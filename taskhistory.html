@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-F2941218
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <p></p>
+ 
+      <div class="H1">
+        TASK HISTORY 
+      </div>
+ 
+      <div class="default">
+        <!-- BEGIN Record STaskHistory -->
+        <form id="STaskHistory" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Filter List</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="6">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="STaskHistorys_tckt">Ticket # : </label><input id="STaskHistorys_tckt" value="{s_tckt}" maxlength="20" name="{s_tckt_Name}"></td> 
+                    <td>Task Status : &nbsp; <label for="STaskHistorys_ts" style="display: none;">ListBox1</label> 
+                      <select id="STaskHistorys_ts" name="{s_ts_Name}">
+                        <option selected value="">Select Value</option>
+                        {s_ts_Options}
+                      </select>
+ </td> 
+                    <td>Engineer : &nbsp; 
+                      <select id="STaskHistorys_eg" name="{s_eg_Name}">
+                        <option selected value="">Select Value</option>
+                        {s_eg_Options}
+                      </select>
+ </td> 
+                    <td>
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="STaskHistoryButton_DoSearch" value="Search" alt="Search" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch -->&nbsp;</td> 
+                    <td>&nbsp;</td> 
+                    <td>&nbsp;</td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="6" align="right"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record STaskHistory --><br>
+        <!-- BEGIN Grid GTaskHistory -->
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>List of Task History</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                  <th style="TEXT-ALIGN: center" width="5%" scope="col">
+                  <!-- BEGIN Sorter Sorter_id -->No. 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTaskHistorySorter_id"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTaskHistorySorter_id"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_id --></th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">
+                  <!-- BEGIN Sorter Sorter_tckt_refnumber -->Ticket # 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTaskHistorySorter_tckt_refnumber"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTaskHistorySorter_tckt_refnumber"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_refnumber --></th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">
+                  <!-- BEGIN Sorter Sorter_tckt_r_date -->Date Reported 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTaskHistorySorter_tckt_r_date"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTaskHistorySorter_tckt_r_date"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_r_date --></th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">
+                  <!-- BEGIN Sorter Sorter_task_current -->Previous Status 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTaskHistorySorter_task_current"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTaskHistorySorter_task_current"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_task_current --></th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">
+                  <!-- BEGIN Sorter Sorter_task_update -->Updated Status 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTaskHistorySorter_task_update"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTaskHistorySorter_task_update"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_task_update --></th>
+ 
+                  <th scope="col">
+                  <!-- BEGIN Sorter Sorter_task_currenteng -->1st Assigned Eng 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTaskHistorySorter_task_currenteng"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTaskHistorySorter_task_currenteng"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_task_currenteng --></th>
+ 
+                  <th scope="col">
+                  <!-- BEGIN Sorter Sorter_task_updatedeng -->2nd Assigned Eng 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTaskHistorySorter_task_updatedeng"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTaskHistorySorter_task_updatedeng"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_task_updatedeng --></th>
+ 
+                  <th style="TEXT-ALIGN: center" width="5%" scope="col">
+                  <!-- BEGIN Sorter Sorter_task_status -->Task Status 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTaskHistorySorter_task_status"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTaskHistorySorter_task_status"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_task_status --></th>
+ 
+                  <th scope="col">Task Notes</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">
+                  <!-- BEGIN Sorter Sorter_task_date -->Date Assigned 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTaskHistorySorter_task_date"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTaskHistorySorter_task_date"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_task_date --></th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {GTaskHistory:rowStyle}>
+                  <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{tckt_refnumber}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{tckt_r_date}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{task_current}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{task_update}&nbsp;</td> 
+                  <td>{task_currenteng}&nbsp;</td> 
+                  <td>{task_updatedeng}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{task_status}&nbsp;</td> 
+                  <td>{task_notes}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{task_date}&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="10">No records</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td colspan="10">
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!-- END Grid GTaskHistory --><br>
+      </div>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

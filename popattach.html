@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-ADC387C5
+
+var RAttachment_DatePicker_attch_date1 = new Object(); 
+RAttachment_DatePicker_attch_date1.format           = "GeneralDate";
+RAttachment_DatePicker_attch_date1.style            = "Styles/smartStyleTurqoise/Style.css";
+RAttachment_DatePicker_attch_date1.relativePathPart = "";
+RAttachment_DatePicker_attch_date1.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//RAttachmentButton_Delete_OnClick @8-22B23E00
+function RAttachmentButton_Delete_OnClick()
+{
+    var result = true;
+//End RAttachmentButton_Delete_OnClick
+
+//Confirmation Message @9-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close RAttachmentButton_Delete_OnClick @8-BC33A33A
+    return result;
+}
+//End Close RAttachmentButton_Delete_OnClick
+
+//RAttachmentButton_Cancel_OnClick @10-95D106B4
+function RAttachmentButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RAttachmentButton_Cancel_OnClick
+
+//bind_events @1-C138D800
+function bind_events() {
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("RAttachmentButton_Delete", "click", RAttachmentButton_Delete_OnClick);
+    addEventHandler("RAttachmentButton_Cancel", "click", RAttachmentButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+&nbsp;
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <p></p>
+ 
+      <div class="H1">
+        PAGE TITLE 
+      </div>
+ 
+      <p></p>
+ 
+      <div class="default">
+        CONTENT START HERE! 
+      </div>
+ 
+      <div class="default">
+        <!-- BEGIN Record RAttachment -->
+        <form id="RAttachment" enctype="{HTMLFormEnctype}" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Add/Edit Attachment </strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="RAttachmentattch_byuser">Upload By</label></td> 
+                    <td><input id="RAttachmentbyuser_toshow" disabled value="{byuser_toshow}" name="{byuser_toshow_Name}"><input id="RAttachmentattch_byuser" value="{attch_byuser}" size="6" type="hidden" name="{attch_byuser_Name}"><input id="RAttachmentresolution_id" value="{resolution_id}" size="5" type="hidden" name="{resolution_id_Name}"><input id="RAttachmentdatemodified" value="{datemodified}" size="7" type="hidden" name="{datemodified_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RAttachmentattch_name">Title <font color="#ff0000">*</font></label></td> 
+                    <td><input id="RAttachmentattch_name" value="{attch_name}" maxlength="200" size="50" name="{attch_name_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RAttachmentdatemodified">Attachment <font color="#ff0000">*</font></label></td> 
+                    <td>
+                      <!-- BEGIN FileUpload FileUpload1 --><input id="RAttachmentFileUpload1ControlName" value="{State}" type="hidden" name="{ControlName}">
+                      <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+                      <!-- BEGIN Upload --><label for="RAttachmentFileUpload1FileControl" style="display: none;">File upload</label><input id="RAttachmentFileUpload1FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+                      <!-- BEGIN DeleteControl --><label for="RAttachmentFileUpload1DeleteControl">Delete</label><input id="RAttachmentFileUpload1DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload1 --></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RAttachmentattch_date">Date</label></td> 
+                    <td><input id="RAttachmentattch_date" value="{attch_date}" maxlength="30" name="{attch_date_Name}">&nbsp; 
+                      <!-- BEGIN DatePicker DatePicker_attch_date1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RAttachmentDatePicker_attch_date1"><img id="RAttachmentDatePicker_attch_date1_Image" border="0" alt="Show Date Picker" src="Styles/SmartStyleTurqoise/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_attch_date1 --></td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RAttachmentButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RAttachmentButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                      <!-- BEGIN Button Button_Delete --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RAttachmentButton_Delete" value="Delete" alt="Delete" src="Styles/{CCS_Style}/Images/en/ButtonDelete.gif" type="image" name="{Button_Name}"><!-- END Button Button_Delete -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RAttachmentButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record RAttachment -->
+      </div>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

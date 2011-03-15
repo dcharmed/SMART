@@ -1,0 +1,1210 @@
+/* CCSTheme v 3.x */
+/* General */
+
+/* Colors */
+.PageBgColor {
+	background-color: #b9b9b9;
+	}
+
+.FormTitleBgColor {
+	background-color: #196d8a;
+	}
+
+.FormTitleFontColor {
+	color: #efefef;
+	}
+
+.CaptionBgColor {
+	background-color: #a5b7bc;
+	}
+
+.CaptionFontColor {
+	color: #155b72;
+	}
+
+.DataBgColor {
+	background-color: #efefef;
+	}
+
+.AltDataBgColor {
+	background-color: #e2e2e2;
+	}
+
+.DataFontColor {
+	color: #196d8a;
+	}
+
+.LinkColor {
+	color: #0000e8;
+	}
+
+.VisitedLinkColor {
+	color: #196d8a;
+	}
+
+.HoverLinkColor {
+	color: #cf0086;
+	}
+
+.ColorBgButton {
+	background-color: #196d8a;
+}
+
+.ColorFontButton {
+	color: #efefef;
+}
+
+.ColorBgButtonPassive {
+	background-color: #61a8c0;
+}
+
+.ColorFontButtonPassive {
+	color: #f7f7f7;
+}
+
+/* BEGIN Common */
+body { 
+	color: #000000;
+	
+	font-family: Arial; font-size: 70%;
+	}
+
+
+
+/*ie6*/
+* html body {
+	font-family: Arial; font-size: 70%;
+}
+
+* html body td, * html body th, * html body table {
+	font-size: 100%;
+}
+/*end*/
+
+.text { 
+	color: #196d8a
+	}
+
+a.menulink:link, a.menulink:visited { 
+	color: #0000e8;
+	}
+
+a.menulink:hover, a.menulink:active { 
+	color: #cf0086;
+	}
+
+
+a:link { 
+	color: #0000e8;
+	}
+
+a:visited { 
+	color: #196d8a;
+	}
+
+a:hover,a:active { 
+	color: #cf0086;
+	}
+
+ul, ol, blockquote { 
+	margin-top: 5px; 
+	margin-bottom: 10px; 
+	margin-left: 20px; 
+	}
+
+form {
+	margin: 0px;
+	}
+
+h1	{
+	color: #196d8a;
+	font-size: 140%;
+	margin-top: 5px; 
+	margin-bottom: 5px;
+	}
+
+h2	{ 
+	color: #196d8a;
+	font-size: 120%;
+	margin-top: 15px; 
+	margin-bottom: 5px; 
+	}
+
+h3	{ 
+	color: #196d8a;
+	font-size: 100%; font-style: italic;
+	margin-top: 15px; 
+	margin-bottom: 5px; 
+	}
+
+h4	{ 
+	color: #196d8a;
+	font-size: 90%;
+	margin-top: 15px; 
+	margin-bottom: 5px; 
+	}
+
+h5	{ 
+	color: #196d8a;
+	font-size: 95%; font-style: italic;
+	margin-top: 15px; 
+	margin-bottom: 5px; 
+	}
+
+h6	{ 
+	color: #196d8a;
+	font-size: 80%;
+	margin-top: 15px; 
+	margin-bottom: 5px; 
+	}
+
+th	{ 
+	font-family: Arial; font-size: 70%;
+	}
+
+td { 
+	font-family: Arial; font-size: 70%;
+	}
+
+/*input, textarea, select {
+	font-family: Arial; font-size: 70%;
+	font-size: 100%;
+}
+
+html>body input, html>body select, html>body textarea {
+	font-family: Arial; font-size: 70%;
+	font-size: inherit;
+}*/
+
+/* END Common */
+
+.Header {
+	width: 100%;
+	}
+
+.Header th { 
+	font-size: 90%; font-weight: bold; text-align: center !important;
+	padding: 2px;
+	background-image: url('Images/HeaderBg.gif');  color: #efefef;
+	width: 100%;
+	white-space: nowrap;
+	
+	}
+
+
+
+/*ie6*/
+* html body .Header th {
+	font-size: 130%; font-weight: bold; text-align: center !important;
+}
+/*end*/
+
+.Header a:link { 
+	color: #efefef;
+	}
+
+.Header a:visited { 
+	color: #efefef;
+	}
+
+.Header a:hover, .Caption a:active { 
+	color: #efefef; text-decoration: none;
+	}
+
+.HeaderLeft { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRight { 
+	background-image: url('Images/HeaderRight.gif');
+	background-position: right top;
+	}
+
+.HeaderLeft img{
+	width: 9px;
+	}
+
+.HeaderRight img{
+	width: 9px;
+	}
+
+
+/* Grid Options */
+.Grid { 
+	
+	width: 100%;
+	}
+
+.Caption th { 
+	font-size: 70%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #a5b7bc; color: #155b72;
+	white-space: nowrap;
+	}
+
+.Caption td { 
+	font-size: 70%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #a5b7bc; color: #155b72;
+	white-space: nowrap;
+	}
+
+
+
+/*ie6*/
+* html body .Caption th, * html body .Caption td {
+	font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.Caption a:link { 
+	color: #155b72;
+	}
+
+.Caption a:visited { 
+	color: #155b72;
+	}
+
+.Caption a:hover, .Caption a:active { 
+	color: #cf0086;
+	}
+
+.Caption img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.Caption input {
+	vertical-align: middle;
+	}
+
+.Row th { 
+	font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #efefef; color: #196d8a;
+	white-space: nowrap;
+	color: #196d8a;
+	}
+
+.Row td { 
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #efefef; 
+	color: #196d8a;
+	}
+	
+
+
+/*ie6*/
+* html body .Row th, * html body .Row td {
+	font-size: 100%;
+}
+/*end*/
+
+caption.Row { 
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #efefef; 
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body caption.Row {
+	font-size: 100%;
+}
+/*end*/
+
+.Row a:link { 
+	color: #0000e8;
+	}
+
+.Row a:visited { 
+	color: #196d8a;
+	}
+
+.Row a:hover, .Row a:active { 
+	color: #cf0086;
+	}
+
+.Separator{
+	color: #196d8a;
+	}
+
+.Separator td{
+	height: 1px;
+	}
+
+
+.AltRow th { 
+	font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #efefef; color: #196d8a;
+	white-space: nowrap;
+	color: #196d8a;
+	}
+
+.AltRow td { 
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #e2e2e2; 
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .AltRow th, * html body .AltRow td {
+	font-size: 100%;
+}
+/*end*/
+
+.AltRow a:link { 
+	color: #0000e8;
+	}
+
+.AltRow a:visited { 
+	color: #196d8a;
+	}
+
+.AltRow a:hover, .AltRow a:active { 
+	color: #cf0086;
+	}
+
+.NoRecords td { 
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	background-color: #efefef; 
+	color: #196d8a;
+	vertical-align: top;
+	}
+
+.Footer td { 
+	font-size: 70%;
+	padding: 2px;
+	
+	background-color: #efefef; color: #196d8a;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .NoRecords td, * html body .Footer td {
+	font-size: 100%;
+}
+/*end*/
+
+.Footer a:link { 
+	color: #0000e8;
+	}
+
+.Footer a:visited { 
+	color: #196d8a;
+	}
+
+.Footer a:hover, .Footer a:active { 
+	color: #cf0086;
+	}
+
+.Footer img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.Footer input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.Record { 
+	
+	width: 100%;
+	}
+
+.Error td { 
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #efefef; 
+	}
+
+
+
+/*ie6*/
+* html body .Error td {
+	font-size: 100%;
+}
+/*end*/
+
+.Controls th { 
+	font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #efefef; color: #196d8a;
+	white-space: nowrap;
+	color: #196d8a;
+	}
+
+.Controls td { 
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #efefef; 
+	color: #196d8a;
+	}
+	
+.Bottom td { 
+	font-size: 70%;
+	padding: 2px;
+	
+	background-color: #efefef; color: #196d8a;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .Controls th, * html body .Controls td, * html body .Bottom td {
+	font-size: 100%;
+}
+/*end*/
+
+.Bottom a:link { 
+	color: #0000e8;
+	}
+
+.Bottom a:visited { 
+	color: #196d8a;
+	}
+
+.Bottom a:hover, .Caption a:active { 
+	color: #cf0086;
+	}
+
+.Bottom img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.Bottom input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaption th{
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #e2e2e2; 
+	color: #196d8a;
+	}
+
+.GroupCaption td{
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #efefef; 
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .GroupCaption th, * html body .GroupCaption td {
+	font-size: 100%;
+}
+/*end*/
+
+.GroupCaption a:link {
+	color: #155b72;
+	}
+
+.GroupCaption a:visited{
+	color: #155b72;
+	}
+
+.GroupCaption a:hover, .GroupCaption a:active{
+	color: #cf0086;
+	}
+
+.GroupFooter td{
+	font-size: 70%;
+	padding: 2px;
+	
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #a5b7bc; 
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .GroupFooter td {
+	font-size: 100%;
+}
+/*end*/
+
+.GroupFooter a:link {
+	color: #0000e8;
+	}
+
+.GroupFooter a:visited{
+	color: #196d8a;
+	}
+
+.GroupFooter a:hover,.GroupFooter a:active{
+	color: #cf0086;
+	}
+
+.GroupFooter img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFooter input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotal td{
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #e2e2e2; 
+	color: #196d8a;
+	border-bottom: 2px solid #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .SubTotal td {
+	font-size: 100%;
+}
+/*end*/
+
+.SubTotal a:link {
+	color: #0000e8;
+	}
+
+.SubTotal a:visited{
+	color: #196d8a;
+	}
+
+.SubTotal a:hover, .SubTotal a:active{
+	color: #cf0086;
+	}
+
+.Total td{
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #e2e2e2; 
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .Total td {
+	font-size: 100%;
+}
+/*end*/
+
+.Total a:link {
+	color: #0000e8;
+	}
+
+.Total a:visited{
+	color: #196d8a;
+	}
+
+.Total a:hover, .Total a:active{
+	color: #cf0086;
+	}
+
+/* Form Options */
+.Button { 
+	background-color: #196d8a; color: #efefef; border-left: solid 1px #EDEDED; border-top: solid 1px #EDEDED; border-right: solid 1px #848284; border-bottom: solid 1px #848284; padding: 2px; font-weight: bold; font-family: Tahoma; font-size: 10px; font-weight: bold;
+	}
+
+/* Calendar */
+
+.Calendar { 
+	
+	width: 100%;
+	}
+
+.CalendarWeekdayName{
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #e2e2e2; 
+	color: #196d8a;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekdayName {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekdayName a:link {
+	color: #0000e8;
+	}
+
+.CalendarWeekdayName a:visited{
+	color: #196d8a;
+	}
+
+.CalendarWeekdayName a:hover, .CalendarWeekdayName a:active{
+	color: #cf0086;
+	}
+
+.CalendarWeekendName{
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #e2e2e2;	
+	color: #196d8a;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendName {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendName a:link {
+	color: #155b72;
+	}
+
+.CalendarWeekendName a:visited{
+	color: #155b72;
+	}
+
+.CalendarWeekendName a:link, .CalendarWeekendName a:visited{
+	color: #cf0086;
+	}
+
+/* Calendar Day */
+.CalendarDay{
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #efefef;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarDay {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarDay a:link {
+	color: #0000e8;
+	}
+
+.CalendarDay a:visited{
+	color: #196d8a;
+	}
+
+.CalendarDay a:hover, .CalendarDay a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekend{
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #e2e2e2;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekend {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekend a:link {
+	color: #0000e8;
+	}
+
+.CalendarWeekend a:visited{
+	color: #196d8a;
+	}
+
+.CalendarWeekend a:hover, .CalendarWeekend a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Today */
+.CalendarToday {
+	font-size: 70%;
+	padding: 0px;
+	border: 2px solid #196d8a;
+	text-align: center;
+	background-color: #efefef;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarToday {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarToday a:link {
+	color: #0000e8;
+	}
+
+.CalendarToday a:visited{
+	color: #196d8a;
+	}
+
+.CalendarToday a:hover, .CalendarToday a:active {
+	color: #cf0086;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendToday {
+	font-size: 70%;
+	padding: 0px;
+	border: 2px solid #196d8a;
+	text-align: center;
+	background-color: #e2e2e2;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendToday {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendToday a:link {
+	color: #0000e8;
+	}
+
+.CalendarWeekendToday a:visited{
+	color: #196d8a;
+	}
+
+.CalendarWeekendToday a:hover, .CalendarWeekendToday a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDay{
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #efefef;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthDay {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthDay a:link {
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthDay a:visited{
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthDay a:hover, .CalendarOtherMonthDay a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthToday {
+	font-size: 70%;
+	padding: 0px;
+	border: 2px solid #196d8a;
+	text-align: center;
+	background-color: #efefef;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthToday {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthToday a:link {
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthToday a:visited{
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthToday a:hover,.CalendarOtherMonthToday a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekend {
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #e2e2e2;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekend {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekend a:link {
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthWeekend a:visited{
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthWeekend a:hover, .CalendarOtherMonthWeekend a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendToday {
+	font-size: 70%;
+	padding: 0px;
+	border: 2px solid #196d8a;
+	text-align: center;
+	color: #196d8a;
+	background-color: #e2e2e2;	
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendToday {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendToday a:link {
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthWeekendToday a:visited{
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthWeekendToday a:hover, .CalendarOtherMonthWeekendToday a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDay{
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #a5b7bc;
+	color: #155b72;
+	text-align: center;
+	font-weight: bold;
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarSelectedDay {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarSelectedDay a:link {
+	color: #155b72;
+	}
+
+.CalendarSelectedDay a:visited{
+	color: #155b72;
+	}
+
+.CalendarSelectedDay a:hover, .CalendarSelectedDay a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigator {
+	font-size: 70%;
+	padding: 2px;
+	background-color: #efefef; color: #196d8a;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigator {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarNavigator a:link {
+	color: #0000e8;
+	}
+
+.CalendarNavigator a:visited{
+	color: #196d8a;
+	}
+
+.CalendarNavigator a:hover, .CalendarNavigator a:active{
+	color: #cf0086;
+	}
+
+.CalendarNavigator img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+.CalendarNavigator td {
+	font-size: 70%;
+	}
+
+.CalendarNavigator th {
+	font-size: 70%;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigator th, * html body .CalendarNavigator td {
+	font-size: 100%;
+}
+/*end*/
+
+/* Calendar Extra */
+.CalendarEvent{
+	font-size: 70%;
+	text-align: left;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarEvent {
+	font-size: 100%;
+}
+/*end*/
+
+.CalendarEvent a:link {
+	color: #0000e8;
+	}
+
+.CalendarEvent a:visited{
+	color: #196d8a;
+	}
+
+.CalendarEvent a:hover, .CalendarEvent a:active{
+	color: #cf0086;
+	}
+
+/* Changes for Section508 */
+table tr td strong {
+	padding: 0px;
+	margin: 0px;
+}
+
+.th { 
+	font-family: Arial; font-size: 70%;
+	font-weight: bold;
+}
+
+
+
+/*ie6*/
+* html body .th {
+	font-size: 100%;
+}
+/*end*/
+
+.Header .th { 
+	font-size: 90%; font-weight: bold; text-align: center !important;
+	padding: 2px;
+	background-image: url('Images/HeaderBg.gif');  color: #efefef;
+	width: 100%;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .Header .th {
+	font-size: 130%; font-weight: bold; text-align: center !important;
+}
+/*end*/
+
+.Caption .th { 
+	font-size: 70%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #a5b7bc; color: #155b72;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .Caption .th {
+	font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.Row .th { 
+	font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #efefef; color: #196d8a;
+	white-space: nowrap;
+	color: #196d8a;
+}
+
+.AltRow .th { 
+	font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #efefef; color: #196d8a;
+	white-space: nowrap;
+	color: #196d8a;
+}
+
+.Controls .th { 
+	font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #efefef; color: #196d8a;
+	white-space: nowrap;
+	color: #196d8a;
+}
+
+.GroupCaption .th {
+	font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #e2e2e2; 
+	color: #196d8a;
+}
+
+
+
+/*ie6*/
+* html body .GroupCaption .th {
+	font-size: 100%;
+}
+
+* html body .Row .th, * html body .AltRow .th, * html body .Controls .th {
+	font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+/*end*/
+
+/* Class for Application Builder Menu */
+.simpleMenu td {
+	font-size: 70%;
+}
+
+
+
+/*ie6*/
+* html body .simpleMenu td {
+	font-size: 100%;
+} 
+/*end*/

@@ -1,0 +1,114 @@
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+&nbsp;&nbsp; 
+<!-- BEGIN Grid GStatProbCat -->
+<table border="0" cellspacing="0" cellpadding="0" width="90%">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+          <td class="th"><strong>Statistic of Ticket(s) According to Problem Categories By Year of {lblYear}</strong></td> 
+          <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th style="TEXT-ALIGN: center" width="3%" scope="col">No.</th>
+ 
+          <th width="30%" scope="col">Problem Categories</th>
+ 
+          <th width="30%" scope="col">&nbsp;Sub Categories</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col">JAN</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col">FEB</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col">MAR</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col">APR</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col">MEI</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col">JUNE</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col">JUL</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col">AUG</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col">SEPT</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col">OCT</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col">NOV</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col">DEC</th>
+ 
+          <th style="TEXT-ALIGN: center" scope="col">TOTAL TICKET(S)</th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;</td> 
+          <td style="TEXT-ALIGN: left"><input id="reportscatGStatProbCatcatval_{GStatProbCat:rowNumber}" value="{catval}" type="hidden" name="{catval_Name}">&nbsp;{ref_description}</td> 
+          <td style="TEXT-ALIGN: left">{SubCat}&nbsp;<input id="reportscatGStatProbCatsubcatval" value="{subcatval}" type="hidden" name="{subcatval_Name}"></td> 
+          <td style="TEXT-ALIGN: center">{JanTic}</td> 
+          <td style="TEXT-ALIGN: center">{FebTic}</td> 
+          <td style="TEXT-ALIGN: center">{MacTic}</td> 
+          <td style="TEXT-ALIGN: center">{AprTic}</td> 
+          <td style="TEXT-ALIGN: center">{MeiTic}</td> 
+          <td style="TEXT-ALIGN: center">{JuneTic}</td> 
+          <td style="TEXT-ALIGN: center">{JulTic}</td> 
+          <td style="TEXT-ALIGN: center">{Augtic}</td> 
+          <td style="TEXT-ALIGN: center">{SeptTic}</td> 
+          <td style="TEXT-ALIGN: center">{OctTic}</td> 
+          <td style="TEXT-ALIGN: center">{NovTic}</td> 
+          <td style="TEXT-ALIGN: center">{DecTic}</td> 
+          <td style="TEXT-ALIGN: center">{TotalTic}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <tr class="Caption">
+          <th style="TEXT-ALIGN: right" colspan="3" scope="col">GRAND TOTAL</th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col"><b><font color="green" size="3">{TotalJan}</font></b></th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col"><b><font color="green" size="3">{TotalFeb}</font></b></th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col"><b><font color="green" size="3">{TotalMac}</font></b></th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col"><b><font color="green" size="3">{TotalApr}</font></b></th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col"><b><font color="green" size="3">{TotalMei}</font></b></th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col"><b><font color="green" size="3">{TotalJune}</font></b></th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col"><b><font color="green" size="3">{TotalJuly}</font></b></th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col"><b><font color="green" size="3">{TotalAug}</font></b></th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col"><b><font color="green" size="3">{TotalSept}</font></b></th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col"><b><font color="green" size="3">{TotalOct}</font></b></th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col"><b><font color="green" size="3">{TotalNov}</font></b></th>
+ 
+          <th style="TEXT-ALIGN: center" width="5%" scope="col"><b><font color="green" size="3">{TotalDec}</font></b></th>
+ 
+          <th style="TEXT-ALIGN: center" scope="col"><b><font color="green" size="3">{GTotal}</font></b></th>
+ 
+        </tr>
+ 
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="16">No records</td> 
+        </tr>
+ <!-- END NoRecords -->
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid GStatProbCat --><a href="{ImageLink1}" id="reportscatImageLink1"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{ImageLink1}" src="Styles/smartStyleTurqoise/Images/en/ButtonPrint.gif"></a><br>
+<br>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">

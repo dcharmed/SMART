@@ -1,0 +1,377 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-B93D65AC
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//OptionReporttypePTDependentListBox1 Start @13-EAA15582
+function OptionReporttypePTDependentListBox1_start(sender) {
+    var dependentElement = $("OptionReporttype" + sender.id.substring(15));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/reports_smart_reportsopt_type_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End OptionReporttypePTDependentListBox1 Start
+
+//CriteriaRptbPTDependentListBox1 Start @38-7F987243
+function CriteriaRptbPTDependentListBox1_start(sender) {
+    var dependentElement = $("CriteriaRptb" + sender.id.substring(12));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/reports_smart_ticket_b_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End CriteriaRptbPTDependentListBox1 Start
+
+//CriteriaRptscatPTDependentListBox2 Start @40-F690FCB8
+function CriteriaRptscatPTDependentListBox2_start(sender) {
+    var dependentElement = $("CriteriaRptscat" + sender.id.substring(14));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/reports_smart_ticket_scat_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End CriteriaRptscatPTDependentListBox2 Start
+
+//bind_events @1-78CAC352
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    if (functionExists("rptticketrn_bind_events")) rptticketrn_bind_events();
+    if (functionExists("reportspm_bind_events")) reportspm_bind_events();
+    if (functionExists("reportscat_bind_events")) reportscat_bind_events();
+    if (functionExists("reportsresnote_bind_events")) reportsresnote_bind_events();
+    if (functionExists("reportsbranch_bind_events")) reportsbranch_bind_events();
+    if (functionExists("reportsticket_bind_events")) reportsticket_bind_events();
+    if (functionExists("reportsbranchcat_bind_events")) reportsbranchcat_bind_events();
+    if (functionExists("reportslogstat_bind_events")) reportslogstat_bind_events();
+    if (functionExists("reportsla_bind_events")) reportsla_bind_events();
+    if (functionExists("reportsgraph_bind_events")) reportsgraph_bind_events();
+    if (functionExists("reportsrsltnnote_bind_events")) reportsrsltnnote_bind_events();
+    if (functionExists("reportrtn_bind_events")) reportrtn_bind_events();
+    addEventHandler("OptionReportopt", "change", OptionReporttypePTDependentListBox1_start);
+    addEventHandler("OptionReportopt", "load", OptionReporttypePTDependentListBox1_start);
+    addEventHandler("CriteriaRpts", "change", CriteriaRptbPTDependentListBox1_start);
+    addEventHandler("CriteriaRpts", "load", CriteriaRptbPTDependentListBox1_start);
+    addEventHandler("CriteriaRptcat", "change", CriteriaRptscatPTDependentListBox2_start);
+    addEventHandler("CriteriaRptcat", "load", CriteriaRptscatPTDependentListBox2_start);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css" />
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <p></p>
+ 
+      <div class="H1">
+        REPORTS &amp; STATISTICS 
+      </div>
+ 
+      <p></p>
+ 
+      <div class="default">
+        <!-- BEGIN Record OptionReport -->
+        <form id="OptionReport" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="3">{Error}</td> 
+                  </tr>
+ <!-- END Error -->
+                  <tr class="Controls">
+                    <td>Select type of reports</td> 
+                    <td>
+                      <select id="OptionReportopt" name="{opt_Name}">
+                        <option selected value="">Select Value</option>
+ {opt_Options} 
+                      </select>
+ </td> 
+                    <td>
+                      <select id="OptionReporttype" name="{type_Name}">
+                        <option selected value="">Select Value</option>
+ {type_Options} 
+                      </select>
+ &nbsp; 
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="OptionReportButton_DoSearch" value="Search" alt="Search" align="absMiddle" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+                  </tr>
+ 
+                </table>
+ </td> 
+            </tr>
+ 
+          </table>
+ 
+        </form>
+ <!-- END Record OptionReport -->
+        <!-- BEGIN Record CriteriaRpt -->
+        <form id="CriteriaRpt" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Reports Criteria</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  </tr>
+ 
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="4">{Error}</td> 
+                  </tr>
+ <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="CriteriaRpts">State</label></td> 
+                    <td>
+                      <select id="CriteriaRpts" name="{s_Name}">
+                        <option selected value="">Select Value</option>
+ {s_Options} 
+                      </select>
+ </td> 
+                    <td>&nbsp;Branch</td> 
+                    <td>
+                      <select id="CriteriaRptb" name="{b_Name}">
+                        <option selected value="">Select Value</option>
+ {b_Options} 
+                      </select>
+ <input id="CriteriaRptset" value="{set}" type="hidden" name="{set_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="CriteriaRptsv">Severity</label></td> 
+                    <td>
+                      <select id="CriteriaRptsv" name="{sv_Name}">
+                        <option selected value="">Select Value</option>
+ {sv_Options} 
+                      </select>
+ </td> 
+                    <td>&nbsp;Escalation</td> 
+                    <td>
+                      <select id="CriteriaRptesc" name="{esc_Name}">
+                        <option selected value="">Select Value</option>
+ {esc_Options} 
+                      </select>
+ </td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="CriteriaRptcat">Category</label></td> 
+                    <td>
+                      <select id="CriteriaRptcat" name="{cat_Name}">
+                        <option selected value="">Select Value</option>
+ {cat_Options} 
+                      </select>
+ </td> 
+                    <td>&nbsp;Sub-Category</td> 
+                    <td>
+                      <select id="CriteriaRptscat" name="{scat_Name}">
+                        <option selected value="">Select Value</option>
+ {scat_Options} 
+                      </select>
+ </td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="CriteriaRptdtfr">Date&nbsp; (Month / Year) <font color="#ff0000">*</font></label></td> 
+                    <td colspan="3"><label for="CriteriaRptmonth" style="display: none;">ListBox1</label> 
+                      <select id="CriteriaRptmonth" name="{month_Name}">
+                        <option selected value="">Select Value</option>
+ {month_Options} 
+                      </select>
+ &nbsp; / <label for="CriteriaRptyear" style="display: none;">ListBox1</label> 
+                      <select id="CriteriaRptyear" name="{year_Name}">
+                        <option selected value="">Select Value</option>
+ {year_Options} 
+                      </select>
+ </td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="CriteriaRptad">Adukom #</label></td> 
+                    <td><input id="CriteriaRptad" value="{ad}" maxlength="50" size="30" name="{ad_Name}"></td> 
+                    <td>&nbsp;Ref Number</td> 
+                    <td>&nbsp;<input id="CriteriaRptrn" value="{rn}" maxlength="30" size="30" name="{rn_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="4" align="right">
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="CriteriaRptButton_DoSearch" value="Search" alt="Search" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+                  </tr>
+ 
+                </table>
+ </td> 
+            </tr>
+ 
+          </table>
+ 
+        </form>
+ <!-- END Record CriteriaRpt -->&nbsp; 
+        <!-- BEGIN Record CriteriaStat2 -->
+        <form id="CriteriaStat2" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Criteria</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  </tr>
+ 
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <tr class="Error">
+                    <td colspan="3">{lblNote}</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="CriteriaStat2month">YEAR</label></td> 
+                    <td><label for="CriteriaStat2month" style="display: none;">ListBox1</label> 
+                      <!-- BEGIN ListBox month -->
+                      <select id="CriteriaStat2month" name="{month_Name}">
+                        <option selected value="">Select Value</option>
+ {month_Options} 
+                      </select>
+ <!-- END ListBox month --><label for="CriteriaStat2year" style="display: none;">ListBox1</label> 
+                      <select id="CriteriaStat2year" name="{year_Name}">
+                        <option selected value="">Select Value</option>
+ {year_Options} 
+                      </select>
+ </td> 
+                    <td><input id="CriteriaStat2set" value="{set}" type="hidden" name="{set_Name}">&nbsp; 
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="CriteriaStat2Button_DoSearch" value="Search" alt="Search" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="3" align="right"></td> 
+                  </tr>
+ 
+                </table>
+ </td> 
+            </tr>
+ 
+          </table>
+ 
+        </form>
+ <!-- END Record CriteriaStat2 --><br>
+      </div>
+ 
+      <!-- BEGIN Panel Panrptticketrn -->{rptticketrn}<!-- END Panel Panrptticketrn -->
+      <!-- BEGIN Panel Panstatpm -->{reportspm}<!-- END Panel Panstatpm -->
+      <!-- BEGIN Panel Panstatcat -->&nbsp;{reportscat}<!-- END Panel Panstatcat -->
+      <!-- BEGIN Panel Panresnote -->{reportsresnote}<!-- END Panel Panresnote -->
+      <!-- BEGIN Panel Panbranch -->{reportsbranch}<!-- END Panel Panbranch -->
+      <!-- BEGIN Panel PanTicket -->{reportsticket}<!-- END Panel PanTicket -->
+      <!-- BEGIN Panel Panbranchcat -->{reportsbranchcat}<!-- END Panel Panbranchcat -->
+      <!-- BEGIN Panel pantcktlogstat -->{reportslogstat}<!-- END Panel pantcktlogstat -->
+      <!-- BEGIN Panel pansla -->&nbsp;{reportsla}<!-- END Panel pansla -->
+      <!-- BEGIN Panel pangraf -->{reportsgraph}<!-- END Panel pangraf -->
+      <!-- BEGIN Panel panrsltnnote -->&nbsp;{reportsrsltnnote}<!-- END Panel panrsltnnote -->
+      <!-- BEGIN Panel panrtnlist -->{reportrtn}<!-- END Panel panrtnlist --></td> 
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

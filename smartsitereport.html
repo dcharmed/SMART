@@ -1,0 +1,529 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-877942DB
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/ajaxpanel.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/prototype_ccs.js" type="text/javascript"></script>
+<script language="JavaScript" src="Services.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="smartsitereport_style.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-C747F25F
+
+var SSiteReport_DatePicker_df = new Object(); 
+SSiteReport_DatePicker_df.format           = "LongDate";
+SSiteReport_DatePicker_df.style            = "Styles/{CCS_Style}/Style.css";
+SSiteReport_DatePicker_df.relativePathPart = "";
+SSiteReport_DatePicker_df.themeVersion = "3.0";
+
+var SSiteReport_DatePicker_dt = new Object(); 
+SSiteReport_DatePicker_dt.format           = "LongDate";
+SSiteReport_DatePicker_dt.style            = "Styles/{CCS_Style}/Style.css";
+SSiteReport_DatePicker_dt.relativePathPart = "";
+SSiteReport_DatePicker_dt.themeVersion = "3.0";
+
+var RSiteReport_DatePicker_sr_datereport = new Object(); 
+RSiteReport_DatePicker_sr_datereport.format           = "GeneralDate";
+RSiteReport_DatePicker_sr_datereport.style            = "Styles/{CCS_Style}/Style.css";
+RSiteReport_DatePicker_sr_datereport.relativePathPart = "";
+RSiteReport_DatePicker_sr_datereport.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//Panel2SUpdStatus_OnLoad @66-8FC8760D
+function Panel2SUpdStatus_OnLoad(form)
+{
+    var result = true;
+//End Panel2SUpdStatus_OnLoad
+
+//Custom Code @88-2A29BDB7
+    // -------------------------
+    if (document.getElementById("errors") == null) 
+    {
+        Panel2ShowModal1_hide();
+        Panel1UpdatePanel_refresh();
+    }
+    else
+    {
+        Panel2ShowModal1_show();
+    }
+    $("Panel2SUpdStatusButton_Cancel").onclick = function()
+    {
+        Panel2UpdatePanel_refresh();
+        Panel2ShowModal1_hide();
+        return false;
+    }
+    // -------------------------
+//End Custom Code
+
+//Close Panel2SUpdStatus_OnLoad @66-BC33A33A
+    return result;
+}
+//End Close Panel2SUpdStatus_OnLoad
+
+//Panel1RSiteReport_OnLoad @37-A8424BA8
+function Panel1RSiteReport_OnLoad(form)
+{
+    var result = true;
+//End Panel1RSiteReport_OnLoad
+
+//Custom Code @74-2A29BDB7
+    // -------------------------
+    if ($("Panel1RSiteReportEditStatuslinkStatus") != null)
+    $("Panel1RSiteReportEditStatuslinkStatus").onclick = function()
+    {
+        Panel2ShowModal1_show();
+        return false;
+    }
+        
+    // -------------------------
+//End Custom Code
+
+//Close Panel1RSiteReport_OnLoad @37-BC33A33A
+    return result;
+}
+//End Close Panel1RSiteReport_OnLoad
+
+//Panel2SUpdStatusButton_Cancel_OnClick @68-818E6216
+function Panel2SUpdStatusButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End Panel2SUpdStatusButton_Cancel_OnClick
+
+//Panel1RSiteReportButton_Cancel_OnClick @40-E1B9FD92
+function Panel1RSiteReportButton_Cancel_OnClick()
+{
+    disableValidation = true;
+        window.location.href = "smartsitereport.php";
+}
+//End Panel1RSiteReportButton_Cancel_OnClick
+
+//Start Panel2 @72-E7ADF65A
+function Panel2_start(sender) {
+    var panel = $("Panel2");
+    panel.onrefresh = function() {
+        Panel2ClientCustomCode1_start(sender);
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Panel2_bind(sender);
+}
+//End Start Panel2
+
+//Refresh Panel2 @72-08B8A74C
+function Panel2_bind(sender) {
+    addEventHandler("Panel2SUpdStatus", "submit", Panel1UpdatePanel_refresh);
+    addEventHandler("Panel2SUpdStatus", "load", Panel2SUpdStatus_OnLoad);
+    addEventHandler("Panel2SUpdStatusButton_Cancel", "click", Panel2SUpdStatusButton_Cancel_OnClick);
+    document.getElementById("Panel2").className="ModalShowDiv";
+}
+//End Refresh Panel2
+
+//Refresh Panel2UpdatePanel @73-3A0BFB2B
+function Panel2UpdatePanel_refresh(sender) {
+    AjaxPanel.reload($("Panel2"));
+}
+//End Refresh Panel2UpdatePanel
+
+//Initialize Panel2ShowModal1 @75-C8BA26FE
+function Panel2ShowModal1_hide() {
+    removeOpacity();
+    el = document.getElementById("Panel2");
+    el.style.display = "none";
+}
+function Panel2ShowModal1_show() {
+    addOpacity();
+    el = document.getElementById("Panel2");
+    el.style.display = "block";
+}
+//End Initialize Panel2ShowModal1
+
+//Handle Panel2ClientCustomCode1 @76-255075DD
+function Panel2ClientCustomCode1_start(sender) {
+//End Handle Panel2ClientCustomCode1
+
+//Custom Panel2ClientCustomCode1 @76-2A29BDB7
+// -------------------------
+    $("Panel2").location = window.location.href;
+// -------------------------
+//End Custom Panel2ClientCustomCode1
+
+//Panel2ClientCustomCode1 Tail @76-FCB6E20C
+}
+//End Panel2ClientCustomCode1 Tail
+
+//Handle Panel2ClientCustomCode2 @109-0C98C12F
+function Panel2ClientCustomCode2_start(sender) {
+//End Handle Panel2ClientCustomCode2
+
+//Custom Panel2ClientCustomCode2 @109-2A29BDB7
+// -------------------------
+    $("Panel2").location = window.location.href;
+// -------------------------
+//End Custom Panel2ClientCustomCode2
+
+//Panel2ClientCustomCode2 Tail @109-FCB6E20C
+}
+//End Panel2ClientCustomCode2 Tail
+
+//Start Panel1 @114-C2C50D0F
+function Panel1_start(sender) {
+    var panel = $("Panel1");
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Panel1_bind(sender);
+}
+//End Start Panel1
+
+//Refresh Panel1 @114-CB672E34
+function Panel1_bind(sender) {
+    addEventHandler("Panel1RSiteReportEditStatuslinkStatus", "click", Panel1ClientCustomCode3_start);
+    addEventHandler("Panel1RSiteReportButton_Cancel", "click", Panel1ClientCustomCode4_start);
+    addEventHandler("Panel1RSiteReportButton_Cancel", "click", Panel1RSiteReportButton_Cancel_OnClick);
+    addEventHandler("Panel1RSiteReport", "load", Panel1RSiteReport_OnLoad);
+}
+//End Refresh Panel1
+
+//Refresh Panel1UpdatePanel @115-389A1C55
+function Panel1UpdatePanel_refresh(sender) {
+    AjaxPanel.reload($("Panel1"));
+}
+//End Refresh Panel1UpdatePanel
+
+//Handle Panel1ClientCustomCode3 @116-F9E7E1AB
+function Panel1ClientCustomCode3_start(sender) {
+//End Handle Panel1ClientCustomCode3
+
+//Custom Panel1ClientCustomCode3 @116-2A29BDB7
+// -------------------------
+    // Write your own code here.
+// -------------------------
+//End Custom Panel1ClientCustomCode3
+
+//Panel1ClientCustomCode3 Tail @116-FCB6E20C
+}
+//End Panel1ClientCustomCode3 Tail
+
+//Handle Panel1ClientCustomCode4 @123-041E19DE
+function Panel1ClientCustomCode4_start(sender) {
+//End Handle Panel1ClientCustomCode4
+
+//Custom Panel1ClientCustomCode4 @123-2A29BDB7
+// -------------------------
+    // Write your own code here.
+// -------------------------
+//End Custom Panel1ClientCustomCode4
+
+//Panel1ClientCustomCode4 Tail @123-FCB6E20C
+}
+//End Panel1ClientCustomCode4 Tail
+
+//bind_events @1-42864802
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    Panel2_start(window);
+    Panel1_start(window);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <div class="H1">
+        SITE REPORT 
+      </div>
+ 
+      <div class="default">
+        <!-- BEGIN Record SSiteReport --><br>
+        This is the list of Site Report which received by.... Click on the Date Report link to view details of reports. Click button <a href="{btnNew}" id="SSiteReportbtnNew"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{btnNew}" align="absMiddle" src="Styles/smartStyleTurqoise/Images/en/ButtonNewRecord.gif"></a> if you want to <b>ADD NEW</b> site Report.<br>
+        <br>
+        <form id="SSiteReport" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Search Site Report </strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="4">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="SSiteReportstat">Status</label></td> 
+                    <td>
+                      <select id="SSiteReportstat" name="{stat_Name}">
+                        <option selected value="">Select Value</option>
+                        {stat_Options}
+                      </select>
+ </td> 
+                    <td>Type</td> 
+                    <td align="left">&nbsp; 
+                      <!-- BEGIN RadioButton type --><input id="SSiteReporttype_{type:optionNumber}" value="{Value}" type="radio" name="{type_Name}" {Check}><label for="SSiteReporttype_{type:optionNumber}">{Description}</label><!-- END RadioButton type --></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="SSiteReportcode">Site Code</label></td> 
+                    <td>
+                      <select id="SSiteReportcode" name="{code_Name}">
+                        <option selected value="">Select Value</option>
+                        {code_Options}
+                      </select>
+ </td> 
+                    <td>&nbsp;</td> 
+                    <td>&nbsp;</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="SSiteReportdf">Range Date</label></td> 
+                    <td><input id="SSiteReportdf" value="{df}" maxlength="12" size="12" name="{df_Name}">
+                      <!-- BEGIN DatePicker DatePicker_df --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="SSiteReportDatePicker_df"><img id="SSiteReportDatePicker_df_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_df -->&nbsp; to&nbsp; <input id="SSiteReportdt" value="{dt}" maxlength="12" size="12" name="{dt_Name}">&nbsp; 
+                      <!-- BEGIN DatePicker DatePicker_dt --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="SSiteReportDatePicker_dt"><img id="SSiteReportDatePicker_dt_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_dt --></td> 
+                    <td>&nbsp;</td> 
+                    <td>&nbsp;</td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="4" align="right">
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="SSiteReportButton_DoSearch" value="Search" alt="Search" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record SSiteReport -->
+        <!-- BEGIN Grid GSiteReport --><br>
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>List of Site Report </strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                  <th style="TEXT-ALIGN: center" width="3%" scope="col">No.</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">Date Report</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">Status</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="15%" scope="col">Type</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">Site Code</th>
+ 
+                  <th scope="col">Report</th>
+ 
+                  <th style="TEXT-ALIGN: left" width="15%" scope="col">Reported By</th>
+ 
+                  <th style="TEXT-ALIGN: left" width="15%" scope="col">Taken By</th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {GSiteReport:rowStyle}>
+                  <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center"><a href="{sr_datereport_Src}" id="GSiteReportsr_datereport_{GSiteReport:rowNumber}">{sr_datereport}</a>&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{sr_status}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{sr_type}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{sr_sitecode}&nbsp;</td> 
+                  <td>{sr_report}&nbsp;</td> 
+                  <td>{sr_reportedby}&nbsp;</td> 
+                  <td>{sr_takenby}&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="8">No records</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td colspan="8">&nbsp; 
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!-- END Grid GSiteReport -->
+        <!-- BEGIN Panel Panel1 -->&nbsp; 
+        <!-- BEGIN Record RSiteReport -->Please complete the form below. Fields with <font color="red">*</font> mark is mandatory.<br>
+        <br>
+        <form id="Panel1RSiteReport" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Site Report Details</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="Panel1RSiteReportsr_status">Status</label></td> 
+                    <td>
+                      <!-- BEGIN ListBox sr_status -->
+                      <select id="Panel1RSiteReportsr_status" disabled name="{sr_status_Name}">
+                        <option selected value="">Select Value</option>
+                        {sr_status_Options}
+                      </select>
+                      <!-- END ListBox sr_status --><strong></strong>{lblStatus} 
+                      <!-- BEGIN Panel EditStatus -->&nbsp;<a href="{linkStatus_Src}" id="Panel1RSiteReportEditStatuslinkStatus">Update Status</a><!-- END Panel EditStatus --></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th">Type <strong><font color="#ff0000">*</font></strong></td> 
+                    <td>
+                      <!-- BEGIN RadioButton sr_type --><input id="Panel1RSiteReportsr_type_{sr_type:optionNumber}" value="{Value}" type="radio" name="{sr_type_Name}" {Check}><label for="Panel1RSiteReportsr_type_{sr_type:optionNumber}">{Description}</label><!-- END RadioButton sr_type --></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="Panel1RSiteReportsr_sitecode">Site Code <strong><font color="#ff0000">*</font></strong></label></td> 
+                    <td>
+                      <select id="Panel1RSiteReportsr_sitecode" name="{sr_sitecode_Name}">
+                        <option selected value="">Select Value</option>
+                        {sr_sitecode_Options}
+                      </select>
+ </td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="Panel1RSiteReportsr_report">Report <strong><font color="#ff0000">*</font></strong></label></td> 
+                    <td><textarea id="Panel1RSiteReportsr_report" rows="10" cols="150" name="{sr_report_Name}">{sr_report}</textarea></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="Panel1RSiteReportsr_reportedby">Reported By</label></td> 
+                    <td><input id="Panel1RSiteReportsr_reportedby" value="{sr_reportedby}" maxlength="150" size="100" name="{sr_reportedby_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="Panel1RSiteReportsr_takenbyv">Taken By</label></td> 
+                    <td><input id="Panel1RSiteReportsr_takenbyv" disabled value="{sr_takenbyv}" maxlength="150" name="{sr_takenbyv_Name}" size="20"><input id="Panel1RSiteReportsr_takenby" value="{sr_takenby}" type="hidden" name="{sr_takenby_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="Panel1RSiteReportsr_datereport">Date Report</label></td> 
+                    <td><input id="Panel1RSiteReportsr_datereport" value="{sr_datereport}" maxlength="12" size="15" name="{sr_datereport_Name}">
+                      <!-- BEGIN DatePicker DatePicker_sr_datereport --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Panel1RSiteReportDatePicker_sr_datereport"><img id="Panel1RSiteReportDatePicker_sr_datereport_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_sr_datereport --></td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel1RSiteReportButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel1RSiteReportButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel1RSiteReportButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record RSiteReport --><!-- END Panel Panel1 --><br>
+        &nbsp; 
+        <!-- BEGIN Panel Panel2 -->&nbsp; 
+        <!-- BEGIN Record SUpdStatus -->
+        <form id="Panel2SUpdStatus" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Update Status Site Report </strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="Panel2SUpdStatusStatus">Status<font color="#ff0000">*</font></label></td> 
+                    <td>
+                      <select id="Panel2SUpdStatusStatus" name="{Status_Name}">
+                        <option selected value="">Select Value</option>
+                        {Status_Options}
+                      </select>
+ <input style="WIDTH: 35px; HEIGHT: 20px" id="Panel2SUpdStatuslogsrpt_id" value="{logsrpt_id}" size="5" type="hidden" name="{logsrpt_id_Name}"><input style="WIDTH: 28px; HEIGHT: 20px" id="Panel2SUpdStatuslogsrpt_action" value="{logsrpt_action}" size="4" type="hidden" name="{logsrpt_action_Name}"><input style="WIDTH: 24px; HEIGHT: 20px" id="Panel2SUpdStatuslogsrpt_staff" value="{logsrpt_staff}" size="3" type="hidden" name="{logsrpt_staff_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="Panel2SUpdStatusRemark">Remark</label></td> 
+                    <td><textarea id="Panel2SUpdStatusRemark" rows="3" cols="35" name="{Remark_Name}">{Remark}</textarea></td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel2SUpdStatusButton_Insert" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel2SUpdStatusButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record SUpdStatus --><!-- END Panel Panel2 --><br>
+      </div>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

@@ -1,0 +1,139 @@
+ticket_id,rsltn_type,rsltn_status,rsltn_date,rsltn_byuser,rsltn_servicedate,rsltn_servicennumber,rsltn_eta,rsltn_etd,rsltn_inspection,rsltn_actiontaken,rsltn_actionmethod,rsltn_planning,rsltn_remark,,,,,,,,,,,,
+1004-73(L),,,2010-04-30 17:39:31,NIK,,,2010-04-22 09:30:00,2010-04-22 17:00:00,,"Received CM report from Rosdi.
+Action taken:
+1. Swapped RTE8000.
+2. Loan unit S/N:5RL13942.
+3. Original unit S/N: 5RL13937.
+4. Test QA success.
+5. Monitor production.",,,,,,,,,,,,,,,
+1004-76(L),,,2010-04-30 17:36:52,NIK,,,,,,"""Received CM report from Azlan.
+Action taken:
+1. Adjust CCD leg only 2 screw not 3 screw.
+2. Place piece of passport paper at top pf PI unit.
+3. Run test. Feed test, production.
+Book manage to print success.""",,,,,,,,,,,,,,,
+1004-62(L),,,2010-04-30 17:34:38,NIK,,,2010-04-17 10:00:00,2010-04-17 14:00:00,,"""Received CM report from Arham.
+Action taken:
+1. Clean thermal head, platen roller, all rollers (cleaning) and fans.
+2. Change film with new.
+3. Test print.
+4. Monitor productions.
+Problem resolved. Production continue as usual.""",,,,,,,,,,,,,,,
+1004-82(L),,,2010-04-30 17:32:14,NIK,,,2010-04-22 14:30:00,2010-04-23 11:00:00,,"""Received CM report from Zul. Dislcation and skew.
+Action taken:
+1. Clean at platen roller area.
+2. take out SP1 and clean the area.
+3. Adjust timing belt from 595 Hz to 480 Hz.
+4. Monitor production.
+5. Adjust slide bar.
+Printing success. Production continue.""",,,,,,,,,,,,,,,
+1004-63(L),,,2010-04-30 17:26:41,NIK,,,2010-04-18 10:00:00,2010-04-18 12:45:00,,"""Received CM report from Arham
+Action taken:
+1. Try to ghost original HDD but fail due to blue screen.
+2. Change old HDD with new.
+3. Ghost - success.
+4. Set all settings.
+5. Cannot do production (offline).
+Imbasan PC runs normally as before. Problem solved.""",,Continue monitor on 19/04/10.,,,,,,,,,,,,,
+1004-105(L),,,2010-04-30 17:21:23,NIK,,,2010-04-29 08:45:00,2010-04-29 12:30:00,,"Received CM report from Arham.
+""Action taken:
+1. Cannot repair the PC because it was under other vendor responsible. 
+2. Temporary solutaion:
+ - Attach jarfalla at PC QA.
+ - PC QA will b used for QA process and Cetakan Muka surat pemerhatian.
+ - Ser settings in txdvr22.tmt.
+ - Keyboard and barcode scanner was replaced with PC QA keyboard.
+Jarfalla process can be done. Problem solved temporarily.""",,Already inform BTMR about the problem and told them to escalate it to responsible vendor.,,,,,,,,,,,,,
+1004-108(L),,,2010-04-29 12:02:10,NIK,,,,,,"Call Kak Lina\'s mobile. Afetr change plug, ok. found plug faulty. Log allow to close.",,,,,,,,,,,,,,,
+1004-108(L),,,2010-04-29 10:55:24,NIK,,,,,,"""Informed to Maria. Maybe power supply faulty. Will update with user later.""",,,,,,,,,,,,,,,
+1004-108(L),,,2010-04-29 10:53:03,NIK,,,,,,"""Call user again. Spoke with kak Lina. She informed that PC cannot on. Suddenly light at CPU OFF and they try to restart but cannot ON. Monitor light ON. Ask user to plug in the CPU plug first at other plug to check if the plug is faulty.""",,,,,,,,,,,,,,,
+1004-108(L),,,2010-04-29 10:45:39,NIK,,,,,,Call user nobody pickup.,,,,,,,,,,,,,,,
+1004-108(L),,,2010-04-29 10:40:07,NIK,,,,,,"""Received call Helmi IRIS. He informed that PC QA cannot boot windows. When he check that is our PC IBM Think center.""",,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,

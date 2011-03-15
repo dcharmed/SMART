@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>test</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-2128F4FF
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    if (functionExists("resolutionnotes_bind_events")) resolutionnotes_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link href="Styles/{CCS_Style}/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" width="100%" rowspan="2">
+      <p><span class="H1">PAGE TITLE</span></p>
+ 
+      <p><span class="default">CONTENT START HERE!</span> </p>
+ 
+      <p>
+      <!-- BEGIN Grid smart_resolutionnote -->
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                <td class="th"><strong>Resolution Notes For Ticket # </strong></td> 
+                <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Caption">
+                <th scope="col">Rsltn Status</th>
+ 
+                <th scope="col">Rsltn Date</th>
+ 
+                <th scope="col">Rsltn Byuser</th>
+ 
+                <th scope="col">Rsltn Actiontaken</th>
+ 
+                <th scope="col">Rsltn Actionmethod</th>
+ 
+                <th scope="col">Rsltn Planning</th>
+ 
+                <th scope="col">Rsltn Remark</th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr {smart_resolutionnote:rowStyle}>
+                <td style="TEXT-ALIGN: right">{rsltn_status}&nbsp;</td> 
+                <td>{rsltn_date}&nbsp;</td> 
+                <td style="TEXT-ALIGN: right">{rsltn_byuser}&nbsp;</td> 
+                <td>{rsltn_actiontaken}&nbsp;</td> 
+                <td>{rsltn_actionmethod}&nbsp;</td> 
+                <td>{rsltn_planning}&nbsp;</td> 
+                <td>{rsltn_remark}&nbsp;</td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN Separator -->
+              <tr class="Separator">
+                <td colspan="7"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+              </tr>
+              <!-- END Separator -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="7">No records</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="7">
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif" border="0"></a> <!-- END First_On -->
+                  <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                  <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+                  <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+                  <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid smart_resolutionnote --><br>
+      <!-- BEGIN Record smart_ticket -->
+      <form id="smart_ticket" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Ticket Summary</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <tr class="Controls">
+                  <td class="th">Tckt Refnumber</td> 
+                  <td>{tckt_refnumber}</td> 
+                  <td>State</td> 
+                  <td>&nbsp;{tckt_state}</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">Tckt Status</td> 
+                  <td>{tckt_status}</td> 
+                  <td>Site</td> 
+                  <td>&nbsp;{tckt_site}</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">Tckt Date</td> 
+                  <td>{tckt_date}</td> 
+                  <td>Category</td> 
+                  <td>&nbsp;{tckt_category}</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">Tckt Severity</td> 
+                  <td>{tckt_severity}</td> 
+                  <td>Sub-Category</td> 
+                  <td>&nbsp;{tckt_subcategory}</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">Tckt Tagrelated</td> 
+                  <td>{tckt_tagrelated}</td> 
+                  <td>&nbsp;</td> 
+                  <td>&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record smart_ticket --><br>
+      </p>
+ 
+      <p>{resolutionnotes}</p>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

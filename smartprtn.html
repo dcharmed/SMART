@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-660E0944
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/scriptaculous.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/controls.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="smartprtnGCheckListpodr_itemcode_style.css" />
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-E23D8FF2
+
+var GCheckList_DatePicker_podr_datereceived1 = new Object(); 
+GCheckList_DatePicker_podr_datereceived1.format           = "LongDate";
+GCheckList_DatePicker_podr_datereceived1.style            = "Styles/{CCS_Style}/Style.css";
+GCheckList_DatePicker_podr_datereceived1.relativePathPart = "";
+GCheckList_DatePicker_podr_datereceived1.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//GCheckListCancel_OnClick @271-6F9CEFA4
+function GCheckListCancel_OnClick()
+{
+    disableValidation = true;
+}
+//End GCheckListCancel_OnClick
+
+//PTAutoFill1 Loading @77-A2B5338B
+function GCheckListpodr_itemcodePTAutoFill1_start(sender) {
+    new Ajax.Request("services/smartpreq_GPreqOrders_podr_itemcode_PTAutoFill1.php?keyword=" + encodeURIComponent($("GCheckListpodr_itemcode").value).replace(/'/g, "%27"), {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            if (typeof(valuesRow) != "undefined") {
+                getSameLevelCtl("GCheckListpodr_itemname", sender).value = valuesRow["spart_name"];
+            } else {
+                getSameLevelCtl("GCheckListpodr_itemname", sender).value = "";
+            }
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//Initialize GCheckListpodr_itemcodePTAutocomplete1 @79-6F6D2997
+function GCheckListpodr_itemcodePTAutocomplete1_start() {
+    if ($("GCheckListpodr_itemcode"))
+        new Ajax.Autocompleter("GCheckListpodr_itemcode", "GCheckListpodr_itemcode_choices", "services/smartpreq_GPreqOrders_podr_itemcode_PTAutocomplete1.php", {});
+}
+//End Initialize GCheckListpodr_itemcodePTAutocomplete1
+
+//bind_events @1-9AD6873A
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    GCheckListpodr_itemcodePTAutocomplete1_start();
+    addEventHandler("GCheckListpodr_itemcode", "change", GCheckListpodr_itemcodePTAutoFill1_start);
+    addEventHandler("GCheckListCancel", "click", GCheckListCancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css" />
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <div class="H1">
+        SPARE PARTS : RETURNED PARTS 
+      </div>
+ 
+      <div class="default">
+        <!-- BEGIN Record SRtn --><br>
+        <form id="SRtn" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Tracking list</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  </tr>
+ 
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="3">{Error}</td> 
+                  </tr>
+ <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="SRtnmonth">PERIOD TRACKING</label></td> 
+                    <td class="th"><label for="SRtnfn" style="display: none;">TextBox1</label><input id="SRtnfn" value="{fn}" name="{fn_Name}">&nbsp;</td> 
+                    <td>&nbsp; 
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="SRtnButton_DoSearch" value="Search" alt="Search" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+                  </tr>
+ 
+                </table>
+ </td> 
+            </tr>
+ 
+          </table>
+ 
+        </form>
+ <!-- END Record SRtn --><br>
+        <!-- BEGIN Grid GRtn -->
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>PARTS TRACKING {lblGTitle}</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                  <th style="TEXT-ALIGN: center" width="3%" scope="col">NO.</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">FORM NO.</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">ENGINEER</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">DATE APPLIED</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">STATUS</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">PROCESSED BY</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">PROCESSED DATE</th>
+ 
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {GRtn:rowStyle}>
+                  <td style="TEXT-ALIGN: center">{lblNumber}</td> 
+                  <td style="TEXT-ALIGN: center"><input style="WIDTH: 17px; HEIGHT: 22px" id="GRtnid" value="{id}" size="2" type="hidden" name="{id_Name}"><a href="{preq_formno_Src}" id="GRtnpreq_formno_{GRtn:rowNumber}">{preq_formno}</a>&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{preq_engineer}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{preq_dateapplied}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{preq_status}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{preq_processedby}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{preq_processeddate}</td> 
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="7">No records</td> 
+                </tr>
+ <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td colspan="7">
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ <!-- END Grid GRtn -->
+        <!-- BEGIN Record RPreqView -->
+        <form id="RPreqView" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Requisition&nbsp;Form</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  </tr>
+ 
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="4">{Error}</td> 
+                  </tr>
+ <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th" width="10%"><label for="RPreqViewpreq_dateapplied">Date Applied</label></td> 
+                    <td width="40%">{preq_dateapplied}</td> 
+                    <td class="th" width="10%">Status&nbsp;</td> 
+                    <td width="40%">{preq_status}&nbsp;{preq_approval}</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RPreqViewpreq_engineer">Engineer</label></td> 
+                    <td>{preq_engineer} </td> 
+                    <td class="th">Parts Received</td> 
+                    <td>{preq_partsreceived}</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RPreqViewpreq_formno">Form No.</label></td> 
+                    <td>{preq_formno}</td> 
+                    <td class="th">&nbsp;ready to be returned?</td> 
+                    <td>{lblRtn}&nbsp;&nbsp; </td> 
+                  </tr>
+ 
+                </table>
+ </td> 
+            </tr>
+ 
+          </table>
+ 
+        </form>
+ <!-- END Record RPreqView --><br>
+        <!-- BEGIN EditableGrid GCheckList -->
+        <form id="GCheckList" method="post" name="{HTMLFormName}" action="{Action}">
+          <input value="{FormState}" type="hidden" name="FormState">{FormScript}
+		  <div class="Error">{NoteGrid} </div>
+          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Parts Replacement</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  </tr>
+ 
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="10">{Error}</td> 
+                  </tr>
+ 				  <!-- END Error -->
+                  <tr class="Caption">
+                    <th style="TEXT-ALIGN: center" width="3%" scope="col">NO.</th>
+ 
+                    <th scope="col">PART CODE</th>
+ 
+                    <th scope="col">PART NAME / DESCRIPTION</th>
+ 
+                    <th style="TEXT-ALIGN: center" scope="col">QTY</th>
+ 
+                    <th style="TEXT-ALIGN: center" scope="col">SITE</th>
+ 
+                    <th style="TEXT-ALIGN: center" scope="col">TOPPAN ID</th>
+ 
+                    <th scope="col">REMARKS (PARTS OUT)</th>
+ 
+                    <th scope="col">DATE RECEIVED</th>
+ 
+                    <th scope="col">QTY RECEIVED</th>
+ 
+                    <th scope="col">REMARKS - RECEIVED PARTS&nbsp;</th>
+ 
+                  </tr>
+ 
+                  <!-- BEGIN Row -->
+                  <!-- BEGIN RowError -->
+                  <tr class="Error">
+                    <td colspan="10">{Error}</td> 
+                  </tr>
+ <!-- END RowError -->
+                  <tr class="Row">
+                    <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;<input style="WIDTH: 38px; HEIGHT: 22px" id="GCheckListpodr_preqid_{GCheckList:rowNumber}" value="{podr_preqid}" size="5" type="hidden" name="{podr_preqid_Name}"></td> 
+                    <td>{podr_itemcode}</td> 
+                    <td>{podr_itemname}</td> 
+                    <td>{podr_qty}</td> 
+                    <td>{podr_site} </td> 
+                    <td>{podr_toppan}</td> 
+                    <td>{podr_remarks}</td> 
+                    <td><input id="GCheckListpodr_datereceived" value="{podr_datereceived}" size="12" name="{podr_datereceived_Name}">&nbsp; 
+                      <!-- BEGIN DatePicker DatePicker_podr_datereceived1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="GCheckListDatePicker_podr_datereceived1"><img id="GCheckListDatePicker_podr_datereceived1_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_podr_datereceived1 --></td> 
+                    <td><input id="GCheckListpodr_qtyreceived" value="{podr_qtyreceived}" size="3" name="{podr_qtyreceived_Name}"></td> 
+                    <td><input id="GCheckListpodr_remarks2" value="{podr_remarks2}" maxlength="200" size="40" name="{podr_remarks2_Name}"></td> 
+                  </tr>
+ <!-- END Row -->
+                  <!-- BEGIN NoRecords -->
+                  <tr class="NoRecords">
+                    <td colspan="10">No records</td> 
+                  </tr>
+ <!-- END NoRecords -->
+                  <tr class="Footer">
+                    <td style="TEXT-ALIGN: right" colspan="10">
+                      <!-- BEGIN Button Button_Submit --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GCheckListButton_Submit" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Submit -->
+                      <!-- BEGIN Button Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GCheckListCancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Cancel --></td> 
+                  </tr>
+ 
+                </table>
+ </td> 
+            </tr>
+ 
+          </table>
+ 
+        </form>
+ <!-- END EditableGrid GCheckList --><br>
+        <br>
+      </div>
+ </td> 
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

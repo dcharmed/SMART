@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ADMIN::SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-9722A627
+</script>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src="../ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//RReferenceCodeButton_Delete_OnClick @20-52C63F06
+function RReferenceCodeButton_Delete_OnClick()
+{
+    var result = true;
+//End RReferenceCodeButton_Delete_OnClick
+
+//Confirmation Message @21-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close RReferenceCodeButton_Delete_OnClick @20-BC33A33A
+    return result;
+}
+//End Close RReferenceCodeButton_Delete_OnClick
+
+//RReferenceCodeButton_Cancel_OnClick @22-39648659
+function RReferenceCodeButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RReferenceCodeButton_Cancel_OnClick
+
+//bind_events @1-86B3A24B
+function bind_events() {
+    if (functionExists("adminheader_bind_events")) adminheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("RReferenceCodeButton_Delete", "click", RReferenceCodeButton_Delete_OnClick);
+    addEventHandler("RReferenceCodeButton_Cancel", "click", RReferenceCodeButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="../Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2">
+      <p><div class="H1">ADMINISTRATION PAGE</div></p>
+		<!-- BEGIN Record OptReferenceCode -->
+		<form id="OptReferenceCode" method="post" name="{HTMLFormName}" action="{Action}">
+		  <table border="0" cellspacing="0" cellpadding="0">
+		    <tr>
+		      <td valign="top">
+		        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+		          <tr>
+		            <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+		            <td class="th"><strong>Search GReference Code </strong></td> 
+		            <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+		          </tr>
+ 
+		        </table>
+ 
+		        <table class="Record" cellspacing="0" cellpadding="0">
+		          <!-- BEGIN Error -->
+		          <tr class="Error">
+		            <td colspan="3">{Error}</td> 
+		          </tr>
+		 <!-- END Error -->
+		          <tr class="Controls">
+		            <td class="th"><label for="OptReferenceCodetype">Code Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+		            <td>
+		              <select id="OptReferenceCodetype" name="{type_Name}">
+		                <option selected value="">Select Value</option>
+		 {type_Options} 
+		              </select>
+		 </td> 
+		            <td>
+		              <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="OptReferenceCodeButton_DoSearch" value="Search" alt="Search" src="../Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+		          </tr>
+ 
+		        </table>
+		 </td> 
+		    </tr>
+ 
+		  </table>
+		</form>
+		<!-- END Record OptReferenceCode -->
+        <table border="1" cellpadding="10" width="100%">
+        <tr>
+          <td valign="top" width="40%">
+            <!-- BEGIN Grid GReferenceCode -->
+            <table border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="top">
+                  <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                      <td class="th"><strong>List of Smart Referencecode </strong></td> 
+                      <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                    </tr>
+                  </table>
+ 
+                  <table class="Grid" cellspacing="0" cellpadding="0">
+                    <tr class="Caption">
+                      <th scope="col">No.</th>
+ 
+                      <th scope="col">Ref Description</th>
+ 
+                      <th scope="col">Ref Rank</th>
+ 
+                      <th scope="col">Ref Type</th>
+ 
+                      <th scope="col">Ref Value</th>
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <tr {GReferenceCode:rowStyle}>
+                      <td style="TEXT-ALIGN: left">{lblNumber}&nbsp;</td> 
+                      <td>
+                        <!-- BEGIN Link ref_description --><a href="{ref_description_Src}" id="GReferenceCoderef_description_{GReferenceCode:rowNumber}">{ref_description}</a><!-- END Link ref_description -->
+						&nbsp;<!-- BEGIN Link linkSubCat --><a href="{linkSubCat_Src}" id="GReferenceCodelinkSubCat_{GReferenceCode:rowNumber}"> List of Tag-Related</a><!-- END Link linkSubCat -->
+						</td> 
+                      <td style="TEXT-ALIGN: left">{ref_rank}&nbsp;</td> 
+                      <td>{ref_type}&nbsp;</td> 
+                      <td>{ref_value}&nbsp;</td>
+                    </tr>
+ 					<!-- END Row -->
+                    <!-- BEGIN Separator -->
+                    <tr class="Separator">
+                      <td colspan="5"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                    </tr>
+                    <!-- END Separator -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                      <td colspan="5">No records</td>
+                    </tr>
+                    <!-- END NoRecords -->
+                    <tr class="Footer">
+                      <td colspan="5"><a href="{smart_referencecode_Insert}" id="GReferenceCodesmart_referencecode_Insert_{GReferenceCode:rowNumber}"><img src="../Styles/smartStyleTurqoise/Images/en/ButtonNewRecord.gif" style="border: 0px;" alt="{smart_referencecode_Insert}"></a>&nbsp; 
+                        <!-- BEGIN Navigator Navigator -->
+                        <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="../Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                        <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="../Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                        <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="../Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                        <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="../Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                        <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="../Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                        <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="../Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                        <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="../Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                        <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="../Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- END Grid GReferenceCode --></td> 
+          <td valign="top">
+            <!-- BEGIN Record RReferenceCode -->
+            <form id="RReferenceCode" method="post" name="{HTMLFormName}" action="{Action}">
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>Add/Edit Smart Referencecode </strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <!-- BEGIN Error -->
+                      <tr class="Error">
+                        <td colspan="2">{Error}</td>
+                      </tr>
+                      <!-- END Error -->
+                      <tr class="Controls">
+                        <td class="th"><label for="RReferenceCoderef_rank">Ref Rank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td><input id="RReferenceCoderef_rank" value="{ref_rank}" maxlength="10" size="10" name="{ref_rank_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RReferenceCoderef_type">Ref Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td><input id="RReferenceCoderef_type" value="{ref_type}" maxlength="50" size="50" name="{ref_type_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RReferenceCoderef_value">Ref Value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td><input id="RReferenceCoderef_value" value="{ref_value}" maxlength="50" size="50" name="{ref_value_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RReferenceCoderef_description">Ref Description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td><input id="RReferenceCoderef_description" value="{ref_description}" maxlength="250" size="50" name="{ref_description_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Bottom">
+                        <td colspan="2" align="right">
+                          <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RReferenceCodeButton_Insert" value="Add" alt="Add" src="../Styles/{CCS_Style}/Images/en/ButtonInsert.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                          <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RReferenceCodeButton_Update" value="Submit" alt="Submit" src="../Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                          <!-- BEGIN Button Button_Delete --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RReferenceCodeButton_Delete" value="Delete" alt="Delete" src="../Styles/{CCS_Style}/Images/en/ButtonDelete.gif" type="image" name="{Button_Name}"><!-- END Button Button_Delete -->
+                          <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RReferenceCodeButton_Cancel" value="Cancel" alt="Cancel" src="../Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <!-- END Record RReferenceCode --></td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

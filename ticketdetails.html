@@ -1,0 +1,1035 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A278F54C
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/ajaxpanel.js" type="text/javascript"></script>
+<script language="JavaScript" src="Services.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/prototype_ccs.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="ticketdetails_style.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-32314C52
+
+var smart_ticket_DatePicker_tckt_r_date = new Object(); 
+smart_ticket_DatePicker_tckt_r_date.format           = "GeneralDate";
+smart_ticket_DatePicker_tckt_r_date.style            = "Styles/{CCS_Style}/Style.css";
+smart_ticket_DatePicker_tckt_r_date.relativePathPart = "";
+smart_ticket_DatePicker_tckt_r_date.themeVersion = "3.0";
+
+var smart_ticket_DatePicker_tckt_c_date = new Object(); 
+smart_ticket_DatePicker_tckt_c_date.format           = "ShortDate";
+smart_ticket_DatePicker_tckt_c_date.style            = "Styles/{CCS_Style}/Style.css";
+smart_ticket_DatePicker_tckt_c_date.relativePathPart = "";
+smart_ticket_DatePicker_tckt_c_date.themeVersion = "3.0";
+
+var RResNote_DatePicker_rsltn_date = new Object(); 
+RResNote_DatePicker_rsltn_date.format           = "GeneralDate";
+RResNote_DatePicker_rsltn_date.style            = "Styles/{CCS_Style}/Style.css";
+RResNote_DatePicker_rsltn_date.relativePathPart = "";
+RResNote_DatePicker_rsltn_date.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//Panel1smart_ticketButton_Cancel_OnClick @8-2AE1DA35
+function Panel1smart_ticketButton_Cancel_OnClick()
+{
+    var result = true;
+//End Panel1smart_ticketButton_Cancel_OnClick
+
+//Custom Code @334-2A29BDB7
+    // -------------------------
+    if(confirm('Do you want to discard changes?')) {
+                window.location = "ticketlist.php";
+        } else {
+                return false;
+        }
+    // -------------------------
+//End Custom Code
+
+//Close Panel1smart_ticketButton_Cancel_OnClick @8-AEF500E0
+    disableValidation = true;
+    return result;
+}
+//End Close Panel1smart_ticketButton_Cancel_OnClick
+
+//Panel1smart_ticketbygroupid_OnChange @26-EFA94800
+function Panel1smart_ticketbygroupid_OnChange()
+{
+    var result = true;
+//End Panel1smart_ticketbygroupid_OnChange
+
+//Custom Code @301-2A29BDB7
+    // -------------------------
+    var dropdownIndex = document.getElementById('Panel1smart_ticketbygroupid').selectedIndex;
+    var raisedbygroup = document.getElementById('Panel1smart_ticketbygroupid')[dropdownIndex].value;
+        if(raisedbygroup == 3) {
+                document.getElementById('Panel1smart_ticketbyEngineer').style.display = '';
+                document.getElementById('Panel1smart_ticketbyadukom').style.display = 'none';
+                document.getElementById('Panel1smart_ticketbyadukomid').style.display = 'none';
+        } else if(raisedbygroup == 6) {
+                document.getElementById('Panel1smart_ticketbyEngineer').style.display = 'none';
+                document.getElementById('Panel1smart_ticketbyadukom').style.display = '';
+                document.getElementById('Panel1smart_ticketbyadukomid').style.display = '';
+        } else {
+                document.getElementById('Panel1smart_ticketbyEngineer').style.display = 'none';
+                document.getElementById('Panel1smart_ticketbyadukom').style.display = 'none';
+                document.getElementById('Panel1smart_ticketbyadukomid').style.display = 'none';
+        } 
+    // -------------------------
+//End Custom Code
+
+//Close Panel1smart_ticketbygroupid_OnChange @26-BC33A33A
+    return result;
+}
+//End Close Panel1smart_ticketbygroupid_OnChange
+
+//Panel1smart_tickettckt_branch_OnChange @14-C780D4AE
+function Panel1smart_tickettckt_branch_OnChange()
+{
+    var result = true;
+//End Panel1smart_tickettckt_branch_OnChange
+
+//Custom Code @261-2A29BDB7
+    // -------------------------
+    var dropdownIndex = document.getElementById('Panel1smart_tickettckt_branch').selectedIndex;
+    var tcktBranch = document.getElementById('Panel1smart_tickettckt_branch')[dropdownIndex].value;
+        var tcktRef = document.getElementById('Panel1smart_tickettckt_refnumber').value.substr(0,8);
+        if(tcktBranch.substr(0,1)== "X") {
+                var sitecode = "O";
+        } else {
+                var sitecode = "L";
+        }
+        document.getElementById('Panel1smart_tickettckt_refnumber').value = tcktRef + "("+sitecode+")";
+                
+    // -------------------------
+//End Custom Code
+
+//Close Panel1smart_tickettckt_branch_OnChange @14-BC33A33A
+    return result;
+}
+//End Close Panel1smart_tickettckt_branch_OnChange
+
+//Panel1smart_ticket_OnLoad @5-1FFB7607
+function Panel1smart_ticket_OnLoad(form)
+{
+    var result = true;
+//End Panel1smart_ticket_OnLoad
+
+//Custom Code @129-2A29BDB7
+    // -------------------------
+    if ($("Panel1smart_ticketEditStatuslinkStatus") != null)
+    $("Panel1smart_ticketEditStatuslinkStatus").onclick = function()
+    {
+        Panel2ShowModal1_show();
+        return false;
+    }
+        //alert("sasdaD"+$("Panel1smart_ticketid").value);
+    if ($("Panel1smart_ticketid").value == null) {
+                $("Panel1smart_tickettckt_equipment").disabled = true;
+                $("Panel1smart_tickettckt_toppanid").disabled = true;
+        } else {
+                $("Panel1smart_tickettckt_equipment").disabled = false;
+                $("Panel1smart_tickettckt_toppanid").disabled = false;
+        }
+    var dropdownIndex = document.getElementById('Panel1smart_ticketbygroupid').selectedIndex;
+    var raisedbygroup = document.getElementById('Panel1smart_ticketbygroupid')[dropdownIndex].value;
+        if(raisedbygroup == 3) {
+                document.getElementById('Panel1smart_ticketbyEngineer').style.display = '';
+                document.getElementById('Panel1smart_ticketbyadukom').style.display = 'none';
+                document.getElementById('Panel1smart_ticketbyadukomid').style.display = 'none';
+        } else if(raisedbygroup == 6) {
+                document.getElementById('Panel1smart_ticketbyEngineer').style.display = 'none';
+                document.getElementById('Panel1smart_ticketbyadukom').style.display = '';
+                document.getElementById('Panel1smart_ticketbyadukomid').style.display = '';
+        } else if(raisedbygroup == 4) {
+                document.getElementById('Panel1smart_ticketbyEngineer').style.display = 'none';
+                document.getElementById('Panel1smart_ticketbyadukom').style.display = 'none';
+                document.getElementById('Panel1smart_ticketbyadukomid').style.display = 'none';
+        }
+    // -------------------------
+//End Custom Code
+
+//Close Panel1smart_ticket_OnLoad @5-BC33A33A
+    return result;
+}
+//End Close Panel1smart_ticket_OnLoad
+
+//Panel1RResNoteButton_Cancel_OnClick @268-E7E669B6
+function Panel1RResNoteButton_Cancel_OnClick()
+{
+    var result = true;
+//End Panel1RResNoteButton_Cancel_OnClick
+
+//Confirmation Message @295-6A5CEB1C
+    return confirm('Do you want to discard changes?');
+//End Confirmation Message
+
+//Close Panel1RResNoteButton_Cancel_OnClick @268-AEF500E0
+    disableValidation = true;
+    return result;
+}
+//End Close Panel1RResNoteButton_Cancel_OnClick
+
+//Panel2smart_tasktask_newstatus_OnChange @94-3E3C4480
+function Panel2smart_tasktask_newstatus_OnChange()
+{
+    var result = true;
+//End Panel2smart_tasktask_newstatus_OnChange
+
+//Custom Code @30-2A29BDB7
+    // -------------------------
+    var dropdownIndex = document.getElementById('Panel2smart_tasktask_newstatus').selectedIndex;
+    var newstatus = document.getElementById('Panel2smart_tasktask_newstatus')[dropdownIndex].value;
+
+    if(newstatus == 2) {
+        document.getElementById("trAssignTo").style.display = '';
+                document.getElementById("trMethod").style.display = 'none';
+        document.getElementById("trReAssignTo").style.display = 'none';
+        document.getElementById("trReason").style.display = '';
+                document.getElementById("trAdukom").style.display = 'none';
+    } else if(newstatus == 3) {
+        document.getElementById("trAssignTo").style.display = '';
+        document.getElementById("trReAssignTo").style.display = '';
+        document.getElementById("trReason").style.display = '';
+        document.getElementById("trAdukom").style.display = 'none';
+                document.getElementById("trMethod").style.display = 'none';
+    }  else if(newstatus == 4) {
+            document.getElementById("trAssignTo").style.display = '';
+            document.getElementById("trReAssignTo").style.display = 'none';
+            document.getElementById("trReason").style.display = '';
+        document.getElementById("trAdukom").style.display = 'none';
+                document.getElementById("trMethod").style.display = 'none';
+    } else if(newstatus == 5 || newstatus == 6) {
+        document.getElementById("trAssignTo").style.display = 'none';
+        document.getElementById("trReAssignTo").style.display = 'none';
+        document.getElementById("trReason").style.display = '';
+        document.getElementById("trAdukom").style.display = 'none';
+                document.getElementById("trMethod").style.display = 'none';
+    } else if(newstatus == 7) {
+        document.getElementById("trAssignTo").style.display = 'none';
+        document.getElementById("trReAssignTo").style.display = 'none';
+        document.getElementById("trReason").style.display = 'none';
+        document.getElementById("trAdukom").style.display = 'none';
+                document.getElementById("trMethod").style.display = '';
+    } else {
+        document.getElementById("trAssignTo").style.display = '';
+        document.getElementById("trReAssignTo").style.display = 'none';
+        document.getElementById("trReason").style.display = '';
+        document.getElementById("trAdukom").style.display = 'none';
+                document.getElementById("trMethod").style.display = 'none';
+    }
+
+
+    // -------------------------
+//End Custom Code
+
+//Close Panel2smart_tasktask_newstatus_OnChange @94-BC33A33A
+    return result;
+}
+//End Close Panel2smart_tasktask_newstatus_OnChange
+
+//Panel2smart_task_OnLoad @90-122B4482
+function Panel2smart_task_OnLoad(form)
+{
+    var result = true;
+//End Panel2smart_task_OnLoad
+
+//Custom Code @128-2A29BDB7
+    // -------------------------
+    if (document.getElementById("errors") == null) {
+        Panel2ShowModal1_hide();
+        Panel1UpdatePanel1_refresh();
+    } else {
+        Panel2ShowModal1_show();
+    }
+    $("Panel2smart_taskButton_Cancel").onclick = function() {
+        Panel2UpdatePanel_refresh();
+        Panel2ShowModal1_hide();
+        return false;
+    }
+    // -------------------------
+//End Custom Code
+
+//Close Panel2smart_task_OnLoad @90-BC33A33A
+    return result;
+}
+//End Close Panel2smart_task_OnLoad
+
+//Panel2smart_taskButton_Cancel_OnClick @92-0752F572
+function Panel2smart_taskButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End Panel2smart_taskButton_Cancel_OnClick
+
+//Start Panel1 @111-C2C50D0F
+function Panel1_start(sender) {
+    var panel = $("Panel1");
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Panel1_bind(sender);
+}
+//End Start Panel1
+
+//Refresh Panel1 @111-2D755A3F
+function Panel1_bind(sender) {
+    addEventHandler("Panel1smart_ticketstate", "change", Panel1smart_tickettckt_branchPTDependentListBox1_start);
+    addEventHandler("Panel1smart_ticketstate", "load", Panel1smart_tickettckt_branchPTDependentListBox1_start);
+    addEventHandler("Panel1smart_tickettckt_subcat", "change", Panel1smart_tickettckt_relatedPTDependentListBox3_start);
+    addEventHandler("Panel1smart_tickettckt_subcat", "load", Panel1smart_tickettckt_relatedPTDependentListBox3_start);
+    addEventHandler("Panel1smart_tickettckt_equipment", "change", Panel1smart_tickettckt_toppanidPTDependentListBox4_start);
+    addEventHandler("Panel1smart_tickettckt_equipment", "load", Panel1smart_tickettckt_toppanidPTDependentListBox4_start);
+    addEventHandler("Panel1smart_tickettckt_toppanid", "change", Panel1smart_tickettckt_toppanidPTAutoFill1_start);
+    addEventHandler("Panel1smart_tickettckt_category", "change", Panel1smart_tickettckt_subcatPTDependentListBox5_start);
+    addEventHandler("Panel1smart_tickettckt_category", "load", Panel1smart_tickettckt_subcatPTDependentListBox5_start);
+    addEventHandler("Panel1smart_ticketEditStatus", "click", Panel1ClientCustomCode2_start);
+    addEventHandler("Panel1smart_ticketButton_Cancel", "click", Panel1smart_ticketButton_Cancel_OnClick);
+    addEventHandler("Panel1smart_ticketbygroupid", "change", Panel1smart_ticketbygroupid_OnChange);
+    addEventHandler("Panel1smart_tickettckt_branch", "change", Panel1smart_tickettckt_branch_OnChange);
+    addEventHandler("Panel1smart_ticket", "load", Panel1smart_ticket_OnLoad);
+    addEventHandler("Panel1RResNoteButton_Cancel", "click", Panel1RResNoteButton_Cancel_OnClick);
+}
+//End Refresh Panel1
+
+//Panel1smart_tickettckt_branchPTDependentListBox1 Start @148-9DEAC44F
+function Panel1smart_tickettckt_branchPTDependentListBox1_start(sender) {
+    var dependentElement = $("Panel1smart_tickettckt_branch" + sender.id.substring(23));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/ticketdetails_smart_ticket_tckt_branch_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End Panel1smart_tickettckt_branchPTDependentListBox1 Start
+
+//Panel1smart_tickettckt_relatedPTDependentListBox3 Start @157-6CF61345
+function Panel1smart_tickettckt_relatedPTDependentListBox3_start(sender) {
+    var dependentElement = $("Panel1smart_tickettckt_related" + sender.id.substring(29));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/ticketdetails_smart_ticket_tckt_related_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End Panel1smart_tickettckt_relatedPTDependentListBox3 Start
+
+//Panel1smart_tickettckt_toppanidPTDependentListBox4 Start @377-2447F610
+function Panel1smart_tickettckt_toppanidPTDependentListBox4_start(sender) {
+        
+    var branchElement = $("Panel1smart_tickettckt_branch").value;
+    var dependentElement = $("Panel1smart_tickettckt_toppanid" + sender.id.substring(32));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/ticketdetails_smart_ticket_tckt_toppanid_PTDependentListBox1.php?branch="+branchElement+"&keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End Panel1smart_tickettckt_toppanidPTDependentListBox4 Start
+
+//PTAutoFill1 Loading @379-B4A0F441
+function Panel1smart_tickettckt_toppanidPTAutoFill1_start(sender) {
+    var branchElement = $("Panel1smart_tickettckt_branch").value;
+    var equipmentElement = $("Panel1smart_tickettckt_equipment").value;
+    new Ajax.Request("services/ticketdetails_smart_ticket_tckt_toppanid_PTAutoFill1.php?qcode="+equipmentElement+"&branch="+branchElement+"&keyword=" + encodeURIComponent($("Panel1smart_tickettckt_toppanid").value).replace(/'/g, "%27"), {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            if (typeof(valuesRow) != "undefined") {
+                getSameLevelCtl("Panel1smart_tickettckt_eqpmtserial", sender).value = valuesRow["eqtop_serialnumber"];
+            } else {
+                getSameLevelCtl("Panel1smart_tickettckt_eqpmtserial", sender).value = "";
+            }
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//Panel1smart_tickettckt_subcatPTDependentListBox5 Start @155-239B7A5D
+function Panel1smart_tickettckt_subcatPTDependentListBox5_start(sender) {
+    var dependentElement = $("Panel1smart_tickettckt_subcat" + sender.id.substring(31));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/ticketdetails_smart_ticket_tckt_subcat_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End Panel1smart_tickettckt_subcatPTDependentListBox5 Start
+
+//Refresh Panel1UpdatePanel1 @112-93CEE98E
+function Panel1UpdatePanel1_refresh(sender) {
+    AjaxPanel.reload($("Panel1"));
+}
+//End Refresh Panel1UpdatePanel1
+
+//Handle Panel1ClientCustomCode2 @135-578F703A
+function Panel1ClientCustomCode2_start(sender) {
+//End Handle Panel1ClientCustomCode2
+
+//Custom Panel1ClientCustomCode2 @135-2A29BDB7
+// -------------------------
+    // Write your own code here.
+// -------------------------
+//End Custom Panel1ClientCustomCode2
+
+//Panel1ClientCustomCode2 Tail @135-FCB6E20C
+}
+//End Panel1ClientCustomCode2 Tail
+
+//Start Panel2 @114-E7ADF65A
+function Panel2_start(sender) {
+    var panel = $("Panel2");
+    panel.onrefresh = function() {
+        Panel2ClientCustomCode1_start(sender);
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Panel2_bind(sender);
+}
+//End Start Panel2
+
+//Refresh Panel2 @114-63393FFF
+function Panel2_bind(sender) {
+    addEventHandler("Panel2smart_task", "submit", Panel1UpdatePanel1_refresh);
+    addEventHandler("Panel2smart_task", "load", Panel2smart_task_OnLoad);
+    addEventHandler("Panel2smart_tasktask_newstatus", "change", Panel2smart_tasktask_newstatus_OnChange);
+    addEventHandler("Panel2smart_taskButton_Cancel", "click", Panel2smart_taskButton_Cancel_OnClick);
+    document.getElementById("Panel2").className="ModalShowDiv";
+}
+//End Refresh Panel2
+
+//Refresh Panel2UpdatePanel @115-3A0BFB2B
+function Panel2UpdatePanel_refresh(sender) {
+    AjaxPanel.reload($("Panel2"));
+}
+//End Refresh Panel2UpdatePanel
+
+//Initialize Panel2ShowModal1 @141-C8BA26FE
+function Panel2ShowModal1_hide() {
+    removeOpacity();
+    el = document.getElementById("Panel2");
+    el.style.display = "none";
+}
+function Panel2ShowModal1_show() {
+    addOpacity();
+    el = document.getElementById("Panel2");
+    el.style.display = "block";
+}
+//End Initialize Panel2ShowModal1
+
+//Handle Panel2ClientCustomCode1 @345-255075DD
+function Panel2ClientCustomCode1_start(sender) {
+//End Handle Panel2ClientCustomCode1
+
+//Custom Panel2ClientCustomCode1 @345-2A29BDB7
+// -------------------------
+    $("Panel2").location = window.location.href;
+// -------------------------
+//End Custom Panel2ClientCustomCode1
+
+//Panel2ClientCustomCode1 Tail @345-FCB6E20C
+}
+//End Panel2ClientCustomCode1 Tail
+
+//bind_events @1-5CF413E1
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    Panel1_start(window);
+    Panel2_start(window);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <div class="H1">
+        TICKET DETAILS</span> 
+      </div>
+      <br>
+      Please fill up form below or click&nbsp;&nbsp;<a href="{ImageLink1}" id="ImageLink1"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" onclick="return confirm(&quot;Are you sure you want to leave this page?&quot;)" alt="{ImageLink1}" align="absMiddle" src="Styles/smartStyleTurqoise/Images/en/ButtonBackToList.gif"></a>&nbsp;to go back to the ticket list page. 
+      <p>
+      <table border="0" cellpadding="2" width="100%">
+        <tr>
+          <td>
+            <!-- BEGIN Panel Panel1 -->
+            <!-- BEGIN Record smart_ticket -->
+            <form id="Panel1smart_ticket" method="post" name="{HTMLFormName}" action="{Action}">
+              <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>Ticket Details : {lblTicketNumber}</strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <!-- BEGIN Error -->
+                      <tr class="Error">
+                        <td colspan="4">{Error}</td>
+                      </tr>
+                      <!-- END Error -->
+                      <tr class="Controls">
+                        <td class="th" width="10%"><label for="Panel1smart_tickettckt_refnumber">Ref. Number&nbsp;<strong><font color="#ff0000">*</font></strong></label></td> 
+                        <td width="35%"><input id="Panel1smart_tickettckt_refnumber" value="{tckt_refnumber}" maxlength="200" size="10" name="{tckt_refnumber_Name}">&nbsp; <input style="WIDTH: 74px; HEIGHT: 22px" id="Panel1smart_ticketid" value="{id}" size="10" type="hidden" name="{id_Name}">{lblNoteRef}</td> 
+                        <td width="10%"><label for="Panel1smart_tickettckt_branch">State &amp; Branch <strong><font color="#ff0000">*</font></strong></label></td> 
+                        <td>
+                          <select id="Panel1smart_ticketstate" name="{state_Name}">
+                            <option selected value="">Select Value</option>
+                            {state_Options}
+                          </select>
+ 
+                          <!-- BEGIN ListBox tckt_branch -->
+                          <select id="Panel1smart_tickettckt_branch" name="{tckt_branch_Name}">
+                            <option selected value="">Select Value</option>
+                            {tckt_branch_Options}
+                          </select>
+ <!-- END ListBox tckt_branch --></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="Panel1smart_tickettckt_status">Status</label></td> 
+                        <td>
+                          <select id="Panel1smart_tickettckt_status" disabled name="{tckt_status_Name}">
+                            <option selected value="">Select Value</option>
+                            {tckt_status_Options}
+                          </select>
+ <input style="WIDTH: 62px; HEIGHT: 22px" id="Panel1smart_tickethid_status" value="{hid_status}" size="8" type="hidden" name="{hid_status_Name}"><label for="Panel1smart_tickettckt_followup" style="display: none;">CheckBox1</label>&nbsp;To Follow-up?&nbsp;<input id="Panel1smart_tickettckt_followup" value="1" type="checkbox" name="{tckt_followup_Name}" {tckt_followup}>
+                          <!-- BEGIN Panel EditStatus -->&nbsp;<a href="{linkStatus_Src}" id="Panel1smart_ticketEditStatuslinkStatus">Update Status</a><!-- END Panel EditStatus --></td> 
+                        <td>Severity <strong><font color="#ff0000">*</font></strong></td> 
+                        <td>
+                          <select id="Panel1smart_tickettckt_severity" name="{tckt_severity_Name}">
+                            <option selected value="">Select Value</option>
+                            {tckt_severity_Options}
+                          </select>
+ </td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="Panel1smart_tickettckt_r_date">Date <strong><font color="#ff0000">*</font></strong></label></td> 
+                        <td><input id="Panel1smart_tickettckt_r_date" value="{tckt_r_date}" maxlength="100" size="25" name="{tckt_r_date_Name}">
+                          <!-- BEGIN DatePicker DatePicker_tckt_r_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Panel1smart_ticketDatePicker_tckt_r_date"><img id="Panel1smart_ticketDatePicker_tckt_r_date_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_tckt_r_date --></td> 
+                        <td>Category / Sub-Category</td> 
+                        <td>
+                          <select id="Panel1smart_tickettckt_category" name="{tckt_category_Name}">
+                            <option selected value="">Select Value</option>
+                            {tckt_category_Options}
+                          </select>
+ 
+                          <select id="Panel1smart_tickettckt_subcat" name="{tckt_subcat_Name}">
+                            <option selected value="">Select Value</option>
+                            {tckt_subcat_Options}
+                          </select>
+ </td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="Panel1smart_tickettckt_eqpmtserial">Equipment </label></td> 
+                        <td>
+                          <!-- BEGIN ListBox tckt_equipment -->
+                          <select id="Panel1smart_tickettckt_equipment" disabled name="{tckt_equipment_Name}">
+                            <option selected value="">Select Value</option>
+                            {tckt_equipment_Options}
+                          </select>
+ <!-- END ListBox tckt_equipment --></td> 
+                        <td>Related To</td> 
+                        <td>
+                          <select id="Panel1smart_tickettckt_related" name="{tckt_related_Name}">
+                            <option selected value="">Select Value</option>
+                            {tckt_related_Options}
+                          </select>
+ <input style="WIDTH: 27px; HEIGHT: 22px" id="Panel1smart_ticketdatemodified" value="{datemodified}" size="2" type="hidden" name="{datemodified_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="Panel1smart_tickettckt_toppanid">ToppanID / Serial Number</label></td> 
+                        <td>
+                          <select id="Panel1smart_tickettckt_toppanid" disabled name="{tckt_toppanid_Name}">
+                            <option selected value="">Select Value</option>
+                            {tckt_toppanid_Options}
+                          </select>
+ &nbsp;&nbsp; <input id="Panel1smart_tickettckt_eqpmtserial" value="{tckt_eqpmtserial}" maxlength="200" size="50" name="{tckt_eqpmtserial_Name}"></td> 
+                        <td>Engineer ID</td> 
+                        <td><input id="Panel1smart_tickettckt_engineer" disabled value="{tckt_engineer}" maxlength="100" name="{tckt_engineer_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="Panel1smart_tickettckt_esc">Esc</label></td> 
+                        <td>
+                          <select id="Panel1smart_tickettckt_esc" name="{tckt_esc_Name}">
+                            <option selected value="">Select Value</option>
+                            {tckt_esc_Options}
+                          </select>
+ </td> 
+                        <td>Resolution Method</td> 
+                        <td><label for="Panel1smart_tickettckt_method" style="display: none;">TextBox1</label><input id="Panel1smart_tickettckt_method" disabled value="{tckt_method}" name="{tckt_method_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="Panel1smart_tickettckt_description">Description <strong><font color="#ff0000">*</font></strong></label></td> 
+                        <td><textarea id="Panel1smart_tickettckt_description" rows="5" cols="40" name="{tckt_description_Name}">{tckt_description}</textarea></td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th" colspan="4">
+                          <hr></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th" colspan="4">
+                          <table class="Grid" border="0" cellspacing="0" cellpadding="2" width="100%">
+                            <tr>
+                              <td colspan="6"><strong>-&nbsp;RAISED-</strong></td>
+                            </tr>
+ 
+                            <tr class="Caption">
+                              <th width="10%" scope="col">&nbsp;<strong>DATE</strong></th>
+ 
+                              <th width="10%" scope="col"><strong>USER&nbsp;<font color="#ff0000">*</font></strong></th>
+ 
+                              <th width="10%" scope="col"><strong>&nbsp;CONTACT <font color="#ff0000">*</font></strong></th>
+ 
+                              <th width="10%" scope="col">&nbsp;<strong>HELPDESK <font color="#ff0000">*</font></strong></th>
+ 
+                              <th width="10%" scope="col"><strong>&nbsp;BY</strong></th>
+ 
+                              <th scope="col"><strong>&nbsp;ADD. INFO</strong></th>
+                            </tr>
+ 
+                            <tr>
+                              <td>{raised_date}</td> 
+                              <td><label for="Panel1smart_ticketcustomer" style="display: none;">&nbsp;</label><input id="Panel1smart_ticketcustomer" value="{customer}" size="25" name="{customer_Name}"></td> 
+                              <td><input id="Panel1smart_ticketbycontact" value="{bycontact}" size="12" name="{bycontact_Name}">&nbsp;/<br>
+                                <input id="Panel1smart_ticketbycontact2" value="{bycontact2}" size="12" name="{bycontact2_Name}"></td> 
+                              <td><input id="Panel1smart_tickethelpdeskName" disabled value="{helpdeskName}" name="{helpdeskName_Name}"><input style="WIDTH: 53px; HEIGHT: 22px" id="Panel1smart_ticketreportedby" value="{reportedby}" size="7" type="hidden" name="{reportedby_Name}"></td> 
+                              <td>
+                                <select id="Panel1smart_ticketbygroupid" name="{bygroupid_Name}">
+                                  <option selected value="">Select Value</option>
+                                  {bygroupid_Options}
+                                </select>
+ </td> 
+                              <td>Engineer: 
+                                <!-- BEGIN ListBox byEngineer -->
+                                <select style="DISPLAY: none" id="Panel1smart_ticketbyEngineer" name="{byEngineer_Name}">
+                                  <option selected value="">Select Value</option>
+                                  {byEngineer_Options}
+                                </select>
+ <!-- END ListBox byEngineer -->Adukom #: 
+                                <!-- BEGIN TextBox byadukom --><input style="DISPLAY: none" id="Panel1smart_ticketbyadukom" value="{byadukom}" size="10" name="{byadukom_Name}"><!-- END TextBox byadukom -->&nbsp;Adukom ID: 
+                                <!-- BEGIN TextBox byadukomid --><input style="DISPLAY: none" id="Panel1smart_ticketbyadukomid" value="{byadukomid}" name="{byadukomid_Name}"><!-- END TextBox byadukomid --></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th" colspan="4">
+                          <table class="Grid" border="0" cellspacing="0" cellpadding="2" width="100%">
+                            <tr>
+                              <td colspan="4"><strong>-&nbsp;CLOSED-</strong></td>
+                            </tr>
+ 
+                            <tr class="Caption">
+                              <th width="15%" scope="col">&nbsp;<strong>DATE</strong></th>
+ 
+                              <th width="10%" scope="col"><strong>&nbsp;USER</strong></th>
+ 
+                              <th width="10%" scope="col"><strong>&nbsp;HELPDESK ID</strong></th>
+ 
+                              <th scope="col"><strong>&nbsp;ADUKOM ID</strong></th>
+                            </tr>
+ 
+                            <tr>
+                              <td>
+                                <!-- BEGIN TextBox tckt_c_date --><input id="Panel1smart_tickettckt_c_date" value="{tckt_c_date}" size="15" name="{tckt_c_date_Name}"><!-- END TextBox tckt_c_date -->&nbsp; 
+                                <!-- BEGIN DatePicker DatePicker_tckt_c_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Panel1smart_ticketDatePicker_tckt_c_date"><img id="Panel1smart_ticketDatePicker_tckt_c_date_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_tckt_c_date --></td> 
+                              <td>
+                                <!-- BEGIN TextBox closedby --><input id="Panel1smart_ticketclosedby" value="{closedby}" size="25" name="{closedby_Name}"><!-- END TextBox closedby --></td> 
+                              <td>
+                                <!-- BEGIN TextBox closedreportedbyname --><input id="Panel1smart_ticketclosedreportedbyname" disabled value="{closedreportedbyname}" size="15" name="{closedreportedbyname_Name}"><!-- END TextBox closedreportedbyname --><input style="WIDTH: 20px; HEIGHT: 22px" id="Panel1smart_ticketclosedreportedbyid" value="{closedreportedbyid}" size="2" type="hidden" name="{closedreportedbyid_Name}"></td> 
+                              <td>
+                                <!-- BEGIN TextBox closedadukom --><input id="Panel1smart_ticketclosedadukom" value="{closedadukom}" name="{closedadukom_Name}"><!-- END TextBox closedadukom --></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td colspan="4" align="right">
+                          <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel1smart_ticketButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                          <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel1smart_ticketButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                          <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel1smart_ticketButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <!-- END Record smart_ticket -->
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td valign="top" width="60%">
+                  <!-- BEGIN Grid GResNote -->
+                  <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                    <tr>
+                      <td valign="top">
+                        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                            <td class="th"><strong>Resolution Notes For Ticket : {lblTicketNumberResNote}&nbsp;</strong></td> 
+                            <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                          </tr>
+                        </table>
+ 
+                        <table class="Grid" cellspacing="0" cellpadding="0">
+                          <tr class="Caption">
+                            <th style="TEXT-ALIGN: center" width="3%" scope="col">&nbsp;Bil.</th>
+ 
+                            <th style="TEXT-ALIGN: center" width="5%" scope="col">&nbsp;Notes<br>
+                            Type</th>
+ 
+                            <th style="TEXT-ALIGN: center" width="15%" scope="col">Date / Time</th>
+ 
+                            <th width="20%" scope="col">Action Taken</th>
+ 
+                            <th width="20%" scope="col">Planning / <em>Remark</em></th>
+ 
+                            <th style="TEXT-ALIGN: center" width="10%" scope="col">Eng</th>
+ 
+                            <th style="TEXT-ALIGN: center" width="10%" scope="col">SPart&nbsp;</th>
+ 
+                            <th style="TEXT-ALIGN: center" width="10%" scope="col">Eqmt&nbsp;</th>
+ 
+                            <th style="TEXT-ALIGN: center" width="10%" scope="col">Attch&nbsp;</th>
+                          </tr>
+ 
+                          <!-- BEGIN Row -->
+                          <tr {GResNote:rowStyle}>
+                            <td style="TEXT-ALIGN: center">{lblNumber}</td> 
+                            <td style="TEXT-ALIGN: center">{rsltn_type}</td> 
+                            <td style="TEXT-ALIGN: center"><a href="{rsltn_date_Src}" id="Panel1GResNotersltn_date_{GResNote:rowNumber}">{rsltn_date}</a>&nbsp;<input style="WIDTH: 21px; HEIGHT: 22px" id="Panel1GResNotersltn_id" value="{rsltn_id}" size="2" type="hidden" name="{rsltn_id_Name}"></td> 
+                            <td style="TEXT-ALIGN: left">{rsltn_action}</td> 
+                            <td style="TEXT-ALIGN: left">{rsltn_planning}<br>
+                              <br>
+                              <em>{rlstn_remark}</em></td> 
+                            <td style="TEXT-ALIGN: center">{rsltn_eng}</td> 
+                            <td style="TEXT-ALIGN: center">{rsltn_spart}&nbsp;</td> 
+                            <td style="TEXT-ALIGN: center">&nbsp;{rsltn_eq}</td> 
+                            <td style="TEXT-ALIGN: center">&nbsp;{rsltn_att}</td>
+                          </tr>
+ <!-- END Row -->
+                          <!-- BEGIN NoRecords -->
+                          <tr class="NoRecords">
+                            <td colspan="9">No records</td>
+                          </tr>
+                          <!-- END NoRecords -->
+                          <tr class="Footer">
+                            <td colspan="9"><a href="{ImageLink2}" id="Panel1GResNoteImageLink2_{GResNote:rowNumber}"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{ImageLink2}" src="Styles/smartStyleTurqoise/Images/en/ButtonNewCM.gif"></a>&nbsp;&nbsp; </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- END Grid GResNote --></td> 
+                <td valign="top" width="40%">
+                  <!-- BEGIN Record RResNote -->
+                  <form id="Panel1RResNote" method="post" name="{HTMLFormName}" action="{Action}">
+                    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                      <tr>
+                        <td valign="top">
+                          <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                              <td class="th"><strong>Support Note Details&nbsp;</strong></td> 
+                              <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                            </tr>
+                          </table>
+ 
+                          <table class="Record" cellspacing="0" cellpadding="0">
+                            <!-- BEGIN Error -->
+                            <tr class="Error">
+                              <td colspan="4">{Error}</td>
+                            </tr>
+                            <!-- END Error -->
+                            <tr class="Controls">
+                              <td class="th"><label for="Panel1RResNotersltn_date">Eng ID</label></td> 
+                              <td><input id="Panel1RResNoteengName" disabled value="{engName}" readonly maxlength="10" size="10" name="{engName_Name}">&nbsp;<input style="WIDTH: 23px; HEIGHT: 22px" id="Panel1RResNotersltn_byuser" value="{rsltn_byuser}" size="3" type="hidden" name="{rsltn_byuser_Name}"><label for="Panel1RResNoteticket_id" style="display: none;">&nbsp;</label><input style="WIDTH: 25px; HEIGHT: 22px" id="Panel1RResNoteticket_id" value="{ticket_id}" size="3" type="hidden" name="{ticket_id_Name}"><input style="WIDTH: 64px; HEIGHT: 22px" id="Panel1RResNotersltn_type" value="{rsltn_type}" size="8" type="hidden" name="{rsltn_type_Name}"></td> 
+                              <td>Date&nbsp;<font color="#ff0000">*</font></td> 
+                              <td><input id="Panel1RResNotersltn_date" value="{rsltn_date}" maxlength="30" name="{rsltn_date_Name}">
+                                <!-- BEGIN DatePicker DatePicker_rsltn_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Panel1RResNoteDatePicker_rsltn_date"><img id="Panel1RResNoteDatePicker_rsltn_date_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_rsltn_date --></td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                              <td class="th"><label for="Panel1RResNotersltn_eta">Action Taken&nbsp;<font color="#ff0000">*</font></label></td> 
+                              <td><textarea id="Panel1RResNotersltn_actiontaken" rows="3" name="{rsltn_actiontaken_Name}">{rsltn_actiontaken}</textarea></td> 
+                              <td></td> 
+                              <td>&nbsp; </td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                              <td class="th"><label for="Panel1RResNotersltn_planning">Rsltn Planning</label></td> 
+                              <td><textarea id="Panel1RResNotersltn_planning" rows="3" name="{rsltn_planning_Name}">{rsltn_planning}</textarea></td> 
+                              <td>&nbsp;Remark</td> 
+                              <td><textarea id="Panel1RResNotersltn_remark" rows="3" name="{rsltn_remark_Name}">{rsltn_remark}</textarea></td>
+                            </tr>
+ 
+                            <tr class="Bottom">
+                              <td colspan="4" align="right">
+                                <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel1RResNoteButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                                <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel1RResNoteButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                                <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel1RResNoteButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                  <!-- END Record RResNote --></td>
+              </tr>
+            </table>
+            <!-- END Panel Panel1 --></td>
+        </tr>
+ 
+        <tr>
+          <td></td>
+        </tr>
+ 
+        <tr>
+          <td>
+            <!-- BEGIN Panel Panel2 -->
+            <!-- BEGIN Record smart_task -->
+            <form id="Panel2smart_task" method="post" name="{HTMLFormName}" action="{Action}">
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>Update Status</strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <!-- BEGIN Error -->
+                      <tr class="Error">
+                        <td colspan="2">{Error}</td>
+                      </tr>
+                      <!-- END Error -->
+                      <tr class="Controls">
+                        <td class="th"><label for="Panel2smart_taskticket_id">Current Status / Date</label></td> 
+                        <td><input id="Panel2smart_taskcurrentstatus" value="{currentstatus}" readonly name="{currentstatus_Name}">&nbsp;<label for="Panel2smart_tasktask_date" style="display: none;">TextBox1</label><input id="Panel2smart_tasktask_date" value="{task_date}" name="{task_date_Name}"><label for="Panel2smart_tasktask_currentstatus" style="display: none;">Task Currentstatus</label><input id="Panel2smart_tasktask_currentstatus" value="{task_currentstatus}" type="hidden" name="{task_currentstatus_Name}"><label for="Panel2smart_taskticket_id" style="display: none;">Ticket Id</label><input id="Panel2smart_taskticket_id" value="{ticket_id}" type="hidden" name="{ticket_id_Name}"><label for="Panel2smart_taskid" style="display: none;">&nbsp;&nbsp;</label></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="Panel2smart_tasktask_newstatus">Task Newstatus <font color="#ff0000">*</font></label></td> 
+                        <td>
+                          <select id="Panel2smart_tasktask_newstatus" name="{task_newstatus_Name}">
+                            <option selected value="">Select Value</option>
+                            {task_newstatus_Options}
+                          </select>
+ <input style="WIDTH: 44px; HEIGHT: 22px" id="Panel2smart_taskdatemodified" value="{datemodified}" size="4" type="hidden" name="{datemodified_Name}">&nbsp;<label for="Panel2smart_tasktckt_closeddate" style="display: none;">tckt_closeddate</label><input id="Panel2smart_tasktckt_closeddate" value="{tckt_closeddate}" type="hidden" name="{tckt_closeddate_Name}"><input id="Panel2smart_taskclosedby" value="{closedby}" type="hidden" name="{closedby_Name}"></td>
+                      </tr>
+ 
+                      <tr style="DISPLAY: none" id="trMethod" class="Controls">
+                        <td class="th">Resolution Method</td> 
+                        <td>
+                          <!-- BEGIN RadioButton rsltn_actionmethod --><input id="Panel2smart_taskrsltn_actionmethod_{rsltn_actionmethod:optionNumber}" value="{Value}" type="radio" name="{rsltn_actionmethod_Name}" {Check}><label for="Panel2smart_taskrsltn_actionmethod_{rsltn_actionmethod:optionNumber}">{Description}</label><!-- END RadioButton rsltn_actionmethod --></td>
+                      </tr>
+ 
+                      <tr style="DISPLAY: none" id="trAssignTo" class="Controls">
+                        <td class="th"><label for="Panel2smart_tasktask_personincharge">Assigned Eng</label></td> 
+                        <td>
+                          <select id="Panel2smart_tasktask_personincharge" name="{task_personincharge_Name}">
+                            <option selected value="">Select Value</option>
+                            {task_personincharge_Options}
+                          </select>
+ </td>
+                      </tr>
+ 
+                      <tr style="DISPLAY: none" id="trReAssignTo" class="Controls">
+                        <td class="th"><label for="Panel2smart_tasktask_secpersonincharge">Re-Assign To&nbsp;</label></td> 
+                        <td>
+                          <select id="Panel2smart_tasktask_secpersonincharge" name="{task_secpersonincharge_Name}">
+                            <option selected value="">Select Value</option>
+                            {task_secpersonincharge_Options}
+                          </select>
+ </td>
+                      </tr>
+ 
+                      <tr style="DISPLAY: none" id="trReason" class="Controls">
+                        <td class="th">Reason</td> 
+                        <td><textarea id="Panel2smart_taskReason" rows="3" cols="30" name="{Reason_Name}">{Reason}</textarea></td>
+                      </tr>
+ 
+                      <tr style="DISPLAY: none" id="trAdukom" class="Controls">
+                        <td class="th"><label for="Panel2smart_tasktask_adukomid">Adukom ID</label></td> 
+                        <td><input id="Panel2smart_tasktask_adukomid" value="{task_adukomid}" maxlength="10" size="10" name="{task_adukomid_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Bottom">
+                        <td colspan="2" align="right">&nbsp; 
+                          <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel2smart_taskButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                          <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel2smart_taskButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <!-- END Record smart_task --><!-- END Panel Panel2 --></td>
+        </tr>
+      </table>
+      </p>
+    </td>
+  </tr>
+</table>
+{footer} 
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+</body>
+</html>

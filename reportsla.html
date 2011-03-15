@@ -1,0 +1,96 @@
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+<br>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">
+<!-- BEGIN Grid SlaSummary -->
+<table border="0" cellspacing="0" cellpadding="0" width="80%">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+          <td class="th"><strong>Resolution Time Report for {lblMonthYear}</strong></td> 
+          <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th width="10%" colspan="2" scope="col"></th>
+ 
+          <th style="TEXT-ALIGN: center" width="10%" colspan="2" scope="col">RESPOND</th>
+ 
+          <th style="TEXT-ALIGN: center" width="10%" colspan="2" scope="col">RESOLUTION</th>
+ 
+          <th style="TEXT-ALIGN: center" width="10%" colspan="2" scope="col">CLOSED</th>
+ 
+        </tr>
+ 
+        <tr class="Caption">
+          <th width="10%" scope="col">SITES</th>
+ 
+          <th width="10%" scope="col">&nbsp;G. TOTAL</th>
+ 
+          <th style="TEXT-ALIGN: center" width="10%" scope="col">&lt;=24 hrs</th>
+ 
+          <th style="TEXT-ALIGN: center" width="10%" scope="col">&gt; 24 hrs</th>
+ 
+          <th style="TEXT-ALIGN: center" width="10%" scope="col">&nbsp;&lt;= 24 hrs</th>
+ 
+          <th style="TEXT-ALIGN: center" width="10%" scope="col">&gt; 24 hrs&nbsp;</th>
+ 
+          <th style="TEXT-ALIGN: center" width="10%" scope="col">&nbsp;&lt;= 24 hrs</th>
+ 
+          <th style="TEXT-ALIGN: center" width="10%" scope="col">&gt; 24 hrs&nbsp;</th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{site}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">&nbsp;{totalticket}</td> 
+          <td style="TEXT-ALIGN: center">&nbsp;{lesssla}</td> 
+          <td style="TEXT-ALIGN: center">&nbsp;{oversla}</td> 
+          <td style="TEXT-ALIGN: center">{lessrsvl}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">{overrsvl}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">{lesscls}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">{overcls}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <tr class="Caption">
+          <td style="TEXT-ALIGN: right"><strong>&nbsp;TOTAL</strong></td> 
+          <td style="TEXT-ALIGN: center"><strong>&nbsp;{GTicketTotal}</strong></td> 
+          <td style="TEXT-ALIGN: center"><strong>&nbsp;</strong>{totlesssla}</td> 
+          <td style="TEXT-ALIGN: center"><strong>&nbsp;</strong>{totoversla}</td> 
+          <td style="TEXT-ALIGN: center">&nbsp;{totlessrsvl}</td> 
+          <td style="TEXT-ALIGN: center">&nbsp;{totoverrsvl}</td> 
+          <td style="TEXT-ALIGN: center">&nbsp;{totlesscls}</td> 
+          <td style="TEXT-ALIGN: center">&nbsp;{totovercls}</td> 
+        </tr>
+ 
+        <tr>
+          <td colspan="8"><em>//Time between status OPEN &gt; RSLVD</em></td> 
+        </tr>
+ 
+        <tr>
+          <td colspan="8"><em>Central : WXXX, BXXX, NXXX<br>
+            PIN : XPIN</em></td> 
+        </tr>
+ 
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td>No records</td> 
+          <td>&nbsp;</td> 
+          <td>&nbsp;</td> 
+          <td>&nbsp;</td> 
+          <td>&nbsp;</td> 
+          <td>&nbsp;</td> 
+          <td>&nbsp;</td> 
+          <td>&nbsp;</td> 
+        </tr>
+ <!-- END NoRecords -->
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid SlaSummary -->

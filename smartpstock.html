@@ -1,0 +1,326 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-B93D65AC
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-04D0076E
+
+var RStock_DatePicker_pstock_date = new Object(); 
+RStock_DatePicker_pstock_date.format           = "LongDate";
+RStock_DatePicker_pstock_date.style            = "Styles/{CCS_Style}/Style.css";
+RStock_DatePicker_pstock_date.relativePathPart = "";
+RStock_DatePicker_pstock_date.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//RStockButton_Cancel_OnClick @33-D2538FDE
+function RStockButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RStockButton_Cancel_OnClick
+
+//PTAutoFill1 Loading @49-82229336
+function RStockpstock_itemcodePTAutoFill1_start(sender) {
+    new Ajax.Request("services/smartpstock_RStock_pstock_itemcode_PTAutoFill1.php?keyword=" + encodeURIComponent($("RStockpstock_itemcode").value).replace(/'/g, "%27"), {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            if (typeof(valuesRow) != "undefined") {
+                getSameLevelCtl("RStockpstock_itemname", sender).value = valuesRow["pstock_itemname"];
+                getSameLevelCtl("RStockpstock_number", sender).value = valuesRow["pstock_number"];
+            } else {
+                getSameLevelCtl("RStockpstock_itemname", sender).value = "";
+                getSameLevelCtl("RStockpstock_number", sender).value = "";
+            }
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//bind_events @1-4FD35866
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("RStockpstock_itemcode", "change", RStockpstock_itemcodePTAutoFill1_start);
+    addEventHandler("RStockButton_Cancel", "click", RStockButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css" />
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <div class="H1">
+        SPARE PARTS: STOCKS 
+      </div>
+ 
+      <div class="default">
+        <!-- BEGIN Record SStock --><br>
+        <form id="SStock" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>FILTER STOCKS</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  </tr>
+ 
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td> 
+                  </tr>
+ <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="SStockqryc">Item code</label></td> 
+                    <td><input id="SStockqryc" value="{qryc}" maxlength="50" size="50" name="{qryc_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="SStockqryn">Item name</label></td> 
+                    <td><input id="SStockqryn" value="{qryn}" maxlength="50" size="50" name="{qryn_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="SStockButton_DoSearch" value="Search" alt="Search" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+                  </tr>
+ 
+                </table>
+ </td> 
+            </tr>
+ 
+          </table>
+ 
+        </form>
+ <!-- END Record SStock --><br>
+        <!-- BEGIN Grid GStock -->
+        <table cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td width="70%"></td> 
+            <td>
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                  <th width="20%" scope="col">{lblPart}</th>
+ 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td colspan="2">
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Row">
+                  <td width="10%">NOMENCLATURE:</td> 
+                  <td>{stock_item}</td> 
+                </tr>
+ 
+                <tr class="Row">
+                  <td>CODE:</td> 
+                  <td>{stock_code}</td> 
+                </tr>
+ 
+                <tr class="Row">
+                  <td>PART NO.:</td> 
+                  <td>{stock_number}</td> 
+                </tr>
+ 
+                <tr class="Row">
+                  <td>&nbsp;</td> 
+                  <td><a href="{BtnUpdStock}" id="GStockBtnUpdStock_{GStock:rowNumber}"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{BtnUpdStock}" src="Styles/smartStyleTurqoise/Images/en/ButtonUpdStock.gif"></a></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ <br>
+        <br>
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                  <th style="TEXT-ALIGN: center" rowspan="2" width="3%" scope="col">NO</th>
+ 
+                  <th style="TEXT-ALIGN: center" rowspan="2" width="10%" scope="col">DATE</th>
+ 
+                  <th style="TEXT-ALIGN: center" rowspan="2" width="10%" scope="col">FORM NO.</th>
+ 
+                  <th style="TEXT-ALIGN: center" colspan="3" scope="col">QUANTITY</th>
+ 
+                  <th rowspan="2" scope="col">REMARKS / SITE</th>
+ 
+                </tr>
+ 
+                <tr class="Caption">
+                  <th style="TEXT-ALIGN: center" width="5%" scope="col">IN</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="5%" scope="col">OUT</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="5%" scope="col">BALANCE</th>
+ 
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr class="Row">
+                  <td style="TEXT-ALIGN: center">{lblNumber}</td> 
+                  <td style="TEXT-ALIGN: center">{pstock_date}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{pstock_preqformno}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{pstock_in}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{pstock_out}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{pstock_balance}&nbsp;</td> 
+                  <td>{pstock_remarks}&nbsp;</td> 
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="7">No records</td> 
+                </tr>
+ <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td colspan="7">
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ <!-- END Grid GStock --><br>
+        <!-- BEGIN Record RStock -->
+        <form id="RStock" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>update stocks</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  </tr>
+ 
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td> 
+                  </tr>
+ <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="RStockpstock_itemcode">Item code<font color="#ff0000">&nbsp; *</font></label></td> 
+                    <td><input id="RStockpstock_itemcode" value="{pstock_itemcode}" maxlength="50" size="10" name="{pstock_itemcode_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th" width="10%"><label for="RStockpstock_itemname">Item name<font color="#ff0000">&nbsp; *</font></label></td> 
+                    <td><input id="RStockpstock_itemname" value="{pstock_itemname}" maxlength="50" size="50" name="{pstock_itemname_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RStockpstock_number">stock Number<font color="#ff0000">&nbsp; *</font></label></td> 
+                    <td><input id="RStockpstock_number" value="{pstock_number}" maxlength="50" size="30" name="{pstock_number_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RStockpstock_date">Date<font color="#ff0000">&nbsp; *</font></label></td> 
+                    <td><input id="RStockpstock_date" value="{pstock_date}" maxlength="12" size="12" name="{pstock_date_Name}">
+                      <!-- BEGIN DatePicker DatePicker_pstock_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RStockDatePicker_pstock_date"><img id="RStockDatePicker_pstock_date_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_pstock_date --></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RStockpstock_preqformno">form no.<font color="#ff0000">&nbsp; *</font></label></td> 
+                    <td><input id="RStockpstock_preqformno" value="{pstock_preqformno}" maxlength="100" size="30" name="{pstock_preqformno_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th">Checking<font color="#ff0000">&nbsp; *</font></td> 
+                    <td>
+                      <!-- BEGIN RadioButton pstock_checking --><input id="RStockpstock_checking_{pstock_checking:optionNumber}" value="{Value}" type="radio" name="{pstock_checking_Name}" {Check}><label for="RStockpstock_checking_{pstock_checking:optionNumber}">{Description}</label><!-- END RadioButton pstock_checking -->&nbsp;&nbsp;&nbsp;<label for="RStockpstock_qty" style="display: none;">TextBox1 </label><input id="RStockpstock_qty" value="{pstock_qty}" size="5" name="{pstock_qty_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RStockpstock_balance">Balance<font color="#ff0000">&nbsp; *</font></label></td> 
+                    <td><input id="RStockpstock_balance" value="{pstock_balance}" maxlength="10" size="10" name="{pstock_balance_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RStockpstock_remarks">Remarks</label></td> 
+                    <td><textarea id="RStockpstock_remarks" rows="5" cols="50" name="{pstock_remarks_Name}">{pstock_remarks}</textarea></td> 
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RStockButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RStockButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td> 
+                  </tr>
+ 
+                </table>
+ </td> 
+            </tr>
+ 
+          </table>
+ 
+        </form>
+ <!-- END Record RStock --><br>
+      </div>
+ </td> 
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

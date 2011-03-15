@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?> <!--FlashChart Header @5-EFBEC7D5-->
+
+<!--FlashChart Template @5-6A262788-->
+<root>
+	<schema name="Metall">
+		<mask/>
+		<colors/>
+	</schema>
+	<separator decimal="," group=""/>
+	<background border="yes"/>
+	<chartarea border="yes">
+		<grid line_style="medium" visible="yes"/>
+		<vertical_axis visible="yes"/>
+		<horizontal_axis visible="yes" rotation="degrees" autoRotate="yes"/>
+		<chart line_thick="2" enabled="yes" type="round_columns" series="rows">
+			<inscriptions visible="yes"/>
+			<animation type="none"/>
+			<markers size="8" type="0"/>
+			<hints border="yes" enabled="yes"/>
+		</chart>
+		<legend sqr_size="12" sqr_borders="yes" border_thick="0" position="bottom-right" layout="horizontal" visible="yes"/>
+		<title position="top" align="center" border="no" alpha="100" visible="yes" text="Tickets Reports By Status"/>
+	</chartarea>
+	<objects>
+	</objects>
+	<data>
+		<columns>
+			<column field="numTicket" name="Ticket Status"/></columns>
+		<rows>
+			<!-- BEGIN Row --><row col1="{numTicket}" name="{status}"/><!-- END Row --></rows>
+	</data>
+</root>
+
+<!--End FlashChart Template-->
+

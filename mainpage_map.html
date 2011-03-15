@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54"><link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css" />
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-CD83ADEA
+function bind_events() {
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    if (functionExists("rightbar_bind_events")) rightbar_bind_events();
+    if (functionExists("smartmap_bind_events")) smartmap_bind_events();
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+{smartheader}
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="80%">
+      <p></p>
+ 
+      <div class="H1">
+        SALAM &amp; GOOD DAY! WELCOME to SMART. 
+      </div>
+ 
+      <p>Welcome to the SMART System. Listed below is a new ticket(s) need to be monitored.</p>
+ 
+      <table border="0" cellspacing="3" cellpadding="3" width="98%">
+        <tr>
+          <td>{smartmap}</td> 
+        </tr>
+ 
+        <tr>
+          <td>
+            <!-- BEGIN Grid smart_ticket -->
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td valign="top">
+                  <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                      <td class="th"><strong>List of Latest (NEW) Ticket </strong></td> 
+                      <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    </tr>
+ 
+                  </table>
+ 
+                  <table class="Grid" cellspacing="0" cellpadding="0">
+                    <tr class="Caption">
+                      <th style="TEXT-ALIGN: center" width="5%" scope="col">No.</th>
+ 
+                      <th width="10%" scope="col">
+                      <!-- BEGIN Sorter Sorter_tckt_refnumber -->Refnumber 
+                      <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_refnumber"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                      <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_refnumber"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_refnumber --></th>
+ 
+                      <th style="TEXT-ALIGN: center" width="5%" scope="col">
+                      <!-- BEGIN Sorter Sorter_tckt_site -->Site 
+                      <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_site"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                      <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_site"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_site --></th>
+ 
+                      <th style="TEXT-ALIGN: center" width="15%" scope="col">
+                      <!-- BEGIN Sorter Sorter_tckt_r_date -->Date 
+                      <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_r_date"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                      <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_r_date"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_r_date --></th>
+ 
+                      <th style="TEXT-ALIGN: center" width="5%" scope="col">Age</th>
+ 
+                      <th width="10%" scope="col">&nbsp;Severity</th>
+ 
+                      <th width="10%" scope="col">
+                      <!-- BEGIN Sorter Sorter_tckt_r_helpdesk -->Helpdesk 
+                      <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_r_helpdesk"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                      <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_r_helpdesk"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_r_helpdesk --></th>
+ 
+                      <th width="10%" scope="col">
+                      <!-- BEGIN Sorter Sorter_tckt_adukom -->Status 
+                      <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_adukom"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                      <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_adukom"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_adukom --></th>
+ 
+                      <th width="20%" scope="col">Description</th>
+ 
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <tr {smart_ticket:rowStyle}>
+                      <td style="TEXT-ALIGN: center">{lblNumber}</td> 
+                      <td style="TEXT-ALIGN: center"><a href="{tckt_refnumber_Src}" id="smart_tickettckt_refnumber_{smart_ticket:rowNumber}">{tckt_refnumber}</a></td> 
+                      <td style="TEXT-ALIGN: center">{tckt_site}</td> 
+                      <td style="TEXT-ALIGN: center">{tckt_r_date}</td> 
+                      <td style="TEXT-ALIGN: center"><input style="WIDTH: 17px; HEIGHT: 22px" id="smart_ticketid" value="{id}" size="2" type="hidden" name="{id_Name}">{tckt_age}</td> 
+                      <td style="TEXT-ALIGN: center">{tckt_severity}&nbsp;</td> 
+                      <td style="TEXT-ALIGN: center">{tckt_r_helpdesk}</td> 
+                      <td style="TEXT-ALIGN: center">{tckt_status}</td> 
+                      <td>{tckt_description}</td> 
+                    </tr>
+ <!-- END Row -->
+                    <!-- BEGIN Separator -->
+                    <tr class="Separator">
+                      <td colspan="9"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    </tr>
+ <!-- END Separator -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                      <td colspan="9">No records</td> 
+                    </tr>
+ <!-- END NoRecords -->
+                    <tr class="Footer">
+                      <td colspan="9">
+                        <!-- BEGIN Navigator Navigator -->
+                        <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                        <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                        <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                        <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                        <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                        <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                        <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                        <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td> 
+                    </tr>
+ 
+                  </table>
+ </td> 
+              </tr>
+ 
+            </table>
+ <!-- END Grid smart_ticket --><br>
+          </td> 
+        </tr>
+ 
+      </table>
+ </td> 
+    <td class="buttons2" valign="top" width="20%">{rightbar} </td> 
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

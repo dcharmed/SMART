@@ -1,0 +1,379 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-B93D65AC
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-76C419F8
+
+var smart_ticketSearch_DatePicker_s_sdate = new Object(); 
+smart_ticketSearch_DatePicker_s_sdate.format           = "yyyy-mm-dd";
+smart_ticketSearch_DatePicker_s_sdate.style            = "Styles/{CCS_Style}/Style.css";
+smart_ticketSearch_DatePicker_s_sdate.relativePathPart = "";
+smart_ticketSearch_DatePicker_s_sdate.themeVersion = "3.0";
+
+var smart_ticketSearch_DatePicker_s_edate = new Object(); 
+smart_ticketSearch_DatePicker_s_edate.format           = "yyyy-mm-dd";
+smart_ticketSearch_DatePicker_s_edate.style            = "Styles/{CCS_Style}/Style.css";
+smart_ticketSearch_DatePicker_s_edate.relativePathPart = "";
+smart_ticketSearch_DatePicker_s_edate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//smart_ticketSearchs_branchPTDependentListBox1 Start @81-F7AD9F43
+function smart_ticketSearchs_branchPTDependentListBox1_start(sender) {
+    var dependentElement = $("smart_ticketSearchs_branch" + sender.id.substring(25));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/ticketlist_smart_ticketSearch_s_branch_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End smart_ticketSearchs_branchPTDependentListBox1 Start
+
+//smart_ticketSearchs_scatPTDependentListBox2 Start @95-9C5D3EFE
+function smart_ticketSearchs_scatPTDependentListBox2_start(sender) {
+    var dependentElement = $("smart_ticketSearchs_scat" + sender.id.substring(23));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/ticketlist_smart_ticketSearch_s_scat_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End smart_ticketSearchs_scatPTDependentListBox2 Start
+
+//bind_events @1-95ABB5B1
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("smart_ticketSearchs_state", "change", smart_ticketSearchs_branchPTDependentListBox1_start);
+    addEventHandler("smart_ticketSearchs_state", "load", smart_ticketSearchs_branchPTDependentListBox1_start);
+    addEventHandler("smart_ticketSearchs_cat", "change", smart_ticketSearchs_scatPTDependentListBox2_start);
+    addEventHandler("smart_ticketSearchs_cat", "load", smart_ticketSearchs_scatPTDependentListBox2_start);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <p></p>
+ 
+      <div class="H1">
+        LIST OF TICKETS 
+      </div>
+ 
+      <p></p>
+      <br>
+      Please click on link in the Ref.Number column to view the details. <br>
+      <br>
+      <!-- BEGIN Record smart_ticketSearch -->
+      <form id="smart_ticketSearch" method="post" name="{HTMLFormName}" action="{Action}">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>Search Ticket </strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="3">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="smart_ticketSearchs_branch">State / Branch</label></td> 
+                  <td>
+                    <select id="smart_ticketSearchs_state" name="{s_state_Name}">
+                      <option selected value="">Select Value</option>
+                      {s_state_Options}
+                    </select>
+ &nbsp;&nbsp; <label for="smart_ticketSearchs_branch" style="display: none;">ListBox2</label> 
+                    <select id="smart_ticketSearchs_branch" name="{s_branch_Name}">
+                      <option selected value="">Select Value</option>
+                      {s_branch_Options}
+                    </select>
+ </td> 
+                  <td>Category : <label for="smart_ticketSearchs_cat" style="display: none;">ListBox1</label> 
+                    <select id="smart_ticketSearchs_cat" name="{s_cat_Name}">
+                      <option selected value="">Select Value</option>
+                      {s_cat_Options}
+                    </select>
+ &nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">Status</td> 
+                  <td>
+                    <select id="smart_ticketSearchs_status" name="{s_status_Name}">
+                      <option selected value="">Select Value</option>
+                      {s_status_Options}
+                    </select>
+ </td> 
+                  <td>Sub-Category : <label for="smart_ticketSearchs_scat" style="display: none;">ListBox1</label> 
+                    <select id="smart_ticketSearchs_scat" name="{s_scat_Name}">
+                      <option selected value="">Select Value</option>
+                      {s_scat_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">Severity</td> 
+                  <td>
+                    <select id="smart_ticketSearchs_svr" name="{s_svr_Name}">
+                      <option selected value="">Select Value</option>
+                      {s_svr_Options}
+                    </select>
+ </td> 
+                  <td>Escalation : <label for="smart_ticketSearchs_esc" style="display: none;">ListBox1</label> 
+                    <select id="smart_ticketSearchs_esc" name="{s_esc_Name}">
+                      <option selected value="">Select Value</option>
+                      {s_esc_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="smart_ticketSearchs_ref">Ticket #</label></td> 
+                  <td><input id="smart_ticketSearchs_ref" value="{s_ref}" maxlength="200" size="50" name="{s_ref_Name}"></td> 
+                  <td>Adukom # : <label for="smart_ticketSearchs_ad" style="display: none;">TextBox1</label><input id="smart_ticketSearchs_ad" value="{s_ad}" name="{s_ad_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="smart_ticketSearchs_sdate">Date</label></td> 
+                  <td><input id="smart_ticketSearchs_sdate" value="{s_sdate}" maxlength="12" size="12" name="{s_sdate_Name}">
+                    <!-- BEGIN DatePicker DatePicker_s_sdate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="smart_ticketSearchDatePicker_s_sdate"><img id="smart_ticketSearchDatePicker_s_sdate_Image" border="0" alt="Show Date Picker" align="absmidlle" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_s_sdate -->&nbsp; <strong>Until</strong>&nbsp; &nbsp;<input id="smart_ticketSearchs_edate" value="{s_edate}" maxlength="12" size="12" name="{s_edate_Name}">&nbsp; 
+                    <!-- BEGIN DatePicker DatePicker_s_edate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="smart_ticketSearchDatePicker_s_edate"><img id="smart_ticketSearchDatePicker_s_edate_Image" border="0" alt="Show Date Picker" align="absmidlle" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_s_edate --><em>(Format: yyyy-mm-dd)</em></td> 
+                  <td>&nbsp;</td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td colspan="3" align="right">
+                    <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="smart_ticketSearchButton_DoSearch" value="Search" alt="Search" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch -->
+                    <!-- BEGIN Button Button_Reset --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="smart_ticketSearchButton_Reset" value="Search" alt="Reset" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Reset --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record smart_ticketSearch --><br>
+      <!-- BEGIN Grid smart_ticket -->
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td valign="top">
+            <table class="Header" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                <td class="th"><strong>Ticket List</strong></td> 
+                <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Row">
+                <td colspan="15">Total Records:&nbsp;{smart_ticket_TotalRecords}</td>
+              </tr>
+ 
+              <tr class="Caption">
+                <th width="2%" scope="col">No.</th>
+ 
+                <th width="10%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_refnumber -->Ref.Number 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_refnumber"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_refnumber"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_refnumber --></th>
+ 
+                <th width="8%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_branch -->Site 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_branch"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_branch"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_branch --></th>
+ 
+                <th width="10%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_date -->Date Reported 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_date"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_date"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_date --></th>
+ 
+                <th width="10%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_status -->Status 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_status"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_status"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_status --></th>
+ 
+                <th style="TEXT-ALIGN: center" width="10%" scope="col">Age (Days)</th>
+ 
+                <th width="5%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_severity -->Severity 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_severity"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_severity"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_severity --></th>
+ 
+                <th width="5%" scope="col">
+                <!-- BEGIN Sorter Sorter_Eng -->Eng ID 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_Eng"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_Eng"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_Eng --></th>
+ 
+                <th width="5%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_esc -->Esc 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_esc"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_esc"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_esc --></th>
+ 
+                <th width="5%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_adukomn -->Adukom # 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_adukomn"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_adukomn"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_adukomn --></th>
+ 
+                <th width="5%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_toppanid -->Toppanid 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="smart_ticketSorter_tckt_toppanid"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="smart_ticketSorter_tckt_toppanid"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_toppanid --></th>
+ 
+                <th width="20%" scope="col">Description</th>
+ 
+                <th width="20%" scope="col">S/PART</th>
+ 
+                <th width="20%" scope="col">Equipment</th>
+ 
+                <th width="20%" scope="col">Follow Up?</th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr {smart_ticket:rowStyle}>
+                <td style="TEXT-ALIGN: center">{lblNumber}<input style="WIDTH: 19px; HEIGHT: 22px" id="smart_ticketid_{smart_ticket:rowNumber}" value="{id}" size="2" type="hidden" name="{id_Name}">&nbsp;</td> 
+                <td style="TEXT-ALIGN: center"><a href="{tckt_refnumber_Src}" id="smart_tickettckt_refnumber_{smart_ticket:rowNumber}">{tckt_refnumber}</a>&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">{tckt_branch}&nbsp;<input style="WIDTH: 20px; HEIGHT: 22px" id="smart_tickettckt_state" value="{tckt_state}" size="2" type="hidden" name="{tckt_state_Name}"></td> 
+                <td style="TEXT-ALIGN: center">{tckt_date}&nbsp;<input style="WIDTH: 68px; HEIGHT: 22px" id="smart_tickettckt_c_date" value="{tckt_c_date}" size="9" type="hidden" name="{tckt_c_date_Name}"></td> 
+                <td style="TEXT-ALIGN: center">{tckt_status}&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">{tckt_age}&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">{tckt_severity}&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">&nbsp;{tcktEng}</td> 
+                <td style="TEXT-ALIGN: center">{tckt_esc}&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">{tckt_adukomn}&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">{tckt_toppanid}&nbsp;</td> 
+                <td>{tckt_description}&nbsp;</td> 
+                <td>&nbsp;{tckt_spart}</td> 
+                <td>&nbsp;{tckt_equipment}</td> 
+                <td>&nbsp;{tckt_followup}</td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN Separator -->
+              <tr class="Separator">
+                <td colspan="15"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+              </tr>
+              <!-- END Separator -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="15">No records</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="15">
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                  <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                  <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                  <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                  <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid smart_ticket --></td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

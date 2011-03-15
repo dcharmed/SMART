@@ -1,0 +1,1096 @@
+/* CCSTheme v 3.x */
+/* General */
+
+/* Colors */
+.PageBgColorAustere_smartbackup {
+	background-color: #bdbdbd;
+	}
+
+.FormTitleBgColorAustere_smartbackup {
+	background-color: #2a7893;
+	}
+
+.FormTitleFontColorAustere_smartbackup {
+	color: #f4f4f4;
+	}
+
+.CaptionBgColorAustere_smartbackup {
+	background-color: #afc0c4;
+	}
+
+.CaptionFontColorAustere_smartbackup {
+	color: #23647a;
+	}
+
+.DataBgColorAustere_smartbackup {
+	background-color: #f4f4f4;
+	}
+
+.AltDataBgColorAustere_smartbackup {
+	background-color: #e7e7e7;
+	}
+
+.DataFontColorAustere_smartbackup {
+	color: #2a7893;
+	}
+
+.LinkColorAustere_smartbackup {
+	color: #0000f7;
+	}
+
+.VisitedLinkColorAustere_smartbackup {
+	color: #2a7893;
+	}
+
+.HoverLinkColorAustere_smartbackup {
+	color: #dd1396;
+	}
+
+.ColorBgButtonAustere_smartbackup {
+	background-color: #2a7893;
+}
+
+.ColorFontButtonAustere_smartbackup {
+	color: #f4f4f4;
+}
+
+.ColorBgButtonPassiveAustere_smartbackup {
+	background-color: #75b6cd;
+}
+
+.ColorFontButtonPassiveAustere_smartbackup {
+	color: #fcfcfc;
+}
+
+
+
+.HeaderAustere_smartbackup {
+	width: 100%;
+	}
+
+.HeaderAustere_smartbackup th { 
+	font-family: Arial; font-size: 110%; text-align: left;
+	padding: 2px;
+	background-image: url('Images/HeaderBg.gif');  color: #f4f4f4;
+	width: 100%;
+	white-space: nowrap;
+	padding-left: 8px;
+	}
+
+
+
+/*ie6*/
+* html body .HeaderAustere_smartbackup th {
+	font-family: Arial; font-size: 138%; text-align: left;
+}
+/*end*/
+
+.HeaderAustere_smartbackup a:link { 
+	color: #f4f4f4;
+	}
+
+.HeaderAustere_smartbackup a:visited { 
+	color: #f4f4f4;
+	}
+
+.HeaderAustere_smartbackup a:hover, .CaptionAustere_smartbackup a:active { 
+	color: #f4f4f4; text-decoration: none;
+	}
+
+.HeaderLeftAustere_smartbackup { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightAustere_smartbackup { 
+	background-image: url('Images/HeaderRight.gif');
+	background-position: right top;
+	}
+
+.HeaderLeftAustere_smartbackup img{
+	width: 1px;
+	}
+
+.HeaderRightAustere_smartbackup img{
+	width: 1px;
+	}
+
+
+/* Grid Options */
+.GridAustere_smartbackup { 
+	
+	width: 100%;
+	}
+
+.CaptionAustere_smartbackup th { 
+	font-family: Arial; font-size: 90%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #afc0c4; color: #23647a;
+	white-space: nowrap;
+	}
+
+.CaptionAustere_smartbackup td { 
+	font-family: Arial; font-size: 90%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #afc0c4; color: #23647a;
+	white-space: nowrap;
+	}
+
+
+
+/*ie6*/
+* html body .CaptionAustere_smartbackup th, * html body .CaptionAustere_smartbackup td {
+	font-family: Arial; font-size: 113%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.CaptionAustere_smartbackup a:link { 
+	color: #23647a;
+	}
+
+.CaptionAustere_smartbackup a:visited { 
+	color: #23647a;
+	}
+
+.CaptionAustere_smartbackup a:hover, .CaptionAustere_smartbackup a:active { 
+	color: #dd1396;
+	}
+
+.CaptionAustere_smartbackup img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionAustere_smartbackup input {
+	vertical-align: middle;
+	}
+
+.RowAustere_smartbackup th { 
+	font-family: Arial; font-size: 90%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #f4f4f4; color: #2a7893;
+	white-space: nowrap;
+	color: #2a7893;
+	}
+
+.RowAustere_smartbackup td { 
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f4f4f4; 
+	color: #2a7893;
+	}
+	
+
+
+/*ie6*/
+* html body .RowAustere_smartbackup th, * html body .RowAustere_smartbackup td {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+caption.RowAustere_smartbackup { 
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f4f4f4; 
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body caption.RowAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.RowAustere_smartbackup a:link { 
+	color: #0000f7;
+	}
+
+.RowAustere_smartbackup a:visited { 
+	color: #2a7893;
+	}
+
+.RowAustere_smartbackup a:hover, .RowAustere_smartbackup a:active { 
+	color: #dd1396;
+	}
+
+.SeparatorAustere_smartbackup{
+	color: #2a7893;
+	}
+
+.SeparatorAustere_smartbackup td{
+	height: 1px;
+	}
+
+
+.AltRowAustere_smartbackup th { 
+	font-family: Arial; font-size: 90%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #f4f4f4; color: #2a7893;
+	white-space: nowrap;
+	color: #2a7893;
+	}
+
+.AltRowAustere_smartbackup td { 
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #e7e7e7; 
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .AltRowAustere_smartbackup th, * html body .AltRowAustere_smartbackup td {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.AltRowAustere_smartbackup a:link { 
+	color: #0000f7;
+	}
+
+.AltRowAustere_smartbackup a:visited { 
+	color: #2a7893;
+	}
+
+.AltRowAustere_smartbackup a:hover, .AltRowAustere_smartbackup a:active { 
+	color: #dd1396;
+	}
+
+.NoRecordsAustere_smartbackup td { 
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	background-color: #f4f4f4; 
+	color: #2a7893;
+	vertical-align: top;
+	}
+
+.FooterAustere_smartbackup td { 
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	
+	background-color: #f4f4f4; color: #2a7893;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .NoRecordsAustere_smartbackup td, * html body .FooterAustere_smartbackup td {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.FooterAustere_smartbackup a:link { 
+	color: #0000f7;
+	}
+
+.FooterAustere_smartbackup a:visited { 
+	color: #2a7893;
+	}
+
+.FooterAustere_smartbackup a:hover, .FooterAustere_smartbackup a:active { 
+	color: #dd1396;
+	}
+
+.FooterAustere_smartbackup img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FooterAustere_smartbackup input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordAustere_smartbackup { 
+	
+	width: 100%;
+	}
+
+.ErrorAustere_smartbackup td { 
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #f4f4f4; 
+	}
+
+
+
+/*ie6*/
+* html body .ErrorAustere_smartbackup td {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.ControlsAustere_smartbackup th { 
+	font-family: Arial; font-size: 90%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #f4f4f4; color: #2a7893;
+	white-space: nowrap;
+	color: #2a7893;
+	}
+
+.ControlsAustere_smartbackup td { 
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f4f4f4; 
+	color: #2a7893;
+	}
+	
+.BottomAustere_smartbackup td { 
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	
+	background-color: #f4f4f4; color: #2a7893;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .ControlsAustere_smartbackup th, * html body .ControlsAustere_smartbackup td, * html body .BottomAustere_smartbackup td {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.BottomAustere_smartbackup a:link { 
+	color: #0000f7;
+	}
+
+.BottomAustere_smartbackup a:visited { 
+	color: #2a7893;
+	}
+
+.BottomAustere_smartbackup a:hover, .CaptionAustere_smartbackup a:active { 
+	color: #dd1396;
+	}
+
+.BottomAustere_smartbackup img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomAustere_smartbackup input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionAustere_smartbackup th{
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #e7e7e7; 
+	color: #2a7893;
+	}
+
+.GroupCaptionAustere_smartbackup td{
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f4f4f4; 
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .GroupCaptionAustere_smartbackup th, * html body .GroupCaptionAustere_smartbackup td {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.GroupCaptionAustere_smartbackup a:link {
+	color: #23647a;
+	}
+
+.GroupCaptionAustere_smartbackup a:visited{
+	color: #23647a;
+	}
+
+.GroupCaptionAustere_smartbackup a:hover, .GroupCaptionAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+.GroupFooterAustere_smartbackup td{
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #afc0c4; 
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .GroupFooterAustere_smartbackup td {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.GroupFooterAustere_smartbackup a:link {
+	color: #0000f7;
+	}
+
+.GroupFooterAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.GroupFooterAustere_smartbackup a:hover, .GroupFooterAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+.GroupFooterAustere_smartbackup img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFooterAustere_smartbackup input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotalAustere_smartbackup td{
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #e7e7e7; 
+	color: #2a7893;
+	border-bottom: 2px solid #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .SubTotalAustere_smartbackup td {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.SubTotalAustere_smartbackup a:link {
+	color: #0000f7;
+	}
+
+.SubTotalAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.SubTotalAustere_smartbackup a:hover, .SubTotalAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+.TotalAustere_smartbackup td{
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #e7e7e7; 
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .TotalAustere_smartbackup td {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.TotalAustere_smartbackup a:link {
+	color: #0000f7;
+	}
+
+.TotalAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.TotalAustere_smartbackup a:hover, .TotalAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+/* Form Options */
+.ButtonAustere_smartbackup { 
+	background-color: #2a7893; color: #f4f4f4; border-left: solid 1px #EDEDED; border-top: solid 1px #EDEDED; border-right: solid 1px #848284; border-bottom: solid 1px #848284; padding: 2px; font-weight: bold; font-family: Arial; font-size: 11px;
+	}
+
+/* Calendar */
+
+.CalendarAustere_smartbackup { 
+	
+	width: 100%;
+	}
+
+.CalendarWeekdayNameAustere_smartbackup{
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #e7e7e7; 
+	color: #2a7893;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekdayNameAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarWeekdayNameAustere_smartbackup a:link {
+	color: #0000f7;
+	}
+
+.CalendarWeekdayNameAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.CalendarWeekdayNameAustere_smartbackup a:hover, .CalendarWeekdayNameAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+.CalendarWeekendNameAustere_smartbackup{
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #e7e7e7;	
+	color: #2a7893;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendNameAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarWeekendNameAustere_smartbackup a:link {
+	color: #23647a;
+	}
+
+.CalendarWeekendNameAustere_smartbackup a:visited{
+	color: #23647a;
+	}
+
+.CalendarWeekendNameAustere_smartbackup a:link, .CalendarWeekendNameAustere_smartbackup a:visited{
+	color: #dd1396;
+	}
+
+/* Calendar Day */
+.CalendarDayAustere_smartbackup{
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #f4f4f4;	
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarDayAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarDayAustere_smartbackup a:link {
+	color: #0000f7;
+	}
+
+.CalendarDayAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.CalendarDayAustere_smartbackup a:hover, .CalendarDayAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendAustere_smartbackup{
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #e7e7e7;	
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarWeekendAustere_smartbackup a:link {
+	color: #0000f7;
+	}
+
+.CalendarWeekendAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.CalendarWeekendAustere_smartbackup a:hover, .CalendarWeekendAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+/* Calendar Today */
+.CalendarTodayAustere_smartbackup {
+	font-family: Arial; font-size: 90%;
+	padding: 0px;
+	border: 2px solid #2a7893;
+	text-align: center;
+	background-color: #f4f4f4;	
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarTodayAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarTodayAustere_smartbackup a:link {
+	color: #0000f7;
+	}
+
+.CalendarTodayAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.CalendarTodayAustere_smartbackup a:hover, .CalendarTodayAustere_smartbackup a:active {
+	color: #dd1396;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodayAustere_smartbackup {
+	font-family: Arial; font-size: 90%;
+	padding: 0px;
+	border: 2px solid #2a7893;
+	text-align: center;
+	background-color: #e7e7e7;	
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendTodayAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarWeekendTodayAustere_smartbackup a:link {
+	color: #0000f7;
+	}
+
+.CalendarWeekendTodayAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.CalendarWeekendTodayAustere_smartbackup a:hover, .CalendarWeekendTodayAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDayAustere_smartbackup{
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #f4f4f4;	
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthDayAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarOtherMonthDayAustere_smartbackup a:link {
+	color: #2a7893;
+	}
+
+.CalendarOtherMonthDayAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.CalendarOtherMonthDayAustere_smartbackup a:hover, .CalendarOtherMonthDayAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodayAustere_smartbackup {
+	font-family: Arial; font-size: 90%;
+	padding: 0px;
+	border: 2px solid #2a7893;
+	text-align: center;
+	background-color: #f4f4f4;	
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthTodayAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarOtherMonthTodayAustere_smartbackup a:link {
+	color: #2a7893;
+	}
+
+.CalendarOtherMonthTodayAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.CalendarOtherMonthTodayAustere_smartbackup a:hover, .CalendarOtherMonthTodayAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendAustere_smartbackup {
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #e7e7e7;	
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendAustere_smartbackup a:link {
+	color: #2a7893;
+	}
+
+.CalendarOtherMonthWeekendAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.CalendarOtherMonthWeekendAustere_smartbackup a:hover, .CalendarOtherMonthWeekendAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodayAustere_smartbackup {
+	font-family: Arial; font-size: 90%;
+	padding: 0px;
+	border: 2px solid #2a7893;
+	text-align: center;
+	color: #2a7893;
+	background-color: #e7e7e7;	
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendTodayAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendTodayAustere_smartbackup a:link {
+	color: #2a7893;
+	}
+
+.CalendarOtherMonthWeekendTodayAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.CalendarOtherMonthWeekendTodayAustere_smartbackup a:hover, .CalendarOtherMonthWeekendTodayAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDayAustere_smartbackup{
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #afc0c4;
+	color: #23647a;
+	text-align: center;
+	font-weight: bold;
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarSelectedDayAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarSelectedDayAustere_smartbackup a:link {
+	color: #23647a;
+	}
+
+.CalendarSelectedDayAustere_smartbackup a:visited{
+	color: #23647a;
+	}
+
+.CalendarSelectedDayAustere_smartbackup a:hover, .CalendarSelectedDayAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorAustere_smartbackup {
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	background-color: #f4f4f4; color: #2a7893;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #2a7893;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigatorAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarNavigatorAustere_smartbackup a:link {
+	color: #0000f7;
+	}
+
+.CalendarNavigatorAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.CalendarNavigatorAustere_smartbackup a:hover, .CalendarNavigatorAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+.CalendarNavigatorAustere_smartbackup img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+.CalendarNavigatorAustere_smartbackup td {
+	font-family: Arial; font-size: 90%;
+	}
+
+.CalendarNavigatorAustere_smartbackup th {
+	font-family: Arial; font-size: 90%;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigatorAustere_smartbackup th, * html body .CalendarNavigatorAustere_smartbackup td {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+/* Calendar Extra */
+.CalendarEventAustere_smartbackup{
+	font-family: Arial; font-size: 90%;
+	text-align: left;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarEventAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+/*end*/
+
+.CalendarEventAustere_smartbackup a:link {
+	color: #0000f7;
+	}
+
+.CalendarEventAustere_smartbackup a:visited{
+	color: #2a7893;
+	}
+
+.CalendarEventAustere_smartbackup a:hover, .CalendarEventAustere_smartbackup a:active{
+	color: #dd1396;
+	}
+
+/* Changes for Section508 */
+table tr td strong {
+	padding: 0px;
+	margin: 0px;
+}
+
+.thAustere_smartbackup { 
+	font-family: Arial; font-size: 80%;
+	font-weight: bold;
+}
+
+
+
+/*ie6*/
+* html body .thAustere_smartbackup {
+	font-size: 100%;
+}
+/*end*/
+
+.HeaderAustere_smartbackup .thAustere_smartbackup { 
+	font-family: Arial; font-size: 110%; text-align: left;
+	padding: 2px;
+	background-image: url('Images/HeaderBg.gif');  color: #f4f4f4;
+	width: 100%;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .HeaderAustere_smartbackup .thAustere_smartbackup {
+	font-family: Arial; font-size: 138%; text-align: left;
+}
+/*end*/
+
+.CaptionAustere_smartbackup .thAustere_smartbackup { 
+	font-family: Arial; font-size: 90%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #afc0c4; color: #23647a;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .CaptionAustere_smartbackup .thAustere_smartbackup {
+	font-family: Arial; font-size: 113%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.RowAustere_smartbackup .thAustere_smartbackup { 
+	font-family: Arial; font-size: 90%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #f4f4f4; color: #2a7893;
+	white-space: nowrap;
+	color: #2a7893;
+}
+
+.AltRowAustere_smartbackup .thAustere_smartbackup { 
+	font-family: Arial; font-size: 90%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #f4f4f4; color: #2a7893;
+	white-space: nowrap;
+	color: #2a7893;
+}
+
+.ControlsAustere_smartbackup .thAustere_smartbackup { 
+	font-family: Arial; font-size: 90%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #f4f4f4; color: #2a7893;
+	white-space: nowrap;
+	color: #2a7893;
+}
+
+.GroupCaptionAustere_smartbackup .thAustere_smartbackup {
+	font-family: Arial; font-size: 90%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #e7e7e7; 
+	color: #2a7893;
+}
+
+
+
+/*ie6*/
+* html body .GroupCaptionAustere_smartbackup .thAustere_smartbackup {
+	font-family: Arial; font-size: 113%;
+}
+
+* html body .RowAustere_smartbackup .thAustere_smartbackup, * html body .AltRowAustere_smartbackup .thAustere_smartbackup, * html body .ControlsAustere_smartbackup .thAustere_smartbackup {
+	font-family: Arial; font-size: 113%; font-weight: normal; text-align: left; vertical-align: top;
+}
+/*end*/
+
+/* Class for Application Builder Menu */
+.simpleMenuAustere_smartbackup td {
+	font-family: Arial; font-size: 90%;
+}
+
+
+
+/*ie6*/
+* html body .simpleMenuAustere_smartbackup td {
+	font-family: Arial; font-size: 113%;
+} 
+/*end*/

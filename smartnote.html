@@ -1,0 +1,395 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>test</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-4AE1464F
+
+var smart_resolution_DatePicker_rslt_date = new Object(); 
+smart_resolution_DatePicker_rslt_date.format           = "LongDate";
+smart_resolution_DatePicker_rslt_date.style            = "Styles/{CCS_Style}/Style.css";
+smart_resolution_DatePicker_rslt_date.relativePathPart = "";
+smart_resolution_DatePicker_rslt_date.themeVersion = "3.0";
+
+var smart_resolution_DatePicker_rslt_servicedate = new Object(); 
+smart_resolution_DatePicker_rslt_servicedate.format           = "LongDate";
+smart_resolution_DatePicker_rslt_servicedate.style            = "Styles/{CCS_Style}/Style.css";
+smart_resolution_DatePicker_rslt_servicedate.relativePathPart = "";
+smart_resolution_DatePicker_rslt_servicedate.themeVersion = "3.0";
+
+var smart_resolution_DatePicker_datemodified = new Object(); 
+smart_resolution_DatePicker_datemodified.format           = "LongDate";
+smart_resolution_DatePicker_datemodified.style            = "Styles/{CCS_Style}/Style.css";
+smart_resolution_DatePicker_datemodified.relativePathPart = "";
+smart_resolution_DatePicker_datemodified.themeVersion = "3.0";
+
+var smart_resolution_DatePicker_rslt_eta = new Object(); 
+smart_resolution_DatePicker_rslt_eta.format           = "LongDate";
+smart_resolution_DatePicker_rslt_eta.style            = "Styles/{CCS_Style}/Style.css";
+smart_resolution_DatePicker_rslt_eta.relativePathPart = "";
+smart_resolution_DatePicker_rslt_eta.themeVersion = "3.0";
+
+var smart_resolution_DatePicker_rslt_etd = new Object(); 
+smart_resolution_DatePicker_rslt_etd.format           = "LongDate";
+smart_resolution_DatePicker_rslt_etd.style            = "Styles/{CCS_Style}/Style.css";
+smart_resolution_DatePicker_rslt_etd.relativePathPart = "";
+smart_resolution_DatePicker_rslt_etd.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//smart_resolutionButton_Cancel_OnClick @52-63964424
+function smart_resolutionButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End smart_resolutionButton_Cancel_OnClick
+
+//bind_events @1-FC40346B
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("smart_resolutionButton_Cancel", "click", smart_resolutionButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link href="Styles/{CCS_Style}/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" width="100%" rowspan="2">
+      <p><span class="H1">PAGE TITLE</span></p>
+ 
+      <table cellspacing="0" cellpadding="0" width="100%" border="0">
+        <tr>
+          <td valign="top" colspan="3">
+            <!-- BEGIN Record smart_resolution -->
+            <form id="smart_resolution" name="{HTMLFormName}" action="{Action}" method="post">
+              <table cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                        <td class="th"><strong>Resolution Note For Ticket : {ticketNumber}</strong></td> 
+                        <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <!-- BEGIN Error -->
+                      <tr class="Error">
+                        <td colspan="4">{Error}</td>
+                      </tr>
+                      <!-- END Error -->
+                      <tr class="Controls">
+                        <td class="th"><label for="smart_resolutionticket_id">Site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td>{site}<input id="smart_resolutionticket_id" type="hidden" value="{ticket_id}" name="{ticket_id_Name}"></td> 
+                        <td class="th"><label for="smart_resolutionrslt_eta">ETA&nbsp;&nbsp;</label></td> 
+                        <td><input id="smart_resolutionrslt_eta" maxlength="100" size="8" value="{rslt_eta}" name="{rslt_eta_Name}">
+                          <!-- BEGIN DatePicker DatePicker_rslt_eta --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="smart_resolutionDatePicker_rslt_eta"><img id="smart_resolutionDatePicker_rslt_eta_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_rslt_eta --></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="smart_resolutionrslt_status">Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td><input id="smart_resolutionrslt_toppanid" maxlength="50" size="50" value="{rslt_toppanid}" name="{rslt_toppanid_Name}"></td> 
+                        <td class="th">ETD</td> 
+                        <td><input id="smart_resolutionrslt_etd" maxlength="100" size="8" value="{rslt_etd}" name="{rslt_etd_Name}">
+                          <!-- BEGIN DatePicker DatePicker_rslt_etd --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="smart_resolutionDatePicker_rslt_etd"><img id="smart_resolutionDatePicker_rslt_etd_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_rslt_etd --></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="smart_resolutionrslt_date">Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td><input id="smart_resolutionrslt_date" maxlength="100" size="8" value="{rslt_date}" name="{rslt_date_Name}">
+                          <!-- BEGIN DatePicker DatePicker_rslt_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="smart_resolutionDatePicker_rslt_date"><img id="smart_resolutionDatePicker_rslt_date_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_rslt_date --></td> 
+                        <td class="">Related Ticket</td> 
+                        <td><input id="smart_resolutionrslt_related" maxlength="200" size="50" value="{rslt_related}" name="{rslt_related_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="smart_resolutionrslt_servicedate">Servicedate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td><input id="smart_resolutionrslt_servicedate" maxlength="100" size="8" value="{rslt_servicedate}" name="{rslt_servicedate_Name}">
+                          <!-- BEGIN DatePicker DatePicker_rslt_servicedate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="smart_resolutionDatePicker_rslt_servicedate"><img id="smart_resolutionDatePicker_rslt_servicedate_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_rslt_servicedate --></td> 
+                        <td class="">Customer</td> 
+                        <td>&nbsp;</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="smart_resolutionrslt_serviceno">Serviceno&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td><input id="smart_resolutionrslt_serviceno" maxlength="100" size="50" value="{rslt_serviceno}" name="{rslt_serviceno_Name}"></td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td colspan="4">&nbsp; 
+                          <table cellpadding="1" width="100%" border="0">
+                            <tr>
+                              <td>Inspection</td> 
+                              <td>Action Taken</td>
+                            </tr>
+ 
+                            <tr>
+                              <td><textarea id="smart_resolutionrslt_inspection" name="{rslt_inspection_Name}" rows="3" cols="50">{rslt_inspection}</textarea></td> 
+                              <td><textarea id="smart_resolutionrslt_action" name="{rslt_action_Name}" rows="3" cols="50">{rslt_action}</textarea><br>
+                                <!-- BEGIN RadioButton rslt_method --><input id="smart_resolutionrslt_method_{rslt_method:optionNumber}" type="radio" value="{Value}" name="{rslt_method_Name}" {Check}><label for="smart_resolutionrslt_method_{rslt_method:optionNumber}">{Description}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><!-- END RadioButton rslt_method --></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td colspan="4">
+                          <table cellpadding="1" width="100%" border="0">
+                            <tr>
+                              <td>Next Action Plan</td> 
+                              <td>Results/Remark</td>
+                            </tr>
+ 
+                            <tr>
+                              <td><textarea id="smart_resolutionrslt_planning" name="{rslt_planning_Name}" rows="3" cols="50">{rslt_planning}</textarea></td> 
+                              <td><textarea id="smart_resolutionrslt_remark" name="{rslt_remark_Name}" rows="3" cols="50">{rslt_remark}</textarea></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="smart_resolutionrslt_engineer">Rslt Engineer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td>
+                          <select id="smart_resolutionrslt_engineer" name="{rslt_engineer_Name}">
+                            <option value="" selected>Select Value</option>
+                            {rslt_engineer_Options}
+                          </select>
+ </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="smart_resolutiondatemodified">Datemodified&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td><input id="smart_resolutiondatemodified" maxlength="100" size="8" value="{datemodified}" name="{datemodified_Name}">
+                          <!-- BEGIN DatePicker DatePicker_datemodified --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="smart_resolutionDatePicker_datemodified"><img id="smart_resolutionDatePicker_datemodified_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_datemodified --></td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                      </tr>
+ 
+                      <tr class="Bottom">
+                        <td align="right" colspan="4">
+                          <!-- BEGIN Button Button_Insert --><input id="smart_resolutionButton_Insert" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                          <!-- BEGIN Button Button_Update --><input id="smart_resolutionButton_Update" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+                          <!-- BEGIN Button Button_Cancel --><input id="smart_resolutionButton_Cancel" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <!-- END Record smart_resolution --></td>
+        </tr>
+ 
+        <tr>
+          <td valign="top" colspan="3">&nbsp;</td>
+        </tr>
+ 
+        <tr>
+          <td valign="top" width="40%">
+            <!-- BEGIN Grid smart_equipment -->
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+              <tr>
+                <td valign="top">
+                  <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                      <td class="th"><strong>Equipment(s)</strong></td> 
+                      <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+                    </tr>
+                  </table>
+ 
+                  <table class="Grid" cellspacing="0" cellpadding="0">
+                    <tr class="Caption">
+                      <th scope="col">Eqmt Type</th>
+ 
+                      <th scope="col">Eqmt Serialno</th>
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <tr class="Row">
+                      <td style="TEXT-ALIGN: right">{id}{eqmt_type}&nbsp;</td> 
+                      <td>{eqmt_serialno}&nbsp;</td>
+                    </tr>
+ <!-- END Row -->
+                    <!-- BEGIN Separator -->
+                    <tr class="Separator">
+                      <td colspan="2"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+                    </tr>
+                    <!-- END Separator -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                      <td colspan="2">No records</td>
+                    </tr>
+                    <!-- END NoRecords -->
+                    <tr class="Footer">
+                      <td colspan="6"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- END Grid smart_equipment --></td> 
+          <td valign="top" width="1%">&nbsp;</td> 
+          <td valign="top" width="59%">
+            <!-- BEGIN Grid smart_measurement -->
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+              <tr>
+                <td valign="top">
+                  <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                      <td class="th"><strong>Measurement(s) (if applicable)</strong></td> 
+                      <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+                    </tr>
+                  </table>
+ 
+                  <table class="Grid" cellspacing="0" cellpadding="0">
+                    <tr class="Caption">
+                      <th scope="col">Id</th>
+ 
+                      <th scope="col">Msre Item</th>
+ 
+                      <th scope="col">Msre Before</th>
+ 
+                      <th scope="col">Msre After</th>
+ 
+                      <th scope="col">Msre Remark</th>
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <tr class="Row">
+                      <td style="TEXT-ALIGN: right">{id}&nbsp;</td> 
+                      <td>{msre_item}&nbsp;</td> 
+                      <td style="TEXT-ALIGN: right">{msre_before}&nbsp;</td> 
+                      <td style="TEXT-ALIGN: right">{msre_after}&nbsp;</td> 
+                      <td>{msre_remark}&nbsp;</td>
+                    </tr>
+ <!-- END Row -->
+                    <!-- BEGIN Separator -->
+                    <tr class="Separator">
+                      <td colspan="5"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+                    </tr>
+                    <!-- END Separator -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                      <td colspan="5">No records</td>
+                    </tr>
+                    <!-- END NoRecords -->
+                    <tr class="Footer">
+                      <td colspan="6"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- END Grid smart_measurement --></td>
+        </tr>
+ 
+        <tr>
+          <td valign="top" width="40%">&nbsp;</td> 
+          <td valign="top" width="1%">&nbsp;</td> 
+          <td valign="top" width="59%">&nbsp;</td>
+        </tr>
+ 
+        <tr>
+          <td colspan="3">
+            <!-- BEGIN Grid smart_replacement -->
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+              <tr>
+                <td valign="top">
+                  <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                      <td class="th"><strong>List of Smart Replacement </strong></td> 
+                      <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+                    </tr>
+                  </table>
+ 
+                  <table class="Grid" cellspacing="0" cellpadding="0">
+                    <tr class="Caption">
+                      <th scope="col">Id</th>
+ 
+                      <th scope="col">Resolution Id</th>
+ 
+                      <th scope="col">Equipment Id</th>
+ 
+                      <th scope="col">Ticket Id</th>
+ 
+                      <th scope="col">Rplmt Serialno</th>
+ 
+                      <th scope="col">Rplmt Remark</th>
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <tr class="Row">
+                      <td style="TEXT-ALIGN: right">{id}&nbsp;</td> 
+                      <td style="TEXT-ALIGN: right">{resolution_id}&nbsp;</td> 
+                      <td style="TEXT-ALIGN: right">{equipment_id}&nbsp;</td> 
+                      <td style="TEXT-ALIGN: right">{ticket_id}&nbsp;</td> 
+                      <td>{rplmt_serialno}&nbsp;</td> 
+                      <td>{rplmt_remark}&nbsp;</td>
+                    </tr>
+ <!-- END Row -->
+                    <!-- BEGIN Separator -->
+                    <tr class="Separator">
+                      <td colspan="6"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+                    </tr>
+                    <!-- END Separator -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                      <td colspan="6">No records</td>
+                    </tr>
+                    <!-- END NoRecords -->
+                    <tr class="Footer">
+                      <td colspan="6">
+                        <!-- BEGIN Navigator Navigator -->
+                        <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif" border="0"></a> <!-- END First_On -->
+                        <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+                        <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+                        <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                        <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+                        <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+                        <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+                        <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- END Grid smart_replacement --><br>
+          </td>
+        </tr>
+ 
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

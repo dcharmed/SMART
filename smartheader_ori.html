@@ -1,0 +1,75 @@
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+
+//Include Common JSFunctions @1-A2F3288E
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-3E8FCECF
+function smartheader_bind_events() {
+    if (functionExists("smartnavmenu_bind_events")) smartnavmenu_bind_events();
+}
+//End bind_events
+
+//End CCS script
+</script>
+<table class="t1" cellspacing="0" cellpadding="5" width="100%">
+  <tr>
+    <td valign="bottom" align="left"><span class="logo1"><img id="Image1" name="Image1" alt="" src="images/TARGET_logo.jpg" width="50" height="50">&nbsp;SMART</span><br>
+      <span class="logo3">Sistem Maklumat &amp; Rekod TARGET</span> </td> 
+    <td style="TEXT-ALIGN: right; valign: bottom" width="40%">&nbsp; 
+      <table style="WIDTH: 100%" border="0" cellspacing="2" cellpadding="0">
+        <tr>
+          <td><b>Today: {TodayDate}</b></td> 
+        </tr>
+ 
+        <tr>
+          <td>
+            <!-- BEGIN Record smart_user -->
+            <form id="smartheadersmart_user" method="post" name="{HTMLFormName}" action="{Action}">
+              {usr_fullname}&nbsp;( {usr_group}&nbsp;) last logged in @ {usr_lastlogged}<br>
+<a href="{Link1_Src}" id="smartheadersmart_userLink1">My Account</a>&nbsp;| <a href="{Logout_Src}" id="smartheadersmart_userLogout">Logout</a> 
+            </form>
+ <!-- END Record smart_user --></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+ 
+  <tr>
+    <td class="navmenu" colspan="2">{smartnavmenu}</td> 
+  </tr>
+</table>
+<!-- BEGIN Record smart_ticket -->
+<table cellspacing="0" cellpadding="1" width="30%" align="right">
+  <tr>
+    <td valign="middle" align="right">
+      <table border="0" cellspacing="0" cellpadding="0" witdh="100%">
+        <tr>
+          <td class="tdTicketAlertLabel" width="20%"></td> 
+          <td class="tdTicketAlertLabel"></td> 
+          <td class="tdTicketAlertLabel" width="13%">CRITICAL</td> 
+          <td class="tdTicketAlertLabel" width="13%">MAJOR;</td> 
+          <td class="tdTicketAlertLabel" width="13%">MINOR</td> 
+          <td class="tdTicketAlertLabel" width="13%">INFO</td> 
+        </tr>
+ 
+        <tr>
+          <td class="tdTicketAlert" width="20%"><a href="{Link1_Src}" id="smartheadersmart_ticketLink1">View All</a>&nbsp;|&nbsp;</td> 
+          <td class="tdTicketAlertLabel">NOT CLOSED:&nbsp;<font class="tdTicketAlert"><a href="{lblNotClose_Src}" id="smartheadersmart_ticketlblNotClose">{lblNotClose}</a></font></td> 
+          <td class="tdTicketAlert" width="12%">[ <a href="{lblCritical_Src}" id="smartheadersmart_ticketlblCritical">{lblCritical}</a></td> 
+          <td class="tdTicketAlert" width="12%"><a href="{lblMajor_Src}" id="smartheadersmart_ticketlblMajor">{lblMajor}</a>&nbsp;</td> 
+          <td class="tdTicketAlert" width="12%"><a href="{lblMinor_Src}" id="smartheadersmart_ticketlblMinor">{lblMinor}</a>&nbsp;</td> 
+          <td class="tdTicketAlert" width="12%"><a href="{lblInfo_Src}" id="smartheadersmart_ticketlblInfo">{lblInfo}</a> ]</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Record smart_ticket -->

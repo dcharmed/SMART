@@ -1,0 +1,190 @@
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-200879CE
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-444F4267
+
+var smart_resolutionnote_smar_DatePicker_s_tckt_r_date = new Object(); 
+smart_resolutionnote_smar_DatePicker_s_tckt_r_date.format           = "LongDate";
+smart_resolutionnote_smar_DatePicker_s_tckt_r_date.style            = "Styles/{CCS_Style}/Style.css";
+smart_resolutionnote_smar_DatePicker_s_tckt_r_date.relativePathPart = "";
+smart_resolutionnote_smar_DatePicker_s_tckt_r_date.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//bind_events @1-E0C83CF6
+function reportsrsltnnote_bind_events() {
+}
+//End bind_events
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">
+<!-- BEGIN Record smart_resolutionnote_smar -->
+<form id="reportsrsltnnotesmart_resolutionnote_smar" method="post" action="{Action}" name="{HTMLFormName}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" border="0" class="Header">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/{CCS_Style}/Images/Spacer.gif" alt=""></td> 
+            <td class="th"><strong>Search Smart Resolutionnote Smar </strong></td> 
+            <td class="HeaderRight"><img border="0" src="Styles/{CCS_Style}/Images/Spacer.gif" alt=""></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="reportsrsltnnotesmart_resolutionnote_smars_tckt_r_date">Tckt R Date</label></td> 
+            <td><input type="text" name="{s_tckt_r_date_Name}" value="{s_tckt_r_date}" maxlength="100" size="29" id="reportsrsltnnotesmart_resolutionnote_smars_tckt_r_date">
+              <!-- BEGIN DatePicker DatePicker_s_tckt_r_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="reportsrsltnnotesmart_resolutionnote_smarDatePicker_s_tckt_r_date"><img src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0" alt="Show Date Picker" id="reportsrsltnnotesmart_resolutionnote_smarDatePicker_s_tckt_r_date_Image"></a><!-- END DatePicker DatePicker_s_tckt_r_date --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="reportsrsltnnotesmart_resolutionnote_smars_tckt_state">Tckt State</label></td> 
+            <td>
+              <select name="{s_tckt_state_Name}" id="reportsrsltnnotesmart_resolutionnote_smars_tckt_state">
+                <option value="">Select Value</option>
+ {s_tckt_state_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="reportsrsltnnotesmart_resolutionnote_smars_tckt_site">Tckt Site</label></td> 
+            <td>
+              <select name="{s_tckt_site_Name}" id="reportsrsltnnotesmart_resolutionnote_smars_tckt_site">
+                <option value="">Select Value</option>
+ {s_tckt_site_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_DoSearch --><input name="{Button_Name}" type="image" style="border-width: 0;" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" value="Search" alt="Search" id="reportsrsltnnotesmart_resolutionnote_smarButton_DoSearch"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record smart_resolutionnote_smar --><br>
+<!-- BEGIN Report smart_ticket_smart_resolu -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table cellspacing="0" cellpadding="0" border="0" class="Header">
+        <tr>
+          <td class="HeaderLeft"><img border="0" src="Styles/{CCS_Style}/Images/Spacer.gif" alt=""></td> 
+          <td class="th"><strong>Smart Ticket, Smart Resolutionnote </strong></td> 
+          <td class="HeaderRight"><img border="0" src="Styles/{CCS_Style}/Images/Spacer.gif" alt=""></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header -->
+        <caption class="Row">Total Records:&nbsp;{Report_TotalRecords}&nbsp;</caption>
+ <!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header -->
+        <tr class="Caption">
+          <th scope="col">tckt_refnumber</th>
+ 
+          <th scope="col">#</th>
+ 
+          <th scope="col">rsltn_type</th>
+ 
+          <th scope="col">rsltn_date</th>
+ 
+          <th scope="col">rsltn_byuser</th>
+ 
+          <th scope="col">rsltn_actiontaken</th>
+ 
+          <th scope="col">ticket_id</th>
+ 
+          <th scope="col">tckt_engineer</th>
+ 
+          <th scope="col">tckt_r_date</th>
+ 
+          <th scope="col">tckt_site</th>
+ 
+          <th scope="col">tckt_description</th>
+ 
+          <th scope="col">tckt_c_date</th>
+ 
+          <th scope="col">tckt_c_method</th>
+ 
+        </tr>
+ <!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tr class="Footer">
+          <td>{Report_CurrentDateTime}</td> 
+          <td colspan="12">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" src="Styles/{CCS_Style}/Images/First.gif" alt="{First_URL}"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img border="0" src="Styles/{CCS_Style}/Images/FirstOff.gif" alt="{First_URL}"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" src="Styles/{CCS_Style}/Images/Prev.gif" alt="{Prev_URL}"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img border="0" src="Styles/{CCS_Style}/Images/PrevOff.gif" alt="{Prev_URL}"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" src="Styles/{CCS_Style}/Images/Next.gif" alt="{Next_URL}"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img border="0" src="Styles/{CCS_Style}/Images/NextOff.gif" alt="{Next_URL}"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" src="Styles/{CCS_Style}/Images/Last.gif" alt="{Last_URL}"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img border="0" src="Styles/{CCS_Style}/Images/LastOff.gif" alt="{Last_URL}"><!-- END Last_Off --><!-- END Navigator Navigator --></td> 
+        </tr>
+ 
+        <!-- BEGIN Panel PageBreak -->
+      </table>
+ </td> 
+  </tr>
+</table>
+<p style="page-break-after:always">&nbsp;</p>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- END Panel PageBreak --><!-- END Section Page_Footer -->
+        <!-- BEGIN Section tckt_refnumber_Header --><!-- END Section tckt_refnumber_Header -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <td>
+{tckt_refnumber} </td> 
+          <td style="text-align:right;">{Report_Row_Number} </td> 
+          <td>{rsltn_type} </td> 
+          <td>{rsltn_date} </td> 
+          <td style="text-align:right;">{rsltn_byuser} </td> 
+          <td>{rsltn_actiontaken} </td> 
+          <td style="text-align:right;">{ticket_id} </td> 
+          <td>{tckt_engineer} </td> 
+          <td>{tckt_r_date} </td> 
+          <td>{tckt_site} </td> 
+          <td>{tckt_description} </td> 
+          <td>{tckt_c_date} </td> 
+          <td>{tckt_c_method} </td> 
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section tckt_refnumber_Footer --><!-- END Section tckt_refnumber_Footer -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="13">No records</td> 
+        </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Report smart_ticket_smart_resolu --><br>

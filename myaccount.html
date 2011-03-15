@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-298AEA8C
+
+var smart_user_DatePicker_usr_dateofbirth = new Object(); 
+smart_user_DatePicker_usr_dateofbirth.format           = "ShortDate";
+smart_user_DatePicker_usr_dateofbirth.style            = "Styles/None/Style.css";
+smart_user_DatePicker_usr_dateofbirth.relativePathPart = "";
+smart_user_DatePicker_usr_dateofbirth.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//smart_userButton_Cancel_OnClick @7-AD51D87D
+function smart_userButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End smart_userButton_Cancel_OnClick
+
+//bind_events @1-0F03EFF7
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("smart_userButton_Cancel", "click", smart_userButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css" />
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <div class="H1">
+        My Account 
+      </div>
+ 
+      <p>You can update your profile details here.</p>
+ 
+      <p>
+      <!-- BEGIN Record smart_user -->
+      <form id="smart_user" method="post" name="{HTMLFormName}" action="{Action}">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>Profile Details</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td> 
+                </tr>
+ <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="smart_userusr_username">Username</label></td> 
+                  <td>{usr_username}<input id="smart_userdatemodified" value="{datemodified}" type="hidden" name="{datemodified_Name}"></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th" colspan="2"><em>Please leave the this area blank if you won't change your password.</em></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">Password</td> 
+                  <td><input id="smart_userusr_password" value="{usr_password}" maxlength="20" type="password" name="{usr_password_Name}" size="20">&nbsp;<input id="smart_userPassword" value="{Password}" type="hidden" name="{Password_Name}"></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="smart_userusr_vpassword">Verify Password</label></td> 
+                  <td><input id="smart_userusr_vpassword" value="{usr_vpassword}" maxlength="20" type="password" name="{usr_vpassword_Name}" size="20"></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="smart_userusr_group">Group</label></td> 
+                  <td>{usr_group} </td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="smart_userusr_email">Email <font color="#ff0000">*</font></label></td> 
+                  <td><input id="smart_userusr_email" value="{usr_email}" maxlength="200" size="50" name="{usr_email_Name}"></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="smart_userusr_fullname">Fullname <font color="#ff0000">*</font></label></td> 
+                  <td><input id="smart_userusr_fullname" value="{usr_fullname}" maxlength="250" size="50" name="{usr_fullname_Name}"></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="smart_userusr_staffid">Staff ID <font color="#ff0000">*</font></label></td> 
+                  <td><input id="smart_userusr_staffid" value="{usr_staffid}" maxlength="20" name="{usr_staffid_Name}" size="20"></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="smart_userusr_post">Post</label></td> 
+                  <td>
+                    <select id="smart_userusr_post" name="{usr_post_Name}">
+                      <option selected value="">Select Value</option>
+ {usr_post_Options} 
+                    </select>
+ </td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="smart_userusr_address">Address</label></td> 
+                  <td><textarea id="smart_userusr_address" rows="3" cols="40" name="{usr_address_Name}">{usr_address}</textarea></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="smart_userusr_gender">Gender</label></td> 
+                  <td>
+                    <!-- BEGIN RadioButton usr_gender --><input id="smart_userusr_gender_{usr_gender:optionNumber}" value="{Value}" type="radio" name="{usr_gender_Name}" {Check}><label for="smart_userusr_gender_{usr_gender:optionNumber}">{Description}</label><!-- END RadioButton usr_gender --></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="smart_userusr_dateofbirth">Date of birth</label></td> 
+                  <td><input id="smart_userusr_dateofbirth" value="{usr_dateofbirth}" maxlength="20" size="12" name="{usr_dateofbirth_Name}">&nbsp; 
+                    <!-- BEGIN DatePicker DatePicker_usr_dateofbirth --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="smart_userDatePicker_usr_dateofbirth"><img id="smart_userDatePicker_usr_dateofbirth_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_usr_dateofbirth --></td> 
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td colspan="2" align="right">
+                    <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="smart_userButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                    <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="smart_userButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record smart_user --><br>
+      </p>
+ </td> 
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

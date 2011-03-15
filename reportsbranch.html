@@ -1,0 +1,117 @@
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+<div id="print_rptbranch">
+  <!-- BEGIN Grid GReportBranchByYear -->
+  <table border="0" cellspacing="0" cellpadding="0" width="80%">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+            <td class="th"><strong>Statistic of Tickets According to&nbsp;Branch By Year of {lblYear}</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <tr class="Caption">
+            <th style="TEXT-ALIGN: center" width="1%" scope="col">#</th>
+ 
+            <th scope="col">BRANCH</th>
+ 
+            <th style="TEXT-ALIGN: center" width="5%" scope="col">JAN</th>
+ 
+            <th style="TEXT-ALIGN: center" width="5%" scope="col">FEB</th>
+ 
+            <th style="TEXT-ALIGN: center" width="5%" scope="col">MAR</th>
+ 
+            <th style="TEXT-ALIGN: center" width="5%" scope="col">APR</th>
+ 
+            <th style="TEXT-ALIGN: center" width="5%" scope="col">MEI</th>
+ 
+            <th style="TEXT-ALIGN: center" width="5%" scope="col">JUNE</th>
+ 
+            <th style="TEXT-ALIGN: center" width="5%" scope="col">JULY</th>
+ 
+            <th style="TEXT-ALIGN: center" width="5%" scope="col">AUG</th>
+ 
+            <th style="TEXT-ALIGN: center" width="5%" scope="col">SEPT</th>
+ 
+            <th style="TEXT-ALIGN: center" width="5%" scope="col">OCT</th>
+ 
+            <th style="TEXT-ALIGN: center" width="5%" scope="col">NOV</th>
+ 
+            <th style="TEXT-ALIGN: center" width="5%" scope="col">DEC</th>
+ 
+            <th style="TEXT-ALIGN: center" width="10%" scope="col">TOTAL TICKET</th>
+ 
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <tr class="Row">
+            <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;</td> 
+            <td>{ref_description}&nbsp;<label for="reportsbranchGReportBranchByYearref_value_{GReportBranchByYear:rowNumber}" style="display: none;">Ref Value</label><input id="reportsbranchGReportBranchByYearref_value_{GReportBranchByYear:rowNumber}" value="{ref_value}" type="hidden" name="{ref_value_Name}"></td> 
+            <td style="TEXT-ALIGN: center">&nbsp;{JanTic}</td> 
+            <td style="TEXT-ALIGN: center">&nbsp;{FebTic}</td> 
+            <td style="TEXT-ALIGN: center">&nbsp;{MacTic}</td> 
+            <td style="TEXT-ALIGN: center">&nbsp;{AprTic}</td> 
+            <td style="TEXT-ALIGN: center">&nbsp;{MeiTic}</td> 
+            <td style="TEXT-ALIGN: center">&nbsp;{JuneTic}</td> 
+            <td style="TEXT-ALIGN: center">&nbsp;{JulyTic}</td> 
+            <td style="TEXT-ALIGN: center">&nbsp;{AugTic}</td> 
+            <td style="TEXT-ALIGN: center">&nbsp;{SeptTic}</td> 
+            <td style="TEXT-ALIGN: center">&nbsp;{OctTic}</td> 
+            <td style="TEXT-ALIGN: center">&nbsp;{NovTic}</td> 
+            <td style="TEXT-ALIGN: center">&nbsp;{DecTic}</td> 
+            <td style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold">{TicMonth}&nbsp;</td> 
+          </tr>
+ <!-- END Row -->
+          <tr class="Caption">
+
+            <th style="TEXT-ALIGN: right; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" colspan="2" scope="col">GRAND TOTAL</th>
+			 <th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" scope="col">{TotalJan}</th>
+ 
+			<th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" scope="col">{TotalFeb}</th>
+ 
+			<th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" scope="col">{TotalMac}</th>
+ 
+			<th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" scope="col">{TotalApr}</th>
+ 
+			<th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" scope="col">{TotalMei}</th>
+ 
+			<th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" scope="col">{TotalJune}</th>
+ 
+			<th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" scope="col">{TotalJuly}</th>
+ 
+			<th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" scope="col">{TotalAug}</th>
+ 
+			<th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" scope="col">{TotalSept}</th>
+ 
+			<th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" scope="col">{TotalOct}</th>
+ 
+			<th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" scope="col">{TotalNov}</th>
+ 
+			<th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="5%" scope="col">{TotalDec}</th>
+
+            <th style="TEXT-ALIGN: center; COLOR: green; FONT-SIZE: 14px; FONT-WEIGHT: bold" width="10%" scope="col"><b>
+
+{GrandTotal}</b></th>
+		  </tr>
+
+          </tr>
+ 
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="15">No records</td> 
+          </tr>
+ <!-- END NoRecords -->
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+ <!-- END Grid GReportBranchByYear -->
+</div>
+<!-- a href="javascript:PrintingPage('print_rptbranch','Statistic of Tickets According to Branches')">Click here to print</a -->
+&nbsp; <a href="{ImageLink1}" id="reportsbranchImageLink1"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{ImageLink1}" src="Styles/smartStyleTurqoise/Images/en/ButtonPrint.gif"></a>

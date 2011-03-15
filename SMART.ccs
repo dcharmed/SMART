@@ -1,0 +1,132 @@
+<Site id="0" language="PHPTemplates" name="SMART" siteLanguage="en" publishingType="Project" FTPpublishingType="Project" securityType="Table" urlType="Absolute" useCCSCultureFormats="True" defaultDateFormat="LongDate" LSEnableQueryString="True" LSQueryStringName="locale" LSEnableHTTPHeader="False" LSEnableSession="True" LSSessionName="locale" LSLanguageSessionName="lang" LSEnableCookie="False" LSCookieName="locale" LSCookieExpired="365" cachingMethod="None" useI18nFeatures="False" showDepreciatedStyles="All" useDynamicStyles="True" SSEnableQueryString="True" SSQueryStringName="style" SSEnableSession="True" SSSessionName="style" SSEnableCookie="False" SSCookieName="style" SSCookieExpired="365" htmlTemplateType="HTML" isSection508="True" createIdsForControls="True" createIdsForNonEditableControls="True" createLablesForControls="False" generateJS="True" fileExtension=".php" improvedHTTPCaching="True" outputFileFormat="Windows" PHPVersion="4" userIDStoreMethod="Session" userIDVariable="UserID" userLoginVariable="UserLogin" groupIDVariable="GroupID" cookieVariable="UserInfo" automatedLogin="False" defaultHTMLEncoding="windows-1252" omitIfEmpty="True" separateEvents="False" FCKBasePath="FCKeditor" ccsVersion="4.3.00.7676" useAmp="True" codeFileEncoding="windows-1252" ALLoginCookieName="SMARTLogin" ALCookieExpired="30" ALEncryptionKey="196E4038BrRiEp66" ALAutoProlong="False" higherLevel="False" connection="SMART" defaultStyle="smartStyleTurqoise" startPage="index.ccp" loginPage="index.ccp" securityConnection="SMART" usersTable="smart_user" userIDField="id" userLoginField="usr_username" userPasswordField="usr_password" ALEnabled="True" ProtectPasswordsInDB="False" ProtectPasswordsMethod="CodeExpression" userGroupField="usr_group" newPageTemplate="C:\wamp\www\SMART\test.ccp">
+	<Components>
+	</Components>
+	<Connections>
+	</Connections>
+	<CodeFiles>
+		<CodeFile id="Templates" language="PHPTemplates" name="Template.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Common" language="PHPTemplates" name="Common.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Sorter" language="PHPTemplates" name="Sorter.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Navigator" language="PHPTemplates" name="Navigator.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="CalendarNavigator" language="PHPTemplates" name="CalendarNavigator.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Classes" language="PHPTemplates" name="Classes.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="db_array" language="PHPTemplates" name="db_array.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="db_adapter" language="PHPTemplates" name="db_adapter.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="JSFunctions" language="PHPTemplates" name="Functions.js" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="JSDatePickerHTML" language="PHPTemplates" name="DatePicker.html" forShow="False" comment="&lt;!--" commentEnd="--&gt;" codePage="windows-1252"/>
+		<CodeFile id="JSDatePicker" language="PHPTemplates" name="DatePicker.js" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="Client" language="PHPTemplates" name="ClientI18N.php" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="Services" language="PHPTemplates" name="Services.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Prototype" language="PHPTemplates" name="prototype.js" path="js\pt" forShow="False" comment="//" codePage="utf-8" CheckSum="DF56ADDD"/>
+		<CodeFile id="PrototypeCcs" language="PHPTemplates" name="prototype_ccs.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="DF43E555"/>
+		<CodeFile id="AjaxPanel" language="PHPTemplates" name="ajaxpanel.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="22E92999"/>
+		<CodeFile id="InlineEditing" language="PHPTemplates" name="inlineediting.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="AADEB3FC"/>
+		<CodeFile id="CaptchaCCS" language="PHPTemplates" name="captcha.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="3197B15E"/>
+		<CodeFile id="PTBuilder" language="PHPTemplates" name="builder.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="F58455A1"/>
+		<CodeFile id="PTControls" language="PHPTemplates" name="controls.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="5224641B"/>
+		<CodeFile id="PTDragDrop" language="PHPTemplates" name="dragdrop.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="F2FF6479"/>
+		<CodeFile id="PTEffects" language="PHPTemplates" name="effects.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="F9CE83BB"/>
+		<CodeFile id="PTScriptaculous" language="PHPTemplates" name="scriptaculous.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="FC331358"/>
+		<CodeFile id="PTSlider" language="PHPTemplates" name="slider.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="78349C90"/>
+		<CodeFile id="PTSound" language="PHPTemplates" name="sound.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="14D71A6D"/>
+		<CodeFile id="YUIAnimation" language="PHPTemplates" name="animation.js" path="js\yui\build\animation" forShow="False" comment="//" codePage="windows-1252" CheckSum="E2B575F5"/>
+		<CodeFile id="YUIAnimationMin" language="PHPTemplates" name="animation-min.js" path="js\yui\build\animation" forShow="False" comment="//" codePage="windows-1252" CheckSum="27AC6A27"/>
+		<CodeFile id="YUIAutocomplete" language="PHPTemplates" name="autocomplete.js" path="js\yui\build\autocomplete" forShow="False" comment="//" codePage="windows-1252" CheckSum="1C1F4551"/>
+		<CodeFile id="YUIAutocompleteMin" language="PHPTemplates" name="autocomplete-min.js" path="js\yui\build\autocomplete" forShow="False" comment="//" codePage="windows-1252" CheckSum="0BFE721A"/>
+		<CodeFile id="YUIConnection" language="PHPTemplates" name="connection.js" path="js\yui\build\connection" forShow="False" comment="//" codePage="windows-1252" CheckSum="1CEA7A1B"/>
+		<CodeFile id="YUICOnnectionMin" language="PHPTemplates" name="connection-min.js" path="js\yui\build\connection" forShow="False" comment="//" codePage="windows-1252" CheckSum="4D9D2F4E"/>
+		<CodeFile id="YUIDOM" language="PHPTemplates" name="dom.js" path="js\yui\build\dom" forShow="False" comment="//" codePage="windows-1252" CheckSum="23FB3233"/>
+		<CodeFile id="YUIDOMMin" language="PHPTemplates" name="dom-min.js" path="js\yui\build\dom" forShow="False" comment="//" codePage="windows-1252" CheckSum="347AFE26"/>
+		<CodeFile id="YUIElement" language="PHPTemplates" name="element-beta.js" path="js\yui\build\element" forShow="False" comment="//" codePage="windows-1252" CheckSum="FA483376"/>
+		<CodeFile id="YUIElementMin" language="PHPTemplates" name="element-beta-min.js" path="js\yui\build\element" forShow="False" comment="//" codePage="windows-1252" CheckSum="D928F640"/>
+		<CodeFile id="YUIEvent" language="PHPTemplates" name="event.js" path="js\yui\build\event" forShow="False" comment="//" codePage="windows-1252" CheckSum="249D272F"/>
+		<CodeFile id="YUIEventMin" language="PHPTemplates" name="event-min.js" path="js\yui\build\event" forShow="False" comment="//" codePage="windows-1252" CheckSum="10A03BD2"/>
+		<CodeFile id="YUITabView" language="PHPTemplates" name="tabview.js" path="js\yui\build\tabview" forShow="False" comment="//" codePage="windows-1252" CheckSum="00D2C772"/>
+		<CodeFile id="YUITabViewMin" language="PHPTemplates" name="tabview-min.js" path="js\yui\build\tabview" forShow="False" comment="//" codePage="windows-1252" CheckSum="DDBAB64C"/>
+		<CodeFile id="YUITabViewBorderTab" language="PHPTemplates" name="border_tabs.css" path="js\yui\build\tabview\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="7CB76A0E"/>
+		<CodeFile id="YUITabViewCss" language="PHPTemplates" name="tabview.css" path="js\yui\build\tabview\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="551A7EC7"/>
+		<CodeFile id="YUITabViewCoreCss" language="PHPTemplates" name="tabview-core.css" path="js\yui\build\tabview\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="73EE3885"/>
+		<CodeFile id="YUIYahoo" language="PHPTemplates" name="yahoo.js" path="js\yui\build\yahoo" forShow="False" comment="//" codePage="windows-1252" CheckSum="79E02F2F"/>
+		<CodeFile id="YUIYahooMin" language="PHPTemplates" name="yahoo-min.js" path="js\yui\build\yahoo" forShow="False" comment="//" codePage="windows-1252" CheckSum="601D3BF1"/>
+		<CodeFile id="YUIYahooDomEvent" language="PHPTemplates" name="yahoo-dom-event.js" path="js\yui\build\yahoo-dom-event" forShow="False" comment="//" codePage="windows-1252" CheckSum="71ED8388"/>
+		<CodeFile id="MenuScript" language="PHPTemplates" name="ADxMenu.js" path="js\menu" forShow="False" comment="//" codePage="windows-1252" CheckSum="A1D53520"/>
+		<CodeFile id="MenuWCHScript" language="PHPTemplates" name="WCH.js" path="js\menu" forShow="False" comment="//" codePage="windows-1252" CheckSum="20EABDE1"/>
+		<CodeFile id="YUIDragDropMin" language="PHPTemplates" name="dragdrop-min.js" path="js\yui\build\dragdrop" forShow="False" comment="//" codePage="windows-1252" CheckSum="7313465F"/>
+		<CodeFile id="db_mysql" language="PHPTemplates" name="db_mysql.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="YUIAutocompleteCommons" language="PHPTemplates" name="autocomplete-commons.js" path="js\yui" forShow="False" comment="//" codePage="windows-1252" CheckSum="70B27280"/>
+	</CodeFiles>
+	<Groups>
+		<Group id="443" name="Administrator" value="1"/>
+<Group id="444" name="Manager" value="2"/>
+<Group id="445" name="Engineer" value="3"/>
+<Group id="446" name="Helpdesk" value="5"/>
+<Group id="447" name="Adukom" value="6"/>
+<Group id="448" name="Senior" value="4"/>
+<Group id="449" name="User/Client" value="10"/>
+<Group id="450" name="In-House Engineer" value="7"/>
+</Groups>
+	<Styles>
+		<Style id="3" name="smartStyle" caption="smartStyle"/>
+		<Style id="4" name="smartStyleTurqoise" caption="smartStyleTurqoise"/>
+		<Style id="100" name="None" caption="None"/>
+		<Style id="169" name="Austere_smartbackup" caption="Austere_smartbackup"/>
+		<Style id="321" name="AustereButton" caption="Austere Button"/>
+	</Styles>
+	<CustomButtons>
+		<CustomButton id="407" name="ButtonCancel" value="Cancel"/>
+<CustomButton id="408" name="ButtonDelete" value="Delete"/>
+<CustomButton id="409" name="ButtonInsert" value="Add"/>
+<CustomButton id="410" name="ButtonLogin" value="Login"/>
+<CustomButton id="411" name="ButtonLogout" value="Logout"/>
+<CustomButton id="412" name="ButtonSearch" value="Search"/>
+<CustomButton id="413" name="ButtonToday" value="Today"/>
+<CustomButton id="414" name="ButtonUpdate" value="Update"/>
+<CustomButton id="415" name="ButtonLast" value="Last"/>
+<CustomButton id="416" name="ButtonLastOff" value="Last"/>
+<CustomButton id="417" name="ButtonFirst" value="First"/>
+<CustomButton id="418" name="ButtonFirstOff" value="First"/>
+<CustomButton id="419" name="ButtonNext" value="Next"/>
+<CustomButton id="420" name="ButtonNextOff" value="Next"/>
+<CustomButton id="421" name="ButtonPrev" value="Prev"/>
+<CustomButton id="422" name="ButtonPrevOff" value="Prev"/>
+<CustomButton id="423" name="ButtonReturned" value="Return"/>
+<CustomButton id="424" name="ButtonProcess" value="Process"/>
+<CustomButton id="425" name="ButtonApproval" value="Submit For Approval"/>
+<CustomButton id="426" name="ButtonBackToList" value="Back To Ticket List"/>
+<CustomButton id="427" name="ButtonCM" value="Corrective Maintenance"/>
+<CustomButton id="428" name="ButtonSN" value="Support Notes"/>
+<CustomButton id="429" name="ButtonNewCM" value="New CM"/>
+<CustomButton id="430" name="ButtonNewSN" value="New SN"/>
+<CustomButton id="431" name="ButtonClose" value="Close"/>
+<CustomButton id="432" name="ButtonFind" value="Find"/>
+<CustomButton id="433" name="ButtonNewRow" value="Add New Row"/>
+<CustomButton id="434" name="ButtonPrint" value="Print"/>
+<CustomButton id="435" name="ButtonReport" value="Generate Report"/>
+<CustomButton id="436" name="ButtonFilter" value="Filter"/>
+<CustomButton id="437" name="ButtonNo" value="No"/>
+<CustomButton id="438" name="ButtonYes" value="Yes"/>
+<CustomButton id="439" name="ButtonSubmit" value="Submit"/>
+<CustomButton id="440" name="ButtonNewRecord" value="Add New Record"/>
+<CustomButton id="441" name="ButtonUpdStock" value="Update Stocks"/>
+<CustomButton id="442" name="ButtonGenerate" value="Generate"/>
+</CustomButtons>
+	<Profiles>
+		<Profile name="Server1" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;pl;pm;cgi;mdb;gif;jpg;css;xml;java;ascx;aspx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;swf" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" fileExtension=".php" location="Local" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;swf" publishingExceptMask="ccs;ccp" publishingType="Project" FTPFolder="" FTPLogin="" FTPPassword="" FTPServer="" FTPServerURL="" __specValue="" localServerPath="C:\wamp\www\SMART" localServerURL="http://localhost/SMART">
+			<Connections connection="SMART">
+				<Connection id="2" serverDatabase="MySQL" DBNameUppercase="True" OptimizeSQL="True" PHPDBLib="MySQL" database="MySQL" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" serverPersistentConnection="False" serverUseODBCCursor="0" connectionType="ODBC" connectionString="SMART" name="SMART" login="smart_smart" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="true;false" serverDatabaseName="smart_dbsmart" serverHost="localhost" serverLogin="smart_smart" connection="SMART" password="suen1982" serverPassword="suen1982"/>
+			</Connections>
+		</Profile>
+		<Profile name="Server2" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;pl;pm;cgi;mdb;gif;jpg;css;xml;java;ascx;aspx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;swf" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" fileExtension=".php" location="FTP" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;swf" publishingExceptMask="ccs;ccp" publishingType="Project">
+			<Connections>
+				<Connection id="1" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" PHPDBLib="MySQL" database="ANSI" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" serverPersistentConnection="False" serverUseODBCCursor="0" name="SMART"/>
+				<Connection id="2" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" PHPDBLib="MySQL" database="ANSI" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" serverPersistentConnection="False" serverUseODBCCursor="0"/>
+			</Connections>
+		</Profile>
+	</Profiles>
+	<Languages>
+		<Language name="en" defaultCountry="US" encoding="windows-1252">
+			<LocaleInfo language="en" country="US" encoding="windows-1252" msValue="1033" booleanFormat="Yes;No;" decimalDigits="2" decimalSeparator="." groupSeparator="," monthNames="January;February;March;April;May;June;July;August;September;October;November;December" monthShortNames="Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec" weekdayNames="Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday" weekdayShortNames="Sun;Mon;Tue;Wed;Thu;Fri;Sat" shortDate="dd/mm/yy" longDate="dd/mm/yy" shortTime="h:nn tt" longTime="h:nn:ss tt" firstWeekDay="0" AMDesignator="AM" PMDesignator="PM" weekdayNarrowNames="S;M;T;W;T;F;S" overrideDateFormats="True" overrideNumberFormats="False" phpValue=""/>
+		</Language>
+	</Languages>
+	<Events/>
+</Site>

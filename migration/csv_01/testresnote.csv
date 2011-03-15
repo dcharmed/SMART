@@ -1,0 +1,115 @@
+1004-108(L),,,2010-04-30 17:39:31,NIK,,,2010-04-22 09:30:00,2010-04-22 17:00:00,,"Received CM report from Rosdi.
+Action taken:
+1. Swapped RTE8000.
+2. Loan unit S/N:5RL13942.
+3. Original unit S/N: 5RL13937.
+4. Test QA success.
+5. Monitor production.",,,test adda,
+1004-109(L),,,2010-04-30 17:36:52,NIK,,,,,,"Received CM report from Azlan.
+Action taken:
+1. Adjust CCD leg only 2 screw not 3 screw.
+2. Place piece of passport paper at top pf PI unit.
+3. Run test. Feed test, production.
+Book manage to print success.",,
+1004-110(L),,,2010-04-30 17:34:38,NIK,,,2010-04-17 10:00:00,2010-04-17 14:00:00,,"Received CM report from Arham.
+Action taken:
+1. Clean thermal head, platen roller, all rollers (cleaning) and fans.
+2. Change film with new.
+3. Test print.
+4. Monitor productions.
+Problem resolved. Production continue as usual.",,
+1004-110(L),,,2010-04-30 17:32:14,NIK,,,2010-04-22 14:30:00,2010-04-23 11:00:00,,"Received CM report from Zul. Dislcation and skew."
+1003-07(L),,,2010-01-03 17:57:56,NIK,,,,,,Received call from Din. En rashid alraedy back home. Ask Din to ask permission to close log from En Wahid.,,
+1003-07(L),,,2010-01-03 17:50:21,SUZIE,,,,,,Call Din TARGET and confirm status with him - more than 20 passport printing. I would like to close log if user agreed as production already continue without problem. Din will confirm with PIT Rashid, if not check with TPPI Wahid.,,
+1003-07(L),,,2010-01-03 17:47:38,SUZIE,,,,,,Call general line, nobody pick up. I call PIT Rashid mobile twice but voice mail.,,
+1003-08(L),,,2010-01-03 17:42:41,SUZIE,,,,,,From the view, each data printed one line will be miss. Thus this log can't be said hardware problem. Log close at our site as user understood on the situation.,,
+1004-108(L),,,2010-01-03 17:28:03,SUZIE,,,,,,"Call Abu and thanks for his 4 pictures. Pass to PIT Latifah - explain to her what I found on the image, the full text should:
+     BEARER HAS PREVIOUSLY TRAVELLED ON
+     PASSPORT NO : xxxxxxxxx
+     ISSUED AT : KUALA LUMPUR
+     ON : 01/03/2010
+     WHICH HAS BEEN CANCELLED AND RETURNED
+(a) The 2nd image show passport number line is missing
+(b) The 3th image show date for ON is missing
+Thus, the actual problem is missing data during printing process. PIT Latifah understood but she inform she will log this problem to ADUKOM tomorrow and pass to HTP as she understand its already 17:30hrs.",,test call back
+1003-08(L),,,2010-01-03 17:14:35,SUZIE,,,,,,Call Abu mobile (012 969 6466) and pass to PIT Latifah - she forget to fax it and she said, Abu will capture the image and send it to Helpdesk mobile. OK,,
+1003-07(L),,,2010-01-03 16:49:38,NIK,,,,,,Received sms from Din. Problem resolved at site. 5 passport alraedy print without problem.,,
+1003-08(L),,,2010-01-03 17:12:58,SUZIE,,,,,,Call general line as im not receive the image. Nobody pick up call - even after pass to operator.,,
+1002-90(L),,,2010-01-03 17:06:36,NIK,,,,,,Call Dian since nobody pickup when call direct line. Dian informed that process room already close. Just informed her that we already sent cleaning kits today.,,
+1002-90(L),,,2010-01-03 16:00:13,NIK,,,,,,Prepare cleaning kits to site. Via nationwide. reference no : 750601 with Ayu.,,
+1003-08(L),,,2010-01-03 16:59:38,SUZIE,,,,,,Call general line 5304, 5604 also fail - nobody pick up call till I dail 17:03hrs cause im still not receive the image yet.,,
+1003-04(L),,,2010-01-03 16:54:47,SUZIE,,,,,,Received CM worksheet from Azhar:The actual setting has set to com port for serial jarfalla instead of LPT port. Setting re-adjust to LPT1 by Azhar.,,
+1003-08(L),,,2010-01-03 16:50:10,SUZIE,,,,,,No fax received yet,,
+1003-08(L),,,2010-01-03 16:35:03,SUZIE,,,,,,Received call from PIT Latifah Subli and from her explanation - gab for each line for cetakan muka pemerhatian too wide. Each line equal to 3 line gap for the next line. The 2nd unit of jarfalla facing the same case too. Advice PIT Latifah to capture the image and send it to our office fax as they do not have 3G or MMS phone. I explain to PIT Latifah the setting is set up by HTP, let we look on the effect first and we will advice later.,,
+1003-04(L),,,2010-01-03 16:28:48,SUZIE,,,,,,Call process room, status confirm with IO Fatimah. Jarfalla printing continue, she allow to close log.,,
+1003-03(L),,,2010-01-03 16:26:20,SUZIE,,,,,,Call process room and status confirm with Cik Azlin - production continue and log allow to be close.,,
+1003-07(L),,,2010-01-03 16:23:39,SUZIE,,,2010-01-03 15:47:00,,,Call Din - arrived at site around 15:47hrs, directly meet PIT Rashid and not TPPI Wahid. Troubleshooting perform, try to test print now.,,
+1002-75(L),,,2010-01-03 15:42:54,SUZIE,,,,,,CM worksheet received from Fakhrul - unit replaced.,,
+1003-07(L),,,2010-01-03 15:51:33,SUZIE,,,,,,Received call from En Wahid - inform Din on his way. TPPI Wahid noted on this.,,
+1003-07(L),,,2010-01-03 15:00:49,NIK,,,,,,Din out from Office.,,
+1003-03(L),,,2010-01-03 15:03:25,NIK,,,,,,Call Faizal on site. problem already resolved after change dongle. Faizal also found that SCSI also not detected but he resolved the problem already. Need to update status with user first before log can be close.,,
+1003-07(L),,,2010-01-03 14:36:11,NIK,,,,,,Received call from Rosmaizah ADUKOM. User log this problem to ADUKOM. 
+User : Rasyid Ahmad
+Contact No : 0387344344 / 0126634677
+Problem reported : Toppan 1 bila cetak passport senget
+Log No : 283671
+* Ticket edit.,,,,
+1003-07(L),,,2010-01-03 14:48:16,NIK,,,,,,Received call from En Wahid. He ask to send engineer to the site since hsi IO cannot do it.,,
+1003-05(L),,,2010-01-03 14:36:30,NIK,,,,,,Received call from Asyraf from Bahagian Keselamatan Passport Bhgn H. He informed that HTP still doing it but until now not resolved yet. Informed Asyraf that since QA selesai thats mean RTE8000 can encode. He understand and will update status back with HTP.,,
+1003-07(L),,,2010-01-03 14:51:32,SUZIE,,,,,,Task assign to Din to look on site.,,
+1003-04(L),,,2010-01-03 14:42:30,NIK,,,,,,Received call from Azhar. He check jarfalla alraedy. Found that problem with Port setting in PC jarfalla. He adjust setting, jarfalla can be use as usual. He not replace with loan jarfalla. Status resolved. Azhar still monitor production because just a few passport test at this jarfalla.,,
+1003-07(L),,,2010-01-03 14:36:58,SUZIE,,,,,,Call general line - status check with Fariz and pass to Azila. She mention she did as advice but printer in process warm up, I wait for a minute but she inform she will give a feedback after this.
+
+* She claim, this printer always stop at everywhere (CCD/E2000/PF) without any error and no process. Its freeze and sometimes, if they not check on it, till night this printer not processing anything.,,
+1003-03(L),,,2010-01-03 13:46:22,NIK,,,,,,Received email from faizal. He arrived on site.,,
+1003-06(L),,,2010-01-03 14:21:47,NIK,,,,,,Call user again. Spoke with Pn Zaiton. Informed her as what Zul have informed me. User will try to refer this problem with IRIS. Log close at our site since we cannot do anything regarding this problem..,,
+1003-07(L),,,2010-01-03 14:23:32,SUZIE,,,,,,Received call from Azila inform dislocation still occur even she did general cleaning. As what Azila explain - she not clean the platen roller yet. Advice her to focus cleaning at platen area and rolling ribbon panel. She pass to PIT Rashid - I explain to him and En Rashid mention Irwan not around today and all of them not familiar what to do as usually they rotate from counter into process room, only Irwan permanent staff for process room.,,
+1003-06(L),,,2010-01-03 13:16:57,NIK,,,,,,Call user many time but not pickup.,,
+1003-06(L),,,2010-01-03 12:55:27,NIK,,,,,,refer problem with Zul. Zul informed that all printer setting with same time but maybe encode cause the printer not same time. Maybe encode for toppan 2 take more time compare with Toppan 1. We cannot do anything but maybe IRIS can check the encode part. Will call user to informed this.,,
+1003-06(L),,,2010-01-03 12:53:23,NIK,,,,,,Call user. Spoke with Pn Zaiton. She informed that printer too slow compare to T1. Example : T1 print 6, but at this printer only 4. Informed user that thsi maybe because engineer want to avoid peel off happened. I will check with engineer first and will call user back.,,
+1003-05(L),,,2010-01-03 13:12:31,NIK,,,,,,Call Zana ADUKOM. She already esc problem to hiari HTP. Noted. Log close at our site.,,
+1003-05(L),,,2010-01-03 12:23:28,NIK,,,,,,Receive dcall from Zana ADUKOM. She log this problem to us. But i explain the problem to her. She understand. She will refer this log to other vendor.,,
+1003-05(L),,,2010-01-03 12:15:44,NIK,,,,,,Received call from Lina. Informed to her as Suen informed. Ask her to log ADUKOM.,,
+1003-05(L),,,2010-01-03 11:58:58,NIK,,,,,,Call Lina many times but not pickup.,,
+1003-05(L),,,2010-01-03 11:50:55,NIK,,,,,,Refer to Suen. She informed maybe Server not update QA process. Suen suggest to ask user to refer thus problem to ADUKOM.,,
+1003-05(L),,,2010-01-03 11:41:46,NIK,,,,,,Received call from Lina. She informed that only one status for QA berjaya. Other 3 status tidak berjaya. In QA process both maklumat QA and Maklumat chip lulus and state there QA selesai. But for the next page for kemaskini:
+Status MRZ = berjaya
+Status QA MRZ = tidak berjaya, 
+Status pengenkodan chip = tidak berjaya 
+Status QA pengenkoda chip = tidak berjaya
+Will check first and will call user back.,,
+1003-03(L),,,2010-01-03 12:16:54,NIK,,,,,,Faizal on the way to the site.,,
+1003-04(L),,,2010-01-03 12:40:20,NIK,,,,,,Azhar out from Office.,,
+1002-104(L),,,2010-01-03 12:37:24,SUZIE,,,,,,Status of log close as this problem due to book condition.,,
+1002-104(L),,,2010-01-03 12:24:41,SUZIE,,,,,,Received CM worksheet from Azhar today:
+Problem occur on 22/02/10 (Mon) during standby for ICAO production. As peel off problem seldom occur, Azhar advice user to use sand paper if necessary.,,
+1002-103(L),,,2010-01-03 12:20:12,SUZIE,,,,,,Log close as this problem had resolved on the same day of reported.,,
+1002-103(L),,,2010-01-03 12:12:16,SUZIE,,,,,,This is a back date log as I just received this CM worksheet from engineer today;
+Log reported by user on 17/02/10 (Wed) relate to log 1002-63(L). Isyraf on site at 13:45hrs and did TRS MARK ADJ, cleaned fiber optic sensor and perform general E2000 cleaning. 
+
+Respond from TPPI Wahid:
+Failure of machine being reported at 09:15hrs. Result is massive delay of passport being processed. Adukom no 171024.,,
+1003-04(L),,,2010-01-03 11:30:33,NIK,,,,,,Azhar informed that he already guide Maria to do test print but failed. Jarfalla pull passport but not print. Need to send Jarfalla to replace at site. 
+* Have 2 old jarfalla taken from site because at site use new jarfalla. But new jarfalla cannot use for UN 1300. So azhar bring one old jarfalla to the site to use for UN1300. This log is a problem to that jarfalla. Will send another old jarfalla to the site replace thsi problem jarfalla. Azhar will sent jarfalla to the site. Test by Azzeri. S/N: 4579977.,,
+1003-04(L),,,2010-01-03 11:21:22,NIK,,,,,,Received call from Maria to update status for log 1003-01(L). She also informed that jarfalla failed to print. Maria informed that now azhar guide user. ,,
+1003-02(L),,,2010-01-03 11:41:47,NIK,,,,,,Received call from Lina. She call to informed about other problems. Refer to log 1003-03(L). But i confirmed this problem with her. many passport already printed without no more dislocation problem. Lina allow to close log for this problem.,,
+1003-01(L),,,2010-01-03 12:00:15,NIK,,,,,,Call ADUKOM. Log close with Najib.,,
+1003-01(L),,,2010-01-03 11:21:14,NIK,,,,,,Received call Maria. She informed that is a human error. PC failed to boot windows because user enter wrong ID. They enter ID for Spooler at encode PC. The time Maria arrive at site, they already can use that PC. Log close because problem resolved and human  error.,,
+1003-03(L),,,2010-01-03 11:13:59,NIK,,,,,,Call Azlin's mobile again. Informed her that engineer will be on site today. Will arrived site around 2 PM as informed by Faizal.,,
+1003-03(L),,,2010-01-03 11:10:41,NIK,,,,,,Informed problem to Faizal. H ethink maybe dongle faulty. He will be on site today to change new dongle.,,
+1003-03(L),,,2010-01-03 10:47:19,NIK,,,,,,Received call from Azlin.She informed that error appear and printer  not pull passport. Ask Faizal. Faizal ask to remove dongle and plug in back and restart PC spooler. Use try but save and config menu not appear. Guide user to check SCSI cable. After user check SCSI cable, error Dongle Error No. 1991 appear again. And lamp at dongle appear red not green. Will check with faizal fisrt and will informed user back.,,
+1003-02(L),,,2010-01-03 10:46:53,NIK,,,,,,Call Lina's mobile after ask the number from Liza. She informed that until now, after clean platen roller and orange roller, problem resolved. But She just print a few passport. Need to monitor more passport.,,
+1003-02(L),,,2010-01-03 10:39:15,NIK,,,,,,Call process room. Nobody pickup.,,
+1003-02(L),,,2010-01-03 10:07:57,NIK,,,,,,Received call from Lina. She informed that dislocation happened. She check film but still happened. Ask user to clean platen roller and orange roller. User will do first and she ask to call back after 30 minutes.,,
+1002-16(L),,,2010-01-03 10:04:41,SUZIE,,,,,,Received CM worksheet from Azhar today.,,
+1002-18(L),,,2010-01-03 09:58:10,SUZIE,,,,,,Received CM worksheet from Azhar on action taken, 05/02/10:
+Even no symptom as occur, he did readjust book in white roller at PI unit, and added small piece at transfer stage. Feed - succeed.,,
+1002-61(L),,,2010-01-03 09:52:51,SUZIE,,,,,,Received CM worksheet from Isyraf, pass on 25 Feb (Thursday - im on leave) while 26 Feb (Friday) is public holiday - Maulidur Rasul:
+On site on 17/02/10, Isyraf clean fiber optic sensor, clean platen roller, and perform E2000 general cleaning. Test print and continuing production resolved.,,
+1002-90(L),,,2010-01-03 09:46:36,NIK,,,,,,Call Nippon. Spoke with Anand. They already come to sent cleaning kits to our office.,,
+1003-01(L),,,2010-01-03 09:15:29,NIK,,,,,,Informed the problem to Maria. She will check this.,,
+1003-01(L),,,2010-01-03 08:36:58,NIK,,,,,,Call user. Spoke with PIT Raja. She informed that one of the encode PC failed to boot window. Check with user this PC dont have our sticker but this one is big type. Not Netvista.
+
+*Now at site cannot do production. SYSTEM DOWN.,,
+1003-01(L),,,2010-01-03 08:33:23,NIK,,,,,,Received log from Zana ADUKOM. She informed that PC toppan failed to boot up.,,
+1002-101(L),,,2010-01-03 09:30:41,NIK,,,,,,Call User spoke with Kak Arnida. She informed that until now, no problem happened anymore. Allow us to close log.,,

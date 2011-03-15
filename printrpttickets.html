@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<style type="text/css">
+    /* CSS for printing */
+#logoHeader {
+        font-family: "Arial";
+        font-size: 100%;
+        line-height: 130%;
+        font-weight: bold;
+        color: #000000;
+}
+#logoHeaderSmall {
+        font-family: "Arial";
+        font-size: 70%;
+        line-height: 130%;
+        font-weight: bold;
+        color: #000000;
+}
+#HeadTitle {
+        font-family: "Arial";
+        font-size: 130%;
+        line-height: 130%;
+        font-weight: bold;
+        color: #000000;
+    text-align:center;
+}
+#HeadTitleTdColored {
+        font-family: "Arial";
+        font-size: 110%;
+        line-height: 100%;
+        font-weight: bold;
+        color: #000000;
+    background-color: #CDCDCD;
+        padding: 4px;
+    text-align:center;
+}
+.t1 {
+        font-family: "Trebuchet MS";
+        font-size: 100%;
+        line-height: 100%;
+        font-weight: normal;
+        padding: 0px;
+    background-color: #2c7d98;
+}
+.tdBordered{
+    border-top: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+    font-weight:normal;
+    font-size:95%;
+}
+.tdHeader{
+    border-top: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+    font-weight:bold;
+    font-size:90%;
+    text-align:center;
+}
+.tdContent {
+    padding-top:2px;
+    font-size:80%;
+    font-weight:normal;
+    border-bottom: 1px solid #CCCCCC;
+}
+.tdBold {
+        line-height: 90%;
+        font-weight: bold;
+    text-align:center;
+}
+
+</style>
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+&nbsp; 
+<!-- BEGIN Report RTicket -->
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header -->
+        <tr>
+          <td colspan="7">
+            <div id="HeadTitleTdColored">
+              <strong>Problem Reports (Month/Year: {hdrmonth}) printed on: {Report_CurrentDateTime}</strong> 
+            </div>
+            <br>
+            <br>
+          </td>
+        </tr>
+ <!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tr class="Footer">
+          <td></td> 
+          <td colspan="6"></td>
+        </tr>
+ 
+        <!-- BEGIN Panel PageBreak -->
+      </table>
+    </td>
+  </tr>
+</table>
+<p style="PAGE-BREAK-AFTER: always">&nbsp;</p>
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- END Panel PageBreak --><!-- END Section Page_Footer -->
+        <!-- BEGIN Section tckt_refnumber_Header -->
+        <tr style="BACKGROUND-COLOR: #cccccc">
+          <th class="tdHeader" width="10%" scope="col">Ticket # : {tckt_refnumber}&nbsp;</th>
+ 
+          <th class="tdHeader" scope="col">{tckt_site}<input id="RTickettckt_refnumber_Headerstate" value="{state}" size="4" type="hidden" name="{state_Name}"></th>
+ 
+          <th class="tdHeader" scope="col">{tckt_r_date}</th>
+ 
+          <th class="tdHeader" scope="col">{tckt_cat}<input id="RTickettckt_refnumber_Headerhidecat" value="{hidecat}" type="hidden" name="{hidecat_Name}"><br>
+          {tckt_subcat}</th>
+ 
+          <th class="tdHeader" scope="col">{tckt_severity}<br>
+          {tckt_status}<br>
+          {tckt_method}&nbsp;{Age}<input id="RTickettckt_refnumber_Headertckt_c_date_{RTicket:rowNumber}" value="{tckt_c_date}" size="5" type="hidden" name="{tckt_c_date_Name}"></th>
+ 
+          <th class="tdHeader" width="30%" scope="col">Adukom: {tckt_r_adukomid}&nbsp;{tckt_adukomn}<br>
+          {tckt_description}</th>
+ 
+          <th class="tdHeader" width="20%" scope="col">&nbsp;{tckt_engineer}</th>
+        </tr>
+ 
+        <tr class="Caption">
+          <th class="tdHeader" colspan="2" scope="col">DATE/TIME</th>
+ 
+          <th class="tdHeader" scope="col">ENG ID&nbsp;</th>
+ 
+          <th class="tdHeader" scope="col">&nbsp;SPARE PART?</th>
+ 
+          <th class="tdHeader" scope="col">EQUIPMENT?</th>
+ 
+          <th class="tdHeader" scope="col">ACTION TAKEN</th>
+ 
+          <th class="tdHeader" scope="col">ACTION PLAN / REMARKS</th>
+        </tr>
+ <!-- END Section tckt_refnumber_Header -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: center" class="tdContent" colspan="2">{rsltn_date} {rsltn_eta}<input id="RTicketDetailrsltn_type" value="{rsltn_type}" type="hidden" name="{rsltn_type_Name}"></td> 
+          <td style="TEXT-ALIGN: center" class="tdContent">{rsltn_byuser} </td> 
+          <td style="TEXT-ALIGN: center" class="tdContent">{SpartOk}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center" class="tdContent">&nbsp;{EqOk}</td> 
+          <td class="tdContent">{rsltn_actiontaken} </td> 
+          <td class="tdContent">&nbsp;{ActionPlan}{Remark}<input id="RTicketDetailAttachment_{RTicket:rowNumber}" value="{Attachment}" type="hidden" name="{Attachment_Name}"></td>
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section tckt_refnumber_Footer --><!-- END Section tckt_refnumber_Footer -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="7">No records</td>
+        </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Report RTicket -->
+</body>
+</html>

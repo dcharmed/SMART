@@ -1,0 +1,1148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-35DD4904
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/scriptaculous.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/controls.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="smartpreqGPreqOrderspodr_itemcode_style.css">
+<link rel="stylesheet" type="text/css" href="smartpreqGPreqOrdersRtnpodr_itemcode_style.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-ACA91330
+
+var SPreq_DatePicker_da = new Object(); 
+SPreq_DatePicker_da.format           = "LongDate";
+SPreq_DatePicker_da.style            = "Styles/{CCS_Style}/Style.css";
+SPreq_DatePicker_da.relativePathPart = "";
+SPreq_DatePicker_da.themeVersion = "3.0";
+
+var RPreq_DatePicker_preq_dateapplied = new Object(); 
+RPreq_DatePicker_preq_dateapplied.format           = "LongDate";
+RPreq_DatePicker_preq_dateapplied.style            = "Styles/{CCS_Style}/Style.css";
+RPreq_DatePicker_preq_dateapplied.relativePathPart = "";
+RPreq_DatePicker_preq_dateapplied.themeVersion = "3.0";
+
+var RPreqSignAprv_DatePicker_preq_approveddate = new Object(); 
+RPreqSignAprv_DatePicker_preq_approveddate.format           = "GeneralDate";
+RPreqSignAprv_DatePicker_preq_approveddate.style            = "Styles/{CCS_Style}/Style.css";
+RPreqSignAprv_DatePicker_preq_approveddate.relativePathPart = "";
+RPreqSignAprv_DatePicker_preq_approveddate.themeVersion = "3.0";
+
+var RPreqSignPrcs_DatePicker_preq_processeddate = new Object(); 
+RPreqSignPrcs_DatePicker_preq_processeddate.format           = "GeneralDate";
+RPreqSignPrcs_DatePicker_preq_processeddate.style            = "Styles/{CCS_Style}/Style.css";
+RPreqSignPrcs_DatePicker_preq_processeddate.relativePathPart = "";
+RPreqSignPrcs_DatePicker_preq_processeddate.themeVersion = "3.0";
+
+var RPreqSignPrcs_DatePicker_preq_takendate = new Object(); 
+RPreqSignPrcs_DatePicker_preq_takendate.format           = "GeneralDate";
+RPreqSignPrcs_DatePicker_preq_takendate.style            = "Styles/{CCS_Style}/Style.css";
+RPreqSignPrcs_DatePicker_preq_takendate.relativePathPart = "";
+RPreqSignPrcs_DatePicker_preq_takendate.themeVersion = "3.0";
+
+var RPreqSignRtn_DatePicker_preq_receiveddate = new Object(); 
+RPreqSignRtn_DatePicker_preq_receiveddate.format           = "GeneralDate";
+RPreqSignRtn_DatePicker_preq_receiveddate.style            = "Styles/{CCS_Style}/Style.css";
+RPreqSignRtn_DatePicker_preq_receiveddate.relativePathPart = "";
+RPreqSignRtn_DatePicker_preq_receiveddate.themeVersion = "3.0";
+
+var GPreqOrdersRtn_DatePicker_podr_datereceived1 = new Object(); 
+GPreqOrdersRtn_DatePicker_podr_datereceived1.format           = "LongDate";
+GPreqOrdersRtn_DatePicker_podr_datereceived1.style            = "Styles/{CCS_Style}/Style.css";
+GPreqOrdersRtn_DatePicker_podr_datereceived1.relativePathPart = "";
+GPreqOrdersRtn_DatePicker_podr_datereceived1.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//GPreqOrderspodr_qty_OnChange @74-CBF49413
+function GPreqOrderspodr_qty_OnChange()
+{
+    var result = true;
+//End GPreqOrderspodr_qty_OnChange
+
+//Custom Code @319-2A29BDB7
+    // -------------------------
+    // Write your own code here.
+    // -------------------------
+//End Custom Code
+
+//Close GPreqOrderspodr_qty_OnChange @74-BC33A33A
+    return result;
+}
+//End Close GPreqOrderspodr_qty_OnChange
+
+//GPreqOrdersButton_Submit1_OnClick @147-A960AB1A
+function GPreqOrdersButton_Submit1_OnClick()
+{
+    var result = true;
+//End GPreqOrdersButton_Submit1_OnClick
+
+//Confirmation Message @148-90D7B8C7
+    return confirm('Are You Sure To Submit For Approval?');
+//End Confirmation Message
+
+//Close GPreqOrdersButton_Submit1_OnClick @147-BC33A33A
+    return result;
+}
+//End Close GPreqOrdersButton_Submit1_OnClick
+
+//RPreqSignPrcspreq_status_OnChange @233-18C12627
+function RPreqSignPrcspreq_status_OnChange()
+{
+    var result = true;
+//End RPreqSignPrcspreq_status_OnChange
+
+//Custom Code @235-2A29BDB7
+    // -------------------------
+    var dropdownIndex = document.getElementById('RPreqSignPrcspreq_status').selectedIndex;
+    var status = document.getElementById('RPreqSignPrcspreq_status')[dropdownIndex].value;
+        
+    if(status == 5) {
+        document.getElementById('RPreqSignPrcspreq_reason').style.display = '';
+        } else {
+                document.getElementById('RPreqSignPrcspreq_reason').style.display = 'none';
+        }
+    // -------------------------
+//End Custom Code
+
+//Close RPreqSignPrcspreq_status_OnChange @233-BC33A33A
+    return result;
+}
+//End Close RPreqSignPrcspreq_status_OnChange
+
+//DEL      // -------------------------
+//DEL      var dropdownIndex = document.getElementById('RPreqSignPrcspreq_status').selectedIndex;
+//DEL      var status = document.getElementById('RPreqSignPrcspreq_status')[dropdownIndex].value;
+//DEL   
+//DEL      if(status == 5) {
+//DEL          document.getElementById('RPreqSignPrcspreq_reason').style.display = '';
+//DEL   } else {
+//DEL           document.getElementById('RPreqSignPrcspreq_reason').style.display = 'none';
+//DEL   }
+//DEL      // -------------------------
+
+//DEL      // -------------------------
+//DEL      if(document.getElementById('RPreqSignPrcspreq_reason').value != null) {
+//DEL           document.getElementById('RPreqSignPrcspreq_reason').style.display = '';
+//DEL   } else {
+//DEL           document.getElementById('RPreqSignPrcspreq_reason').style.display = 'none';
+//DEL   }
+//DEL      // -------------------------
+
+//RPreqButton_Cancel_OnClick @47-C7C04422
+function RPreqButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RPreqButton_Cancel_OnClick
+
+//GPreqOrdersCancel_OnClick @81-F090705D
+function GPreqOrdersCancel_OnClick()
+{
+    disableValidation = true;
+}
+//End GPreqOrdersCancel_OnClick
+
+//RPreqSignAprvButton_Cancel_OnClick @85-B4FE6C9A
+function RPreqSignAprvButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RPreqSignAprvButton_Cancel_OnClick
+
+//RPreqSignPrcsButton_Cancel_OnClick @163-CDF29C55
+function RPreqSignPrcsButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RPreqSignPrcsButton_Cancel_OnClick
+
+//RPreqSignRtnButton_Cancel_OnClick @184-67D5015A
+function RPreqSignRtnButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RPreqSignRtnButton_Cancel_OnClick
+
+//RPreqSignViewButton_Cancel_OnClick @211-EB1AECC3
+function RPreqSignViewButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RPreqSignViewButton_Cancel_OnClick
+
+//GPreqOrdersRtnCancel_OnClick @271-D698B2A9
+function GPreqOrdersRtnCancel_OnClick()
+{
+    disableValidation = true;
+}
+//End GPreqOrdersRtnCancel_OnClick
+
+//PTAutoFill1 Loading @153-01B8EA1D
+function GPreqOrderspodr_itemcodePTAutoFill1_start(sender) {
+        var elementId = sender.id;
+        var ArrElementId = elementId.split("_");
+
+        var RowId = ArrElementId[2];
+        
+    new Ajax.Request("services/smartpreq_GPreqOrders_podr_itemcode_PTAutoFill1.php?keyword=" + encodeURIComponent($("GPreqOrderspodr_itemcode_"+RowId).value).replace(/'/g, "%27"), {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            if (typeof(valuesRow) != "undefined") {
+                getSameLevelCtl("GPreqOrderspodr_itemname_"+RowId, sender).value = valuesRow["spart_name"];
+            } else {
+                getSameLevelCtl("GPreqOrderspodr_itemname_"+RowId, sender).value = "";
+            }
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//Initialize GPreqOrderspodr_itemcodePTAutocomplete1 @151-10BBFB3D
+function GPreqOrderspodr_itemcodePTAutocomplete1_start(sender) {
+        var elementId = sender.id;
+        var ArrElementId = elementId.split("_");
+
+        var RowId = ArrElementId[2];
+    if ($("GPreqOrderspodr_itemcode_"+RowId))
+        new Ajax.Autocompleter("GPreqOrderspodr_itemcode_"+RowId, "GPreqOrderspodr_itemcode_choices", "services/smartpreq_GPreqOrders_podr_itemcode_PTAutocomplete1.php", {});
+}
+//End Initialize GPreqOrderspodr_itemcodePTAutocomplete1
+
+//PTAutoFill2 Loading @259-4B287633
+function GPreqOrdersRtnpodr_itemcodePTAutoFill2_start(sender) {
+    new Ajax.Request("services/smartpreq_GPreqOrders_podr_itemcode_PTAutoFill1.php?keyword=" + encodeURIComponent($("GPreqOrdersRtnpodr_itemcode").value).replace(/'/g, "%27"), {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            if (typeof(valuesRow) != "undefined") {
+                getSameLevelCtl("GPreqOrdersRtnpodr_itemname", sender).value = valuesRow["spart_name"];
+            } else {
+                getSameLevelCtl("GPreqOrdersRtnpodr_itemname", sender).value = "";
+            }
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill2 Loading
+
+//Initialize GPreqOrdersRtnpodr_itemcodePTAutocomplete2 @261-B1390553
+function GPreqOrdersRtnpodr_itemcodePTAutocomplete2_start() {
+    if ($("GPreqOrdersRtnpodr_itemcode"))
+        new Ajax.Autocompleter("GPreqOrdersRtnpodr_itemcode", "GPreqOrdersRtnpodr_itemcode_choices", "services/smartpreq_GPreqOrders_podr_itemcode_PTAutocomplete1.php", {});
+}
+//End Initialize GPreqOrdersRtnpodr_itemcodePTAutocomplete2
+
+//bind_events @1-AF4748A6
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    //addEventHandler("GPreqOrderspodr_itemcode", "change", GPreqOrderspodr_itemcodePTAutocomplete1_start);
+    addEventHandler("GPreqOrderspodr_itemcode", "change", GPreqOrderspodr_itemcodePTAutoFill1_start);
+    addEventHandler("GPreqOrdersButton_Submit1", "click", GPreqOrdersButton_Submit1_OnClick);
+    addEventHandler("RPreqButton_Cancel", "click", RPreqButton_Cancel_OnClick);
+    addEventHandler("GPreqOrdersCancel", "click", GPreqOrdersCancel_OnClick);
+    addEventHandler("RPreqSignPrcspreq_status", "change", RPreqSignPrcspreq_status_OnChange);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <div class="H1">
+        SPARE PARTS 
+      </div>
+ 
+      <div class="default">
+        <br>
+        <!-- BEGIN Record SPreq -->
+        <form id="SPreq" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Search Criteria </strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="SPreqfn">Form No</label></td> 
+                    <td><input id="SPreqfn" value="{fn}" maxlength="100" size="50" name="{fn_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="SPreqda">Date applied</label></td> 
+                    <td><input id="SPreqda" value="{da}" maxlength="100" size="12" name="{da_Name}">
+                      <!-- BEGIN DatePicker DatePicker_da --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="SPreqDatePicker_da"><img id="SPreqDatePicker_da_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_da --></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="SPreqeng">Preq Engineer</label></td> 
+                    <td>
+                      <select id="SPreqeng" name="{eng_Name}">
+                        <option selected value="">Select Value</option>
+                        {eng_Options}
+                      </select>
+ </td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="SPreqButton_DoSearch" value="Search" alt="Search" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record SPreq --><br>
+        <!-- BEGIN Grid GPreq -->Below is the list of Parts Requisition. Click on Date Applied column to view detail or Click button <a href="{btnNew}" id="GPreqbtnNew_{GPreq:rowNumber}"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{ImageLink1}" align="absMiddle" src="Styles/smartStyleTurqoise/Images/en/ButtonNewRecord.gif"></a> to add new record.<br>
+        <br>
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>List of Parts requisition</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                  <th style="TEXT-ALIGN: center" width="3%" scope="col">No.&nbsp;</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="5%" scope="col">Date Applied</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Status&nbsp;</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Form No</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Engineer</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Approved By</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Approved Date</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Processed By</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Processed Date</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Taken By</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Taken Date</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Parts Received</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Received By</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Received Date</th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {GPreq:rowStyle}>
+                  <td style="TEXT-ALIGN: center">{lblNumber}</td> 
+                  <td style="TEXT-ALIGN: center"><a href="{preq_dateapplied_Src}" id="GPreqpreq_dateapplied_{GPreq:rowNumber}">{preq_dateapplied}</a>&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{preq_status}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{preq_formno}</td> 
+                  <td style="TEXT-ALIGN: center">{preq_engineer}</td> 
+                  <td style="TEXT-ALIGN: center">{preq_approvedby}</td> 
+                  <td style="TEXT-ALIGN: center">{preq_approveddate}</td> 
+                  <td style="TEXT-ALIGN: center">{preq_processedby}</td> 
+                  <td style="TEXT-ALIGN: center">{preq_processeddate}</td> 
+                  <td style="TEXT-ALIGN: center">{preq_takenby}</td> 
+                  <td style="TEXT-ALIGN: center">{preq_takendate}</td> 
+                  <td style="TEXT-ALIGN: center">{preq_partsreceived}</td> 
+                  <td style="TEXT-ALIGN: center">{preq_receivedby}</td> 
+                  <td style="TEXT-ALIGN: center">{preq_receiveddate}</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="14">No records</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td colspan="14">
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!-- END Grid GPreq -->
+        <!-- BEGIN Panel PanProcessCheck -->
+        <table border="0" cellspacing="2" cellpadding="2" width="100%">
+          <tr>
+            <td class="tdBox">{lblRequest}</td> 
+            <td align="center"><img border="0" align="absMiddle" src="images/arrow_right.png"></td> 
+            <td class="tdBox">{lblApproval}</td> 
+            <td align="center"><img border="0" align="absMiddle" src="images/arrow_right.png"></td> 
+            <td class="tdBox">{lblInProcess}</td> 
+            <td align="center"><img border="0" align="absMiddle" src="images/arrow_right.png"></td> 
+            <td class="tdBox">{lblReturned}</td> 
+            <td align="center"><img border="0" align="absMiddle" src="images/arrow_right.png"></td> 
+            <td class="tdBox">{lblFinished}</td>
+          </tr>
+ 
+          <tr>
+            <td>&nbsp;</td> 
+            <td></td> 
+            <td>&nbsp;</td> 
+            <td></td> 
+            <td align="center"><img border="0" align="absMiddle" src="images/arrow_down.png"></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr>
+            <td>&nbsp;</td> 
+            <td></td> 
+            <td>&nbsp;</td> 
+            <td></td> 
+            <td class="tdBox">{lblReleased}</td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr>
+            <td>&nbsp;</td> 
+            <td></td> 
+            <td>&nbsp;</td> 
+            <td></td> 
+            <td align="center"><img border="0" align="absMiddle" src="images/arrow_down.png"></td> 
+            <td></td> 
+            <td align="center"></td> 
+            <td></td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr>
+            <td>&nbsp;</td> 
+            <td></td> 
+            <td>&nbsp;</td> 
+            <td></td> 
+            <td class="tdBox">{lblCancelled}</td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+        <br>
+        <!-- END Panel PanProcessCheck -->
+        <!-- BEGIN Record RPreq -->
+        <form id="RPreq" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0" width="60%">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Requisition&nbsp;Form</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th" width="10%"><label for="RPreqpreq_dateapplied">Date Applied&nbsp; <font color="#ff0000"><strong>*</strong></font></label></td> 
+                    <td><input id="RPreqpreq_dateapplied" value="{preq_dateapplied}" maxlength="15" name="{preq_dateapplied_Name}">
+                      <!-- BEGIN DatePicker DatePicker_preq_dateapplied --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RPreqDatePicker_preq_dateapplied"><img id="RPreqDatePicker_preq_dateapplied_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_preq_dateapplied --></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RPreqpreq_engineer">Engineer&nbsp; <strong><font color="#ff0000">*</font></strong></label></td> 
+                    <td>
+                      <select id="RPreqpreq_engineer" name="{preq_engineer_Name}">
+                        <option selected value="">Select Value</option>
+                        {preq_engineer_Options}
+                      </select>
+ <input id="RPreqpreq_status" value="{preq_status}" type="hidden" name="{preq_status_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RPreqpreq_formno">Form No.&nbsp; <strong><font color="#ff0000">*</font></strong></label></td> 
+                    <td><input id="RPreqpreq_formno" value="{preq_formno}" maxlength="30" size="30" name="{preq_formno_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record RPreq -->
+        <!-- BEGIN Record RPreqView -->
+        <form id="RPreqView" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Requisition&nbsp;Form</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="4">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th" width="10%"><label for="RPreqViewpreq_dateapplied">Date Applied</label></td> 
+                    <td width="40%">{preq_dateapplied}</td> 
+                    <td class="th" width="10%">Status&nbsp;</td> 
+                    <td width="40%">{preq_status}&nbsp;{preq_approval}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RPreqViewpreq_engineer">Engineer</label></td> 
+                    <td>{preq_engineer} </td> 
+                    <td class="th">Parts Received</td> 
+                    <td>{preq_partsreceived}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RPreqViewpreq_formno">Form No.</label></td> 
+                    <td>{preq_formno}</td> 
+                    <td class="th">&nbsp;ready to be returned?</td> 
+                    <td>
+                      <!-- BEGIN CheckBox status --><input id="RPreqViewstatus" value="1" type="checkbox" name="{status_Name}" {status}><!-- END CheckBox status -->&nbsp; 
+                      <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqViewButton_Update" value="Submit" alt="Submit" align="absMiddle" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->{lblRtn}&nbsp;&nbsp; 
+                      <!-- BEGIN Link linkRtn --><a href="{linkRtn_Src}" id="RPreqViewlinkRtn">(Check List)</a><!-- END Link linkRtn --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record RPreqView --><br>
+        <!-- BEGIN EditableGrid GPreqOrders -->
+        <form id="GPreqOrders" method="post" name="{HTMLFormName}" action="{Action}">
+          <input value="{FormState}" type="hidden" name="FormState">{FormScript} 
+          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Parts Replacement</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="8">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Caption">
+                    <th style="TEXT-ALIGN: center" width="3%" scope="col">No.</th>
+ 
+                    <th width="5%" scope="col">Part Code</th>
+ 
+                    <th scope="col">Part Name / Description</th>
+ 
+                    <th style="TEXT-ALIGN: center" scope="col">Qty.</th>
+ 
+                    <th style="TEXT-ALIGN: center" scope="col">Site</th>
+ 
+                    <th style="TEXT-ALIGN: center" scope="col">Toppan ID</th>
+ 
+                    <th scope="col">Remarks (Parts Out)</th>
+ 
+                    <th style="TEXT-ALIGN: center" width="5%" scope="col">Delete</th>
+                  </tr>
+ 
+                  <!-- BEGIN Row -->
+                  <!-- BEGIN RowError -->
+                  <tr class="Error">
+                    <td colspan="8">{Error}</td>
+                  </tr>
+                  <!-- END RowError -->
+                  <tr class="Row">
+                    <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;<input style="WIDTH: 38px; HEIGHT: 22px" id="GPreqOrderspodr_preqid_{GPreqOrders:rowNumber}" value="{podr_preqid}" size="5" type="hidden" name="{podr_preqid_Name}"></td> 
+                    <td>
+                      <!-- BEGIN TextBox podr_itemcode --><input id="GPreqOrderspodr_itemcode_{GPreqOrders:rowNumber}" value="{podr_itemcode}" maxlength="50" size="10" name="{podr_itemcode_Name}" autocomplete="off">
+                      <!-- BEGINF PTAutocomplete PTAutocomplete1 -->
+                      <div id="GPreqOrderspodr_itemcode_choices">
+                      </div>
+                      <!-- ENDF PTAutocomplete PTAutocomplete1 --><!-- END TextBox podr_itemcode --></td> 
+                    <td><input id="GPreqOrderspodr_itemname_{GPreqOrders:rowNumber}" value="{podr_itemname}" maxlength="100" size="40" name="{podr_itemname_Name}"></td> 
+                    <td><input id="GPreqOrderspodr_qty_{GPreqOrders:rowNumber}" value="{podr_qty}" maxlength="5" size="3" name="{podr_qty_Name}">{lblQty}</td> 
+                    <td>
+                      <select id="GPreqOrderspodr_site_{GPreqOrders:rowNumber}" name="{podr_site_Name}">
+                        <option selected value="">Select Value</option>
+                        {podr_site_Options}
+                      </select>
+ </td> 
+                    <td><input id="GPreqOrderspodr_toppan_{GPreqOrders:rowNumber}" value="{podr_toppan}" maxlength="50" size="15" name="{podr_toppan_Name}"></td> 
+                    <td><textarea id="GPreqOrderspodr_remarks_{GPreqOrders:rowNumber}" cols="35" name="{podr_remarks_Name}">{podr_remarks}</textarea></td> 
+                    <td>
+                      <!-- BEGIN Panel CheckBox_Delete_Panel --><label for="GPreqOrdersCheckBox_Delete_PanelCheckBox_Delete_{GPreqOrders:rowNumber}" style="display: none;">Delete</label> 
+                      <!-- BEGIN CheckBox CheckBox_Delete --><input id="GPreqOrdersCheckBox_Delete_PanelCheckBox_Delete_{GPreqOrders:rowNumber}" value="1" type="checkbox" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete --><!-- END Panel CheckBox_Delete_Panel -->&nbsp;</td>
+                  </tr>
+ <!-- END Row -->
+                  <!-- BEGIN NoRecords -->
+                  <tr class="NoRecords">
+                    <td colspan="8">No records</td>
+                  </tr>
+                  <!-- END NoRecords -->
+                  <tr class="Footer">
+                    <td style="TEXT-ALIGN: right" colspan="8">
+                      <!-- BEGIN Button Button_Submit --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GPreqOrdersButton_Submit" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Submit -->
+                      <!-- BEGIN Button Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GPreqOrdersCancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Cancel -->
+                      <!-- BEGIN Button Button_Submit1 --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GPreqOrdersButton_Submit1" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonApproval.gif" type="image" name="{Button_Name}"><!-- END Button Button_Submit1 --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END EditableGrid GPreqOrders -->
+        <!-- BEGIN EditableGrid GPreqOrdersRtn -->
+        <form id="GPreqOrdersRtn" method="post" name="{HTMLFormName}" action="{Action}">
+          <input value="{FormState}" type="hidden" name="FormState">{FormScript} 
+          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Parts Replacement</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="10">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Caption">
+                    <th style="TEXT-ALIGN: center" width="3%" scope="col">NO.</th>
+ 
+                    <th scope="col">PART CODE</th>
+ 
+                    <th scope="col">PART NAME / DESCRIPTION</th>
+ 
+                    <th style="TEXT-ALIGN: center" scope="col">QTY</th>
+ 
+                    <th style="TEXT-ALIGN: center" scope="col">SITE</th>
+ 
+                    <th style="TEXT-ALIGN: center" scope="col">TOPPAN ID</th>
+ 
+                    <th scope="col">REMARKS (PARTS OUT)</th>
+ 
+                    <th scope="col">DATE RECEIVED</th>
+ 
+                    <th scope="col">QTY RECEIVED</th>
+ 
+                    <th scope="col">REMARKS - RECEIVED PARTS&nbsp;</th>
+                  </tr>
+ 
+                  <!-- BEGIN Row -->
+                  <!-- BEGIN RowError -->
+                  <tr class="Error">
+                    <td colspan="10">{Error}</td>
+                  </tr>
+                  <!-- END RowError -->
+                  <tr class="Row">
+                    <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;<input style="WIDTH: 38px; HEIGHT: 22px" id="GPreqOrdersRtnpodr_preqid_{GPreqOrdersRtn:rowNumber}" value="{podr_preqid}" size="5" type="hidden" name="{podr_preqid_Name}"></td> 
+                    <td>{podr_itemcode}</td> 
+                    <td>{podr_itemname}</td> 
+                    <td>{podr_qty}</td> 
+                    <td>{podr_site} </td> 
+                    <td>{podr_toppan}</td> 
+                    <td>{podr_remarks}</td> 
+                    <td><input id="GPreqOrdersRtnpodr_datereceived" value="{podr_datereceived}" size="12" name="{podr_datereceived_Name}">&nbsp; 
+                      <!-- BEGIN DatePicker DatePicker_podr_datereceived1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="GPreqOrdersRtnDatePicker_podr_datereceived1"><img id="GPreqOrdersRtnDatePicker_podr_datereceived1_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_podr_datereceived1 --></td> 
+                    <td><input id="GPreqOrdersRtnpodr_qtyreceived" value="{podr_qtyreceived}" size="3" name="{podr_qtyreceived_Name}"></td> 
+                    <td><input id="GPreqOrdersRtnpodr_remarks2" value="{podr_remarks2}" maxlength="200" size="40" name="{podr_remarks2_Name}"></td>
+                  </tr>
+ <!-- END Row -->
+                  <!-- BEGIN NoRecords -->
+                  <tr class="NoRecords">
+                    <td colspan="10">No records</td>
+                  </tr>
+                  <!-- END NoRecords -->
+                  <tr class="Footer">
+                    <td style="TEXT-ALIGN: right" colspan="10">
+                      <!-- BEGIN Button Button_Submit --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GPreqOrdersRtnButton_Submit" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Submit -->
+                      <!-- BEGIN Button Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GPreqOrdersRtnCancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Cancel --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END EditableGrid GPreqOrdersRtn -->
+        <!-- BEGIN Grid GPartsOrdersView -->
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>PARTS REPLACEMENT</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                  <th style="TEXT-ALIGN: center" width="3%" scope="col">NO.</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="5%" scope="col">PART CODE</th>
+ 
+                  <th scope="col">PART NAME / DESCRIPTION</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="3%" scope="col">QTY</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="5%" scope="col">SITE</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="5%" scope="col">TOPPAN ID</th>
+ 
+                  <th scope="col">REMARKS (PARTS OUT)</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">DATE RECEIVED</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="5%" scope="col">QTY RECEIVED</th>
+ 
+                  <th scope="col">REMARKS (RECEIVED PARTS)</th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr class="Row">
+                  <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{podr_itemcode}&nbsp;</td> 
+                  <td>{podr_itemname}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{podr_qty}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{podr_site}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{podr_toppan}&nbsp;</td> 
+                  <td>{podr_remarks}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{podr_datereceived}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{podr_qtyreceived}&nbsp;</td> 
+                  <td>{podr_remarks2}&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="10">No records</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td style="TEXT-ALIGN: right" colspan="10"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!-- END Grid GPartsOrdersView --><br>
+        <br>
+        <!-- BEGIN Record RPreqSignAprv -->
+        <form id="RPreqSignAprv" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+              <td valign="top">
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="6">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th">Status approval<font color="#ff0000">&nbsp; *</font></td> 
+                    <td>
+                      <!-- BEGIN RadioButton preq_status --><input id="RPreqSignAprvpreq_status_{preq_status:optionNumber}" value="{Value}" type="radio" name="{preq_status_Name}" {Check}><label for="RPreqSignAprvpreq_status_{preq_status:optionNumber}">{Description}</label><!-- END RadioButton preq_status --><input id="RPreqSignAprvstatus" value="{status}" type="hidden" name="{status_Name}"></td> 
+                    <td class="th">status</td> 
+                    <td>
+                      <select id="RPreqSignAprvpreq_process" disabled name="{preq_process_Name}">
+                        <option selected value="">Select Value</option>
+                        {preq_process_Options}
+                      </select>
+ </td> 
+                    <td class="th">&nbsp;</td> 
+                    <td class="th">&nbsp;</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RPreqSignAprvpreq_approvedby">Approved by<font color="#ff0000">&nbsp; *</font></label></td> 
+                    <td>
+                      <select id="RPreqSignAprvpreq_approvedby" name="{preq_approvedby_Name}">
+                        <option selected value="">Select Value</option>
+                        {preq_approvedby_Options}
+                      </select>
+ </td> 
+                    <td class="th">Processed By</td> 
+                    <td>
+                      <select id="RPreqSignAprvpreq_processedby" disabled name="{preq_processedby_Name}">
+                        <option selected value="">Select Value</option>
+                        {preq_processedby_Options}
+                      </select>
+ &nbsp;</td> 
+                    <td class="th">Taken By</td> 
+                    <td>
+                      <select id="RPreqSignAprvpreq_takenby" disabled name="{preq_takenby_Name}">
+                        <option selected value="">Select Value</option>
+                        {preq_takenby_Options}
+                      </select>
+ &nbsp;</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RPreqSignAprvpreq_approveddate">Approved date<font color="#ff0000">&nbsp; *</font></label></td> 
+                    <td><input id="RPreqSignAprvpreq_approveddate" value="{preq_approveddate}" maxlength="100" size="25" name="{preq_approveddate_Name}">
+                      <!-- BEGIN DatePicker DatePicker_preq_approveddate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RPreqSignAprvDatePicker_preq_approveddate"><img id="RPreqSignAprvDatePicker_preq_approveddate_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_preq_approveddate --></td> 
+                    <td class="th">Date Processed</td> 
+                    <td class="th"><input id="RPreqSignAprvpreq_processeddate" disabled value="{preq_processeddate}" maxlength="100" size="29" name="{preq_processeddate_Name}">&nbsp; </td> 
+                    <td class="th">Date Taken</td> 
+                    <td class="th">&nbsp;<input id="RPreqSignAprvpreq_takendate" disabled value="{preq_takendate}" maxlength="100" size="29" name="{preq_takendate_Name}">&nbsp; </td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RPreqSignAprvpreq_receivedby">Received by</label></td> 
+                    <td>
+                      <select id="RPreqSignAprvpreq_receivedby" disabled name="{preq_receivedby_Name}">
+                        <option selected value="">Select Value</option>
+                        {preq_receivedby_Options}
+                      </select>
+ </td> 
+                    <td class="th">&nbsp;</td> 
+                    <td class="th">&nbsp;</td> 
+                    <td class="th">&nbsp;</td> 
+                    <td class="th">&nbsp;</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RPreqSignAprvpreq_receiveddate">Received date</label></td> 
+                    <td><input id="RPreqSignAprvpreq_receiveddate" disabled value="{preq_receiveddate}" maxlength="100" size="29" name="{preq_receiveddate_Name}"></td> 
+                    <td class="th">&nbsp;</td> 
+                    <td class="th">&nbsp;</td> 
+                    <td class="th">&nbsp;</td> 
+                    <td class="th">&nbsp;</td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="6" align="right">
+                      <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqSignAprvButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqSignAprvButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqSignAprvButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record RPreqSignAprv -->
+      </div>
+      <!-- BEGIN Record RPreqSignPrcs -->
+      <form id="RPreqSignPrcs" method="post" name="{HTMLFormName}" action="{Action}">
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="6">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th">Status approval</td> 
+                  <td>{preq_approval}</td> 
+                  <td class="th">STATUS<font color="#ff0000">&nbsp; *</font></td> 
+                  <td>
+                    <select id="RPreqSignPrcspreq_status" name="{preq_status_Name}">
+                      <option selected value="">Select Value</option>
+                      {preq_status_Options}
+                    </select>
+ &nbsp; <label for="RPreqSignPrcspreq_reason" style="display: none;">TextArea1</label> 
+                    <div id="divreason">
+                      <textarea style="DISPLAY: none" id="RPreqSignPrcspreq_reason" rows="3" cols="30" name="{preq_reason_Name}">{preq_reason}</textarea>
+                    </div>
+                  </td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RPreqSignPrcspreq_approvedby">Approved by</label></td> 
+                  <td>{preq_approvedby} </td> 
+                  <td class="th">Processed By<font color="#ff0000">&nbsp; *</font></td> 
+                  <td>
+                    <select id="RPreqSignPrcspreq_processedby" name="{preq_processedby_Name}">
+                      <option selected value="">Select Value</option>
+                      {preq_processedby_Options}
+                    </select>
+ &nbsp;</td> 
+                  <td class="th">Taken By<font color="#ff0000">&nbsp; *</font></td> 
+                  <td>
+                    <select id="RPreqSignPrcspreq_takenby" name="{preq_takenby_Name}">
+                      <option selected value="">Select Value</option>
+                      {preq_takenby_Options}
+                    </select>
+ &nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RPreqSignPrcspreq_approveddate">Approved date</label></td> 
+                  <td>{preq_approveddate} </td> 
+                  <td class="th">Date Processed<font color="#ff0000">&nbsp; *</font></td> 
+                  <td><input id="RPreqSignPrcspreq_processeddate" value="{preq_processeddate}" maxlength="100" size="15" name="{preq_processeddate_Name}">&nbsp; 
+                    <!-- BEGIN DatePicker DatePicker_preq_processeddate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RPreqSignPrcsDatePicker_preq_processeddate"><img id="RPreqSignPrcsDatePicker_preq_processeddate_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_preq_processeddate --></td> 
+                  <td class="th">Date Taken<font color="#ff0000">&nbsp; *</font></td> 
+                  <td><input id="RPreqSignPrcspreq_takendate" value="{preq_takendate}" maxlength="18" size="15" name="{preq_takendate_Name}">&nbsp; 
+                    <!-- BEGIN DatePicker DatePicker_preq_takendate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RPreqSignPrcsDatePicker_preq_takendate"><img id="RPreqSignPrcsDatePicker_preq_takendate_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_preq_takendate --></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RPreqSignPrcspreq_receivedby">Received by</label></td> 
+                  <td>
+                    <select id="RPreqSignPrcspreq_receivedby" disabled name="{preq_receivedby_Name}">
+                      <option selected value="">Select Value</option>
+                      {preq_receivedby_Options}
+                    </select>
+ </td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RPreqSignPrcspreq_receiveddate">Received date</label></td> 
+                  <td><input id="RPreqSignPrcspreq_receiveddate" disabled value="{preq_receiveddate}" maxlength="100" size="29" name="{preq_receiveddate_Name}"></td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td colspan="6" align="right">
+                    <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqSignPrcsButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqSignPrcsButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                    <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqSignPrcsButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record RPreqSignPrcs -->
+      <!-- BEGIN Record RPreqSignRtn -->
+      <form id="RPreqSignRtn" method="post" name="{HTMLFormName}" action="{Action}">
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="6">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th">Status approval</td> 
+                  <td>{preq_approval}</td> 
+                  <td class="th">STATUS</td> 
+                  <td class="th">{ListBox1} </td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RPreqSignRtnpreq_approvedby">Approved by</label></td> 
+                  <td>{preq_approvedby} </td> 
+                  <td class="th">Processed By</td> 
+                  <td class="th">{preq_processedby} &nbsp;</td> 
+                  <td class="th">Taken By</td> 
+                  <td class="th">{preq_takenby} &nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RPreqSignRtnpreq_approveddate">Approved date</label></td> 
+                  <td>{preq_approveddate} </td> 
+                  <td class="th">Date Processed</td> 
+                  <td class="th">{preq_processeddate}&nbsp; </td> 
+                  <td class="th">Date Taken</td> 
+                  <td class="th">&nbsp;{preq_takendate}&nbsp; </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RPreqSignRtnpreq_receivedby">Received by<font color="#ff0000">&nbsp; *</font></label></td> 
+                  <td>
+                    <select id="RPreqSignRtnpreq_receivedby" name="{preq_receivedby_Name}">
+                      <option selected value="">Select Value</option>
+                      {preq_receivedby_Options}
+                    </select>
+ </td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RPreqSignRtnpreq_receiveddate">Received date<font color="#ff0000">&nbsp; *</font></label></td> 
+                  <td><input id="RPreqSignRtnpreq_receiveddate" value="{preq_receiveddate}" maxlength="100" size="15" name="{preq_receiveddate_Name}">&nbsp; 
+                    <!-- BEGIN DatePicker DatePicker_preq_receiveddate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RPreqSignRtnDatePicker_preq_receiveddate"><img id="RPreqSignRtnDatePicker_preq_receiveddate_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_preq_receiveddate --></td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td colspan="6" align="right">
+                    <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqSignRtnButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqSignRtnButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                    <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqSignRtnButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record RPreqSignRtn -->
+      <!-- BEGIN Record RPreqSignView -->
+      <form id="RPreqSignView" method="post" name="{HTMLFormName}" action="{Action}">
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="6">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th" width="10%">Status approval</td> 
+                  <td width="20%">{preq_status}</td> 
+                  <td class="th" width="10%">status</td> 
+                  <td width="20%">{preq_process}&nbsp;{preq_reason}</td> 
+                  <td class="th" width="10%">&nbsp;</td> 
+                  <td>&nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RPreqSignViewpreq_approvedby">Approved by</label></td> 
+                  <td>{preq_approvedby} </td> 
+                  <td class="th">Processed By</td> 
+                  <td>{preq_processedby} &nbsp;</td> 
+                  <td class="th">Taken By</td> 
+                  <td>{preq_takenby} &nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RPreqSignViewpreq_approveddate">Approved date</label></td> 
+                  <td>{preq_approveddate}</td> 
+                  <td class="th">Date Processed</td> 
+                  <td>{preq_processeddate}&nbsp; </td> 
+                  <td class="th">Date Taken</td> 
+                  <td>&nbsp;{preq_takendate}&nbsp; </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RPreqSignViewpreq_receivedby">Received by</label></td> 
+                  <td>{preq_receivedby} </td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RPreqSignViewpreq_receiveddate">Received date</label></td> 
+                  <td>{preq_receiveddate}</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td> 
+                  <td class="th">&nbsp;</td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td colspan="6" align="right">
+                    <!-- BEGIN Button BtnProcess --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqSignViewBtnProcess" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonProcess.gif" type="image" name="{Button_Name}"><!-- END Button BtnProcess -->
+                    <!-- BEGIN Button BtnApproval --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqSignViewBtnApproval" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonApproved.gif" type="image" name="{Button_Name}"><!-- END Button BtnApproval -->
+                    <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreqSignViewButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonBack.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record RPreqSignView --></td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-78738617
+
+var Search_DatePicker_s_sdate = new Object(); 
+Search_DatePicker_s_sdate.format           = "LongDate";
+Search_DatePicker_s_sdate.style            = "Styles/{CCS_Style}/Style.css";
+Search_DatePicker_s_sdate.relativePathPart = "";
+Search_DatePicker_s_sdate.themeVersion = "3.0";
+
+var Search_DatePicker_s_edate = new Object(); 
+Search_DatePicker_s_edate.format           = "LongDate";
+Search_DatePicker_s_edate.style            = "Styles/{CCS_Style}/Style.css";
+Search_DatePicker_s_edate.relativePathPart = "";
+Search_DatePicker_s_edate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//bind_events @1-F2941218
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <p></p>
+ 
+      <div class="H1">
+        PREVENTIVE MAINTENANCE 
+      </div>
+ 
+      <p></p>
+ 
+      <p>Below are list of task of preventive maintenance. You can filter list using search criteria provided in the form below. Click on "DATE REPORTED" for more details. </p>
+ 
+      <p>
+      <!-- BEGIN Record Search -->
+      <form id="Search" method="post" name="{HTMLFormName}" action="{Action}">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>Search PM</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="3">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="Searchs_sdate">Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                  <td><input id="Searchs_sdate" value="{s_sdate}" maxlength="100" size="12" name="{s_sdate_Name}">
+                    <!-- BEGIN DatePicker DatePicker_s_sdate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="SearchDatePicker_s_sdate"><img id="SearchDatePicker_s_sdate_Image" border="0" alt="Show Date Picker" align="absmidlle" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_s_sdate -->&nbsp; Until <input id="Searchs_edate" value="{s_edate}" size="12" name="{s_edate_Name}">&nbsp; 
+                    <!-- BEGIN DatePicker DatePicker_s_edate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="SearchDatePicker_s_edate"><img id="SearchDatePicker_s_edate_Image" border="0" alt="Show Date Picker" align="absmidlle" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_s_edate --></td> 
+                  <td>
+                    <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="SearchButton_DoSearch" value="Search" alt="Search" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch -->&nbsp;</td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td colspan="3" align="right"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record Search --><br>
+      <!-- BEGIN Grid GSmartPreventive -->
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td valign="top">
+            <table class="Header" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                <td class="th"><strong>PM List</strong></td> 
+                <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Row">
+                <td colspan="9">Total Records:&nbsp;{GSmartPreventive_TotalRecords}</td>
+              </tr>
+ 
+              <tr class="Caption">
+                <th width="2%" scope="col">No.</th>
+ 
+                <th width="10%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_date -->Date Reported 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GSmartPreventiveSorter_tckt_date"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GSmartPreventiveSorter_tckt_date"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_date --></th>
+ 
+                <th width="10%" scope="col">&nbsp;Ref Number</th>
+ 
+                <th width="10%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_branch -->Site 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GSmartPreventiveSorter_tckt_branch"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GSmartPreventiveSorter_tckt_branch"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_branch --></th>
+ 
+                <th width="5%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_toppanid -->Toppan ID 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GSmartPreventiveSorter_tckt_toppanid"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GSmartPreventiveSorter_tckt_toppanid"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_toppanid --></th>
+ 
+                <th width="10%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_eta -->ETA 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GSmartPreventiveSorter_tckt_eta"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GSmartPreventiveSorter_tckt_eta"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_eta --></th>
+ 
+                <th width="10%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_etd -->ETD 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GSmartPreventiveSorter_tckt_etd"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GSmartPreventiveSorter_tckt_etd"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_etd --></th>
+ 
+                <th width="20%" scope="col">Eng ID #1&nbsp;</th>
+ 
+                <th width="20%" scope="col">&nbsp;Eng ID #2</th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr {GSmartPreventive:rowStyle}>
+                <td style="TEXT-ALIGN: center">{lblNumber}<input style="WIDTH: 19px; HEIGHT: 22px" id="GSmartPreventiveid_{GSmartPreventive:rowNumber}" value="{id}" size="2" type="hidden" name="{id_Name}">&nbsp;</td> 
+                <td style="TEXT-ALIGN: center"><a href="{prvt_date_Src}" id="GSmartPreventiveprvt_date_{GSmartPreventive:rowNumber}">{prvt_date}</a>&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">{refnumber}&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">{prvt_branch}&nbsp;<input style="WIDTH: 20px; HEIGHT: 22px" id="GSmartPreventiveprvt_state" value="{prvt_state}" size="2" type="hidden" name="{prvt_state_Name}"></td> 
+                <td style="TEXT-ALIGN: center">{prvt_toppanid}&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">{prvt_eta}&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">{prvt_etd}&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">{tcktEng1}</td> 
+                <td style="TEXT-ALIGN: center">{tcktEng2}</td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN Separator -->
+              <tr class="Separator">
+                <td colspan="9"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+              </tr>
+              <!-- END Separator -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="9">No records</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="9">
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                  <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                  <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                  <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                  <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid GSmartPreventive --><br>
+      </p>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

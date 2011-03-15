@@ -1,0 +1,1096 @@
+/* CCSTheme v 3.x */
+/* General */
+
+/* Colors */
+.PageBgColorAustereButton {
+	background-color: #b9b9b9;
+	}
+
+.FormTitleBgColorAustereButton {
+	background-color: #196d8a;
+	}
+
+.FormTitleFontColorAustereButton {
+	color: #efefef;
+	}
+
+.CaptionBgColorAustereButton {
+	background-color: #a5b7bc;
+	}
+
+.CaptionFontColorAustereButton {
+	color: #155b72;
+	}
+
+.DataBgColorAustereButton {
+	background-color: #efefef;
+	}
+
+.AltDataBgColorAustereButton {
+	background-color: #e2e2e2;
+	}
+
+.DataFontColorAustereButton {
+	color: #196d8a;
+	}
+
+.LinkColorAustereButton {
+	color: #0000e8;
+	}
+
+.VisitedLinkColorAustereButton {
+	color: #196d8a;
+	}
+
+.HoverLinkColorAustereButton {
+	color: #cf0086;
+	}
+
+.ColorBgButtonAustereButton {
+	background-color: #196d8a;
+}
+
+.ColorFontButtonAustereButton {
+	color: #efefef;
+}
+
+.ColorBgButtonPassiveAustereButton {
+	background-color: #61a8c0;
+}
+
+.ColorFontButtonPassiveAustereButton {
+	color: #f7f7f7;
+}
+
+
+
+.HeaderAustereButton {
+	width: 100%;
+	}
+
+.HeaderAustereButton th { 
+	font-family: Arial; font-size: 90%; font-weight: bold; text-align: center !important;
+	padding: 2px;
+	background-image: url('Images/HeaderBg.gif');  color: #efefef;
+	width: 100%;
+	white-space: nowrap;
+	
+	}
+
+
+
+/*ie6*/
+* html body .HeaderAustereButton th {
+	font-family: Arial; font-size: 130%; font-weight: bold; text-align: center !important;
+}
+/*end*/
+
+.HeaderAustereButton a:link { 
+	color: #efefef;
+	}
+
+.HeaderAustereButton a:visited { 
+	color: #efefef;
+	}
+
+.HeaderAustereButton a:hover, .CaptionAustereButton a:active { 
+	color: #efefef; text-decoration: none;
+	}
+
+.HeaderLeftAustereButton { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightAustereButton { 
+	background-image: url('Images/HeaderRight.gif');
+	background-position: right top;
+	}
+
+.HeaderLeftAustereButton img{
+	width: 9px;
+	}
+
+.HeaderRightAustereButton img{
+	width: 9px;
+	}
+
+
+/* Grid Options */
+.GridAustereButton { 
+	
+	width: 100%;
+	}
+
+.CaptionAustereButton th { 
+	font-family: Arial; font-size: 70%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #a5b7bc; color: #155b72;
+	white-space: nowrap;
+	}
+
+.CaptionAustereButton td { 
+	font-family: Arial; font-size: 70%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #a5b7bc; color: #155b72;
+	white-space: nowrap;
+	}
+
+
+
+/*ie6*/
+* html body .CaptionAustereButton th, * html body .CaptionAustereButton td {
+	font-family: Arial; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.CaptionAustereButton a:link { 
+	color: #155b72;
+	}
+
+.CaptionAustereButton a:visited { 
+	color: #155b72;
+	}
+
+.CaptionAustereButton a:hover, .CaptionAustereButton a:active { 
+	color: #cf0086;
+	}
+
+.CaptionAustereButton img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionAustereButton input {
+	vertical-align: middle;
+	}
+
+.RowAustereButton th { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #efefef; color: #196d8a;
+	white-space: nowrap;
+	color: #196d8a;
+	}
+
+.RowAustereButton td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #efefef; 
+	color: #196d8a;
+	}
+	
+
+
+/*ie6*/
+* html body .RowAustereButton th, * html body .RowAustereButton td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+caption.RowAustereButton { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #efefef; 
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body caption.RowAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.RowAustereButton a:link { 
+	color: #0000e8;
+	}
+
+.RowAustereButton a:visited { 
+	color: #196d8a;
+	}
+
+.RowAustereButton a:hover, .RowAustereButton a:active { 
+	color: #cf0086;
+	}
+
+.SeparatorAustereButton{
+	color: #196d8a;
+	}
+
+.SeparatorAustereButton td{
+	height: 1px;
+	}
+
+
+.AltRowAustereButton th { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #efefef; color: #196d8a;
+	white-space: nowrap;
+	color: #196d8a;
+	}
+
+.AltRowAustereButton td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #e2e2e2; 
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .AltRowAustereButton th, * html body .AltRowAustereButton td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.AltRowAustereButton a:link { 
+	color: #0000e8;
+	}
+
+.AltRowAustereButton a:visited { 
+	color: #196d8a;
+	}
+
+.AltRowAustereButton a:hover, .AltRowAustereButton a:active { 
+	color: #cf0086;
+	}
+
+.NoRecordsAustereButton td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	background-color: #efefef; 
+	color: #196d8a;
+	vertical-align: top;
+	}
+
+.FooterAustereButton td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	
+	background-color: #efefef; color: #196d8a;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .NoRecordsAustereButton td, * html body .FooterAustereButton td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.FooterAustereButton a:link { 
+	color: #0000e8;
+	}
+
+.FooterAustereButton a:visited { 
+	color: #196d8a;
+	}
+
+.FooterAustereButton a:hover, .FooterAustereButton a:active { 
+	color: #cf0086;
+	}
+
+.FooterAustereButton img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FooterAustereButton input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordAustereButton { 
+	
+	width: 100%;
+	}
+
+.ErrorAustereButton td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #efefef; 
+	}
+
+
+
+/*ie6*/
+* html body .ErrorAustereButton td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.ControlsAustereButton th { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #efefef; color: #196d8a;
+	white-space: nowrap;
+	color: #196d8a;
+	}
+
+.ControlsAustereButton td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #efefef; 
+	color: #196d8a;
+	}
+	
+.BottomAustereButton td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	
+	background-color: #efefef; color: #196d8a;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .ControlsAustereButton th, * html body .ControlsAustereButton td, * html body .BottomAustereButton td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.BottomAustereButton a:link { 
+	color: #0000e8;
+	}
+
+.BottomAustereButton a:visited { 
+	color: #196d8a;
+	}
+
+.BottomAustereButton a:hover, .CaptionAustereButton a:active { 
+	color: #cf0086;
+	}
+
+.BottomAustereButton img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomAustereButton input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionAustereButton th{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #e2e2e2; 
+	color: #196d8a;
+	}
+
+.GroupCaptionAustereButton td{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #efefef; 
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .GroupCaptionAustereButton th, * html body .GroupCaptionAustereButton td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.GroupCaptionAustereButton a:link {
+	color: #155b72;
+	}
+
+.GroupCaptionAustereButton a:visited{
+	color: #155b72;
+	}
+
+.GroupCaptionAustereButton a:hover, .GroupCaptionAustereButton a:active{
+	color: #cf0086;
+	}
+
+.GroupFooterAustereButton td{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #a5b7bc; 
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .GroupFooterAustereButton td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.GroupFooterAustereButton a:link {
+	color: #0000e8;
+	}
+
+.GroupFooterAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.GroupFooterAustereButton a:hover, .GroupFooterAustereButton a:active{
+	color: #cf0086;
+	}
+
+.GroupFooterAustereButton img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFooterAustereButton input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotalAustereButton td{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #e2e2e2; 
+	color: #196d8a;
+	border-bottom: 2px solid #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .SubTotalAustereButton td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.SubTotalAustereButton a:link {
+	color: #0000e8;
+	}
+
+.SubTotalAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.SubTotalAustereButton a:hover, .SubTotalAustereButton a:active{
+	color: #cf0086;
+	}
+
+.TotalAustereButton td{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #e2e2e2; 
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .TotalAustereButton td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.TotalAustereButton a:link {
+	color: #0000e8;
+	}
+
+.TotalAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.TotalAustereButton a:hover, .TotalAustereButton a:active{
+	color: #cf0086;
+	}
+
+/* Form Options */
+.ButtonAustereButton { 
+	background-color: #196d8a; color: #efefef; border-left: solid 1px #EDEDED; border-top: solid 1px #EDEDED; border-right: solid 1px #848284; border-bottom: solid 1px #848284; padding: 2px; font-weight: bold; font-family: Tahoma; font-size: 10px; font-weight: bold;
+	}
+
+/* Calendar */
+
+.CalendarAustereButton { 
+	
+	width: 100%;
+	}
+
+.CalendarWeekdayNameAustereButton{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #e2e2e2; 
+	color: #196d8a;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekdayNameAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekdayNameAustereButton a:link {
+	color: #0000e8;
+	}
+
+.CalendarWeekdayNameAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.CalendarWeekdayNameAustereButton a:hover, .CalendarWeekdayNameAustereButton a:active{
+	color: #cf0086;
+	}
+
+.CalendarWeekendNameAustereButton{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #e2e2e2;	
+	color: #196d8a;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendNameAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendNameAustereButton a:link {
+	color: #155b72;
+	}
+
+.CalendarWeekendNameAustereButton a:visited{
+	color: #155b72;
+	}
+
+.CalendarWeekendNameAustereButton a:link, .CalendarWeekendNameAustereButton a:visited{
+	color: #cf0086;
+	}
+
+/* Calendar Day */
+.CalendarDayAustereButton{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #efefef;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarDayAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarDayAustereButton a:link {
+	color: #0000e8;
+	}
+
+.CalendarDayAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.CalendarDayAustereButton a:hover, .CalendarDayAustereButton a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendAustereButton{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #e2e2e2;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendAustereButton a:link {
+	color: #0000e8;
+	}
+
+.CalendarWeekendAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.CalendarWeekendAustereButton a:hover, .CalendarWeekendAustereButton a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Today */
+.CalendarTodayAustereButton {
+	font-family: Arial; font-size: 70%;
+	padding: 0px;
+	border: 2px solid #196d8a;
+	text-align: center;
+	background-color: #efefef;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarTodayAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarTodayAustereButton a:link {
+	color: #0000e8;
+	}
+
+.CalendarTodayAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.CalendarTodayAustereButton a:hover, .CalendarTodayAustereButton a:active {
+	color: #cf0086;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodayAustereButton {
+	font-family: Arial; font-size: 70%;
+	padding: 0px;
+	border: 2px solid #196d8a;
+	text-align: center;
+	background-color: #e2e2e2;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendTodayAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendTodayAustereButton a:link {
+	color: #0000e8;
+	}
+
+.CalendarWeekendTodayAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.CalendarWeekendTodayAustereButton a:hover, .CalendarWeekendTodayAustereButton a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDayAustereButton{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #efefef;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthDayAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthDayAustereButton a:link {
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthDayAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthDayAustereButton a:hover, .CalendarOtherMonthDayAustereButton a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodayAustereButton {
+	font-family: Arial; font-size: 70%;
+	padding: 0px;
+	border: 2px solid #196d8a;
+	text-align: center;
+	background-color: #efefef;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthTodayAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthTodayAustereButton a:link {
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthTodayAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthTodayAustereButton a:hover, .CalendarOtherMonthTodayAustereButton a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendAustereButton {
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #e2e2e2;	
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendAustereButton a:link {
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthWeekendAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthWeekendAustereButton a:hover, .CalendarOtherMonthWeekendAustereButton a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodayAustereButton {
+	font-family: Arial; font-size: 70%;
+	padding: 0px;
+	border: 2px solid #196d8a;
+	text-align: center;
+	color: #196d8a;
+	background-color: #e2e2e2;	
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendTodayAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendTodayAustereButton a:link {
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthWeekendTodayAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.CalendarOtherMonthWeekendTodayAustereButton a:hover, .CalendarOtherMonthWeekendTodayAustereButton a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDayAustereButton{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #a5b7bc;
+	color: #155b72;
+	text-align: center;
+	font-weight: bold;
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarSelectedDayAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarSelectedDayAustereButton a:link {
+	color: #155b72;
+	}
+
+.CalendarSelectedDayAustereButton a:visited{
+	color: #155b72;
+	}
+
+.CalendarSelectedDayAustereButton a:hover, .CalendarSelectedDayAustereButton a:active{
+	color: #cf0086;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorAustereButton {
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	background-color: #efefef; color: #196d8a;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #196d8a;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigatorAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarNavigatorAustereButton a:link {
+	color: #0000e8;
+	}
+
+.CalendarNavigatorAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.CalendarNavigatorAustereButton a:hover, .CalendarNavigatorAustereButton a:active{
+	color: #cf0086;
+	}
+
+.CalendarNavigatorAustereButton img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+.CalendarNavigatorAustereButton td {
+	font-family: Arial; font-size: 70%;
+	}
+
+.CalendarNavigatorAustereButton th {
+	font-family: Arial; font-size: 70%;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigatorAustereButton th, * html body .CalendarNavigatorAustereButton td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+/* Calendar Extra */
+.CalendarEventAustereButton{
+	font-family: Arial; font-size: 70%;
+	text-align: left;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarEventAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarEventAustereButton a:link {
+	color: #0000e8;
+	}
+
+.CalendarEventAustereButton a:visited{
+	color: #196d8a;
+	}
+
+.CalendarEventAustereButton a:hover, .CalendarEventAustereButton a:active{
+	color: #cf0086;
+	}
+
+/* Changes for Section508 */
+table tr td strong {
+	padding: 0px;
+	margin: 0px;
+}
+
+.thAustereButton { 
+	font-family: Arial; font-size: 70%;
+	font-weight: bold;
+}
+
+
+
+/*ie6*/
+* html body .thAustereButton {
+	font-size: 100%;
+}
+/*end*/
+
+.HeaderAustereButton .thAustereButton { 
+	font-family: Arial; font-size: 90%; font-weight: bold; text-align: center !important;
+	padding: 2px;
+	background-image: url('Images/HeaderBg.gif');  color: #efefef;
+	width: 100%;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .HeaderAustereButton .thAustereButton {
+	font-family: Arial; font-size: 130%; font-weight: bold; text-align: center !important;
+}
+/*end*/
+
+.CaptionAustereButton .thAustereButton { 
+	font-family: Arial; font-size: 70%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #a5b7bc; color: #155b72;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .CaptionAustereButton .thAustereButton {
+	font-family: Arial; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.RowAustereButton .thAustereButton { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #efefef; color: #196d8a;
+	white-space: nowrap;
+	color: #196d8a;
+}
+
+.AltRowAustereButton .thAustereButton { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #efefef; color: #196d8a;
+	white-space: nowrap;
+	color: #196d8a;
+}
+
+.ControlsAustereButton .thAustereButton { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #efefef; color: #196d8a;
+	white-space: nowrap;
+	color: #196d8a;
+}
+
+.GroupCaptionAustereButton .thAustereButton {
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #e2e2e2; 
+	color: #196d8a;
+}
+
+
+
+/*ie6*/
+* html body .GroupCaptionAustereButton .thAustereButton {
+	font-family: Arial; font-size: 100%;
+}
+
+* html body .RowAustereButton .thAustereButton, * html body .AltRowAustereButton .thAustereButton, * html body .ControlsAustereButton .thAustereButton {
+	font-family: Arial; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+/*end*/
+
+/* Class for Application Builder Menu */
+.simpleMenuAustereButton td {
+	font-family: Arial; font-size: 70%;
+}
+
+
+
+/*ie6*/
+* html body .simpleMenuAustereButton td {
+	font-family: Arial; font-size: 100%;
+} 
+/*end*/

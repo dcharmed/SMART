@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-B93D65AC
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//GDamPassportdp_subcategoryPTDependentListBox1 Start @69-026A01AB
+function GDamPassportdp_subcategoryPTDependentListBox1_start(sender) {
+    var dependentElement = $("GDamPassportdp_subcategory" + sender.id.substring(23));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/smartdp_GDamPassport_dp_subcategory_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End GDamPassportdp_subcategoryPTDependentListBox1 Start
+
+//bind_events @1-54BEA2A3
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("GDamPassportdp_category", "change", GDamPassportdp_subcategoryPTDependentListBox1_start);
+    addEventHandler("GDamPassportdp_category", "load", GDamPassportdp_subcategoryPTDependentListBox1_start);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <div class="H1">
+        DAMAGED PASSPORT 
+      </div>
+      <br>
+      <div class="default">
+        <!-- BEGIN Record RCriteria -->Please generate the list of damaged passport in order to view/update the details using the form below.<br>
+        <br>
+        <form id="RCriteria" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="4">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="RCriteriaprod">Production</label></td> 
+                    <td><input id="RCriteriaprod" value="{prod}" maxlength="10" size="10" name="{prod_Name}"></td> 
+                    <td>Site</td> 
+                    <td>
+                      <select id="RCriteriasite" name="{site_Name}">
+                        <option selected value="">Select Value</option>
+                        {site_Options}
+                      </select>
+ </td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RCriteriamth">Period</label></td> 
+                    <td>
+                      <select id="RCriteriamth" name="{mth_Name}">
+                        <option selected value="">Select Value</option>
+                        {mth_Options}
+                      </select>
+ &nbsp;(MONTH) &nbsp;&nbsp;&nbsp; 
+                      <select id="RCriteriayear" name="{year_Name}">
+                        <option selected value="">Select Value</option>
+                        {year_Options}
+                      </select>
+ &nbsp;(YEAR) </td> 
+                    <td>&nbsp;</td> 
+                    <td>&nbsp; 
+                      <!-- BEGIN Button BtnGenerate --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RCriteriaBtnGenerate" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonGenerate.gif" type="image" name="{Button_Name}"><!-- END Button BtnGenerate --></td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="4" align="right"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record RCriteria -->
+        <!-- BEGIN Record VCriteria -->Please update records of <b>Damaged Passport</b> According to the details below:<br>
+        <br>
+        <form id="VCriteria" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th">Passport Production</td> 
+                    <td>{v_prod}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th">Site</td> 
+                    <td>{v_site}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th">Period</td> 
+                    <td>{v_date}&nbsp; (MONTH / YEAR)</td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td style="TEXT-ALIGN: left" colspan="2"><em>Logged By: <b>{lblUser}</b>&nbsp; on : <b>{lblDate}</b></em></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record VCriteria --><br>
+        <!-- BEGIN EditableGrid GDamPassport -->
+        <form id="GDamPassport" method="post" name="{HTMLFormName}" action="{Action}">
+          <input value="{FormState}" type="hidden" name="FormState">{FormScript} 
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>List of Damaged Passport</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="5">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Caption">
+                    <th scope="col">No.</th>
+ 
+                    <th scope="col">Reported By</th>
+ 
+                    <th scope="col">Category</th>
+ 
+                    <th scope="col">Sub Category</th>
+ 
+                    <th scope="col">Quantity</th>
+                  </tr>
+ 
+                  <!-- BEGIN Row -->
+                  <!-- BEGIN RowError -->
+                  <tr class="Error">
+                    <td colspan="5">{Error}</td>
+                  </tr>
+                  <!-- END RowError -->
+                  <tr class="Row">
+                    <td>{lblNumber}&nbsp;<input style="WIDTH: 21px; HEIGHT: 22px" id="GDamPassportdp_production_{GDamPassport:rowNumber}" value="{dp_production}" size="2" type="hidden" name="{dp_production_Name}"><input style="WIDTH: 26px; HEIGHT: 22px" id="GDamPassportdp_site_{GDamPassport:rowNumber}" value="{dp_site}" size="3" type="hidden" name="{dp_site_Name}"><input style="WIDTH: 21px; HEIGHT: 22px" id="GDamPassportdp_date_{GDamPassport:rowNumber}" value="{dp_date}" size="2" type="hidden" name="{dp_date_Name}"></td> 
+                    <td><label for="GDamPassportdp_reportedby_{GDamPassport:rowNumber}" style="display: none;">Dp Reportedby</label> 
+                      <select id="GDamPassportdp_reportedby_{GDamPassport:rowNumber}" name="{dp_reportedby_Name}">
+                        <option selected value="">Select Value</option>
+                        {dp_reportedby_Options}
+                      </select>
+ </td> 
+                    <td><label for="GDamPassportdp_category_{GDamPassport:rowNumber}" style="display: none;">Dp Category</label> 
+                      <select id="GDamPassportdp_category_{GDamPassport:rowNumber}" name="{dp_category_Name}">
+                        <option selected value="">Select Value</option>
+                        {dp_category_Options}
+                      </select>
+ </td> 
+                    <td><label for="GDamPassportdp_subcategory_{GDamPassport:rowNumber}" style="display: none;">Dp Subcategory</label> 
+                      <select id="GDamPassportdp_subcategory_{GDamPassport:rowNumber}" name="{dp_subcategory_Name}">
+                        <option selected value="">Select Value</option>
+                        {dp_subcategory_Options}
+                      </select>
+ </td> 
+                    <td><label for="GDamPassportdp_quantity_{GDamPassport:rowNumber}" style="display: none;">Dp Quantity</label><input id="GDamPassportdp_quantity_{GDamPassport:rowNumber}" value="{dp_quantity}" maxlength="10" size="10" name="{dp_quantity_Name}"></td>
+                  </tr>
+ <!-- END Row -->
+                  <!-- BEGIN NoRecords -->
+                  <tr class="NoRecords">
+                    <td colspan="5">No records</td>
+                  </tr>
+                  <!-- END NoRecords -->
+                  <tr class="Footer">
+                    <td style="TEXT-ALIGN: right" colspan="5">
+                      <!-- BEGIN Navigator Navigator -->
+                      <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                      <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                      <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                      <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                      <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                      <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                      <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                      <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->
+                      <!-- BEGIN Button Button_Submit --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GDamPassportButton_Submit" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Submit -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GDamPassportButton_Cancel" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END EditableGrid GDamPassport --><br>
+      </div>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

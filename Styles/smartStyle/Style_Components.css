@@ -1,0 +1,1096 @@
+/* CCSTheme v 3.x */
+/* General */
+
+/* Colors */
+.PageBgColorsmartStyle {
+	background-color: #bfbfbf;
+	}
+
+.FormTitleBgColorsmartStyle {
+	background-color: #2c7d98;
+	}
+
+.FormTitleFontColorsmartStyle {
+	color: #f7f7f7;
+	}
+
+.CaptionBgColorsmartStyle {
+	background-color: #b4c5c9;
+	}
+
+.CaptionFontColorsmartStyle {
+	color: #25687e;
+	}
+
+.DataBgColorsmartStyle {
+	background-color: #f7f7f7;
+	}
+
+.AltDataBgColorsmartStyle {
+	background-color: #eaeaea;
+	}
+
+.DataFontColorsmartStyle {
+	color: #2c7d98;
+	}
+
+.LinkColorsmartStyle {
+	color: #0000ff;
+	}
+
+.VisitedLinkColorsmartStyle {
+	color: #2c7d98;
+	}
+
+.HoverLinkColorsmartStyle {
+	color: #e4149b;
+	}
+
+.ColorBgButtonsmartStyle {
+	background-color: #2c7d98;
+}
+
+.ColorFontButtonsmartStyle {
+	color: #f7f7f7;
+}
+
+.ColorBgButtonPassivesmartStyle {
+	background-color: #78bdd4;
+}
+
+.ColorFontButtonPassivesmartStyle {
+	color: #ffffff;
+}
+
+
+
+.HeadersmartStyle {
+	width: 100%;
+	}
+
+.HeadersmartStyle th { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 4px;
+	background-image: url('Images/HeaderBg.gif'); color: #f7f7f7;
+	width: 100%;
+	white-space: nowrap;
+	padding-left: 8px;
+	}
+
+
+
+/*ie6*/
+* html body .HeadersmartStyle th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.HeadersmartStyle a:link { 
+	color: #f7f7f7;
+	}
+
+.HeadersmartStyle a:visited { 
+	color: #f7f7f7;
+	}
+
+.HeadersmartStyle a:hover, .CaptionsmartStyle a:active { 
+	color: #f7f7f7; text-decoration: none;
+	}
+
+.HeaderLeftsmartStyle { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightsmartStyle { 
+	background-image: url('Images/HeaderRight.gif');
+	background-position: right top;
+	}
+
+.HeaderLeftsmartStyle img{
+	width: 1px;
+	}
+
+.HeaderRightsmartStyle img{
+	width: 1px;
+	}
+
+
+/* Grid Options */
+.GridsmartStyle { 
+	border-left: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;
+	width: 100%;
+	}
+
+.CaptionsmartStyle th { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-left: solid 1px #FFFFFF; border-top: solid 1px #FFFFFF; border-right: solid 1px #848284; border-bottom: solid 1px #848284;
+	background-color: #b4c5c9; color: #25687e;
+	white-space: nowrap;
+	}
+
+.CaptionsmartStyle td { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-left: solid 1px #FFFFFF; border-top: solid 1px #FFFFFF; border-right: solid 1px #848284; border-bottom: solid 1px #848284;
+	background-color: #b4c5c9; color: #25687e;
+	white-space: nowrap;
+	}
+
+
+
+/*ie6*/
+* html body .CaptionsmartStyle th, * html body .CaptionsmartStyle td {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.CaptionsmartStyle a:link { 
+	color: #25687e;
+	}
+
+.CaptionsmartStyle a:visited { 
+	color: #25687e;
+	}
+
+.CaptionsmartStyle a:hover, .CaptionsmartStyle a:active { 
+	color: #e4149b;
+	}
+
+.CaptionsmartStyle img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionsmartStyle input {
+	vertical-align: middle;
+	}
+
+.RowsmartStyle th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #f7f7f7; color: #2c7d98;
+	white-space: nowrap;
+	color: #2c7d98;
+	}
+
+.RowsmartStyle td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #2c7d98;
+	}
+	
+
+
+/*ie6*/
+* html body .RowsmartStyle th, * html body .RowsmartStyle td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+caption.RowsmartStyle { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border: 1px solid #FFFFFF; border-bottom: 0px;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body caption.RowsmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.RowsmartStyle a:link { 
+	color: #0000ff;
+	}
+
+.RowsmartStyle a:visited { 
+	color: #2c7d98;
+	}
+
+.RowsmartStyle a:hover, .RowsmartStyle a:active { 
+	color: #e4149b;
+	}
+
+.SeparatorsmartStyle{
+	color: #2c7d98;
+	}
+
+.SeparatorsmartStyle td{
+	height: 1px;
+	}
+
+
+.AltRowsmartStyle th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #f7f7f7; color: #2c7d98;
+	white-space: nowrap;
+	color: #2c7d98;
+	}
+
+.AltRowsmartStyle td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #eaeaea; 
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .AltRowsmartStyle th, * html body .AltRowsmartStyle td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.AltRowsmartStyle a:link { 
+	color: #0000ff;
+	}
+
+.AltRowsmartStyle a:visited { 
+	color: #2c7d98;
+	}
+
+.AltRowsmartStyle a:hover, .AltRowsmartStyle a:active { 
+	color: #e4149b;
+	}
+
+.NoRecordssmartStyle td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	background-color: #f7f7f7; 
+	color: #2c7d98;
+	vertical-align: top;
+	}
+
+.FootersmartStyle td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #b4c5c9; color: #25687e;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .NoRecordssmartStyle td, * html body .FootersmartStyle td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.FootersmartStyle a:link { 
+	color: #0000ff;
+	}
+
+.FootersmartStyle a:visited { 
+	color: #2c7d98;
+	}
+
+.FootersmartStyle a:hover, .FootersmartStyle a:active { 
+	color: #e4149b;
+	}
+
+.FootersmartStyle img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FootersmartStyle input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordsmartStyle { 
+	border-left: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;
+	width: 100%;
+	}
+
+.ErrorsmartStyle td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-left: solid 1px #FFFFFF; border-top: solid 1px #FFFFFF; border-right: solid 1px #848284; border-bottom: solid 1px #848284;
+	text-align: left;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	}
+
+
+
+/*ie6*/
+* html body .ErrorsmartStyle td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.ControlssmartStyle th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #f7f7f7; color: #2c7d98;
+	white-space: nowrap;
+	color: #2c7d98;
+	}
+
+.ControlssmartStyle td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #2c7d98;
+	}
+	
+.BottomsmartStyle td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #b4c5c9; color: #25687e;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .ControlssmartStyle th, * html body .ControlssmartStyle td, * html body .BottomsmartStyle td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.BottomsmartStyle a:link { 
+	color: #0000ff;
+	}
+
+.BottomsmartStyle a:visited { 
+	color: #2c7d98;
+	}
+
+.BottomsmartStyle a:hover, .CaptionsmartStyle a:active { 
+	color: #e4149b;
+	}
+
+.BottomsmartStyle img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomsmartStyle input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionsmartStyle th{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #eaeaea; 
+	color: #2c7d98;
+	}
+
+.GroupCaptionsmartStyle td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7f7f7; 
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .GroupCaptionsmartStyle th, * html body .GroupCaptionsmartStyle td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupCaptionsmartStyle a:link {
+	color: #25687e;
+	}
+
+.GroupCaptionsmartStyle a:visited{
+	color: #25687e;
+	}
+
+.GroupCaptionsmartStyle a:hover, .GroupCaptionsmartStyle a:active{
+	color: #e4149b;
+	}
+
+.GroupFootersmartStyle td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #b4c5c9; 
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .GroupFootersmartStyle td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupFootersmartStyle a:link {
+	color: #0000ff;
+	}
+
+.GroupFootersmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.GroupFootersmartStyle a:hover, .GroupFootersmartStyle a:active{
+	color: #e4149b;
+	}
+
+.GroupFootersmartStyle img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFootersmartStyle input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotalsmartStyle td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #eaeaea; 
+	color: #2c7d98;
+	border-bottom: 2px solid #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .SubTotalsmartStyle td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.SubTotalsmartStyle a:link {
+	color: #0000ff;
+	}
+
+.SubTotalsmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.SubTotalsmartStyle a:hover, .SubTotalsmartStyle a:active{
+	color: #e4149b;
+	}
+
+.TotalsmartStyle td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #eaeaea; 
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .TotalsmartStyle td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.TotalsmartStyle a:link {
+	color: #0000ff;
+	}
+
+.TotalsmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.TotalsmartStyle a:hover, .TotalsmartStyle a:active{
+	color: #e4149b;
+	}
+
+/* Form Options */
+.ButtonsmartStyle { 
+	background-color: #2c7d98; color: #f7f7f7; border-left: solid 1px #EDEDED; border-top: solid 1px #EDEDED; border-right: solid 1px #848284; border-bottom: solid 1px #848284; padding: 2px; font-weight: bold; font-family: Tahoma; font-size: 11px; font-weight: bold;
+	}
+
+/* Calendar */
+
+.CalendarsmartStyle { 
+	border: 1px solid #FFFFFF;
+	width: 100%;
+	}
+
+.CalendarWeekdayNamesmartStyle{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-left: solid 1px #FFFFFF; border-top: solid 1px #FFFFFF; border-right: solid 1px #848284; border-bottom: solid 1px #848284;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #eaeaea; 
+	color: #2c7d98;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekdayNamesmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekdayNamesmartStyle a:link {
+	color: #0000ff;
+	}
+
+.CalendarWeekdayNamesmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarWeekdayNamesmartStyle a:hover, .CalendarWeekdayNamesmartStyle a:active{
+	color: #e4149b;
+	}
+
+.CalendarWeekendNamesmartStyle{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-left: solid 1px #FFFFFF; border-top: solid 1px #FFFFFF; border-right: solid 1px #848284; border-bottom: solid 1px #848284;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #eaeaea;	
+	color: #2c7d98;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendNamesmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendNamesmartStyle a:link {
+	color: #25687e;
+	}
+
+.CalendarWeekendNamesmartStyle a:visited{
+	color: #25687e;
+	}
+
+.CalendarWeekendNamesmartStyle a:link, .CalendarWeekendNamesmartStyle a:visited{
+	color: #e4149b;
+	}
+
+/* Calendar Day */
+.CalendarDaysmartStyle{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarDaysmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarDaysmartStyle a:link {
+	color: #0000ff;
+	}
+
+.CalendarDaysmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarDaysmartStyle a:hover, .CalendarDaysmartStyle a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendsmartStyle{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: center;
+	background-color: #eaeaea;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendsmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendsmartStyle a:link {
+	color: #0000ff;
+	}
+
+.CalendarWeekendsmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarWeekendsmartStyle a:hover, .CalendarWeekendsmartStyle a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Today */
+.CalendarTodaysmartStyle {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 2px solid #2c7d98;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarTodaysmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarTodaysmartStyle a:link {
+	color: #0000ff;
+	}
+
+.CalendarTodaysmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarTodaysmartStyle a:hover, .CalendarTodaysmartStyle a:active {
+	color: #e4149b;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodaysmartStyle {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 2px solid #2c7d98;
+	text-align: center;
+	background-color: #eaeaea;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendTodaysmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendTodaysmartStyle a:link {
+	color: #0000ff;
+	}
+
+.CalendarWeekendTodaysmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarWeekendTodaysmartStyle a:hover, .CalendarWeekendTodaysmartStyle a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDaysmartStyle{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthDaysmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthDaysmartStyle a:link {
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthDaysmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthDaysmartStyle a:hover, .CalendarOtherMonthDaysmartStyle a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodaysmartStyle {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 2px solid #2c7d98;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthTodaysmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthTodaysmartStyle a:link {
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthTodaysmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthTodaysmartStyle a:hover, .CalendarOtherMonthTodaysmartStyle a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendsmartStyle {
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: center;
+	background-color: #eaeaea;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendsmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendsmartStyle a:link {
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthWeekendsmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthWeekendsmartStyle a:hover, .CalendarOtherMonthWeekendsmartStyle a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodaysmartStyle {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 2px solid #2c7d98;
+	text-align: center;
+	color: #2c7d98;
+	background-color: #eaeaea;	
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendTodaysmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendTodaysmartStyle a:link {
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthWeekendTodaysmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthWeekendTodaysmartStyle a:hover, .CalendarOtherMonthWeekendTodaysmartStyle a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDaysmartStyle{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #b4c5c9;
+	color: #25687e;
+	text-align: center;
+	font-weight: bold;
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarSelectedDaysmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarSelectedDaysmartStyle a:link {
+	color: #25687e;
+	}
+
+.CalendarSelectedDaysmartStyle a:visited{
+	color: #25687e;
+	}
+
+.CalendarSelectedDaysmartStyle a:hover, .CalendarSelectedDaysmartStyle a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorsmartStyle {
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	background-color: #b4c5c9; color: #25687e;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigatorsmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarNavigatorsmartStyle a:link {
+	color: #0000ff;
+	}
+
+.CalendarNavigatorsmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarNavigatorsmartStyle a:hover, .CalendarNavigatorsmartStyle a:active{
+	color: #e4149b;
+	}
+
+.CalendarNavigatorsmartStyle img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+.CalendarNavigatorsmartStyle td {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+.CalendarNavigatorsmartStyle th {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigatorsmartStyle th, * html body .CalendarNavigatorsmartStyle td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+/* Calendar Extra */
+.CalendarEventsmartStyle{
+	font-family: Tahoma; font-size: 80%;
+	text-align: left;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarEventsmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarEventsmartStyle a:link {
+	color: #0000ff;
+	}
+
+.CalendarEventsmartStyle a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarEventsmartStyle a:hover, .CalendarEventsmartStyle a:active{
+	color: #e4149b;
+	}
+
+/* Changes for Section508 */
+table tr td strong {
+	padding: 0px;
+	margin: 0px;
+}
+
+.thsmartStyle { 
+	font-family: Tahoma; font-size: 80%;
+	font-weight: bold;
+}
+
+
+
+/*ie6*/
+* html body .thsmartStyle {
+	font-size: 100%;
+}
+/*end*/
+
+.HeadersmartStyle .thsmartStyle { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 4px;
+	background-image: url('Images/HeaderBg.gif'); color: #f7f7f7;
+	width: 100%;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .HeadersmartStyle .thsmartStyle {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.CaptionsmartStyle .thsmartStyle { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-left: solid 1px #FFFFFF; border-top: solid 1px #FFFFFF; border-right: solid 1px #848284; border-bottom: solid 1px #848284;
+	background-color: #b4c5c9; color: #25687e;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .CaptionsmartStyle .thsmartStyle {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.RowsmartStyle .thsmartStyle { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #f7f7f7; color: #2c7d98;
+	white-space: nowrap;
+	color: #2c7d98;
+}
+
+.AltRowsmartStyle .thsmartStyle { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #f7f7f7; color: #2c7d98;
+	white-space: nowrap;
+	color: #2c7d98;
+}
+
+.ControlssmartStyle .thsmartStyle { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #f7f7f7; color: #2c7d98;
+	white-space: nowrap;
+	color: #2c7d98;
+}
+
+.GroupCaptionsmartStyle .thsmartStyle {
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #eaeaea; 
+	color: #2c7d98;
+}
+
+
+
+/*ie6*/
+* html body .GroupCaptionsmartStyle .thsmartStyle {
+	font-family: Tahoma; font-size: 100%;
+}
+
+* html body .RowsmartStyle .thsmartStyle, * html body .AltRowsmartStyle .thsmartStyle, * html body .ControlssmartStyle .thsmartStyle {
+	font-family: Tahoma; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+/*end*/
+
+/* Class for Application Builder Menu */
+.simpleMenusmartStyle td {
+	font-family: Tahoma; font-size: 80%;
+}
+
+
+
+/*ie6*/
+* html body .simpleMenusmartStyle td {
+	font-family: Tahoma; font-size: 100%;
+} 
+/*end*/

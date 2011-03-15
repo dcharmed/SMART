@@ -1,0 +1,21 @@
+/*Page Style @1-E42F8125*/
+#GPreqOrders1podr_itemcode_choices {
+    position: absolute;
+}
+#GPreqOrders1podr_itemcode_choices ul {
+    background-color: white;
+    border: 1px solid black;
+    border-top: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+#GPreqOrders1podr_itemcode_choices ul li.selected { background-color: #aaa;}
+#GPreqOrders1podr_itemcode_choices li {
+    list-style-type: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0;
+}
+/*End Page Style*/
+

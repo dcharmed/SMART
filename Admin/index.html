@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ADMIN::SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-9722A627
+</script>
+<script language="JavaScript" src="../ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-1DB9E5A5
+function bind_events() {
+    if (functionExists("adminheader_bind_events")) adminheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    if (functionExists("rightbar_bind_events")) rightbar_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="../Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="80%">
+      <p></p>
+ 
+      <div class="H1">
+        ADMINISTRATION PAGE 
+      </div>
+      <br>
+      <br>
+      <div class="default">
+        <table border="1" cellspacing="0" cellpadding="5" width="100%">
+          <tr>
+            <td style="TEXT-ALIGN: center" valign="top" width="20%">
+              <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>USER MANAGEMENT</strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <tr class="Controls">
+                        <td class="th"><img id="Image4" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkUsr1_Src}" id="linkUsr1">New Account</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image5" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkUsr2_Src}" id="linkUsr2">List Of Users</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image6" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkUsr3_Src}" id="linkUsr3">Change Password</a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td> 
+            <td style="TEXT-ALIGN: center" valign="top" width="20%">
+              <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="th"><strong>REF NUMBER MNGMT</strong></td> 
+                        <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <tr class="Controls">
+                        <td class="th"><img id="Image19" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkRfNGenerator1_Src}" id="linkRfNGenerator1">Ticket Generator</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image20" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkRfNGenerator2_Src}" id="linkRfNGenerator2">PM Generator</a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td> 
+            <td style="TEXT-ALIGN: center" valign="top" width="20%">
+              <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>TICKETS MNGMT</strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <tr class="Controls">
+                        <td class="th"><img id="Image14" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkTicket1_Src}" id="linkTicket1">Ticket List</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image27" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkTicket2_Src}" id="linkTicket2">Search Ticket</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image15" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkTicket3_Src}" id="linkTicket3">Delete Ticket</a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td> 
+            <td style="TEXT-ALIGN: center" valign="top" width="20%">
+              <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>PM MNGMT</strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <tr class="Controls">
+                        <td class="th"><img id="Image17" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkPm1_Src}" id="linkPm1">Search PM</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image18" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkPm2_Src}" id="linkPm2">Delete Ticket</a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              &nbsp;</td>
+          </tr>
+ 
+          <tr>
+            <td style="TEXT-ALIGN: center">
+              <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>REF CODE MNGMT</strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <tr class="Controls">
+                        <td class="th"><img id="Image1" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkRef1_Src}" id="linkRef1">Problem Category</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image10" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp; <a href="{linkRef6_Src}" id="linkRef6">State</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image9" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkRef2_Src}" id="linkRef2">Branches</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image16" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkRef10_Src}" id="linkRef10">Escalate</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image11" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkRef7_Src}" id="linkRef7">Ticket Severity</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image7" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkRef4_Src}" id="linkRef4">Ticket Status</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image8" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkRef5_Src}" id="linkRef5">Resolution Method</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image12" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkRef8_Src}" id="linkRef8">Task Status</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image13" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkRef9_Src}" id="linkRef9">Type of Event</a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td> 
+            <td style="TEXT-ALIGN: center" valign="top">
+              <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="th"><strong>EQUIPMENT MNGMT</strong></td> 
+                        <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <tr class="Controls">
+                        <td class="th"><img id="Image21" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkEq_Src}" id="linkEq">Equipment</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image22" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkToppan_Src}" id="linkToppan">Toppan Equipment</a> </td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image22" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkEqDel_Src}" id="linkEqDel">Delete Equipment</a> </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td> 
+            <td style="TEXT-ALIGN: center" valign="top">
+              <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="th"><strong>TASK MNGMT</strong></td> 
+                        <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <tr class="Controls">
+                        <td class="th"><img id="Image23" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkTask1_Src}" id="linkTask1">Task List</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image24" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkTask2_Src}" id="linkTask2">Delete Task</a> </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td> 
+            <td style="TEXT-ALIGN: center" valign="top">
+              <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="th"><strong>LOG ACTIVITIES</strong></td> 
+                        <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <tr class="Controls">
+                        <td class="th"><img id="Image25" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkLog1_Src}" id="linkLog1">List Of Logs</a></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><img id="Image26" alt=" " align="absMiddle" src="../images/breadcrumb.jpg">&nbsp;&nbsp;<a href="{linkLog2_Src}" id="linkLog2">Trend Logs</a> </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td> 
+    <td class="buttons2" valign="top" width="20%">{rightbar}</td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

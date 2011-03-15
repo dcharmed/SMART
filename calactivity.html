@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-23CD333F
+
+var RActivityDetails_DatePicker_cal_datefrom = new Object(); 
+RActivityDetails_DatePicker_cal_datefrom.format           = "LongDate";
+RActivityDetails_DatePicker_cal_datefrom.style            = "Styles/{CCS_Style}/Style.css";
+RActivityDetails_DatePicker_cal_datefrom.relativePathPart = "";
+RActivityDetails_DatePicker_cal_datefrom.themeVersion = "3.0";
+
+var RActivityDetails_DatePicker_cal_dateto = new Object(); 
+RActivityDetails_DatePicker_cal_dateto.format           = "LongDate";
+RActivityDetails_DatePicker_cal_dateto.style            = "Styles/{CCS_Style}/Style.css";
+RActivityDetails_DatePicker_cal_dateto.relativePathPart = "";
+RActivityDetails_DatePicker_cal_dateto.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//RActivityDetailsButton_Delete_OnClick @26-DCD7FED8
+function RActivityDetailsButton_Delete_OnClick()
+{
+    var result = true;
+//End RActivityDetailsButton_Delete_OnClick
+
+//Confirmation Message @27-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close RActivityDetailsButton_Delete_OnClick @26-BC33A33A
+    return result;
+}
+//End Close RActivityDetailsButton_Delete_OnClick
+
+//RActivityDetailsButton_Cancel_OnClick @28-B6BEB989
+function RActivityDetailsButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RActivityDetailsButton_Cancel_OnClick
+
+//bind_events @1-7D8392F1
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("RActivityDetailsButton_Delete", "click", RActivityDetailsButton_Delete_OnClick);
+    addEventHandler("RActivityDetailsButton_Cancel", "click", RActivityDetailsButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" width="100%" rowspan="2">
+      <p><span class="H1">PAGE TITLE</span></p>
+ 
+      <p>
+      <!-- BEGIN Calendar smart_calendar -->
+      <table cellspacing="0" cellpadding="0" width="80%" border="0">
+        <tr>
+          <td>
+            <table class="Calendar" cellspacing="3" cellpadding="0">
+              <tr valign="top">
+                <!-- BEGIN Month -->
+                <td>
+                  <table class="Grid" cellspacing="0" cellpadding="0">
+                    <tr class="Caption">
+                      <th scope="col" colspan="7">{MonthDate}</th>
+                    </tr>
+ 
+                    <tr>
+                      <!-- BEGIN WeekDays -->
+                      <th scope="col" width="14.29%" {Style}>{DayOfWeek}</th>
+                      <!-- END WeekDays -->
+                    </tr>
+                    <!-- BEGIN Week -->
+                    <tr>
+                      <!-- BEGIN Day -->
+                      <td {Style}>{DayNumber} 
+                        <!-- BEGIN EventRow -->
+                        <div class="CalendarEvent">
+<a href="{EventDescription_Src}" id="smart_calendarEventDescription">{EventDescription}</a> 
+                        </div>
+                        <!-- END EventRow --></td><!-- END Day -->
+                      <!-- BEGIN EmptyDay -->
+                      <td {Style}>&nbsp;</td><!-- END EmptyDay -->
+                    </tr>
+                    <!-- END Week -->
+                    <!-- BEGIN WeekSeparator -->
+                    <tr class="Separator">
+                      <td colspan="7"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+                    </tr>
+                    <!-- END WeekSeparator -->
+                  </table>
+                </td><!-- END Month -->
+                <!-- BEGIN MonthsRowSeparator -->
+              </tr>
+ 
+              <tr valign="top">
+                <!-- END MonthsRowSeparator -->
+              </tr>
+ 
+              <tr>
+                <td class="CalendarNavigator" colspan="{MonthsInRow}">
+                  <!-- BEGIN CalendarNavigator Navigator -->
+                  <form action="{Action}" method="post">
+                    <input type="hidden" value="{CalendarName}" name="ccsForm">
+                    <table style="DISPLAY: inline">
+                      <tr>
+                        <!-- BEGIN Prev_Year -->
+                        <td><a href="{URL}" title="Prev Year"><img alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif" border="0"></a></td><!-- END Prev_Year -->
+                        <!-- BEGIN Prev -->
+                        <td><a href="{URL}" title="Prev Quarter"><img alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif" border="0"></a></td><!-- END Prev -->
+                        <!-- BEGIN Quarters -->
+                        <td><label for="{CalendarName}Month" style="display: none;">Month</label> 
+                          <select id="{CalendarName}Month" name="{CalendarName}Month">
+                            <!-- BEGIN Regular_Quarter -->
+                            <option value="{Month}">{Quarter}</option>
+ <!-- END Regular_Quarter -->
+                            <!-- BEGIN Current_Quarter -->
+                            <option value="{Month}" selected>{Quarter}</option>
+                            <!-- END Current_Quarter -->
+                          </select>
+ </td><!-- END Quarters -->
+                        <!-- BEGIN Years -->
+                        <td><label for="{CalendarName}Year" style="display: none;">Year</label> 
+                          <select id="{CalendarName}Year" name="{CalendarName}Year">
+                            <!-- BEGIN Regular_Year -->
+                            <option value="{Year}">{Year}</option>
+ <!-- END Regular_Year -->
+                            <!-- BEGIN Current_Year -->
+                            <option value="{Year}" selected>{Year}</option>
+                            <!-- END Current_Year -->
+                          </select>
+ </td><!-- END Years -->
+                        <td><input type="image" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" value="Submit" border="0"></td>
+                        <!-- BEGIN Next -->
+                        <td><a href="{URL}" title="Next Quarter"><img alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif" border="0"></a></td><!-- END Next -->
+                        <!-- BEGIN Next_Year -->
+                        <td><a href="{URL}" title="Next Year"><img alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif" border="0"></a></td><!-- END Next_Year -->
+                      </tr>
+                    </table>
+                  </form>
+                  <!-- END CalendarNavigator Navigator --></td>
+              </tr>
+            </table>
+            If you like to&nbsp;add new event to the calendar, please click here <a href="{ImageLink1}" id="smart_calendarImageLink1"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" alt="{ImageLink1}" src="Styles/smartStyleTurqoise/Images/en/ButtonNewRecord.gif"></a></td>
+        </tr>
+      </table>
+      <!-- END Calendar smart_calendar --><br>
+      <br>
+      <!-- BEGIN Record RActivityDetails -->
+      <form id="RActivityDetails" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Whereabout Details</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="RActivityDetailscal_userid">Staff</label></td> 
+                  <td>
+                    <select id="RActivityDetailscal_userid" name="{cal_userid_Name}">
+                      <option value="" selected>Select Value</option>
+                      {cal_userid_Options}
+                    </select>
+ <input type="hidden" name="{datemodified_Name}" value="{datemodified}" id="RActivityDetailsdatemodified"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RActivityDetailscal_type">Type of Event</label></td> 
+                  <td>
+                    <!-- BEGIN RadioButton cal_type --><input id="RActivityDetailscal_type_{cal_type:optionNumber}" type="radio" value="{Value}" name="{cal_type_Name}" {Check}><label for="RActivityDetailscal_type_{cal_type:optionNumber}">{Description}</label><br>
+                    <!-- END RadioButton cal_type --></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RActivityDetailscal_description">Description</label></td> 
+                  <td><textarea id="RActivityDetailscal_description" name="{cal_description_Name}" rows="3" cols="50">{cal_description}</textarea></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RActivityDetailscal_datefrom">From</label></td> 
+                  <td><input id="RActivityDetailscal_datefrom" maxlength="100" size="8" value="{cal_datefrom}" name="{cal_datefrom_Name}">
+                    <!-- BEGIN DatePicker DatePicker_cal_datefrom --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RActivityDetailsDatePicker_cal_datefrom"><img id="RActivityDetailsDatePicker_cal_datefrom_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_cal_datefrom --></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RActivityDetailscal_dateto">To</label></td> 
+                  <td><input id="RActivityDetailscal_dateto" maxlength="100" size="8" value="{cal_dateto}" name="{cal_dateto_Name}">
+                    <!-- BEGIN DatePicker DatePicker_cal_dateto --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RActivityDetailsDatePicker_cal_dateto"><img id="RActivityDetailsDatePicker_cal_dateto_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_cal_dateto --></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_Insert --><input id="RActivityDetailsButton_Insert" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Update --><input id="RActivityDetailsButton_Update" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+                    <!-- BEGIN Button Button_Delete --><input id="RActivityDetailsButton_Delete" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Delete" src="Styles/{CCS_Style}/Images/en/ButtonDelete.gif" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+                    <!-- BEGIN Button Button_Cancel --><input id="RActivityDetailsButton_Cancel" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record RActivityDetails --><br>
+      <br>
+      </p>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

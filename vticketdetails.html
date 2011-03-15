@@ -1,0 +1,548 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-B93D65AC
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-9BBA4C01
+
+var smart_resolutionnote_DatePicker_rsltn_date = new Object(); 
+smart_resolutionnote_DatePicker_rsltn_date.format           = "GeneralDate";
+smart_resolutionnote_DatePicker_rsltn_date.style            = "Styles/{CCS_Style}/Style.css";
+smart_resolutionnote_DatePicker_rsltn_date.relativePathPart = "";
+smart_resolutionnote_DatePicker_rsltn_date.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//RSmartTicket_OnLoad @5-1F84B91B
+function RSmartTicket_OnLoad(form)
+{
+    var result = true;
+//End RSmartTicket_OnLoad
+
+//Custom Code @71-2A29BDB7
+    // -------------------------
+    if ($("Panel1smart_ticketEditStatuslinkStatus") != null)
+    $("Panel1smart_ticketEditStatuslinkStatus").onclick = function()
+    {
+        Panel2ShowModal1_show();
+        return false;
+    }
+    // -------------------------
+//End Custom Code
+
+//Close RSmartTicket_OnLoad @5-BC33A33A
+    return result;
+}
+//End Close RSmartTicket_OnLoad
+
+//smart_resolutionnoteButton_Cancel_OnClick @98-1F496292
+function smart_resolutionnoteButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End smart_resolutionnoteButton_Cancel_OnClick
+
+//resnoteviewButton_Cancel_OnClick @149-A042277A
+function resnoteviewButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End resnoteviewButton_Cancel_OnClick
+
+//RSmartTickettckt_branchPTDependentListBox4 Start @53-0DAC46F4
+function RSmartTickettckt_branchPTDependentListBox4_start(sender) {
+    var dependentElement = $("RSmartTickettckt_branch" + sender.id.substring(17));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/ticketdetails_smart_ticket_tckt_branch_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End RSmartTickettckt_branchPTDependentListBox4 Start
+
+//RSmartTickettckt_relatedPTDependentListBox1 Start @57-6CB4C4AA
+function RSmartTickettckt_relatedPTDependentListBox1_start(sender) {
+    var dependentElement = $("RSmartTickettckt_related" + sender.id.substring(23));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/ticketdetails_smart_ticket_tckt_related_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End RSmartTickettckt_relatedPTDependentListBox1 Start
+
+//RSmartTickettckt_subcatPTDependentListBox3 Start @69-36C67DFF
+function RSmartTickettckt_subcatPTDependentListBox3_start(sender) {
+    var dependentElement = $("RSmartTickettckt_subcat" + sender.id.substring(25));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/ticketdetails_smart_ticket_tckt_subcat_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End RSmartTickettckt_subcatPTDependentListBox3 Start
+
+//bind_events @1-C62C1DA9
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("RSmartTicketstate", "change", RSmartTickettckt_branchPTDependentListBox4_start);
+    addEventHandler("RSmartTicketstate", "load", RSmartTickettckt_branchPTDependentListBox4_start);
+    addEventHandler("RSmartTickettckt_subcat", "change", RSmartTickettckt_relatedPTDependentListBox1_start);
+    addEventHandler("RSmartTickettckt_subcat", "load", RSmartTickettckt_relatedPTDependentListBox1_start);
+    addEventHandler("RSmartTickettckt_category", "change", RSmartTickettckt_subcatPTDependentListBox3_start);
+    addEventHandler("RSmartTickettckt_category", "load", RSmartTickettckt_subcatPTDependentListBox3_start);
+    addEventHandler("RSmartTicket", "load", RSmartTicket_OnLoad);
+    addEventHandler("smart_resolutionnoteButton_Cancel", "click", smart_resolutionnoteButton_Cancel_OnClick);
+    addEventHandler("resnoteviewButton_Cancel", "click", resnoteviewButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <p></p>
+ 
+      <div class="H1">
+        TICKET DETAILS 
+      </div>
+ 
+      <p></p>
+ 
+      <p>Please fill up form below or click&nbsp;&nbsp;<a href="{ImageLink1}" id="ImageLink1"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" onclick="return confirm(&quot;Are you sure you want to leave this page?&quot;)" alt="{ImageLink1}" align="absMiddle" src="Styles/smartStyleTurqoise/Images/en/ButtonBackToList.gif"></a>&nbsp;to go back to the ticket list page. </p>
+ 
+      <p>
+      <!-- BEGIN Record RSmartTicket -->
+      <form id="RSmartTicket" method="post" name="{HTMLFormName}" action="{Action}">
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>Ticket Details : {lblTicketNumber}</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="4">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="RSmartTickettckt_refnumber">Refnumber&nbsp;</label></td> 
+                  <td><input id="RSmartTickettckt_refnumber" disabled value="{tckt_refnumber}" name="{tckt_refnumber_Name}"></td> 
+                  <td><label for="RSmartTickettckt_branch">Branch&nbsp;&nbsp;&nbsp;</label></td> 
+                  <td>
+                    <select id="RSmartTicketstate" disabled name="{state_Name}">
+                      <option selected value="">Select Value</option>
+                      {state_Options}
+                    </select>
+ 
+                    <select id="RSmartTickettckt_branch" disabled name="{tckt_branch_Name}">
+                      <option selected value="">Select Value</option>
+                      {tckt_branch_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RSmartTickettckt_status">Status</label></td> 
+                  <td>{tckt_status}</td> 
+                  <td>Severity</td> 
+                  <td>
+                    <select id="RSmartTickettckt_severity" disabled name="{tckt_severity_Name}">
+                      <option selected value="">Select Value</option>
+                      {tckt_severity_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RSmartTickettckt_r_date">Date</label></td> 
+                  <td><input id="RSmartTickettckt_r_date" disabled value="{tckt_r_date}" maxlength="100" size="8" name="{tckt_r_date_Name}"></td> 
+                  <td>Category</td> 
+                  <td>
+                    <select id="RSmartTickettckt_category" disabled name="{tckt_category_Name}">
+                      <option selected value="">Select Value</option>
+                      {tckt_category_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RSmartTickettckt_toppanid">ToppanID</label></td> 
+                  <td><input id="RSmartTickettckt_toppanid" disabled value="{tckt_toppanid}" maxlength="10" size="10" name="{tckt_toppanid_Name}"></td> 
+                  <td>Sub-Category</td> 
+                  <td>
+                    <select id="RSmartTickettckt_subcat" disabled name="{tckt_subcat_Name}">
+                      <option selected value="">Select Value</option>
+                      {tckt_subcat_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RSmartTickettckt_eqpmtserial">Eqpmt Serial Number</label></td> 
+                  <td><input id="RSmartTickettckt_eqpmtserial" disabled value="{tckt_eqpmtserial}" maxlength="200" size="50" name="{tckt_eqpmtserial_Name}"></td> 
+                  <td>Related To</td> 
+                  <td>
+                    <select id="RSmartTickettckt_related" disabled name="{tckt_related_Name}">
+                      <option selected value="">Select Value</option>
+                      {tckt_related_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RSmartTickettckt_esc">Esc</label></td> 
+                  <td>
+                    <select id="RSmartTickettckt_esc" disabled name="{tckt_esc_Name}">
+                      <option selected value="">Select Value</option>
+                      {tckt_esc_Options}
+                    </select>
+ </td> 
+                  <td>&nbsp;Engineer</td> 
+                  <td>&nbsp;<input id="RSmartTickettckt_engineer" disabled value="{tckt_engineer}" maxlength="100" name="{tckt_engineer_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="RSmartTickettckt_description">Description</label></td> 
+                  <td><textarea id="RSmartTickettckt_description" disabled rows="5" cols="40" name="{tckt_description_Name}">{tckt_description}</textarea></td> 
+                  <td>&nbsp;Resolution Method</td> 
+                  <td>&nbsp;<label for="RSmartTickettckt_method" style="display: none;">TextBox1</label><input id="RSmartTickettckt_method" disabled value="{tckt_method}" name="{tckt_method_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th" colspan="4">
+                    <hr></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th" colspan="4">
+                    <table class="Grid" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td colspan="6"><strong>-&nbsp;RAISED-</strong></td>
+                      </tr>
+ 
+                      <tr class="Caption">
+                        <th width="15%" scope="col">&nbsp;<strong>DATE</strong></th>
+ 
+                        <th width="10%" scope="col"><strong>&nbsp;USER</strong></th>
+ 
+                        <th width="10%" scope="col"><strong>&nbsp;CONTACT</strong></th>
+ 
+                        <th width="10%" scope="col"><strong>&nbsp;HELPDESK</strong></th>
+ 
+                        <th width="10%" scope="col"><strong>&nbsp;BY</strong></th>
+ 
+                        <th scope="col"><strong>&nbsp;ADD. INFO</strong></th>
+                      </tr>
+ 
+                      <tr>
+                        <td>{raised_date}</td> 
+                        <td>{customer}</td> 
+                        <td>{bycontact}&nbsp;/ {bycontact1}</td> 
+                        <td>{helpdesk} </td> 
+                        <td>&nbsp;{byusergroup}</td> 
+                        <td><b>ENG:</b> {byEngineer}&nbsp; | &nbsp; <b>ADUKOM # :</b> {byadukom}&nbsp; | &nbsp; <b>ADUKOM ID:</b> {byadukomid}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th" colspan="4">
+                    <table class="Grid" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td colspan="4"><strong>-&nbsp;CLOSED-</strong></td>
+                      </tr>
+ 
+                      <tr class="Caption">
+                        <th width="15%" scope="col">&nbsp;<strong>DATE</strong></th>
+ 
+                        <th width="10%" scope="col"><strong>&nbsp;USER</strong></th>
+ 
+                        <th width="10%" scope="col"><strong>&nbsp;HELPDESK ID</strong></th>
+ 
+                        <th scope="col"><strong>&nbsp;ADUKOM ID</strong></th>
+                      </tr>
+ 
+                      <tr>
+                        <td>{tckt_c_date}&nbsp; </td> 
+                        <td>{closedby} </td> 
+                        <td>{closedreportedby} </td> 
+                        <td>{closedadukom}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record RSmartTicket --></p>
+ 
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td valign="top" width="60%">
+            <!-- BEGIN Grid GResNote -->
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td valign="top">
+                  <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                      <td class="th"><strong>Resolution Notes For Ticket : {lblTicketNumberResNote}&nbsp;</strong></td> 
+                      <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                    </tr>
+                  </table>
+ 
+                  <table class="Grid" cellspacing="0" cellpadding="0">
+                    <tr class="Caption">
+                      <th style="TEXT-ALIGN: center" width="3%" scope="col">&nbsp;Bil.</th>
+ 
+                      <th style="TEXT-ALIGN: center" width="5%" scope="col">&nbsp;Notes<br>
+                      Type</th>
+ 
+                      <th style="TEXT-ALIGN: center" width="15%" scope="col">Date / Time</th>
+ 
+                      <th width="20%" scope="col">Action Taken</th>
+ 
+                      <th width="20%" scope="col">Planning / <em>Remark</em></th>
+ 
+                      <th style="TEXT-ALIGN: center" width="10%" scope="col">Eng</th>
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <tr {GResNote:rowStyle}>
+                      <td style="TEXT-ALIGN: center">{lblNumber}</td> 
+                      <td style="TEXT-ALIGN: center">{rsltn_type}</td> 
+                      <td style="TEXT-ALIGN: center"><a href="{rsltn_date_Src}" id="GResNotersltn_date_{GResNote:rowNumber}">{rsltn_date}</a>&nbsp;<input style="WIDTH: 21px; HEIGHT: 22px" id="GResNotersltn_id" value="{rsltn_id}" size="2" type="hidden" name="{rsltn_id_Name}"></td> 
+                      <td style="TEXT-ALIGN: left">{rsltn_action}</td> 
+                      <td style="TEXT-ALIGN: left">{rsltn_planning}<br>
+                        <br>
+                        <em>{rlstn_remark}</em></td> 
+                      <td style="TEXT-ALIGN: center">{rsltn_eng}</td>
+                    </tr>
+ <!-- END Row -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                      <td colspan="6">No records</td>
+                    </tr>
+                    <!-- END NoRecords -->
+                    <tr class="Footer">
+                      <td colspan="6"><a href="{ImageLink2}" id="GResNoteImageLink2_{GResNote:rowNumber}"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{ImageLink2}" src="Styles/smartStyleTurqoise/Images/en/ButtonNewCM.gif"></a>&nbsp;&nbsp; </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- END Grid GResNote --></td> 
+          <td valign="top">
+            <!-- BEGIN Record smart_resolutionnote -->
+            <form id="smart_resolutionnote" method="post" name="{HTMLFormName}" action="{Action}">
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>Support Note Details&nbsp;</strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <!-- BEGIN Error -->
+                      <tr class="Error">
+                        <td colspan="4">{Error}</td>
+                      </tr>
+                      <!-- END Error -->
+                      <tr class="Controls">
+                        <td class="th"><label for="smart_resolutionnotersltn_date">Eng ID</label></td> 
+                        <td><input id="smart_resolutionnoteengName" disabled value="{engName}" readonly maxlength="10" size="10" name="{engName_Name}"><input style="WIDTH: 41px; HEIGHT: 22px" id="smart_resolutionnotersltn_byuser" value="{rsltn_byuser}" size="5" type="hidden" name="{rsltn_byuser_Name}">&nbsp;<input style="WIDTH: 19px; HEIGHT: 22px" id="smart_resolutionnoteticket_id" value="{ticket_id}" size="2" type="hidden" name="{ticket_id_Name}"><input style="WIDTH: 64px; HEIGHT: 22px" id="smart_resolutionnotersltn_type" value="{rsltn_type}" size="8" type="hidden" name="{rsltn_type_Name}"></td> 
+                        <td>Date&nbsp;</td> 
+                        <td><input id="smart_resolutionnotersltn_date" value="{rsltn_date}" maxlength="30" name="{rsltn_date_Name}">
+                          <!-- BEGIN DatePicker DatePicker_rsltn_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="smart_resolutionnoteDatePicker_rsltn_date"><img id="smart_resolutionnoteDatePicker_rsltn_date_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_rsltn_date --></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="smart_resolutionnotersltn_eta">Action Taken <font color="#ff0000">*</font></label></td> 
+                        <td><textarea id="smart_resolutionnotersltn_actiontaken" rows="3" name="{rsltn_actiontaken_Name}">{rsltn_actiontaken}</textarea></td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="smart_resolutionnotersltn_planning">Planning</label></td> 
+                        <td><textarea id="smart_resolutionnotersltn_planning" rows="3" name="{rsltn_planning_Name}">{rsltn_planning}</textarea></td> 
+                        <td>&nbsp;Remark</td> 
+                        <td><textarea id="smart_resolutionnotersltn_remark" rows="3" name="{rsltn_remark_Name}">{rsltn_remark}</textarea></td>
+                      </tr>
+ 
+                      <tr class="Bottom">
+                        <td colspan="4" align="right">
+                          <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="smart_resolutionnoteButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                          <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="smart_resolutionnoteButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                          <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="smart_resolutionnoteButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <!-- END Record smart_resolutionnote -->
+            <!-- BEGIN Record resnoteview -->
+            <form id="resnoteview" method="post" name="{HTMLFormName}" action="{Action}">
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>Support Note Details&nbsp;</strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <tr class="Error">
+                        <td colspan="4">SORRY, YOU CANNOT UPDATE THE DETAILS BECAUSE THE SN IS NOT CREATED BY YOU</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="resnoteviewrsltn_date">Eng ID</label></td> 
+                        <td><input id="resnoteviewengName" disabled value="{engName}" readonly name="{engName_Name}"><input style="WIDTH: 41px; HEIGHT: 22px" id="resnoteviewrsltn_byuser" value="{rsltn_byuser}" size="5" type="hidden" name="{rsltn_byuser_Name}">&nbsp;<input style="WIDTH: 19px; HEIGHT: 22px" id="resnoteviewticket_id" value="{ticket_id}" size="2" type="hidden" name="{ticket_id_Name}"><input style="WIDTH: 64px; HEIGHT: 22px" id="resnoteviewrsltn_type" value="{rsltn_type}" size="8" type="hidden" name="{rsltn_type_Name}"></td> 
+                        <td>Date&nbsp;</td> 
+                        <td>{rsltn_date}</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="smart_resolutionnotersltn_eta">Action Taken <font color="#ff0000">*</font></label></td> 
+                        <td>{rsltn_actiontaken}</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="resnoteviewrsltn_planning">Planning</label></td> 
+                        <td>{rsltn_planning}</td> 
+                        <td>&nbsp;Remark</td> 
+                        <td>{rsltn_remark}</td>
+                      </tr>
+ 
+                      <tr class="Bottom">
+                        <td colspan="4" align="right">&nbsp; 
+                          <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="resnoteviewButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <!-- END Record resnoteview --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

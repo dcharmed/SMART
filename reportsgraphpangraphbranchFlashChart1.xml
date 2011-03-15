@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?> <!--FlashChart Header @3-EFBEC7D5-->
+
+<!--FlashChart Template @3-F3CDBDC9-->
+<root>
+	<schema name="Metall">
+		<mask/>
+		<colors/>
+	</schema>
+	<separator decimal="," group=""/>
+	<background border="yes"/>
+	<chartarea border="yes">
+		<grid line_style="medium" visible="yes"/>
+		<vertical_axis visible="yes"/>
+		<horizontal_axis visible="yes" rotation="degrees" autoRotate="yes"/>
+		<chart line_thick="2" enabled="yes" type="3d_columns_horizontal" series="columns">
+			<inscriptions visible="yes"/>
+			<animation type="none"/>
+			<markers size="8" type="0"/>
+			<hints border="yes" enabled="yes"/>
+		</chart>
+		<legend sqr_size="12" sqr_borders="yes" border_thick="0" position="bottom-left" layout="horizontal" visible="yes"/>
+		<title position="top" align="center" border="no" alpha="100" visible="yes" text="Graph of Tickets According To Branch By Year"/>
+	</chartarea>
+	<objects>
+	</objects>
+	<data>
+		<columns>
+			<column field="ticketsum" name="Number of Tickets"/></columns>
+		<rows>
+			<!-- BEGIN Row --><row col1="{ticketsum}" name="{branch}"/><!-- END Row --></rows>
+	</data>
+</root>
+
+<!--End FlashChart Template-->
+

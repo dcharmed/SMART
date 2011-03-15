@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ADMIN::SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<link rel="stylesheet" type="text/css" href="../Styles/{CCS_Style}/Style_doctype.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-86BEACD2
+</script>
+<script language="JavaScript" src="../ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="../ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-D8FB49DC
+
+var RUser_DatePicker_usr_dateofbirth = new Object(); 
+RUser_DatePicker_usr_dateofbirth.format           = "LongDate";
+RUser_DatePicker_usr_dateofbirth.style            = "Admin/../Styles/{CCS_Style}/Style.css";
+RUser_DatePicker_usr_dateofbirth.relativePathPart = "../";
+RUser_DatePicker_usr_dateofbirth.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//RUserButton_Delete_OnClick @31-20BBFBF8
+function RUserButton_Delete_OnClick()
+{
+    var result = true;
+//End RUserButton_Delete_OnClick
+
+//Confirmation Message @32-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close RUserButton_Delete_OnClick @31-BC33A33A
+    return result;
+}
+//End Close RUserButton_Delete_OnClick
+
+//RUserButton_Cancel_OnClick @33-52E9CABD
+function RUserButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RUserButton_Cancel_OnClick
+
+//bind_events @1-7F76E559
+function bind_events() {
+    if (functionExists("adminheader_bind_events")) adminheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("RUserButton_Delete", "click", RUserButton_Delete_OnClick);
+    addEventHandler("RUserButton_Cancel", "click", RUserButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+{header} 
+<table class="t2" cellpadding="5" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="80%">
+      <p></p>
+ 
+      <div class="H1">
+        USER MANAGEMENT
+      </div>
+ 
+      <p></p>
+ 
+      <div class="default">
+        <!-- BEGIN Record SFUser -->
+        <form id="SFUser" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Filter User </strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="5">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="SFUsers_username">ByUsername&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                    <td><input id="SFUsers_username" value="{s_username}" maxlength="20" name="{s_username_Name}" size="20"></td> 
+                    <td><label for="SFUsers_usergroup">By Group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                    <td>
+                      <select id="SFUsers_usergroup" name="{s_usergroup_Name}">
+                        <option selected value="">Select Value</option>
+                        {s_usergroup_Options}
+                      </select>
+ </td> 
+                    <td>
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="SFUserButton_DoSearch" value="Search" alt="Search" src="../Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record SFUser --><br>
+        <!-- BEGIN Grid GUser -->
+        <table border="0" cellspacing="0" cellpadding="0" width="90%">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>List of Smart User</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                  <th scope="col">No.</th>
+ 
+                  <th scope="col">Username</th>
+ 
+                  <th scope="col">Fullname</th>
+ 
+                  <th scope="col">Group</th>
+ 
+                  <th scope="col">Email</th>
+ 
+                  <th scope="col">Account Status</th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {GUser:rowStyle}>
+                  <td style="TEXT-ALIGN: center"><input style="WIDTH: 16px; HEIGHT: 22px" id="GUserid_{GUser:rowNumber}" value="{id}" size="2" type="hidden" name="{id_Name}">{lblNumber}</td> 
+                  <td><a href="{usr_username_Src}" id="GUserusr_username_{GUser:rowNumber}">{usr_username}</a>&nbsp;</td> 
+                  <td>{usr_fullname}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{usr_group}&nbsp;</td> 
+                  <td>{usr_email}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{usr_status}&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN Separator -->
+                <tr class="Separator">
+                  <td colspan="6"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+                <!-- END Separator -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="6">No records</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td colspan="6"><a href="{smart_user_Insert}" id="GUsersmart_user_Insert_{GUser:rowNumber}"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{smart_user_Insert}" src="../Styles/smartStyleTurqoise/Images/en/ButtonNewRecord.gif"></a>&nbsp; 
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="../Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="../Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="../Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="../Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="../Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="../Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="../Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="../Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!-- END Grid GUser --><br>
+        <!-- BEGIN Record RUser -->
+        <form id="RUser" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Add/Edit Smart User </strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="RUserusr_status">Account Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                    <td>
+                      <!-- BEGIN RadioButton usr_status --><input id="RUserusr_status_{usr_status:optionNumber}" value="{Value}" type="radio" name="{usr_status_Name}" {Check}><label for="RUserusr_status_{usr_status:optionNumber}">{Description}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><!-- END RadioButton usr_status -->&nbsp;<input id="RUserdatemodified" value="{datemodified}" type="hidden" name="{datemodified_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RUserusr_username">Username&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                    <td><input id="RUserusr_username" value="{usr_username}" maxlength="20" name="{usr_username_Name}" size="20"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th" colspan="2"><em><font color="#ff0000">Please leaves the password empty if you won't update the password</font></em></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RUserusr_password">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                    <td><input id="RUserusr_oripassword" value="{usr_oripassword}" type="hidden" name="{usr_oripassword_Name}"><input id="RUserusr_password" value="{usr_password}" maxlength="20" type="password" name="{usr_password_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th">Verify Password</td> 
+                    <td><input id="RUserusr_vpassword" value="{usr_vpassword}" maxlength="20" type="password" name="{usr_vpassword_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RUserusr_fullname">Fullname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                    <td><input id="RUserusr_fullname" value="{usr_fullname}" maxlength="250" size="100" name="{usr_fullname_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RUserusr_group">Group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                    <td>
+                      <select id="RUserusr_group" name="{usr_group_Name}">
+                        <option selected value="">Select Value</option>
+                        {usr_group_Options}
+                      </select>
+ </td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RUserusr_email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                    <td><input id="RUserusr_email" value="{usr_email}" maxlength="200" size="50" name="{usr_email_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RUserusr_staffid">Staff ID&nbsp;</label></td> 
+                    <td><input id="RUserusr_staffid" value="{usr_staffid}" maxlength="20" name="{usr_staffid_Name}" size="20"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RUserusr_post">Post&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                    <td>
+                      <select id="RUserusr_post" name="{usr_post_Name}">
+                        <option selected value="">Select Value</option>
+                        {usr_post_Options}
+                      </select>
+ </td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RUserusr_address">Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                    <td><textarea id="RUserusr_address" rows="5" cols="50" name="{usr_address_Name}">{usr_address}</textarea></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RUserusr_gender">Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                    <td>
+                      <!-- BEGIN RadioButton usr_gender --><input id="RUserusr_gender_{usr_gender:optionNumber}" value="{Value}" type="radio" name="{usr_gender_Name}" {Check}><label for="RUserusr_gender_{usr_gender:optionNumber}">{Description}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><!-- END RadioButton usr_gender --></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RUserusr_dateofbirth">Dateofbirth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                    <td><input id="RUserusr_dateofbirth" value="{usr_dateofbirth}" maxlength="100" size="8" name="{usr_dateofbirth_Name}">
+                      <!-- BEGIN DatePicker DatePicker_usr_dateofbirth --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RUserDatePicker_usr_dateofbirth"><img id="RUserDatePicker_usr_dateofbirth_Image" border="0" alt="Show Date Picker" src="../Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_usr_dateofbirth --></td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RUserButton_Insert" value="Add" alt="Add" src="../Styles/{CCS_Style}/Images/en/ButtonInsert.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RUserButton_Update" value="Submit" alt="Submit" src="../Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                      <!-- BEGIN Button Button_Delete --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RUserButton_Delete" value="Delete" alt="Delete" src="../Styles/{CCS_Style}/Images/en/ButtonDelete.gif" type="image" name="{Button_Name}"><!-- END Button Button_Delete -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RUserButton_Cancel" value="Cancel" alt="Cancel" src="../Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record RUser -->
+      </div>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

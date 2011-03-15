@@ -1,0 +1,621 @@
+<link href="Styles/{CCS_Style}/Style_doctype.css" type="text/css" rel="stylesheet">
+<link href="{page:pathToRoot}js/yui/build/tabview/assets/tabview.css" type="text/css" rel="stylesheet">
+<link href="{page:pathToRoot}js/yui/build/tabview/assets/tabview-core.css" type="text/css" rel="stylesheet">
+<link href="{page:pathToRoot}js/yui/build/tabview/assets/border_tabs.css" type="text/css" rel="stylesheet">
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-200879CE
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-339270DD
+</script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/element/element-beta-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/connection/connection-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/tabview/tabview-min.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-EAA747EE
+
+var smart_resolution_DatePicker_rslt_date = new Object(); 
+smart_resolution_DatePicker_rslt_date.format           = "LongDate";
+smart_resolution_DatePicker_rslt_date.style            = "Styles/{CCS_Style}/Style.css";
+smart_resolution_DatePicker_rslt_date.relativePathPart = "";
+smart_resolution_DatePicker_rslt_date.themeVersion = "3.0";
+
+var smart_resolution_DatePicker_rslt_servicedate = new Object(); 
+smart_resolution_DatePicker_rslt_servicedate.format           = "LongDate";
+smart_resolution_DatePicker_rslt_servicedate.style            = "Styles/{CCS_Style}/Style.css";
+smart_resolution_DatePicker_rslt_servicedate.relativePathPart = "";
+smart_resolution_DatePicker_rslt_servicedate.themeVersion = "3.0";
+
+var smart_resolution_DatePicker_rslt_eta = new Object(); 
+smart_resolution_DatePicker_rslt_eta.format           = "LongDate";
+smart_resolution_DatePicker_rslt_eta.style            = "Styles/{CCS_Style}/Style.css";
+smart_resolution_DatePicker_rslt_eta.relativePathPart = "";
+smart_resolution_DatePicker_rslt_eta.themeVersion = "3.0";
+
+var smart_resolution_DatePicker_rslt_etd = new Object(); 
+smart_resolution_DatePicker_rslt_etd.format           = "LongDate";
+smart_resolution_DatePicker_rslt_etd.style            = "Styles/{CCS_Style}/Style.css";
+smart_resolution_DatePicker_rslt_etd.relativePathPart = "";
+smart_resolution_DatePicker_rslt_etd.themeVersion = "3.0";
+
+var smart_faultyequipment_DatePicker_flty_date = new Object(); 
+smart_faultyequipment_DatePicker_flty_date.format           = "LongDate";
+smart_faultyequipment_DatePicker_flty_date.style            = "Styles/{CCS_Style}/Style.css";
+smart_faultyequipment_DatePicker_flty_date.relativePathPart = "";
+smart_faultyequipment_DatePicker_flty_date.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Insert_OnClick @138-306ADE9C
+function resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Insert_OnClick()
+{
+    var result = true;
+//End resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Insert_OnClick
+
+//Custom Code @26-2A29BDB7
+    // -------------------------
+    // Write your own code here.
+    // -------------------------
+//End Custom Code
+
+//Close resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Insert_OnClick @138-BC33A33A
+    return result;
+}
+//End Close resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Insert_OnClick
+
+//resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Cancel_OnClick @140-238BF98C
+function resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Cancel_OnClick()
+{
+    var result = true;
+//End resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Cancel_OnClick
+
+//Custom Code @141-2A29BDB7
+    // -------------------------
+    CloseWindowAndReload();
+    // -------------------------
+//End Custom Code
+
+//Close resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Cancel_OnClick @140-AEF500E0
+    disableValidation = true;
+    return result;
+}
+//End Close resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Cancel_OnClick
+
+//resolutionnotesPanel1TabCMActivitysmart_resolutionButton_Cancel_OnClick @15-F151EB13
+function resolutionnotesPanel1TabCMActivitysmart_resolutionButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End resolutionnotesPanel1TabCMActivitysmart_resolutionButton_Cancel_OnClick
+
+//Start resolutionnotesPanel1 @2-C973345E
+function resolutionnotesPanel1_start(sender) {
+    var panel = $("resolutionnotesPanel1");
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    resolutionnotesPanel1_bind(sender);
+}
+//End Start resolutionnotesPanel1
+
+//Refresh resolutionnotesPanel1 @2-02F3C3EB
+function resolutionnotesPanel1_bind(sender) {
+    addEventHandler("resolutionnotesPanel1TabEquipmentPanel2smart_equipmenteqmt_serialno", "click", resolutionnotesPanel1TabEquipmentPanel2HideShow1_show);
+    addEventHandler("resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Cancel", "click", resolutionnotesPanel1TabEquipmentPanel2HideShow1_hide);
+    addEventHandler("resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Cancel", "click", resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Cancel_OnClick);
+    addEventHandler("resolutionnotesPanel1TabEquipmentsmart_equipmentbtnNewRec", "click", resolutionnotesPanel1ClientCustomCode2_start);
+    addEventHandler("resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Insert", "click", resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Insert_OnClick);
+    addEventHandler("resolutionnotesPanel1TabCMActivitysmart_resolutionButton_Cancel", "click", resolutionnotesPanel1TabCMActivitysmart_resolutionButton_Cancel_OnClick);
+    resolutionnotesPanel1TabEquipmentPanel2_start(window);
+}
+//End Refresh resolutionnotesPanel1
+
+//Start resolutionnotesPanel1TabEquipmentPanel2 @131-23D10F15
+function resolutionnotesPanel1TabEquipmentPanel2_start(sender) {
+    var panel = $("resolutionnotesPanel1TabEquipmentPanel2");
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    resolutionnotesPanel1TabEquipmentPanel2_bind(sender);
+}
+//End Start resolutionnotesPanel1TabEquipmentPanel2
+
+//Refresh resolutionnotesPanel1TabEquipmentPanel2 @131-F6AD3D66
+function resolutionnotesPanel1TabEquipmentPanel2_bind(sender) {
+}
+//End Refresh resolutionnotesPanel1TabEquipmentPanel2
+
+//Refresh resolutionnotesPanel1TabEquipmentPanel2UpdatePanel @132-0FAF2F45
+function resolutionnotesPanel1TabEquipmentPanel2UpdatePanel_refresh(sender) {
+    AjaxPanel.reload($("resolutionnotesPanel1TabEquipmentPanel2"));
+}
+//End Refresh resolutionnotesPanel1TabEquipmentPanel2UpdatePanel
+
+//HideShow1 Loading @155-E1D52419
+function resolutionnotesPanel1TabEquipmentPanel2HideShow1_show(sender) {
+    var control = getSameLevelCtl("resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipment", sender);
+    if (control != null) {
+            control.style.display = "";
+    } else {
+            addProgress();
+    }
+}
+function resolutionnotesPanel1TabEquipmentPanel2HideShow1_hide(sender) {
+    var control = getSameLevelCtl("resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipment", sender);
+    if (control != null) {
+            control.style.display = "none";
+    } else {
+            removeProgress();
+    }
+}
+//End HideShow1 Loading
+
+//resolutionnotesPanel1YahooTabbedView Start @3-5BD1C4CC
+function resolutionnotesPanel1YahooTabbedView_start() {
+    resolutionnotesPanel1YahooTabbedView = new YAHOO.widget.TabView();
+    if (document.getElementById("resolutionnotesPanel1TabCMActivity")) {
+        var TabCMActivity_tab = new YAHOO.widget.Tab({
+            label: "TabCMActivity",
+            active: true,
+            contentEl: document.getElementById("resolutionnotesPanel1TabCMActivity")
+        });
+        resolutionnotesPanel1YahooTabbedView.addTab(TabCMActivity_tab);
+    }
+    if (document.getElementById("resolutionnotesPanel1TabEquipment")) {
+        var TabEquipment_tab = new YAHOO.widget.Tab({
+            label: "TabEquipment",
+            contentEl: document.getElementById("resolutionnotesPanel1TabEquipment")
+        });
+        resolutionnotesPanel1YahooTabbedView.addTab(TabEquipment_tab);
+    }
+    if (document.getElementById("resolutionnotesPanel1TabSparePart")) {
+        var TabSparePart_tab = new YAHOO.widget.Tab({
+            label: "TabSparePart",
+            contentEl: document.getElementById("resolutionnotesPanel1TabSparePart")
+        });
+        resolutionnotesPanel1YahooTabbedView.addTab(TabSparePart_tab);
+    }
+    if (document.getElementById("resolutionnotesPanel1TabReplacement")) {
+        var TabReplacement_tab = new YAHOO.widget.Tab({
+            label: "TabReplacement",
+            contentEl: document.getElementById("resolutionnotesPanel1TabReplacement")
+        });
+        resolutionnotesPanel1YahooTabbedView.addTab(TabReplacement_tab);
+    }
+    YAHOO.util.Event.onContentReady("resolutionnotesPanel1", function() {
+        resolutionnotesPanel1YahooTabbedView.appendTo(this);
+        resolutionnotesPanel1TabEquipmentPanel2_start(window);
+    });
+}
+//End resolutionnotesPanel1YahooTabbedView Start
+
+//Refresh resolutionnotesPanel1UpdatePanel1 @94-834A88E2
+function resolutionnotesPanel1UpdatePanel1_refresh(sender) {
+    AjaxPanel.reload($("resolutionnotesPanel1"));
+}
+//End Refresh resolutionnotesPanel1UpdatePanel1
+
+//Handle resolutionnotesPanel1ClientCustomCode2 @95-33C74AB1
+function resolutionnotesPanel1ClientCustomCode2_start(sender) {
+//End Handle resolutionnotesPanel1ClientCustomCode2
+
+//Custom resolutionnotesPanel1ClientCustomCode2 @95-2A29BDB7
+// -------------------------
+    // Write your own code here.
+// -------------------------
+//End Custom resolutionnotesPanel1ClientCustomCode2
+
+//resolutionnotesPanel1ClientCustomCode2 Tail @95-FCB6E20C
+}
+//End resolutionnotesPanel1ClientCustomCode2 Tail
+
+//bind_events @1-585F77B8
+function resolutionnotes_bind_events() {
+    resolutionnotesPanel1YahooTabbedView_start();
+}
+//End bind_events
+function querySt(qry) {
+        hu = window.location.search.substring(1);
+        gy = hu.split("&");
+        for (i=0;i<gy.length;i++) {
+                ft = gy[i].split("=");
+                if (ft[0] == qry) {
+                        return ft[1];
+                }
+        }
+}
+function OpenFormEq()
+{
+        var tcktid = querySt("tcktid");
+        var rid = querySt("rid");
+        var queryStringURL = "tcktid="+tcktid+"&rid="+rid;
+        var win = window.open("popRNfaultyequipment.php?"+queryStringURL, "NewEquipment", "left=100,top=10,width=640,height=600,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+
+  win.focus();
+}
+//End CCS script
+</script>
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Panel TabCMActivity -->
+<!-- BEGIN Record smart_resolution -->
+<form id="resolutionnotesPanel1TabCMActivitysmart_resolution" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Resolution Note # : {rsltnId}&nbsp;For Ticket : {ticketNumber}</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="resolutionnotesPanel1TabCMActivitysmart_resolutionticket_id">Site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+            <td>{site}<input id="resolutionnotesPanel1TabCMActivitysmart_resolutionticket_id" type="hidden" value="{ticket_id}" name="{ticket_id_Name}"></td> 
+            <td class="th"><label for="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_eta">ETA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+            <td><input id="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_eta" maxlength="100" size="8" value="{rsltn_eta}" name="{rsltn_eta_Name}">
+              <!-- BEGIN DatePicker DatePicker_rslt_eta --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="resolutionnotesPanel1TabCMActivitysmart_resolutionDatePicker_rslt_eta"><img id="resolutionnotesPanel1TabCMActivitysmart_resolutionDatePicker_rslt_eta_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_rslt_eta --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="smart_resolutionrslt_status">ToppanID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+            <td><input id="resolutionnotesPanel1TabCMActivitysmart_resolutionticketToppanid" disabled readonly maxlength="50" size="50" value="{ticketToppanid}" name="{ticketToppanid_Name}"></td> 
+            <td class="th">ETD</td> 
+            <td><input id="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_etd" maxlength="100" size="8" value="{rsltn_etd}" name="{rsltn_etd_Name}">
+              <!-- BEGIN DatePicker DatePicker_rslt_etd --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="resolutionnotesPanel1TabCMActivitysmart_resolutionDatePicker_rslt_etd"><img id="resolutionnotesPanel1TabCMActivitysmart_resolutionDatePicker_rslt_etd_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_rslt_etd --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_date">Date <font color="#ff0000">(*)</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+            <td><input id="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_date" maxlength="100" size="8" value="{rsltn_date}" name="{rsltn_date_Name}">
+              <!-- BEGIN DatePicker DatePicker_rslt_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="resolutionnotesPanel1TabCMActivitysmart_resolutionDatePicker_rslt_date"><img id="resolutionnotesPanel1TabCMActivitysmart_resolutionDatePicker_rslt_date_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_rslt_date --></td> 
+            <td class="">Related Ticket</td> 
+            <td><input id="resolutionnotesPanel1TabCMActivitysmart_resolutionticketRelated" disabled readonly maxlength="200" size="50" value="{ticketRelated}" name="{ticketRelated_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_servicedate">Service Date <font color="#ff0000">(*)</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+            <td><input id="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_servicedate" maxlength="100" size="8" value="{rsltn_servicedate}" name="{rsltn_servicedate_Name}">
+              <!-- BEGIN DatePicker DatePicker_rslt_servicedate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="resolutionnotesPanel1TabCMActivitysmart_resolutionDatePicker_rslt_servicedate"><img id="resolutionnotesPanel1TabCMActivitysmart_resolutionDatePicker_rslt_servicedate_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_rslt_servicedate --></td> 
+            <td class="">Customer</td> 
+            <td></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_serviceno">Service No. <font color="#ff0000">(*)</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+            <td><input id="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_serviceno" maxlength="100" size="50" value="{rsltn_serviceno}" name="{rsltn_serviceno_Name}"></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td colspan="4">&nbsp; 
+              <table cellpadding="1" width="100%" border="0">
+                <tr>
+                  <td>Inspection <font color="#ff0000">(*)</font></td> 
+                  <td>Action Taken <font color="#ff0000">(*)</font></td> 
+                </tr>
+ 
+                <tr>
+                  <td><textarea id="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_inspection" name="{rsltn_inspection_Name}" rows="3" cols="50">{rsltn_inspection}</textarea></td> 
+                  <td><textarea id="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_action" name="{rsltn_action_Name}" rows="3" cols="50">{rsltn_action}</textarea><br>
+                    <!-- BEGIN RadioButton rsltn_method --><input id="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_method_{rsltn_method:optionNumber}" type="radio" value="{Value}" name="{rsltn_method_Name}" {Check}><label for="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_method_{rsltn_method:optionNumber}">{Description}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><!-- END RadioButton rsltn_method --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td colspan="4">
+              <table cellpadding="1" width="100%" border="0">
+                <tr>
+                  <td>Next Action Plan</td> 
+                  <td>Results/Remark</td> 
+                </tr>
+ 
+                <tr>
+                  <td><textarea id="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_planning" name="{rsltn_planning_Name}" rows="3" cols="50">{rsltn_planning}</textarea></td> 
+                  <td><textarea id="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_remark" name="{rsltn_remark_Name}" rows="3" cols="50">{rsltn_remark}</textarea></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_engineer">Engineer <font color="#ff0000">(*)</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+            <td>
+              <select id="resolutionnotesPanel1TabCMActivitysmart_resolutionrsltn_engineer" name="{rsltn_engineer_Name}">
+                <option value="" selected>Select Value</option>
+ {rsltn_engineer_Options} 
+              </select>
+ </td> 
+            <td>&nbsp;<input id="resolutionnotesPanel1TabCMActivitysmart_resolutiondatemodified" maxlength="100" size="8" value="{datemodified}" name="{datemodified_Name}"></td> 
+            <td>&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="4">
+              <!-- BEGIN Button Button_Insert --><input id="resolutionnotesPanel1TabCMActivitysmart_resolutionButton_Insert" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input id="resolutionnotesPanel1TabCMActivitysmart_resolutionButton_Update" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input id="resolutionnotesPanel1TabCMActivitysmart_resolutionButton_Cancel" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record smart_resolution --><!-- END Panel TabCMActivity -->
+<!-- BEGIN Panel TabEquipment -->
+<!-- BEGIN Panel Panel2 -->
+<table cellspacing="0" cellpadding="2" width="100%" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Grid smart_equipment -->
+      <table cellspacing="0" cellpadding="0" width="100%" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                <td class="th"><strong>Equipment(s)</strong></td> 
+                <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+              </tr>
+ 
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Caption">
+                <th scope="col">Equipment</th>
+ 
+                <th scope="col">Serialno</th>
+ 
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td>{id}{eqmt_type}&nbsp;</td> 
+                <td><a href="{eqmt_serialno_Src}" id="resolutionnotesPanel1TabEquipmentPanel2smart_equipmenteqmt_serialno_{smart_equipment:rowNumber}">{eqmt_serialno}</a>
+
+
+&nbsp;</td> 
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN Separator -->
+              <tr class="Separator">
+                <td colspan="2"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+              </tr>
+ <!-- END Separator -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="2">No records</td> 
+              </tr>
+ <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="6"><input id="resolutionnotesPanel1TabEquipmentPanel2smart_equipmentquerystring" type="hidden" value="{querystring}" name="{querystring_Name}"><a href="{btnNewRec}" id="resolutionnotesPanel1TabEquipmentPanel2smart_equipmentbtnNewRec"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" alt="{btnNewRec}" src="Styles/smartStyleTurqoise/Images/en/ButtonNewRecord.gif"></a></td> 
+              </tr>
+ 
+            </table>
+ </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid smart_equipment --></td> 
+    <td>&nbsp; 
+      <!-- BEGIN Record smart_faultyequipment -->
+      <form id="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipment" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Faulty Equipment Details</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td> 
+                </tr>
+ <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="smart_faultyequipmentequipment_id">Equipment&nbsp;&nbsp;</label></td> 
+                  <td>
+                    <select id="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmenteqpmt_name" name="{eqpmt_name_Name}">
+                      <option value="" selected>Select Value</option>
+ {eqpmt_name_Options} 
+                    </select>
+ Serial Number :&nbsp; 
+                    <!-- BEGIN TextBox eqpmt_serialnumber --><input id="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmenteqpmt_serialnumber" size="40" value="{eqpmt_serialnumber}" name="{eqpmt_serialnumber_Name}" autocomplete="off"><!-- END TextBox eqpmt_serialnumber --></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentflty_date">Date Report&nbsp;&nbsp;&nbsp;</label></td> 
+                  <td><input id="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentflty_date" maxlength="100" size="8" value="{flty_date}" name="{flty_date_Name}">
+                    <!-- BEGIN DatePicker DatePicker_flty_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentDatePicker_flty_date"><img id="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentDatePicker_flty_date_Image" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_flty_date --></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentflty_byuser">Reported By&nbsp;&nbsp;</label></td> 
+                  <td>
+                    <select id="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentflty_byuser" name="{flty_byuser_Name}">
+                      <option value="" selected>Select Value</option>
+ {flty_byuser_Options} 
+                    </select>
+ <input id="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentresolution_id" style="WIDTH: 40px; HEIGHT: 22px" type="hidden" size="5" value="{resolution_id}" name="{resolution_id_Name}"><input id="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentdatemodified" type="hidden" value="{datemodified}" name="{datemodified_Name}"></td> 
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">&nbsp; 
+                    <!-- BEGIN Button Button_Insert --><input id="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Insert" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Update --><input id="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Update" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+                    <!-- BEGIN Button Button_Cancel --><input id="resolutionnotesPanel1TabEquipmentPanel2smart_faultyequipmentButton_Cancel" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonClose.gif" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record smart_faultyequipment --></td> 
+  </tr>
+</table>
+<!-- END Panel Panel2 -->&nbsp;<br>
+<!-- END Panel TabEquipment -->
+<!-- BEGIN Panel TabSparePart -->
+<!-- BEGIN Grid smart_measurement -->
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          <td class="th"><strong>Measurement(s) (if applicable)</strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col" width="5%">No.</th>
+ 
+          <th scope="col" width="30%">Part(s)</th>
+ 
+          <th scope="col">Before</th>
+ 
+          <th scope="col">After</th>
+ 
+          <th scope="col" width="40%">Remark</th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;</td> 
+          <td>{msre_item}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">{msre_before}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">{msre_after}&nbsp;</td> 
+          <td>{msre_remark}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN Separator -->
+        <tr class="Separator">
+          <td colspan="5"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+        </tr>
+ <!-- END Separator -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="5">No records</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="6"><a href="{btnNewRec}" id="resolutionnotesPanel1TabSparePartsmart_measurementbtnNewRec_{smart_equipment:rowNumber}"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" alt="{btnNewRec}" src="Styles/smartStyleTurqoise/Images/en/ButtonNewRecord.gif"></a></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid smart_measurement --><!-- END Panel TabSparePart -->
+<!-- BEGIN Panel TabReplacement -->
+<!-- BEGIN Grid smart_replacement -->
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          <td class="th"><strong>Part(s) / Equipment Replacement (if applicable)</strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col" width="5%">No.</th>
+ 
+          <th scope="col" width="20%">Part/Equipment</th>
+ 
+          <th scope="col">Original S/N</th>
+ 
+          <th scope="col" width="5%">Replacement Method&nbsp;</th>
+ 
+          <th scope="col">Replacement S/N</th>
+ 
+          <th scope="col" width="3%">Remark</th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;</td> 
+          <td>{equipment_id}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">{equipment_serialno}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">{rplc_method}</td> 
+          <td style="TEXT-ALIGN: center">{rplc_serialnumber}&nbsp;</td> 
+          <td>{rplc_remark}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN Separator -->
+        <tr class="Separator">
+          <td colspan="6"><img alt="" src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+        </tr>
+ <!-- END Separator -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">
+
+
+No records</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="6">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;<a href="{btnNewRec}" id="resolutionnotesPanel1TabReplacementsmart_replacementbtnNewRec_{smart_equipment:rowNumber}"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" alt="{btnNewRec}" src="Styles/smartStyleTurqoise/Images/en/ButtonNewRecord.gif"></a></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid smart_replacement --><!-- END Panel TabReplacement --><!-- END Panel Panel1 -->
+<p></p>
+<p>&nbsp;</p>

@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<style type="text/css">
+    /* CSS for printing */
+#logoHeader {
+        font-family: "Arial";
+        font-size: 100%;
+        line-height: 130%;
+        font-weight: bold;
+        color: #000000;
+}
+#logoHeaderSmall {
+        font-family: "Arial";
+        font-size: 70%;
+        line-height: 130%;
+        font-weight: bold;
+        color: #000000;
+}
+#HeadTitle {
+        font-family: "Arial";
+        font-size: 130%;
+        line-height: 130%;
+        font-weight: bold;
+        color: #000000;
+    text-align:center;
+}
+#HeadTitleTdColored {
+        font-family: "Arial";
+        font-size: 110%;
+        line-height: 100%;
+        font-weight: bold;
+        color: #000000;
+    background-color: #CDCDCD;
+        padding: 4px;
+    text-align:center;
+}
+.t1 {
+        font-family: "Trebuchet MS";
+        font-size: 100%;
+        line-height: 100%;
+        font-weight: normal;
+        padding: 0px;
+    background-color: #2c7d98;
+}
+.tdBordered{
+    border-top: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+    font-weight:normal;
+    font-size:95%;
+}
+.tdHeader{
+    border-top: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+    font-weight:bold;
+    font-size:90%;
+    text-align:center;
+}
+.tdContent {
+    padding-top:2px;
+    font-size:80%;
+    font-weight:normal;
+    border-bottom: 1px solid #CCCCCC;
+}
+.tdBold {
+        line-height: 90%;
+        font-weight: bold;
+    text-align:center;
+}
+
+</style>
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<!-- BEGIN Grid GStatLogStatus -->
+<table border="0" cellspacing="0" cellpadding="0" width="90%">
+  <tr>
+    <td valign="top">
+      <div id="HeadTitleTdColored">
+        <strong>Statistic of Tickets According to Status By Year of {lblYear}</strong> 
+      </div>
+      <br>
+      <br>
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr>
+          <th style="TEXT-ALIGN: center" class="tdHeader" width="1%" scope="col">No.</th>
+ 
+          <th class="tdHeader" width="20%" class="tdHeader" scope="col">Ticket</th>
+
+		  <th class="tdHeader" width="20%" class="tdHeader" scope="col">Site</th>
+ 
+          <th style="TEXT-ALIGN: center" class="tdHeader" width="10%" scope="col">OPEN</th>
+ 
+          <th style="TEXT-ALIGN: center" class="tdHeader" width="8%" scope="col">HELPDESK</th>
+ 
+          <th style="TEXT-ALIGN: center" class="tdHeader" width="10%" scope="col">ASSIGNED</th>
+ 
+          <th style="TEXT-ALIGN: center" class="tdHeader" width="8%" scope="col">ENG ID #1</th>
+ 
+          <th style="TEXT-ALIGN: center" class="tdHeader" width="10%" scope="col">RE-ASSIGNED</th>
+ 
+          <th style="TEXT-ALIGN: center" class="tdHeader" width="8%" scope="col">ENG ID #2</th>
+ 
+          <th style="TEXT-ALIGN: center" class="tdHeader" width="10%" scope="col">WORK IN PROGRESS</th>
+ 
+          <th style="TEXT-ALIGN: center" class="tdHeader" width="10%" scope="col">RESOLVED</th>
+ 
+          <th style="TEXT-ALIGN: center" class="tdHeader" width="10%" scope="col">CLOSED</th>
+ 
+          <th style="TEXT-ALIGN: center" class="tdHeader" width="10%" scope="col">HELPDESK</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="tdContent">
+          <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;</td> 
+          <td style="TEXT-ALIGN: left">{refno}&nbsp;<input id="GStatLogStatusticketid" value="{ticketid}" type="hidden" name="{ticketid_Name}"></td> 
+          <td style="TEXT-ALIGN: center">{tckt_site}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">{dateopen}</td> 
+          <td style="TEXT-ALIGN: center">{tckt_r_helpdesk}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">{dateassign}</td> 
+          <td style="TEXT-ALIGN: center">{tckt_eng1}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">{datereassign}</td> 
+          <td style="TEXT-ALIGN: center">{tckt_eng2}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">{datewip}</td> 
+          <td style="TEXT-ALIGN: center">{dateresolved}</td> 
+          <td style="TEXT-ALIGN: center">{dateclosed}</td> 
+          <td style="TEXT-ALIGN: center">{tckt_c_helpdesk}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <tr class="Caption">
+          <th colspan="12" scope="col"></th>
+        </tr>
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="8">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid GStatLogStatus -->
+</body>
+</html>

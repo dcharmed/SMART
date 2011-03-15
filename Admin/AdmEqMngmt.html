@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-86BEACD2
+</script>
+<script language="JavaScript" src="../ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="../ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-113F5716
+</script>
+<script language="JavaScript" src="../js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-21EB2848
+
+var GEquipment_DatePicker_eqpmt_datelifetime = new Object(); 
+GEquipment_DatePicker_eqpmt_datelifetime.format           = "LongDate";
+GEquipment_DatePicker_eqpmt_datelifetime.style            = "Admin/../Styles/{CCS_Style}/Style.css";
+GEquipment_DatePicker_eqpmt_datelifetime.relativePathPart = "../";
+GEquipment_DatePicker_eqpmt_datelifetime.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//GToppanCancel_OnClick @42-B784487A
+function GToppanCancel_OnClick()
+{
+    disableValidation = true;
+}
+//End GToppanCancel_OnClick
+
+//SToppans_branchPTDependentListBox1 Start @50-E728E868
+function SToppans_branchPTDependentListBox1_start(sender) {
+    var dependentElement = $("SToppans_branch" + sender.id.substring(14));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("../services/Admin_AdmEqMngmt_SToppan_s_branch_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End SToppans_branchPTDependentListBox1 Start
+
+//bind_events @1-3DF181AC
+function bind_events() {
+    if (functionExists("adminheader_bind_events")) adminheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("SToppans_state", "change", SToppans_branchPTDependentListBox1_start);
+    addEventHandler("SToppans_state", "load", SToppans_branchPTDependentListBox1_start);
+    addEventHandler("GToppanCancel", "click", GToppanCancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="../Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <p></p>
+ 
+      <div class="H1">
+        EQUIPMENT MANAGEMENT 
+      </div>
+ 
+      <p></p>
+ 
+      <div class="default">
+        <!-- BEGIN EditableGrid GEquipment -->
+        <form id="GEquipment" method="post" name="{HTMLFormName}" action="{Action}">
+          <input value="{FormState}" type="hidden" name="FormState">{FormScript} 
+          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>List of Smart Equipment </strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="10">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Caption">
+                    <th width="3%" scope="col">No.</th>
+ 
+                    <th width="5%" scope="col">Eqpmt Status</th>
+ 
+                    <th scope="col">Eqpmt Code</th>
+ 
+                    <th scope="col">Eqpmt Name</th>
+ 
+                    <th width="20%" scope="col">Eqpmt Datelifetime</th>
+ 
+                    <th width="10%" scope="col">Toppan</th>
+ 
+                    <th colspan="4" scope="col">Delete</th>
+                  </tr>
+ 
+                  <!-- BEGIN Row -->
+                  <!-- BEGIN RowError -->
+                  <tr class="Error">
+                    <td colspan="10">{Error}</td>
+                  </tr>
+                  <!-- END RowError -->
+                  <tr class="Row">
+                    <td>{lblNumber}&nbsp;</td> 
+                    <td>
+                      <select id="GEquipmenteqpmt_status_{GEquipment:rowNumber}" name="{eqpmt_status_Name}">
+                        <option selected value="">Select Value</option>
+                        {eqpmt_status_Options}
+                      </select>
+ </td> 
+                    <td><label style="display: none;" for="GEquipmenteqpmt_code_{GEquipment:rowNumber}">Eqpmt Code</label><input id="GEquipmenteqpmt_code_{GEquipment:rowNumber}" value="{eqpmt_code}" maxlength="30" size="30" name="{eqpmt_code_Name}"><input id="GEquipmentdatemodified_{GEquipment:rowNumber}" value="{datemodified}" type="hidden" name="{datemodified_Name}"></td> 
+                    <td><label style="display: none;" for="GEquipmenteqpmt_name_{GEquipment:rowNumber}">Eqpmt Name</label><input id="GEquipmenteqpmt_name_{GEquipment:rowNumber}" value="{eqpmt_name}" maxlength="250" size="50" name="{eqpmt_name_Name}"></td> 
+                    <td><label style="display: none;" for="GEquipmenteqpmt_datelifetime_{GEquipment:rowNumber}">Eqpmt Datelifetime</label><input id="GEquipmenteqpmt_datelifetime_{GEquipment:rowNumber}" value="{eqpmt_datelifetime}" maxlength="100" size="29" name="{eqpmt_datelifetime_Name}">
+                      <!-- BEGIN DatePicker DatePicker_eqpmt_datelifetime --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="GEquipmentDatePicker_eqpmt_datelifetime_{GEquipment:rowNumber}"><img id="GEquipmentDatePicker_eqpmt_datelifetime_Image_{GEquipment:rowNumber}" border="0" alt="Show Date Picker" src="../Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_eqpmt_datelifetime --></td> 
+                    <td><a href="{ImageLink1}" id="GEquipmentImageLink1_{GEquipment:rowNumber}"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{ImageLink1}" align="absMiddle" src="../images/icon-details.jpg">&nbsp;View Toppan</a></td> 
+                    <td colspan="4">
+                      <!-- BEGIN Panel CheckBox_Delete_Panel --><label style="display: none;" for="GEquipmentCheckBox_Delete_PanelCheckBox_Delete_{GEquipment:rowNumber}">Delete</label> 
+                      <!-- BEGIN CheckBox CheckBox_Delete --><input id="GEquipmentCheckBox_Delete_PanelCheckBox_Delete_{GEquipment:rowNumber}" value="1" type="checkbox" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete --><!-- END Panel CheckBox_Delete_Panel -->&nbsp;</td>
+                  </tr>
+ <!-- END Row -->
+                  <!-- BEGIN NoRecords -->
+                  <tr class="NoRecords">
+                    <td colspan="10">No records</td>
+                  </tr>
+                  <!-- END NoRecords -->
+                  <tr class="Footer">
+                    <td style="TEXT-ALIGN: right" colspan="10">
+                      <!-- BEGIN Button Button_Submit --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GEquipmentButton_Submit" value="Submit" alt="Submit" src="../Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END EditableGrid GEquipment --><br>
+        <!-- BEGIN Record SToppan -->
+        <form id="SToppan" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Filter Toppan</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="5">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="SToppans_branch">Eqtop Branch</label></td> 
+                    <td>
+                      <select id="SToppans_state" name="{s_state_Name}">
+                        <option selected value="">Select Value</option>
+                        {s_state_Options}
+                      </select>
+ &nbsp;</td> 
+                    <td>&nbsp; 
+                      <select id="SToppans_branch" name="{s_branch_Name}">
+                        <option selected value="">Select Value</option>
+                        {s_branch_Options}
+                      </select>
+ </td> 
+                    <td>&nbsp; 
+                      <select id="SToppantype" name="{type_Name}">
+                        <option selected value="">Select Value</option>
+                        {type_Options}
+                      </select>
+ </td> 
+                    <td>&nbsp; 
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="SToppanButton_DoSearch" value="Search" alt="Search" src="../Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record SToppan --><br>
+        <!-- BEGIN EditableGrid GToppan -->
+        <form id="GToppan" method="post" name="{HTMLFormName}" action="{Action}">
+          <input value="{FormState}" type="hidden" name="FormState">{FormScript} 
+          <table border="0" cellspacing="0" cellpadding="0" width="70%">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>List of Toppan According to Equipment &amp; Branch</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="6">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Caption">
+                    <th scope="col">Id</th>
+ 
+                    <th scope="col">Eqtop Eqcode</th>
+ 
+                    <th scope="col">Eqtop Branch</th>
+ 
+                    <th scope="col">Eqtop Toppan</th>
+ 
+                    <th scope="col">Eqtop Serialnumber</th>
+ 
+                    <th scope="col">Delete</th>
+                  </tr>
+ 
+                  <!-- BEGIN Row -->
+                  <!-- BEGIN RowError -->
+                  <tr class="Error">
+                    <td colspan="6">{Error}</td>
+                  </tr>
+                  <!-- END RowError -->
+                  <tr class="Row">
+                    <td>{id}&nbsp;</td> 
+                    <td><label style="display: none;" for="GToppaneqtop_eqcode_{GToppan:rowNumber}">Eqtop Eqcode</label><input id="GToppaneqtop_eqcode_{GToppan:rowNumber}" value="{eqtop_eqcode}" maxlength="15" size="15" name="{eqtop_eqcode_Name}"></td> 
+                    <td><label style="display: none;" for="GToppaneqtop_branch_{GToppan:rowNumber}">Eqtop Branch</label> 
+                      <!-- BEGIN TextBox eqtop_branch --><input id="GToppaneqtop_branch_{GToppan:rowNumber}" value="{eqtop_branch}" maxlength="10" size="10" name="{eqtop_branch_Name}"><!-- END TextBox eqtop_branch --></td> 
+                    <td><label style="display: none;" for="GToppaneqtop_toppan_{GToppan:rowNumber}">Eqtop Toppan</label><input id="GToppaneqtop_toppan_{GToppan:rowNumber}" value="{eqtop_toppan}" maxlength="4" size="4" name="{eqtop_toppan_Name}"></td> 
+                    <td><label style="display: none;" for="GToppaneqtop_serialnumber_{GToppan:rowNumber}">Eqtop Serialnumber</label><input id="GToppaneqtop_serialnumber_{GToppan:rowNumber}" value="{eqtop_serialnumber}" maxlength="30" size="30" name="{eqtop_serialnumber_Name}"></td> 
+                    <td>
+                      <!-- BEGIN Panel CheckBox_Delete_Panel --><label style="display: none;" for="GToppanCheckBox_Delete_PanelCheckBox_Delete_{GToppan:rowNumber}">Delete</label> 
+                      <!-- BEGIN CheckBox CheckBox_Delete --><input id="GToppanCheckBox_Delete_PanelCheckBox_Delete_{GToppan:rowNumber}" value="1" type="checkbox" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete --><!-- END Panel CheckBox_Delete_Panel -->&nbsp;</td>
+                  </tr>
+ <!-- END Row -->
+                  <!-- BEGIN NoRecords -->
+                  <tr class="NoRecords">
+                    <td colspan="6">No records</td>
+                  </tr>
+                  <!-- END NoRecords -->
+                  <tr class="Footer">
+                    <td style="TEXT-ALIGN: right" colspan="6">
+                      <!-- BEGIN Navigator Navigator -->
+                      <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="../Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                      <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="../Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                      <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="../Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                      <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="../Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                      <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="../Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                      <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="../Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                      <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="../Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                      <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="../Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->
+                      <!-- BEGIN Button Button_Submit --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GToppanButton_Submit" value="Submit" alt="Submit" src="../Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Submit -->
+                      <!-- BEGIN Button Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GToppanCancel" value="Cancel" alt="Cancel" src="../Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Cancel --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END EditableGrid GToppan --><br>
+      </div>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

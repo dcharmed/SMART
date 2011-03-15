@@ -1,0 +1,946 @@
+/* ADxMenu */
+
+/* htb - Horizontal Top Bottom */
+
+/* - - - ADxMenu: BASIC styles [ MANDATORY ] - - - */
+
+/* remove all list stylings */
+.menu_htb, .menu_htb ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+	display: block;
+}
+
+.menu_htb li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+	float: left;	/* move all main list items into one row, by floating them */
+	position: relative;	/* position each LI, thus creating potential IE.win overlap problem */
+	z-index: 5;		/* thus we need to apply explicit z-index here... */
+}
+
+.menu_htb li:hover {
+	z-index: 10000;	/* ...and here. this makes sure active item is always above anything else in the menu */
+	white-space: normal;/* required to resolve IE7 :hover bug (z-index above is ignored if this is not present)
+							see http://www.tanfa.co.uk/css/articles/pure-css-popups-bug.asp for other stuff that work */
+}
+
+.menu_htb li li {
+	float: none;/* items of the nested menus are kept on separate lines */
+}
+
+.menu_htb ul {
+	visibility: hidden;	/* initially hide all submenus. */
+	position: absolute;
+	z-index: 10000;
+	left: 0;	/* while hidden, always keep them at the top left corner, */
+	top: 0;		/* 		to avoid scrollbars as much as possible */
+}
+
+.menu_htb li:hover>ul {
+	visibility: visible;	/* display submenu them on hover */
+	top: 100%;	/* 1st level go below their parent item */
+}
+
+.menu_htb li li:hover>ul {	/* 2nd+ levels go on the right side of the parent item */
+	top: 0;
+	left: 100%;
+}
+
+/* -- float.clear --
+	force containment of floated LIs inside of UL */
+.menu_htb:after, .menu_htb ul:after {
+	content: ".";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	clear: both;
+}
+.menu_htb, .menu_htb ul {	/* IE7 float clear: */
+	min-height: 0;
+}
+/* -- float.clear.END --  */
+
+/* -- sticky.submenu --
+	it should not disappear when your mouse moves a bit outside the submenu
+	YOU SHOULD NOT STYLE the background of the ".menu_htb UL" or this feature may not work properly!
+	if you do it, make sure you 110% know what you do */
+.menu_htb ul {
+	background-image: url(empty.gif);	/* required for sticky to work in IE6 and IE7 - due to their (different) hover bugs */
+	padding: 10px 30px 30px 30px;
+	margin: -10px 0 0 -30px;
+	/*background: #f00;*/	/* uncomment this if you want to see the "safe" area.
+								you can also use to adjust the safe area to your requirement */
+}
+.menu_htb ul ul {
+	padding: 30px 30px 30px 10px;
+	margin: -30px 0 0 -10px;
+}
+/* -- sticky.submenu.END -- */
+
+
+
+
+
+
+/* - - - ADxMenu: DESIGN styles [ OPTIONAL, design your heart out :) ] - - - */
+
+.menu_htb, .menu_htb ul li {
+	color: #eee;
+	background: #234;
+}
+
+.menu_htb ul {
+	width: 11em;
+}
+
+.menu_htb a {
+	text-decoration: none;
+	color: #eee;
+	padding: .4em 1em;
+	display: block;
+	position: relative;
+}
+
+.menu_htb a:hover, .menu_htb li:hover>a {
+}
+
+.menu_htb li li {	/* create borders around each item */
+	border: 1px solid #ccc;
+}
+
+.menu_htb ul>li + li, .menu_htb ul>li + li a {	/* and remove the top border on all but first item in the list */
+	border-top: 0;
+}
+
+.menu_htb ul>li + li:hover, .menu_htb ul>li + li:hover a {	/* and remove the top border on all but first item in the list */
+	border-top: 0;
+}
+
+.menu_htb li li:hover>ul {	/* inset 2nd+ submenus, to show off overlapping */
+	top: 5px;
+	left: 90%;
+}
+
+/* special colouring for "Main menu:", and for "xx submenu" items in ADxMenu
+	placed here to clarify the terminology I use when referencing submenus in posts */
+.menu_htb>li:first-child>a, .menu_htb li + li + li li:first-child>a {
+	/* color: #567; */ /* my comment */
+}
+
+/* Fix for IE5/Mac \*//*/
+.menu_htb a {
+	float: left;
+}
+/* End Fix */
+
+
+
+/* hbt - Horizontal Bottom Top */
+
+/* - - - ADxMenu: BASIC styles - - - */
+
+/* remove all list stylings */
+.menu_hbt, .menu_hbt ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+	display: block;
+}
+
+.menu_hbt li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+	float: left;	/* move all main list items into one row, by floating them */
+	position: relative;	/* position each LI, thus creating potential IE.win overlap problem */
+	z-index: 5;		/* thus we need to apply explicit z-index here... */
+}
+
+.menu_hbt li:hover {
+	z-index: 10000;	/* ...and here. this makes sure active item is always above anything else in the menu */
+	white-space: normal;/* required to resolve IE7 :hover bug (z-index above is ignored if this is not present)
+							see http://www.tanfa.co.uk/css/articles/pure-css-popups-bug.asp for other stuff that work */
+}
+
+.menu_hbt li li {
+	float: none;/* items of the nested menus are kept on separate lines */
+}
+
+.menu_hbt ul {
+	visibility: hidden;	/* initially hide all submenus. */
+	position: absolute;
+	z-index: 10;
+	left: 0;	/* while hidden, always keep them at the bottom left corner, */
+	bottom: 0;		/* 		to avoid scrollbars as much as possible */
+}
+
+.menu_hbt li:hover>ul {
+	visibility: visible;	/* display submenu them on hover */
+	bottom: 100%;	/* 1st level go above their parent item */
+}
+
+.menu_hbt li li:hover>ul {	/* 2nd+ levels go on the right side of the parent item */
+	bottom: 0;
+	left: 100%;
+}
+
+/* -- float.clear --
+	force containment of floated LIs inside of UL */
+.menu_hbt:after, .menu_hbt ul:after {
+	content: ".";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	clear: both;
+}
+.menu_hbt, .menu_hbt ul {	/* IE7 float clear: */
+	min-height: 0;
+}
+/* -- float.clear.END --  */
+
+/* sticky submenu: it should not disappear when your mouse moves a bit outside the submenu
+	YOU SHOULD NOT STYLE the background of the ".menu_hbt UL" or this feature may not work properly!
+	if you do it, make sure you 110% know what you do */
+.menu_hbt ul {
+	background-image: url(empty.gif);	/* required for sticky to work in IE6 and IE7 - due to their (different) hover bugs */
+	padding: 30px 30px 10px 30px;
+	margin: 0 0 -10px -30px;
+	/*background: #f00;*/	/* uncomment this if you want to see the "safe" area.
+								you can also use to adjust the safe area to your requirement */
+}
+.menu_hbt ul ul {
+	padding: 30px 30px 30px 10px;
+	margin: 0 0 -30px -10px;
+}
+
+
+/* - - - ADxMenu: DESIGN styles - - - */
+
+.menu_hbt, .menu_hbt ul li {
+	color: #eee;
+	background: #234;
+}
+
+.menu_hbt ul {
+	width: 11em;
+}
+
+.menu_hbt a {
+	text-decoration: none;
+	color: #eee;
+	padding: .4em 1em;
+	display: block;
+	position: relative;
+}
+
+.menu_hbt a:hover, .menu_hbt li:hover>a {
+}
+
+.menu_hbt li li {	/* create borders around each item */
+	border: 1px solid #ccc;
+}
+
+.menu_hbt ul>li + li, .menu_hbt ul>li + li a {	/* and remove the top border on all but first item in the list */
+	border-top: 0;
+}
+
+.menu_hbt ul>li + li:hover, .menu_hbt ul>li + li:hover a {	/* and remove the top border on all but first item in the list */
+	border-top: 0;
+}
+
+.menu_hbt li li:hover>ul {	/* inset 2nd+ submenus, to show off overlapping */
+	bottom: 5px;
+	left: 90%;
+}
+
+/* special colouring for "Main menu:", and for "xx submenu" items in ADxMenu
+	placed here to clarify the terminology I use when referencing submenus in posts */
+.menu_hbt>li:first-child>a, .menu_hbt li + li + li li:first-child>a {
+	/* color: #567; */ /* my comment */
+}
+
+/* Fix for IE5/Mac \*//*/
+.menu_hbt a {
+	float: left;
+}
+/* End Fix */
+
+
+
+/* vlr - Vertical Left Right */
+
+/* - - - ADxMenu: BASIC styles - - - */
+
+.menu_vlr {
+	width: 10em;/* VERY IMPORTANT! Set this to appropriate value, either here on down in the design section */
+}
+
+.menu_vlr, .menu_vlr ul {	/* remove all list stylings */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+	display: block;
+}
+
+.menu_vlr li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+	position: relative;	/* position each LI, thus creating potential IE.win overlap problem */
+	z-index: 5;		/* thus we need to apply explicit z-index here... */
+}
+
+.menu_vlr li:hover {
+	z-index: 10000;	/* ...and here. this makes sure active item is always above anything else in the menu */
+	white-space: normal;/* required to resolve IE7 :hover bug (z-index above is ignored if this is not present)
+							see http://www.tanfa.co.uk/css/articles/pure-css-popups-bug.asp for other stuff that work */
+}
+
+.menu_vlr ul {
+	visibility: hidden;	/* initially hide all submenus. */
+	position: absolute;
+	z-index: 10;
+	left: 0;	/* while hidden, always keep them at the top left corner, */
+	top: 0;		/* 		to avoid scrollbars as much as possible */
+}
+
+.menu_vlr li:hover>ul {
+	visibility: visible;	/* display submenu them on hover */
+	left: 100%;	/* and move them to the right of the item */
+}
+
+/* -- float.clear --
+	force containment of floated LIs inside of UL */
+.menu_vlr:after, .menu_vlr ul:after {
+	content: ".";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	clear: both;
+}
+.menu_vlr, .menu_vlr ul {	/* IE7 float clear: */
+	min-height: 0;
+}
+/* -- float.clear.END --  */
+
+/* sticky submenu: it should not disappear when your mouse moves a bit outside the submenu
+	YOU SHOULD NOT STYLE the background of the ".menu_vlr UL" or this feature may not work properly!
+	if you do it, make sure you 110% know what you do */
+.menu_vlr ul {
+	background-image: url(empty.gif);	/* required for sticky to work in IE6 and IE7 - due to their (different) hover bugs */
+	padding: 30px 30px 30px 10px;
+	margin: -30px 0 0 -10px;
+	/*background: #f00;*/	/* uncomment this if you want to see the "safe" area.
+								you can also use to adjust the safe area to your requirement */
+}
+
+
+/* - - - ADxMenu: DESIGN styles - - - */
+
+.menu_vlr, .menu_vlr ul li {
+	color: #eee;
+	background: #234;
+}
+
+.menu_vlr {
+	width: 8em;
+}
+
+.menu_vlr ul {
+	width: 11em;
+}
+
+.menu_vlr a {
+	text-decoration: none;
+	color: #eee;
+	padding: .4em 1em;
+	display: block;
+}
+
+.menu_vlr a:hover, .menu_vlr li:hover>a {
+}
+
+.menu_vlr li {	/* create borders around each item */
+	border: 1px solid #ccc;
+}
+
+.menu_vlr>li + li, .menu_vlr ul>li + li, .menu_vlr>li + li a, .menu_vlr ul>li + li a {	/* and remove the top border on all but first item in the list */
+	border-top: 0;
+}
+
+.menu_vlr>li + li:hover, .menu_vlr ul>li + li:hover, .menu_vlr>li + li:hover a, .menu_vlr ul>li + li:hover a {	/* and remove the top border on all but first item in the list */
+	border-top: 0;
+}
+
+.menu_vlr li:hover>ul {	/* inset submenus, to show off overlapping */
+	top: 5px;
+	left: 90%;
+}
+
+/* special colouring for "Main menu:", and for "xx submenu" items in ADxMenu
+	placed here to clarify the terminology I use when referencing submenus in posts */
+.menu_vlr>li:first-child>a, .menu_vlr li + li + li li:first-child>a {
+	/* color: #567; */ /* my comment */
+}
+
+
+
+/* vrl - Vertical Right Left */
+
+/* - - - ADxMenu: BASIC styles - - - */
+
+.menu_vrl {
+	width: 10em;/* VERY IMPORTANT! Set this to appropriate value, either here on down in the design section */
+}
+
+.menu_vrl, .menu_vrl ul {	/* remove all list stylings */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+	display: block;
+}
+
+.menu_vrl li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+	position: relative;	/* position each LI, thus creating potential IE.win overlap problem */
+	z-index: 5;		/* thus we need to apply explicit z-index here... */
+}
+
+.menu_vrl li:hover {
+	z-index: 10000;	/* ...and here. this makes sure active item is always above anything else in the menu */
+	white-space: normal;/* required to resolve IE7 :hover bug (z-index above is ignored if this is not present)
+							see http://www.tanfa.co.uk/css/articles/pure-css-popups-bug.asp for other stuff that work */
+}
+
+.menu_vrl ul {
+	visibility: hidden;	/* initially hide all submenus. */
+	position: absolute;
+	z-index: 10;
+	right: 0;	/* while hidden, always keep them at the top right corner, */
+	top: 0;		/* 		to avoid scrollbars as much as possible */
+}
+
+.menu_vrl li:hover>ul {
+	visibility: visible;	/* display submenu them on hover */
+	right: 100%;	/* and move them to the left of the item */
+}
+
+/* -- float.clear --
+	force containment of floated LIs inside of UL */
+.menu_vrl:after, .menu_vrl ul:after {
+	content: ".";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	clear: both;
+}
+.menu_vrl, .menu_vrl ul {	/* IE7 float clear: */
+	min-height: 0;
+}
+/* -- float.clear.END --  */
+
+/* sticky submenu: it should not disappear when your mouse moves a bit outside the submenu
+	YOU SHOULD NOT STYLE the background of the ".menu_vrl UL" or this feature may not work properly!
+	if you do it, make sure you 110% know what you do */
+.menu_vrl ul {
+	background-image: url(empty.gif);	/* required for sticky to work in IE6 and IE7 - due to their (different) hover bugs */
+	padding: 30px 10px 30px 30px;
+	margin: -30px -10px 0 0;
+	/*background: #f00;*/	/* uncomment this if you want to see the "safe" area.
+								you can also use to adjust the safe area to your requirement */
+}
+
+
+/* - - - ADxMenu: DESIGN styles - - - */
+
+.menu_vrl, .menu_vrl ul li {
+	color: #eee;
+	background: #234;
+}
+
+.menu_vrl {
+	width: 8em;
+	float: right;
+}
+
+.menu_vrl ul {
+	width: 11em;
+}
+
+.menu_vrl a {
+	text-decoration: none;
+	color: #eee;
+	padding: .4em 1em;
+	display: block;
+}
+
+.menu_vrl a:hover, .menu_vrl li:hover>a {
+}
+
+.menu_vrl li {	/* create borders around each item */
+	border: 1px solid #ccc;
+}
+
+.menu_vrl>li + li, .menu_vrl ul>li + li, .menu_vrl>li + li a, .menu_vrl ul>li + li a {	/* and remove the top border on all but first item in the list */
+	border-top: 0;
+}
+
+.menu_vrl>li + li:hover, .menu_vrl ul>li + li:hover, .menu_vrl>li + li:hover a, .menu_vrl ul>li + li:hover a {	/* and remove the top border on all but first item in the list */
+	border-top: 0;
+}
+
+.menu_vrl li:hover>ul {	/* inset submenus, to show off overlapping */
+	top: 5px;
+	right: 90%;
+}
+
+/* special colouring for "Main menu:", and for "xx submenu" items in ADxMenu
+	placed here to clarify the terminology I use when referencing submenus in posts */
+.menu_vrl>li:first-child>a, .menu_vrl li + li + li li:first-child>a {
+	/* color: #567; */ /* my comment */
+}
+
+
+
+/* vlr_tree - Vertical Left Right Tree */
+
+/* - - - ADxMenu: BASIC styles - - - */
+
+.menu_vlr_tree {
+	width: 10em;/* VERY IMPORTANT! Set this to appropriate value, either here on down in the design section */
+}
+
+.menu_vlr_tree, .menu_vlr_tree ul {	/* remove all list stylings */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+	display: block;
+}
+
+.menu_vlr_tree li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+	position: relative;	/* position each LI, thus creating potential IE.win overlap problem */
+	z-index: 5;		/* thus we need to apply explicit z-index here... */
+}
+
+.menu_vlr_tree li:hover {
+	z-index: 10000;	/* ...and here. this makes sure active item is always above anything else in the menu */
+	white-space: normal;/* required to resolve IE7 :hover bug (z-index above is ignored if this is not present)
+							see http://www.tanfa.co.uk/css/articles/pure-css-popups-bug.asp for other stuff that work */
+}
+
+.menu_vlr_tree ul {
+	display: none; /* my */
+	/*visibility: hidden;*/	/* initially hide all submenus. */
+	/* position: absolute; */ /* my comment */
+	position: relative; /* my */
+	z-index: 10;
+	left: 0;	/* while hidden, always keep them at the top left corner, */
+	top: 0;		/* 		to avoid scrollbars as much as possible */
+}
+
+.menu_vlr_tree ul ul {
+	position: absolute;
+}
+
+.menu_vlr_tree ul li:hover>ul {
+	display: block; /* my */
+	visibility: visible;	/* display submenu them on hover */
+	left: 100%;
+}
+
+/* -- float.clear --
+	force containment of floated LIs inside of UL */
+.menu_vlr_tree:after, .menu_vlr_tree ul:after {
+	content: ".";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	clear: both;
+}
+.menu_vlr_tree, .menu_vlr_tree ul {	/* IE7 float clear: */
+	min-height: 0;
+}
+/* -- float.clear.END --  */
+
+/* sticky submenu: it should not disappear when your mouse moves a bit outside the submenu
+	YOU SHOULD NOT STYLE the background of the ".menu_vlr_tree UL" or this feature may not work properly!
+	if you do it, make sure you 110% know what you do */
+.menu_vlr_tree ul {
+	background-image: url(empty.gif);	/* required for sticky to work in IE6 and IE7 - due to their (different) hover bugs */
+	/*padding: 30px 30px 30px 10px;*/
+	/*margin: -30px 0 0 -10px;*/
+	/*background: #f00;*/	/* uncomment this if you want to see the "safe" area.
+								you can also use to adjust the safe area to your requirement */
+}
+
+.menu_vlr_tree ul ul {
+	background-image: url(empty.gif);	/* required for sticky to work in IE6 and IE7 - due to their (different) hover bugs */
+	padding: 30px 30px 30px 10px;
+	margin: -30px 0 0 -10px;
+	/* background: #f00; /*	/* uncomment this if you want to see the "safe" area.
+								you can also use to adjust the safe area to your requirement */
+}
+
+
+/* - - - ADxMenu: DESIGN styles - - - */
+
+.menu_vlr_tree, .menu_vlr_tree ul li {
+	color: #eee;
+	background: #234;
+}
+
+.menu_vlr_tree {
+	width: 8em;
+}
+
+.menu_vlr_tree ul {
+	width: 11em;
+}
+
+.menu_vlr_tree a {
+	text-decoration: none;
+	color: #eee;
+	padding: .4em 1em;
+	display: block;
+}
+
+.menu_vlr_tree a:hover, .menu_vlr_tree li:hover>a {
+}
+
+.menu_vlr_tree li {	/* create borders around each item */
+	border: 1px solid #ccc;
+}
+
+.menu_vlr_tree>li + li, .menu_vlr_tree ul>li + li, .menu_vlr_tree>li + li a, .menu_vlr_tree ul>li + li a {	/* and remove the top border on all but first item in the list */
+	border-top: 0;
+}
+
+.menu_vlr_tree>li + li:hover, .menu_vlr_tree ul>li + li:hover, .menu_vlr_tree>li + li:hover a, .menu_vlr_tree ul>li + li:hover a {	/* and remove the top border on all but first item in the list */
+	border-top: 0;
+}
+
+.menu_vlr_tree li:hover>ul ul {	/* inset submenus, to show off overlapping */
+	top: 5px;
+	left: 100%;
+}
+
+/* special colouring for "Main menu:", and for "xx submenu" items in ADxMenu
+	placed here to clarify the terminology I use when referencing submenus in posts */
+.menu_vlr_tree>li:first-child>a, .menu_vlr_tree li + li + li li:first-child>a {
+	/* color: #567; */ /* my comment */
+}
+
+/* IE Fixes */
+
+/* htb - Horizontal Top Bottom */
+
+/* - - - ADxMenu: IE6 BASIC styles [MANDATORY] - - - */
+
+.menu_htb, .menu_htb ul {	/* float.clear */
+	.zoom: 1;
+}
+
+.menu_htb li.adxmhover {
+	z-index: 10000;
+}
+
+.menu_htb .adxmhoverUL {	/* li:hover>ul selector */
+	visibility: visible;
+}
+
+.menu_htb .adxmhoverUL {	/* 1st-level submenu go below their parent item */
+	top: 100%;
+	left: 0;
+}
+
+.menu_htb .adxmhoverUL .adxmhoverUL {	/* 2nd+ levels go on the right side of the parent item */
+	top: 0;
+	left: 100%;
+}
+
+/* - - - ADxMenu: DESIGN styles - - - */
+
+.menu_htb ul a {	/* fix clickability-area problem */
+	.zoom: 1;
+}
+
+.menu_htb li li {	/* fix white gap problem */
+	.float: left;
+	.width: 100%;
+}
+
+.menu_htb li li {	/* prevent double-line between items */
+	.margin-top: -1px;
+}
+
+.menu_htb a:hover, .menu_htb .adxmhoverA {		/* li:hover>a selector */
+	.cursor: hand;
+}
+
+.menu_htb .adxmhoverUL .adxmhoverUL {	/* inset 2nd+ submenus, to show off overlapping */
+	top: 5px;
+	left: 90%;
+}
+
+
+
+/* hbt - Horizontal Bottom Top */
+
+/* - - - ADxMenu: BASIC styles - - - */
+
+
+.menu_hbt, .menu_hbt ul {	/* float.clear */
+	.zoom: 1;
+}
+
+.menu_hbt li.adxmhover {
+	z-index: 10000;
+}
+
+.menu_hbt .adxmhoverUL {	/* li:hover>ul selector */
+	visibility: visible;
+}
+
+.menu_hbt .adxmhoverUL {	/* 1st-level submenu go below their parent item */
+	bottom: 100%;
+	left: 0;
+}
+
+.menu_hbt .adxmhoverUL .adxmhoverUL {	/* 2nd+ levels go on the right side of the parent item */
+	bottom: 0;
+	left: 100%;
+}
+
+/* - - - ADxMenu: DESIGN styles - - - */
+
+.menu_hbt ul a {	/* fix clickability-area problem */
+	.zoom: 1;
+}
+
+.menu_hbt li li {	/* fix white gap problem */
+	.float: left;
+	.width: 100%;
+}
+
+.menu_hbt li li {	/* prevent double-line between items */
+	.margin-top: -1px;
+}
+
+.menu_hbt a:hover, .menu_hbt .adxmhoverA {		/* li:hover>a selector */
+	.cursor: hand;
+}
+
+.menu_hbt .adxmhoverUL .adxmhoverUL {	/* inset 2nd+ submenus, to show off overlapping */
+	bottom: 5px;
+	left: 90%;
+}
+
+
+
+/* vlr - Vertical Left Right */
+
+/* - - - ADxMenu: BASIC styles - - - */
+
+.menu_vlr, .menu_vlr ul {	/* float.clear */
+	.zoom: 1;
+}
+
+.menu_vlr li.adxmhover {
+	z-index: 10000;
+}
+
+.menu_vlr .adxmhoverUL {	/* li:hover>ul selector */
+	visibility: visible;
+}
+
+.menu_vlr .adxmhoverUL {	/* submenu goes to the right */
+	left: 100%;
+}
+
+/* - - - ADxMenu: DESIGN styles - - - */
+
+.menu_vlr ul a {	/* fix clickability-area problem */
+	.zoom: 1;
+}
+
+.menu_vlr li {	/* fix white gap problem */
+	.float: left;
+	.width: 100%;
+}
+
+.menu_vlr li {	/* prevent double-line between items */
+	.margin-top: -1px;
+}
+
+.menu_vlr a:hover, .menu_vlr .adxmhoverA {		/* li:hover>a selector */
+	.cursor: hand;
+}
+
+.menu_vlr .adxmhoverUL {	/* inset submenus, to show off overlapping */
+	top: 5px;
+	left: 90%;
+}
+
+
+
+/* vrl - Vertical Right Left */
+
+/* - - - ADxMenu: BASIC styles - - - */
+
+.menu_vrl, .menu_vrl ul {	/* float.clear */
+	.zoom: 1;
+}
+
+.menu_vrl li.adxmhover {
+	z-index: 10000;
+}
+
+.menu_vrl .adxmhoverUL {	/* li:hover>ul selector */
+	visibility: visible;
+}
+
+.menu_vrl .adxmhoverUL {	/* submenu goes to the left */
+	right: 100%;
+}
+
+/* - - - ADxMenu: DESIGN styles - - - */
+
+.menu_vrl ul a {	/* fix clickability-area problem */
+	.zoom: 1;
+}
+
+.menu_vrl li {	/* fix white gap problem */
+	.float: left;
+	.width: 100%;
+}
+
+.menu_vrl li {	/* prevent double-line between items */
+	.margin-top: -1px;
+}
+
+.menu_vrl a:hover, .menu_vrl .adxmhoverA {		/* li:hover>a selector */
+	.cursor: hand;
+}
+
+.menu_vrl .adxmhoverUL {	/* inset submenus, to show off overlapping */
+	top: 5px;
+	right: 90%;
+}
+
+
+
+/* vtb - Vertical Top Bottom */
+
+/* - - - ADxMenu: BASIC styles - - - */
+
+.menu_vlr_tree, .menu_vlr_tree ul {	/* float.clear */
+	.zoom: 1;
+}
+
+.menu_vlr_tree li.adxmhover {
+	z-index: 10000;
+}
+
+.menu_vlr_tree .adxmhoverUL {	/* li:hover>ul selector */
+	/*display: block;*/ /* my */
+	/*visibility: visible;*/
+}
+
+.menu_vlr_tree .adxmhoverUL .adxmhoverUL {	/* submenu goes to the right */
+	left: 100%;
+}
+
+/* - - - ADxMenu: DESIGN styles - - - */
+
+.menu_vlr_tree ul a {	/* fix clickability-area problem */
+	.zoom: 1;
+}
+
+.menu_vlr_tree li {	/* fix white gap problem */
+	.float: left;
+	.width: 100%;
+}
+
+.menu_vlr_tree li {	/* prevent double-line between items */
+	.margin-top: -1px;
+}
+
+.menu_vlr_tree a:hover, .menu_vlr_tree .adxmhoverA {		/* li:hover>a selector */
+	.cursor: hand;
+}
+
+.menu_vlr_tree .adxmhoverUL .adxmhoverUL {	/* inset submenus, to show off overlapping */
+	display: block; /* my */
+	visibility: visible;
+	top: 5px;
+	left: 100%;
+}
+
+
+
+/* CCS Menu Item */
+
+/* item structure: 
+ *
+ * +----------------------------------+ 
+ * |  1                               |
+ * |  +---------------------------+   | 
+ * |  | 2                    | 3  |   |
+ * |  +---------------------------+   | 
+ * +----------------------------------+ 
+ *
+ *  1. content
+ *  2. text
+ *  3. arrow
+ *
+ */
+
+.adxm span {
+	display: block;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 0;
+	height: 0;
+}
+
+.adxm .right2 {
+	float: left;
+	
+	/* IE Bug with empty spans and divs */
+	font-size: 0; 
+	line-height:0;
+}
+
+.adxm .content {
+	float: left;
+}
+
+/* 5 */
+.adxm .text {
+	float: left;
+}

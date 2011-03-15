@@ -1,0 +1,421 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-86BEACD2
+</script>
+<script language="JavaScript" src="../ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="../ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-699FF0C4
+
+var RRefGenerator_DatePicker_period1 = new Object(); 
+RRefGenerator_DatePicker_period1.format           = "LongDate";
+RRefGenerator_DatePicker_period1.style            = "Styles/None/Style.css";
+RRefGenerator_DatePicker_period1.relativePathPart = "../";
+RRefGenerator_DatePicker_period1.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//RDelTicketButton_Delete_OnClick @6-5DBEB4AA
+function RDelTicketButton_Delete_OnClick()
+{
+    var result = true;
+//End RDelTicketButton_Delete_OnClick
+
+//Confirmation Message @7-FDDD4CE5
+    return confirm('You are about to delete this record. Are you really sure?');
+//End Confirmation Message
+
+//Close RDelTicketButton_Delete_OnClick @6-BC33A33A
+    return result;
+}
+//End Close RDelTicketButton_Delete_OnClick
+
+//RDelTicketButton_Cancel_OnClick @8-1B7442B4
+function RDelTicketButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RDelTicketButton_Cancel_OnClick
+
+//RRefGeneratorButton_Cancel_OnClick @68-92C45940
+function RRefGeneratorButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RRefGeneratorButton_Cancel_OnClick
+
+//bind_events @1-7FE6C402
+function bind_events() {
+    if (functionExists("adminheader_bind_events")) adminheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("RDelTicketButton_Delete", "click", RDelTicketButton_Delete_OnClick);
+    addEventHandler("RDelTicketButton_Cancel", "click", RDelTicketButton_Cancel_OnClick);
+    addEventHandler("RRefGeneratorButton_Cancel", "click", RRefGeneratorButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="../Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <div class="H1">
+        TICKET MANAGEMENT 
+      </div>
+ 
+      <div class="default">
+        Please search the ticket number in order to delete existing record. Please be noticed, once the record has deleted, there's no way details can be retrieve back.<br>
+        <p>
+        <!-- BEGIN Grid GTickets -->
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>Ticket List</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Row">
+                  <td colspan="12">Total Records:&nbsp;{smart_ticket_TotalRecords}</td>
+                </tr>
+ 
+                <tr class="Caption">
+                  <th width="2%" scope="col">No.</th>
+ 
+                  <th width="10%" scope="col">
+                  <!-- BEGIN Sorter Sorter_tckt_refnumber -->Ref.Number 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTicketsSorter_tckt_refnumber"><img border="0" alt="{Asc_URL}" src="../Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTicketsSorter_tckt_refnumber"><img border="0" alt="{Desc_URL}" src="../Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_refnumber --></th>
+ 
+                  <th width="8%" scope="col">
+                  <!-- BEGIN Sorter Sorter_tckt_branch -->Site 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTicketsSorter_tckt_branch"><img border="0" alt="{Asc_URL}" src="../Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTicketsSorter_tckt_branch"><img border="0" alt="{Desc_URL}" src="../Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_branch --></th>
+ 
+                  <th width="10%" scope="col">
+                  <!-- BEGIN Sorter Sorter_tckt_date -->Date Reported 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTicketsSorter_tckt_date"><img border="0" alt="{Asc_URL}" src="../Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTicketsSorter_tckt_date"><img border="0" alt="{Desc_URL}" src="../Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_date --></th>
+ 
+                  <th width="10%" scope="col">
+                  <!-- BEGIN Sorter Sorter_tckt_status -->Status 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTicketsSorter_tckt_status"><img border="0" alt="{Asc_URL}" src="../Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTicketsSorter_tckt_status"><img border="0" alt="{Desc_URL}" src="../Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_status --></th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">Age (Days)</th>
+ 
+                  <th width="5%" scope="col">
+                  <!-- BEGIN Sorter Sorter_tckt_severity -->Severity 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTicketsSorter_tckt_severity"><img border="0" alt="{Asc_URL}" src="../Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTicketsSorter_tckt_severity"><img border="0" alt="{Desc_URL}" src="../Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_severity --></th>
+ 
+                  <th width="5%" scope="col">&nbsp;Eng ID</th>
+ 
+                  <th width="5%" scope="col">
+                  <!-- BEGIN Sorter Sorter_tckt_esc -->Esc 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTicketsSorter_tckt_esc"><img border="0" alt="{Asc_URL}" src="../Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTicketsSorter_tckt_esc"><img border="0" alt="{Desc_URL}" src="../Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_esc --></th>
+ 
+                  <th width="5%" scope="col">
+                  <!-- BEGIN Sorter Sorter_tckt_adukomn -->Adukomn ID 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTicketsSorter_tckt_adukomn"><img border="0" alt="{Asc_URL}" src="../Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTicketsSorter_tckt_adukomn"><img border="0" alt="{Desc_URL}" src="../Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_adukomn --></th>
+ 
+                  <th width="5%" scope="col">
+                  <!-- BEGIN Sorter Sorter_tckt_toppanid -->Toppanid 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GTicketsSorter_tckt_toppanid"><img border="0" alt="{Asc_URL}" src="../Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GTicketsSorter_tckt_toppanid"><img border="0" alt="{Desc_URL}" src="../Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_toppanid --></th>
+ 
+                  <th width="20%" scope="col">Description</th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {GTickets:rowStyle}>
+                  <td style="TEXT-ALIGN: center">{lblNumber}<input style="WIDTH: 19px; HEIGHT: 22px" id="GTicketsid_{GTickets:rowNumber}" value="{id}" size="2" type="hidden" name="{id_Name}">&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center"><a href="{tckt_refnumber_Src}" id="GTicketstckt_refnumber_{GTickets:rowNumber}">{tckt_refnumber}</a>&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{tckt_branch}&nbsp;<input style="WIDTH: 20px; HEIGHT: 22px" id="GTicketstckt_state" value="{tckt_state}" size="2" type="hidden" name="{tckt_state_Name}"></td> 
+                  <td style="TEXT-ALIGN: center">{tckt_date}&nbsp;<input style="WIDTH: 68px; HEIGHT: 22px" id="GTicketstckt_c_date" value="{tckt_c_date}" size="9" type="hidden" name="{tckt_c_date_Name}"></td> 
+                  <td style="TEXT-ALIGN: center">{tckt_status}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{tckt_age}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{tckt_severity}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">&nbsp;{tcktEng}</td> 
+                  <td style="TEXT-ALIGN: center">{tckt_esc}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{tckt_adukomn}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{tckt_toppanid}&nbsp;</td> 
+                  <td>{tckt_description}&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN Separator -->
+                <tr class="Separator">
+                  <td colspan="12"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+                <!-- END Separator -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="12">No records</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td colspan="12">
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="../Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="../Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="../Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="../Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="../Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="../Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="../Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="../Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!-- END Grid GTickets --></p>
+        <br>
+        <!-- BEGIN Record SDelTicket -->
+        <form id="SDelTicket" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Search Smart Ticket </strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="3">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="SDelTicketd_tckt">Tckt Refnumber</label></td> 
+                    <td><input id="SDelTicketd_tckt" value="{d_tckt}" maxlength="20" name="{d_tckt_Name}"></td> 
+                    <td>&nbsp; 
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="SDelTicketButton_DoSearch" value="Search" alt="Search" src="../Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record SDelTicket --><br>
+        <!-- BEGIN Record RDelTicket -->
+        <form id="RDeRDelTickete=&quot;{HTMLFormName}" method="post" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Summary Ticket: </strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="RDelTickettckt_refnumber">Ref number</label></td> 
+                    <td><input id="RDelTickettckt_refnumber" disabled value="{tckt_refnumber}" readonly maxlength="10" size="30" name="{tckt_refnumber_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RDelTickettckt_status">Status</label></td> 
+                    <td>{tckt_status}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RDelTickettckt_r_date">Date</label></td> 
+                    <td>{tckt_r_date}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RDelTickettckt_state">State</label></td> 
+                    <td>{tckt_state}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RDelTickettckt_site">Site</label></td> 
+                    <td>{tckt_site}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RDelTickettckt_category">Category</label></td> 
+                    <td>{tckt_category}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RDelTickettckt_subcategory">Subcategory</label></td> 
+                    <td>{tckt_subcategory}</td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_Delete --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RDelTicketButton_Delete" value="Delete" alt="Delete" src="../Styles/{CCS_Style}/Images/en/ButtonDelete.gif" type="image" name="{Button_Name}"><!-- END Button Button_Delete -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RDelTicketButton_Cancel" value="Cancel" alt="Cancel" src="../Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record RDelTicket -->
+        <!-- BEGIN Grid GRefGenerator -->
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>Ticket Generator </strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                  <th scope="col">Id</th>
+ 
+                  <th scope="col">Type</th>
+ 
+                  <th scope="col">Period</th>
+ 
+                  <th scope="col">Currentticket</th>
+ 
+                  <th scope="col">Datemodified</th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {GRefGenerator:rowStyle}>
+                  <td style="TEXT-ALIGN: right">{id}&nbsp;</td> 
+                  <td>{type}&nbsp;</td> 
+                  <td><a href="{period_Src}" id="GRefGeneratorperiod_{GRefGenerator:rowNumber}">{period}</a>&nbsp;</td> 
+                  <td>{currentticket}&nbsp;</td> 
+                  <td>{datemodified}&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="5">No records</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td colspan="5">
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="../Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="../Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="../Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="../Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="../Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="../Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="../Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="../Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!-- END Grid GRefGenerator --><br>
+        <br>
+        <!-- BEGIN Record RRefGenerator -->
+        <form id="RRefGenerator" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Smart Ticket Generator </strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="RRefGeneratortype">Type</label></td> 
+                    <td>
+                      <select id="RRefGeneratortype" name="{type_Name}">
+                        <option selected value="">Select Value</option>
+                        {type_Options}
+                      </select>
+ </td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RRefGeneratorperiod">Year</label></td> 
+                    <td><input id="RRefGeneratorperiod" value="{period}" maxlength="12" size="12" name="{period_Name}">&nbsp; 
+                      <!-- BEGIN DatePicker DatePicker_period1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RRefGeneratorDatePicker_period1"><img id="RRefGeneratorDatePicker_period1_Image" border="0" alt="Show Date Picker" src="../Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_period1 --></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RRefGeneratorcurrentticket">Currentticket</label></td> 
+                    <td><input id="RRefGeneratorcurrentticket" value="{currentticket}" maxlength="5" size="5" name="{currentticket_Name}">&nbsp; <a href="{Link1_Src}" id="RRefGeneratorLink1">Click Here To Add New Record</a></td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RRefGeneratorButton_Insert" value="Add" alt="Add" src="../Styles/{CCS_Style}/Images/en/ButtonInsert.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RRefGeneratorButton_Update" value="Submit" alt="Submit" src="../Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RRefGeneratorButton_Cancel" value="Cancel" alt="Cancel" src="../Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record RRefGenerator --><br>
+      </div>
+    </td>
+  </tr>
+</table>
+{footer} </rdelticketl>
+</body>
+</html>

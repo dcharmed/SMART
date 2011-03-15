@@ -1,0 +1,1096 @@
+/* CCSTheme v 3.x */
+/* General */
+
+/* Colors */
+.PageBgColorsmartStyleTurqoise {
+	background-color: #bfbfbf;
+	}
+
+.FormTitleBgColorsmartStyleTurqoise {
+	background-color: #2c7d98;
+	}
+
+.FormTitleFontColorsmartStyleTurqoise {
+	color: #f7f7f7;
+	}
+
+.CaptionBgColorsmartStyleTurqoise {
+	background-color: #b4c5c9;
+	}
+
+.CaptionFontColorsmartStyleTurqoise {
+	color: #25687e;
+	}
+
+.DataBgColorsmartStyleTurqoise {
+	background-color: #f7f7f7;
+	}
+
+.AltDataBgColorsmartStyleTurqoise {
+	background-color: #eaeaea;
+	}
+
+.DataFontColorsmartStyleTurqoise {
+	color: #2c7d98;
+	}
+
+.LinkColorsmartStyleTurqoise {
+	color: #0000ff;
+	}
+
+.VisitedLinkColorsmartStyleTurqoise {
+	color: #2c7d98;
+	}
+
+.HoverLinkColorsmartStyleTurqoise {
+	color: #e4149b;
+	}
+
+.ColorBgButtonsmartStyleTurqoise {
+	background-color: #2c7d98;
+}
+
+.ColorFontButtonsmartStyleTurqoise {
+	color: #f7f7f7;
+}
+
+.ColorBgButtonPassivesmartStyleTurqoise {
+	background-color: #78bdd4;
+}
+
+.ColorFontButtonPassivesmartStyleTurqoise {
+	color: #ffffff;
+}
+
+
+
+.HeadersmartStyleTurqoise {
+	width: 100%;
+	}
+
+.HeadersmartStyleTurqoise th { 
+	font-family: Arial; font-size: 90%; text-align: left;
+	padding: 4px;
+	background-image: url('Images/HeaderBg.gif'); color: #f7f7f7;
+	width: 100%;
+	white-space: nowrap;
+	padding-left: 8px;
+	}
+
+
+
+/*ie6*/
+* html body .HeadersmartStyleTurqoise th {
+	font-family: Arial; font-size: 130%; text-align: left;
+}
+/*end*/
+
+.HeadersmartStyleTurqoise a:link { 
+	color: #f7f7f7;
+	}
+
+.HeadersmartStyleTurqoise a:visited { 
+	color: #f7f7f7;
+	}
+
+.HeadersmartStyleTurqoise a:hover, .CaptionsmartStyleTurqoise a:active { 
+	color: #f7f7f7; text-decoration: none;
+	}
+
+.HeaderLeftsmartStyleTurqoise { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightsmartStyleTurqoise { 
+	background-image: url('Images/HeaderRight.gif');
+	background-position: right top;
+	}
+
+.HeaderLeftsmartStyleTurqoise img{
+	width: 1px;
+	}
+
+.HeaderRightsmartStyleTurqoise img{
+	width: 1px;
+	}
+
+
+/* Grid Options */
+.GridsmartStyleTurqoise { 
+	border-left: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;
+	width: 100%;
+	}
+
+.CaptionsmartStyleTurqoise th { 
+	font-family: Arial; font-size: 70%; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-left: solid 1px #FFFFFF; border-top: solid 1px #FFFFFF; border-right: solid 1px #848284; border-bottom: solid 1px #848284;
+	background-color: #b4c5c9; color: #25687e;
+	white-space: nowrap;
+	}
+
+.CaptionsmartStyleTurqoise td { 
+	font-family: Arial; font-size: 70%; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-left: solid 1px #FFFFFF; border-top: solid 1px #FFFFFF; border-right: solid 1px #848284; border-bottom: solid 1px #848284;
+	background-color: #b4c5c9; color: #25687e;
+	white-space: nowrap;
+	}
+
+
+
+/*ie6*/
+* html body .CaptionsmartStyleTurqoise th, * html body .CaptionsmartStyleTurqoise td {
+	font-family: Arial; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.CaptionsmartStyleTurqoise a:link { 
+	color: #25687e;
+	}
+
+.CaptionsmartStyleTurqoise a:visited { 
+	color: #25687e;
+	}
+
+.CaptionsmartStyleTurqoise a:hover, .CaptionsmartStyleTurqoise a:active { 
+	color: #e4149b;
+	}
+
+.CaptionsmartStyleTurqoise img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionsmartStyleTurqoise input {
+	vertical-align: middle;
+	}
+
+.RowsmartStyleTurqoise th { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #f7f7f7; color: #2c7d98;
+	white-space: nowrap;
+	color: #2c7d98;
+	}
+
+.RowsmartStyleTurqoise td { 
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #2c7d98;
+	}
+	
+
+
+/*ie6*/
+* html body .RowsmartStyleTurqoise th, * html body .RowsmartStyleTurqoise td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+caption.RowsmartStyleTurqoise { 
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border: 1px solid #FFFFFF; border-bottom: 0px;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body caption.RowsmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.RowsmartStyleTurqoise a:link { 
+	color: #0000ff;
+	}
+
+.RowsmartStyleTurqoise a:visited { 
+	color: #2c7d98;
+	}
+
+.RowsmartStyleTurqoise a:hover, .RowsmartStyleTurqoise a:active { 
+	color: #e4149b;
+	}
+
+.SeparatorsmartStyleTurqoise{
+	color: #2c7d98;
+	}
+
+.SeparatorsmartStyleTurqoise td{
+	height: 1px;
+	}
+
+
+.AltRowsmartStyleTurqoise th { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #f7f7f7; color: #2c7d98;
+	white-space: nowrap;
+	color: #2c7d98;
+	}
+
+.AltRowsmartStyleTurqoise td { 
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #eaeaea; 
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .AltRowsmartStyleTurqoise th, * html body .AltRowsmartStyleTurqoise td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.AltRowsmartStyleTurqoise a:link { 
+	color: #0000ff;
+	}
+
+.AltRowsmartStyleTurqoise a:visited { 
+	color: #2c7d98;
+	}
+
+.AltRowsmartStyleTurqoise a:hover, .AltRowsmartStyleTurqoise a:active { 
+	color: #e4149b;
+	}
+
+.NoRecordssmartStyleTurqoise td { 
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	background-color: #f7f7f7; 
+	color: #2c7d98;
+	vertical-align: top;
+	}
+
+.FootersmartStyleTurqoise td { 
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #b4c5c9; color: #25687e;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .NoRecordssmartStyleTurqoise td, * html body .FootersmartStyleTurqoise td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.FootersmartStyleTurqoise a:link { 
+	color: #0000ff;
+	}
+
+.FootersmartStyleTurqoise a:visited { 
+	color: #2c7d98;
+	}
+
+.FootersmartStyleTurqoise a:hover, .FootersmartStyleTurqoise a:active { 
+	color: #e4149b;
+	}
+
+.FootersmartStyleTurqoise img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FootersmartStyleTurqoise input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordsmartStyleTurqoise { 
+	border-left: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;
+	width: 100%;
+	}
+
+.ErrorsmartStyleTurqoise td { 
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-left: solid 1px #FFFFFF; border-top: solid 1px #FFFFFF; border-right: solid 1px #848284; border-bottom: solid 1px #848284;
+	text-align: left;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	}
+
+
+
+/*ie6*/
+* html body .ErrorsmartStyleTurqoise td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.ControlssmartStyleTurqoise th { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #f7f7f7; color: #2c7d98;
+	white-space: nowrap;
+	color: #2c7d98;
+	}
+
+.ControlssmartStyleTurqoise td { 
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #2c7d98;
+	}
+	
+.BottomsmartStyleTurqoise td { 
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #b4c5c9; color: #25687e;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .ControlssmartStyleTurqoise th, * html body .ControlssmartStyleTurqoise td, * html body .BottomsmartStyleTurqoise td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.BottomsmartStyleTurqoise a:link { 
+	color: #0000ff;
+	}
+
+.BottomsmartStyleTurqoise a:visited { 
+	color: #2c7d98;
+	}
+
+.BottomsmartStyleTurqoise a:hover, .CaptionsmartStyleTurqoise a:active { 
+	color: #e4149b;
+	}
+
+.BottomsmartStyleTurqoise img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomsmartStyleTurqoise input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionsmartStyleTurqoise th{
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #eaeaea; 
+	color: #2c7d98;
+	}
+
+.GroupCaptionsmartStyleTurqoise td{
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7f7f7; 
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .GroupCaptionsmartStyleTurqoise th, * html body .GroupCaptionsmartStyleTurqoise td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.GroupCaptionsmartStyleTurqoise a:link {
+	color: #25687e;
+	}
+
+.GroupCaptionsmartStyleTurqoise a:visited{
+	color: #25687e;
+	}
+
+.GroupCaptionsmartStyleTurqoise a:hover, .GroupCaptionsmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+.GroupFootersmartStyleTurqoise td{
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #b4c5c9; 
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .GroupFootersmartStyleTurqoise td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.GroupFootersmartStyleTurqoise a:link {
+	color: #0000ff;
+	}
+
+.GroupFootersmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.GroupFootersmartStyleTurqoise a:hover, .GroupFootersmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+.GroupFootersmartStyleTurqoise img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFootersmartStyleTurqoise input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotalsmartStyleTurqoise td{
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #eaeaea; 
+	color: #2c7d98;
+	border-bottom: 2px solid #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .SubTotalsmartStyleTurqoise td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.SubTotalsmartStyleTurqoise a:link {
+	color: #0000ff;
+	}
+
+.SubTotalsmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.SubTotalsmartStyleTurqoise a:hover, .SubTotalsmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+.TotalsmartStyleTurqoise td{
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #eaeaea; 
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .TotalsmartStyleTurqoise td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.TotalsmartStyleTurqoise a:link {
+	color: #0000ff;
+	}
+
+.TotalsmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.TotalsmartStyleTurqoise a:hover, .TotalsmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+/* Form Options */
+.ButtonsmartStyleTurqoise { 
+	background-color: #2c7d98; color: #f7f7f7; border-left: solid 1px #EDEDED; border-top: solid 1px #EDEDED; border-right: solid 1px #848284; border-bottom: solid 1px #848284; padding: 2px; font-weight: bold; font-family: Tahoma; font-size: 10px; font-weight: bold;
+	}
+
+/* Calendar */
+
+.CalendarsmartStyleTurqoise { 
+	border: 1px solid #FFFFFF;
+	width: 100%;
+	}
+
+.CalendarWeekdayNamesmartStyleTurqoise{
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-left: solid 1px #FFFFFF; border-top: solid 1px #FFFFFF; border-right: solid 1px #848284; border-bottom: solid 1px #848284;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #eaeaea; 
+	color: #2c7d98;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekdayNamesmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekdayNamesmartStyleTurqoise a:link {
+	color: #0000ff;
+	}
+
+.CalendarWeekdayNamesmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarWeekdayNamesmartStyleTurqoise a:hover, .CalendarWeekdayNamesmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+.CalendarWeekendNamesmartStyleTurqoise{
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-left: solid 1px #FFFFFF; border-top: solid 1px #FFFFFF; border-right: solid 1px #848284; border-bottom: solid 1px #848284;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #eaeaea;	
+	color: #2c7d98;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendNamesmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendNamesmartStyleTurqoise a:link {
+	color: #25687e;
+	}
+
+.CalendarWeekendNamesmartStyleTurqoise a:visited{
+	color: #25687e;
+	}
+
+.CalendarWeekendNamesmartStyleTurqoise a:link, .CalendarWeekendNamesmartStyleTurqoise a:visited{
+	color: #e4149b;
+	}
+
+/* Calendar Day */
+.CalendarDaysmartStyleTurqoise{
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarDaysmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarDaysmartStyleTurqoise a:link {
+	color: #0000ff;
+	}
+
+.CalendarDaysmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarDaysmartStyleTurqoise a:hover, .CalendarDaysmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendsmartStyleTurqoise{
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: center;
+	background-color: #eaeaea;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendsmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendsmartStyleTurqoise a:link {
+	color: #0000ff;
+	}
+
+.CalendarWeekendsmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarWeekendsmartStyleTurqoise a:hover, .CalendarWeekendsmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Today */
+.CalendarTodaysmartStyleTurqoise {
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border: 2px solid #2c7d98;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarTodaysmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarTodaysmartStyleTurqoise a:link {
+	color: #0000ff;
+	}
+
+.CalendarTodaysmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarTodaysmartStyleTurqoise a:hover, .CalendarTodaysmartStyleTurqoise a:active {
+	color: #e4149b;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodaysmartStyleTurqoise {
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border: 2px solid #2c7d98;
+	text-align: center;
+	background-color: #eaeaea;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendTodaysmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendTodaysmartStyleTurqoise a:link {
+	color: #0000ff;
+	}
+
+.CalendarWeekendTodaysmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarWeekendTodaysmartStyleTurqoise a:hover, .CalendarWeekendTodaysmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDaysmartStyleTurqoise{
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthDaysmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthDaysmartStyleTurqoise a:link {
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthDaysmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthDaysmartStyleTurqoise a:hover, .CalendarOtherMonthDaysmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodaysmartStyleTurqoise {
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border: 2px solid #2c7d98;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthTodaysmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthTodaysmartStyleTurqoise a:link {
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthTodaysmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthTodaysmartStyleTurqoise a:hover, .CalendarOtherMonthTodaysmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendsmartStyleTurqoise {
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: center;
+	background-color: #eaeaea;	
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendsmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendsmartStyleTurqoise a:link {
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthWeekendsmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthWeekendsmartStyleTurqoise a:hover, .CalendarOtherMonthWeekendsmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodaysmartStyleTurqoise {
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border: 2px solid #2c7d98;
+	text-align: center;
+	color: #2c7d98;
+	background-color: #eaeaea;	
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendTodaysmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendTodaysmartStyleTurqoise a:link {
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthWeekendTodaysmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarOtherMonthWeekendTodaysmartStyleTurqoise a:hover, .CalendarOtherMonthWeekendTodaysmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDaysmartStyleTurqoise{
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #b4c5c9;
+	color: #25687e;
+	text-align: center;
+	font-weight: bold;
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarSelectedDaysmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarSelectedDaysmartStyleTurqoise a:link {
+	color: #25687e;
+	}
+
+.CalendarSelectedDaysmartStyleTurqoise a:visited{
+	color: #25687e;
+	}
+
+.CalendarSelectedDaysmartStyleTurqoise a:hover, .CalendarSelectedDaysmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorsmartStyleTurqoise {
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	background-color: #b4c5c9; color: #25687e;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #2c7d98;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigatorsmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarNavigatorsmartStyleTurqoise a:link {
+	color: #0000ff;
+	}
+
+.CalendarNavigatorsmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarNavigatorsmartStyleTurqoise a:hover, .CalendarNavigatorsmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+.CalendarNavigatorsmartStyleTurqoise img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+.CalendarNavigatorsmartStyleTurqoise td {
+	font-family: Arial; font-size: 70%;
+	}
+
+.CalendarNavigatorsmartStyleTurqoise th {
+	font-family: Arial; font-size: 70%;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigatorsmartStyleTurqoise th, * html body .CalendarNavigatorsmartStyleTurqoise td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+/* Calendar Extra */
+.CalendarEventsmartStyleTurqoise{
+	font-family: Arial; font-size: 70%;
+	text-align: left;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarEventsmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarEventsmartStyleTurqoise a:link {
+	color: #0000ff;
+	}
+
+.CalendarEventsmartStyleTurqoise a:visited{
+	color: #2c7d98;
+	}
+
+.CalendarEventsmartStyleTurqoise a:hover, .CalendarEventsmartStyleTurqoise a:active{
+	color: #e4149b;
+	}
+
+/* Changes for Section508 */
+table tr td strong {
+	padding: 0px;
+	margin: 0px;
+}
+
+.thsmartStyleTurqoise { 
+	font-family: Arial; font-size: 70%;
+	font-weight: bold;
+}
+
+
+
+/*ie6*/
+* html body .thsmartStyleTurqoise {
+	font-size: 100%;
+}
+/*end*/
+
+.HeadersmartStyleTurqoise .thsmartStyleTurqoise { 
+	font-family: Arial; font-size: 90%; text-align: left;
+	padding: 4px;
+	background-image: url('Images/HeaderBg.gif'); color: #f7f7f7;
+	width: 100%;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .HeadersmartStyleTurqoise .thsmartStyleTurqoise {
+	font-family: Arial; font-size: 130%; text-align: left;
+}
+/*end*/
+
+.CaptionsmartStyleTurqoise .thsmartStyleTurqoise { 
+	font-family: Arial; font-size: 70%; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-left: solid 1px #FFFFFF; border-top: solid 1px #FFFFFF; border-right: solid 1px #848284; border-bottom: solid 1px #848284;
+	background-color: #b4c5c9; color: #25687e;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .CaptionsmartStyleTurqoise .thsmartStyleTurqoise {
+	font-family: Arial; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.RowsmartStyleTurqoise .thsmartStyleTurqoise { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #f7f7f7; color: #2c7d98;
+	white-space: nowrap;
+	color: #2c7d98;
+}
+
+.AltRowsmartStyleTurqoise .thsmartStyleTurqoise { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #f7f7f7; color: #2c7d98;
+	white-space: nowrap;
+	color: #2c7d98;
+}
+
+.ControlssmartStyleTurqoise .thsmartStyleTurqoise { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	background-color: #f7f7f7; color: #2c7d98;
+	white-space: nowrap;
+	color: #2c7d98;
+}
+
+.GroupCaptionsmartStyleTurqoise .thsmartStyleTurqoise {
+	font-family: Arial; font-size: 70%;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #eaeaea; 
+	color: #2c7d98;
+}
+
+
+
+/*ie6*/
+* html body .GroupCaptionsmartStyleTurqoise .thsmartStyleTurqoise {
+	font-family: Arial; font-size: 100%;
+}
+
+* html body .RowsmartStyleTurqoise .thsmartStyleTurqoise, * html body .AltRowsmartStyleTurqoise .thsmartStyleTurqoise, * html body .ControlssmartStyleTurqoise .thsmartStyleTurqoise {
+	font-family: Arial; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+/*end*/
+
+/* Class for Application Builder Menu */
+.simpleMenusmartStyleTurqoise td {
+	font-family: Arial; font-size: 70%;
+}
+
+
+
+/*ie6*/
+* html body .simpleMenusmartStyleTurqoise td {
+	font-family: Arial; font-size: 100%;
+} 
+/*end*/

@@ -1,0 +1,491 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-808FEE7A
+
+var RSmartTask_DatePicker_task_date = new Object(); 
+RSmartTask_DatePicker_task_date.format           = "GeneralDate";
+RSmartTask_DatePicker_task_date.style            = "Styles/{CCS_Style}/Style.css";
+RSmartTask_DatePicker_task_date.relativePathPart = "";
+RSmartTask_DatePicker_task_date.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//RSmartTaskButton_Cancel_OnClick @39-90726F48
+function RSmartTaskButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RSmartTaskButton_Cancel_OnClick
+
+//SummaryTicketButton_Cancel_OnClick @131-33687176
+function SummaryTicketButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End SummaryTicketButton_Cancel_OnClick
+
+//RSmartTaskViewButton_Cancel_OnClick @158-E47B962C
+function RSmartTaskViewButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RSmartTaskViewButton_Cancel_OnClick
+
+//bind_events @1-1C7CF6E6
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("RSmartTaskButton_Cancel", "click", RSmartTaskButton_Cancel_OnClick);
+    addEventHandler("SummaryTicketButton_Cancel", "click", SummaryTicketButton_Cancel_OnClick);
+    addEventHandler("RSmartTaskViewButton_Cancel", "click", RSmartTaskViewButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <p></p>
+ 
+      <div class="H1">
+        TASK ASSIGNMENTS 
+      </div>
+ 
+      <p></p>
+      <!-- BEGIN Grid GSmartTicket -->
+      <p><span class="default">Please find the current pending task by engineers reffered to the ticket list listed below. Please click on the Ref.Number for details</span> </p>
+ 
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td valign="top">
+            <table class="Header" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                <td class="th"><strong>Ticket List</strong></td> 
+                <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Caption">
+                <th width="2%" scope="col">No.</th>
+ 
+                <th width="10%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_refnumber -->Ref.Number 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GSmartTicketSorter_tckt_refnumber"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GSmartTicketSorter_tckt_refnumber"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_refnumber --></th>
+ 
+                <th width="10%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_branch -->Site 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GSmartTicketSorter_tckt_branch"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GSmartTicketSorter_tckt_branch"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_branch --></th>
+ 
+                <th width="10%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_date -->Date Reported 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GSmartTicketSorter_tckt_date"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GSmartTicketSorter_tckt_date"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_date --></th>
+ 
+                <th width="5%" scope="col">&nbsp;Age</th>
+ 
+                <th width="10%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_status -->Status 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GSmartTicketSorter_tckt_status"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GSmartTicketSorter_tckt_status"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_status --></th>
+ 
+                <th width="5%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_eng -->Engineer 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GSmartTicketSorter_tckt_eng"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GSmartTicketSorter_tckt_eng"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_eng --></th>
+ 
+                <th width="5%" scope="col">
+                <!-- BEGIN Sorter Sorter_tckt_helpdesk -->Helpdesk 
+                <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GSmartTicketSorter_tckt_helpdesk"><img border="0" alt="{Asc_URL}" src="Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GSmartTicketSorter_tckt_helpdesk"><img border="0" alt="{Desc_URL}" src="Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_tckt_helpdesk --></th>
+ 
+                <th width="20%" scope="col">Description</th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr {GSmartTicket:rowStyle}>
+                <td style="TEXT-ALIGN: center">{lblNumber}<input style="WIDTH: 19px; HEIGHT: 22px" id="GSmartTicketid_{GSmartTicket:rowNumber}" value="{id}" size="2" type="hidden" name="{id_Name}">&nbsp;</td> 
+                <td style="TEXT-ALIGN: center"><a href="{tckt_refnumber_Src}" id="GSmartTickettckt_refnumber_{GSmartTicket:rowNumber}">{tckt_refnumber}</a>&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">{tckt_branch}&nbsp;<input style="WIDTH: 20px; HEIGHT: 22px" id="GSmartTickettckt_state" value="{tckt_state}" size="2" type="hidden" name="{tckt_state_Name}"></td> 
+                <td style="TEXT-ALIGN: center">{tckt_date}&nbsp;<input style="WIDTH: 27px; HEIGHT: 22px" id="GSmartTickettckt_closeddate" value="{tckt_closeddate}" size="3" type="hidden" name="{tckt_closeddate_Name}"></td> 
+                <td style="TEXT-ALIGN: center">{tckt_age}&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">{tckt_status}&nbsp;</td> 
+                <td style="TEXT-ALIGN: center">&nbsp;{tcktEng}</td> 
+                <td style="TEXT-ALIGN: center">{tckt_helpdesk}&nbsp;</td> 
+                <td>{tckt_description}&nbsp;</td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN Separator -->
+              <tr class="Separator">
+                <td colspan="9"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+              </tr>
+              <!-- END Separator -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="9">No records</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="9">
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                  <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                  <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                  <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                  <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid GSmartTicket -->
+      <table border="0" cellpadding="2" width="100%">
+        <tr>
+          <td valign="top">
+            <!-- BEGIN Grid GSmartTask -->
+            <p>Please find the history of tasks by engineers for ticket: {lblTicket} list listed below. Please click the VIEW DETAILS button to manage task</p>
+ 
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td valign="top">
+                  <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                      <td class="th"><strong>List of Task</strong></td> 
+                      <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                    </tr>
+                  </table>
+ 
+                  <table class="Grid" cellspacing="0" cellpadding="0">
+                    <tr class="Caption">
+                      <th style="TEXT-ALIGN: center" width="5%" scope="col">
+                      <!-- BEGIN Sorter Sorter_id --><a href="{Sort_URL}" id="GSmartTaskSorter_id">No</a> 
+                      <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                      <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_id --></th>
+ 
+                      <th style="TEXT-ALIGN: center" scope="col">
+                      <!-- BEGIN Sorter Sorter_ticket_id --><a href="{Sort_URL}" id="GSmartTaskSorter_ticket_id">Ref Number</a> 
+                      <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                      <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ticket_id --></th>
+ 
+                      <th style="TEXT-ALIGN: center" width="10%" scope="col">Severity&nbsp;</th>
+ 
+                      <th style="TEXT-ALIGN: center" width="5%" scope="col">Site&nbsp;</th>
+ 
+                      <th style="TEXT-ALIGN: center" scope="col">
+                      <!-- BEGIN Sorter Sorter_task_status --><a href="{Sort_URL}" id="GSmartTaskSorter_task_status">Task Status</a> 
+                      <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                      <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_task_status --></th>
+ 
+                      <th scope="col">
+                      <!-- BEGIN Sorter Sorter_task_currenteng --><a href="{Sort_URL}" id="GSmartTaskSorter_task_currenteng">Engineer Before</a> 
+                      <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                      <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_task_currenteng --></th>
+ 
+                      <th scope="col">
+                      <!-- BEGIN Sorter Sorter_task_updatedeng --><a href="{Sort_URL}" id="GSmartTaskSorter_task_updatedeng">Engineer After</a> 
+                      <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                      <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_task_updatedeng --></th>
+ 
+                      <th scope="col">Remark</th>
+ 
+                      <th width="10%" scope="col">Action</th>
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <tr {GSmartTask:rowStyle}>
+                      <td style="TEXT-ALIGN: center">{lblNumber}</td> 
+                      <td style="TEXT-ALIGN: center">{ticket_id}&nbsp;<input style="WIDTH: 29px; HEIGHT: 22px" id="GSmartTasktask_id" value="{task_id}" size="3" type="hidden" name="{task_id_Name}"></td> 
+                      <td style="TEXT-ALIGN: center">{tckt_severity}</td> 
+                      <td style="TEXT-ALIGN: center">{tckt_site}<input style="WIDTH: 21px; HEIGHT: 22px" id="GSmartTasktckt_state" value="{tckt_state}" size="2" type="hidden" name="{tckt_state_Name}"></td> 
+                      <td style="TEXT-ALIGN: center">{task_status}&nbsp;</td> 
+                      <td style="TEXT-ALIGN: left">{task_currenteng}&nbsp;</td> 
+                      <td style="TEXT-ALIGN: left">{task_updatedeng}&nbsp;</td> 
+                      <td style="TEXT-ALIGN: left">&nbsp;{task_remark}</td> 
+                      <td style="TEXT-ALIGN: center">
+                        <!-- BEGIN ImageLink lblView --><a href="{lblView}" id="GSmartTasklblView_{GSmartTask:rowNumber}"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{lblView}" src="Styles/smartStyleTurqoise/Images/en/ButtonDetails.gif"></a><!-- END ImageLink lblView --></td>
+                    </tr>
+ <!-- END Row -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                      <td colspan="9">No records</td>
+                    </tr>
+                    <!-- END NoRecords -->
+                    <tr class="Footer">
+                      <td colspan="9">&nbsp; 
+                        <!-- BEGIN Navigator Navigator -->
+                        <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                        <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                        <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                        <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                        <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                        <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                        <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                        <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- END Grid GSmartTask -->
+            <!-- BEGIN Record SummaryTicket -->
+            <form id="SummaryTicket" method="post" name="{HTMLFormName}" action="{Action}">
+              <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>Ticket's Summary</strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <tr class="Controls">
+                        <td class="th" width="10%">Ref. Number</td> 
+                        <td width="30%">{tckt_refnumber}</td> 
+                        <td width="15%">&nbsp;Customer</td> 
+                        <td>{tckt_r_customer}</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th">Date</td> 
+                        <td>{tckt_r_date}</td> 
+                        <td>&nbsp;Customer's contact</td> 
+                        <td>{tckt_r_customercontact}&nbsp;/ {tckt_r_customercontact1}</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th">Status</td> 
+                        <td>{tckt_status}</td> 
+                        <td>&nbsp;Site</td> 
+                        <td>{tckt_site}</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th">Severity</td> 
+                        <td>{tckt_severity}</td> 
+                        <td>&nbsp;Toppan ID</td> 
+                        <td>{tckt_toppanid}</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th">Escalate</td> 
+                        <td>{tckt_escalate}</td> 
+                        <td>Serial Number</td> 
+                        <td>{tckt_serialnumber}</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th">Category</td> 
+                        <td>{tckt_category}</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th">Sub-category</td> 
+                        <td>{tckt_subcategory}</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th">Tag Related</td> 
+                        <td>{tckt_tagrelated}</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th">Description</td> 
+                        <td>{tckt_description}</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                      </tr>
+ 
+                      <tr class="Bottom">
+                        <td colspan="4" align="right">
+                          <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="SummaryTicketButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <!-- END Record SummaryTicket --><br>
+          </td> 
+          <td>
+            <!-- BEGIN Record RSmartTask -->
+            <form id="RSmartTask" method="post" name="{HTMLFormName}" action="{Action}">
+              <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>Updates Task</strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <!-- BEGIN Error -->
+                      <tr class="Error">
+                        <td colspan="2">{Error}</td>
+                      </tr>
+                      <!-- END Error -->
+                      <tr class="Controls">
+                        <td class="th"><label for="RSmartTasktask_current">Current Status</label></td> 
+                        <td><input id="RSmartTasktask_current" disabled value="{task_current}" readonly maxlength="10" size="10" name="{task_current_Name}">&nbsp;<br>
+                          FOR TICKET#: <input id="RSmartTaskticketRef" disabled value="{ticketRef}" size="15" name="{ticketRef_Name}"><input style="WIDTH: 26px; HEIGHT: 22px" id="RSmartTaskticket_id" value="{ticket_id}" size="3" type="hidden" name="{ticket_id_Name}"><input style="WIDTH: 25px; HEIGHT: 22px" id="RSmartTaskdatemodified" value="{datemodified}" size="3" type="hidden" name="{datemodified_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th">Previous Engineer</td> 
+                        <td><input id="RSmartTasktask_currenteng" disabled value="{task_currenteng}" readonly size="30" name="{task_currenteng_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RSmartTasktask_currenteng">Re-Assign To</label></td> 
+                        <td>
+                          <!-- BEGIN TextBox task_neweng --><input id="RSmartTasktask_neweng" disabled value="{task_neweng}" readonly size="30" name="{task_neweng_Name}"><!-- END TextBox task_neweng --></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th">Accepting Task? <font color="#ff0000">*</font></td> 
+                        <td>&nbsp; 
+                          <!-- BEGIN RadioButton taskStatus --><input id="RSmartTasktaskStatus_{taskStatus:optionNumber}" value="{Value}" type="radio" name="{taskStatus_Name}" {Check}><label for="RSmartTasktaskStatus_{taskStatus:optionNumber}">{Description}</label><!-- END RadioButton taskStatus --></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RSmartTasktask_notes">Notes</label></td> 
+                        <td><textarea id="RSmartTasktask_notes" rows="5" cols="30" name="{task_notes_Name}">{task_notes}</textarea></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RSmartTasktask_date">Date</label></td> 
+                        <td><input id="RSmartTasktask_date" value="{task_date}" maxlength="30" size="18" name="{task_date_Name}">
+                          <!-- BEGIN DatePicker DatePicker_task_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RSmartTaskDatePicker_task_date"><img id="RSmartTaskDatePicker_task_date_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_task_date --></td>
+                      </tr>
+ 
+                      <tr class="Bottom">
+                        <td colspan="2" align="right">
+                          <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RSmartTaskButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                          <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RSmartTaskButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                          <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RSmartTaskButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <!-- END Record RSmartTask -->
+            <!-- BEGIN Record RSmartTaskView -->
+            <form id="RSmartTaskView" method="post" name="{HTMLFormName}" action="{Action}">
+              <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>View Task</strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <!-- BEGIN Error -->
+                      <tr class="Error">
+                        <td colspan="2">{Error}</td>
+                      </tr>
+                      <!-- END Error -->
+                      <tr class="Controls">
+                        <td class="th"><label for="RSmartTaskViewtask_current">Current Status</label></td> 
+                        <td><input id="RSmartTaskViewtask_current" disabled value="{task_current}" readonly maxlength="10" size="10" name="{task_current_Name}">&nbsp;<br>
+                          FOR TICKET#: <input id="RSmartTaskViewticketRef" disabled value="{ticketRef}" size="15" name="{ticketRef_Name}"><input style="WIDTH: 26px; HEIGHT: 22px" id="RSmartTaskViewticket_id" value="{ticket_id}" size="3" type="hidden" name="{ticket_id_Name}"><input style="WIDTH: 25px; HEIGHT: 22px" id="RSmartTaskViewdatemodified" value="{datemodified}" size="3" type="hidden" name="{datemodified_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th">Previous Engineer</td> 
+                        <td><input id="RSmartTaskViewtask_currenteng" disabled value="{task_currenteng}" readonly size="30" name="{task_currenteng_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RSmartTaskViewtask_currenteng">Re-Assign To</label></td> 
+                        <td>
+                          <!-- BEGIN TextBox task_neweng --><input id="RSmartTaskViewtask_neweng" disabled value="{task_neweng}" readonly size="30" name="{task_neweng_Name}"><!-- END TextBox task_neweng --></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th">Accepting Task? <font color="#ff0000">*</font></td> 
+                        <td>&nbsp; {taskStatus}</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RSmartTaskViewtask_notes">Notes</label></td> 
+                        <td><textarea id="RSmartTaskViewtask_notes" disabled rows="5" cols="30" name="{task_notes_Name}">{task_notes}</textarea></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RSmartTaskViewtask_date">Date</label></td> 
+                        <td>{task_date}</td>
+                      </tr>
+ 
+                      <tr class="Bottom">
+                        <td colspan="2" align="right">&nbsp; 
+                          <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RSmartTaskViewButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <!-- END Record RSmartTaskView --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

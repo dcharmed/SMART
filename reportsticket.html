@@ -1,0 +1,110 @@
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+&nbsp;&nbsp; 
+<!-- BEGIN Report RTicket -->
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header -->
+        <tr>
+          <td colspan="15">
+            <table class="Header" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                <td class="th"><strong>Problem Reports (Month/Year: {hdrmonth}) printed on: {Report_CurrentDateTime}</strong></td> 
+                <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+              </tr>
+ 
+            </table>
+ </td> 
+        </tr>
+ <!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tr class="Footer">
+          <td></td> 
+          <td colspan="14">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->
+&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator --></td> 
+        </tr>
+ 
+        <!-- BEGIN Panel PageBreak -->
+      </table>
+ </td> 
+  </tr>
+</table>
+<p style="PAGE-BREAK-AFTER: always">&nbsp;</p>
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- END Panel PageBreak --><!-- END Section Page_Footer -->
+        <!-- BEGIN Section tckt_refnumber_Header -->
+        <tr class="GroupCaption">
+          <th width="10%" scope="col">Ticket # : {tckt_refnumber}&nbsp;</th>
+ 
+          <th scope="col">{tckt_site}<input id="reportsticketRTickettckt_refnumber_Headerstate" value="{state}" size="4" type="hidden" name="{state_Name}"></th>
+ 
+          <th scope="col">{tckt_r_date}</th>
+ 
+          <th scope="col">{tckt_cat}<input id="reportsticketRTickettckt_refnumber_Headerhidecat" value="{hidecat}" type="hidden" name="{hidecat_Name}"><br>
+          {tckt_subcat}</th>
+ 
+          <th scope="col">{tckt_severity}<br>
+          {tckt_status}&nbsp;{tckt_method}<br>
+          {Age}<input id="reportsticketRTickettckt_refnumber_Headertckt_c_date_{RTicket:rowNumber}" value="{tckt_c_date}" size="5" type="hidden" name="{tckt_c_date_Name}"></th>
+ 
+          <th width="30%" scope="col">Adukom: {tckt_r_adukomid}&nbsp;{tckt_adukomn}<br>
+          {tckt_description}</th>
+ 
+          <th width="20%" scope="col">&nbsp;{tckt_engineer}</th>
+ 
+        </tr>
+ 
+        <tr class="Caption">
+          <th colspan="2" scope="col">DATE/TIME</th>
+ 
+          <th scope="col">ENG ID&nbsp;</th>
+ 
+          <th scope="col">&nbsp;SPARE PART?</th>
+ 
+          <th scope="col">EQUIPMENT?</th>
+ 
+          <th scope="col">ACTION TAKEN</th>
+ 
+          <th scope="col">ACTION PLAN / REMARKS</th>
+ 
+        </tr>
+ <!-- END Section tckt_refnumber_Header -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: center" colspan="2">{rsltn_date} {rsltn_eta}<input id="reportsticketRTicketDetailrsltn_type" value="{rsltn_type}" type="hidden" name="{rsltn_type_Name}"></td> 
+          <td style="TEXT-ALIGN: center">{rsltn_byuser} </td> 
+          <td style="TEXT-ALIGN: center">{SpartOk}&nbsp;</td> 
+          <td style="TEXT-ALIGN: center">&nbsp;{EqOk}</td> 
+          <td>{rsltn_actiontaken} </td> 
+          <td>&nbsp;{ActionPlan}{Remark}<input id="reportsticketRTicketDetailAttachment_{RTicket:rowNumber}" value="{Attachment}" type="hidden" name="{Attachment_Name}"></td> 
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section tckt_refnumber_Footer --><!-- END Section tckt_refnumber_Footer -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="7">No records</td> 
+        </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Report RTicket --><br>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">
+<a href="{ImageLink1}" id="reportsticketImageLink1"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{ImageLink1}" src="Styles/smartStyleTurqoise/Images/en/ButtonPrint.gif"></a>

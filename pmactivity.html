@@ -1,0 +1,969 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-CAA84CDD
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/ajaxpanel.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-E47FF227
+
+var RPreventive_DatePicker_prvt_date = new Object(); 
+RPreventive_DatePicker_prvt_date.format           = "GeneralDate";
+RPreventive_DatePicker_prvt_date.style            = "Styles/{CCS_Style}/Style.css";
+RPreventive_DatePicker_prvt_date.relativePathPart = "";
+RPreventive_DatePicker_prvt_date.themeVersion = "3.0";
+
+var RPreventive_DatePicker_prvt_servicedate = new Object(); 
+RPreventive_DatePicker_prvt_servicedate.format           = "dd/mm/yyyy";
+RPreventive_DatePicker_prvt_servicedate.style            = "Styles/{CCS_Style}/Style.css";
+RPreventive_DatePicker_prvt_servicedate.relativePathPart = "";
+RPreventive_DatePicker_prvt_servicedate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//RPreventiveprvt_toppanid_OnChange @58-61872A09
+function RPreventiveprvt_toppanid_OnChange()
+{
+    var result = true;
+//End RPreventiveprvt_toppanid_OnChange
+
+//Custom Code @230-2A29BDB7
+    // -------------------------
+        GeneratePMRefNumber();
+    // -------------------------
+//End Custom Code
+
+//Close RPreventiveprvt_toppanid_OnChange @58-BC33A33A
+    return result;
+}
+//End Close RPreventiveprvt_toppanid_OnChange
+
+//RPreventivesite_OnChange @345-9714A682
+function RPreventivesite_OnChange()
+{
+    var result = true;
+//End RPreventivesite_OnChange
+
+//Custom Code @351-2A29BDB7
+    // -------------------------
+    GeneratePMRefNumber();
+    // -------------------------
+//End Custom Code
+
+//Close RPreventivesite_OnChange @345-BC33A33A
+    return result;
+}
+//End Close RPreventivesite_OnChange
+
+//Panel3RSmartReplacementitemtype_OnClick @136-D7DD513B
+function Panel3RSmartReplacementitemtype_OnClick()
+{
+    var result = true;
+//End Panel3RSmartReplacementitemtype_OnClick
+
+//Custom Code @316-2A29BDB7
+    // -------------------------
+    for (var i=0; i < document.RSmartReplacement.itemtype.length; i++) {
+        if (document.RSmartReplacement.itemtype[i].checked) {
+                var rad_val = document.RSmartReplacement.itemtype[i].value;
+                }
+        }
+		
+        if(rad_val=='eq') {
+            document.getElementById("trEquipment").style.display = '';
+            document.getElementById("trSparePart").style.display = 'none';
+        } else if (rad_val=='sp') {
+            document.getElementById("trEquipment").style.display = 'none';
+            document.getElementById("trSparePart").style.display = '';
+        } else {
+            //document.getElementById("trEquipment").style.display = 'none';
+            //document.getElementById("trSparePart").style.display = 'none';
+        }
+
+    // -------------------------
+//End Custom Code
+
+//Close Panel3RSmartReplacementitemtype_OnClick @136-BC33A33A
+    return result;
+}
+//End Close Panel3RSmartReplacementitemtype_OnClick
+
+//Panel3RSmartReplacement_OnLoad @130-D23E419D
+function Panel3RSmartReplacement_OnLoad(form)
+{
+    var result = true;
+//End Panel3RSmartReplacement_OnLoad
+//Custom Code @311-2A29BDB7
+    // -------------------------
+
+    // -------------------------
+//End Custom Code
+
+//Close Panel3RSmartReplacement_OnLoad @130-BC33A33A
+    return result;
+}
+//End Close Panel3RSmartReplacement_OnLoad
+
+//Panel1GEquipmentCancel_OnClick @295-3DDD37E2
+function Panel1GEquipmentCancel_OnClick()
+{
+    disableValidation = true;
+}
+//End Panel1GEquipmentCancel_OnClick
+
+//RPreventiveButton_Cancel_OnClick @42-9EDB45B3
+function RPreventiveButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RPreventiveButton_Cancel_OnClick
+
+//Panel2GMeasurementCancel_OnClick @308-C406DF3A
+function Panel2GMeasurementCancel_OnClick()
+{
+    disableValidation = true;
+}
+//End Panel2GMeasurementCancel_OnClick
+
+//Panel3RSmartReplacementButton_Cancel_OnClick @133-220957AE
+function Panel3RSmartReplacementButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End Panel3RSmartReplacementButton_Cancel_OnClick
+
+//smart_attachmentCancel_OnClick @192-C20815B7
+function smart_attachmentCancel_OnClick()
+{
+    disableValidation = true;
+}
+//End smart_attachmentCancel_OnClick
+
+//Start Panel1 @5-C2C50D0F
+function Panel1_start(sender) {
+    var panel = $("Panel1");
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Panel1_bind(sender);
+}
+//End Start Panel1
+
+//Refresh Panel1 @5-0C63759A
+function Panel1_bind(sender) {
+    addEventHandler("Panel1GEquipmentCancel", "click", Panel1GEquipmentCancel_OnClick);
+}
+//End Refresh Panel1
+
+//Refresh Panel1UpdatePanel @6-389A1C55
+function Panel1UpdatePanel_refresh(sender) {
+    AjaxPanel.reload($("Panel1"));
+}
+//End Refresh Panel1UpdatePanel
+
+//RPreventiveprvt_toppanidPTDependentListBox2 Start @213-EC7C72A0
+function RPreventiveprvt_toppanidPTDependentListBox2_start(sender) {
+    var dependentElement = $("RPreventiveprvt_toppanid" + sender.id.substring(25));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/pmactivity_RPreventive_prvt_toppanid_PTDependentListBox1.php?qcode=E2000&keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+        
+}
+//End RPreventiveprvt_toppanidPTDependentListBox2 Start
+
+//RPreventivesitePTDependentListBox1 Start @350-5645E345
+function RPreventivesitePTDependentListBox1_start(sender) {
+    var dependentElement = $("RPreventivesite" + sender.id.substring(16));
+    var selectedValue = null;
+    if (addEventHandler.isOnLoad)
+        selectedValue = dependentElement.value;
+    new Ajax.Request("services/pmactivity_RPreventive_site_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selectedValue)
+                dependentElement.value = selectedValue;
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End RPreventivesitePTDependentListBox1 Start
+
+function GeneratePMRefNumber() {
+        var SiteCode = $("RPreventivesite").value;
+    var ToppanCode = $("RPreventiveprvt_toppanid").value;
+    var tcktRefVal = $("RPreventiveprvt_refnumber").value;
+        var tcktRef = $("RPreventiveprvt_refnumber").value.substr(0,5);
+    
+    $("RPreventiveprvt_refnumber").value = tcktRef + SiteCode+"("+ToppanCode+")";
+}
+
+//Start Panel2 @84-A87C33CA
+function Panel2_start(sender) {
+    var panel = $("Panel2");
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Panel2_bind(sender);
+}
+//End Start Panel2
+
+//Refresh Panel2 @84-4C131DC7
+function Panel2_bind(sender) {
+    addEventHandler("Panel2GMeasurementCancel", "click", Panel2GMeasurementCancel_OnClick);
+}
+//End Refresh Panel2
+
+//Refresh Panel2UpdatePanel @85-3A0BFB2B
+function Panel2UpdatePanel_refresh(sender) {
+    AjaxPanel.reload($("Panel2"));
+}
+//End Refresh Panel2UpdatePanel
+
+//Start Panel3 @86-8E14D989
+function Panel3_start(sender) {
+    var panel = $("Panel3");
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Panel3_bind(sender);
+}
+//End Start Panel3
+
+//Refresh Panel3 @86-8CE53A77
+function Panel3_bind(sender) {
+    addEventHandler("Panel3RSmartReplacementitemtype", "click", Panel3RSmartReplacementitemtype_OnClick);
+    addEventHandler("Panel3RSmartReplacement", "load", Panel3RSmartReplacement_OnLoad);
+    addEventHandler("Panel3RSmartReplacementButton_Cancel", "click", Panel3RSmartReplacementButton_Cancel_OnClick);
+}
+//End Refresh Panel3
+
+//Refresh Panel3UpdatePanel @87-3B84A601
+function Panel3UpdatePanel_refresh(sender) {
+    AjaxPanel.reload($("Panel3"));
+}
+//End Refresh Panel3UpdatePanel
+
+//bind_events @1-4AE3B4EB
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    Panel1_start(window);
+    Panel2_start(window);
+    Panel3_start(window);
+    addEventHandler("RPreventivesite", "change", RPreventiveprvt_toppanidPTDependentListBox2_start);
+    addEventHandler("RPreventivesite", "load", RPreventiveprvt_toppanidPTDependentListBox2_start);
+    addEventHandler("RPreventivestate", "change", RPreventivesitePTDependentListBox1_start);
+        addEventHandler("RPreventiveprvt_toppanid", "change", GeneratePMRefNumber);
+    addEventHandler("RPreventivestate", "load", RPreventivesitePTDependentListBox1_start);
+    addEventHandler("RPreventiveButton_Cancel", "click", RPreventiveButton_Cancel_OnClick);
+    addEventHandler("smart_attachmentCancel", "click", smart_attachmentCancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<script type="text/javascript" src="js/switchcontent.js"></script>
+<style type="text/css">
+
+/*Style sheet used for demo. Remove if desired*/
+.handcursor{
+cursor:hand;
+cursor:pointer;
+width: 100%;
+font-weight:bold;
+font-size:14px;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <div class="H1">
+        PREVENTIVE MAINTENANCE ACTIVITY DETAILS 
+      </div>
+      <br>
+      <table border="0" cellspacing="0" cellpadding="2" width="100%">
+        <tr>
+          <td>
+            <!-- BEGIN Record RPreventive -->
+            <form id="RPreventive" method="post" name="{HTMLFormName}" action="{Action}">
+              <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                  <td valign="top">
+                    <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                        <td class="th"><strong>PM Details Activity</strong></td> 
+                        <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                      </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                      <!-- BEGIN Error -->
+                      <tr class="Error">
+                        <td colspan="4">{Error}</td>
+                      </tr>
+                      <!-- END Error -->
+                      <tr class="Controls">
+                        <td class="th"><label for="RPreventiveprvt_date">Date /&nbsp;Ref Number&nbsp;<font color="#ff0000">*</font></label></td> 
+                        <td><input id="RPreventiveprvt_date" value="{prvt_date}" maxlength="100" name="{prvt_date_Name}">
+                          <!-- BEGIN DatePicker DatePicker_prvt_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RPreventiveDatePicker_prvt_date"><img id="RPreventiveDatePicker_prvt_date_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_prvt_date -->&nbsp; / <label for="RPreventiveprvt_refnumber" style="display: none;">TextBox1</label><input id="RPreventiveprvt_refnumber" value="{prvt_refnumber}" name="{prvt_refnumber_Name}"></td> 
+                        <td>Related Ticket</td> 
+                        <td><input id="RPreventiveprvt_tagrelated" value="{prvt_tagrelated}" maxlength="200" size="50" name="{prvt_tagrelated_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RPreventiveticket_id">State <font color="#ff0000">* </font>/ Site&nbsp; <font color="#ff0000">*</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td width="40%">
+                          <label for="RPreventivestate" style="display: none;">ListBox1</label>
+<select name="{state_Name}" id="RPreventivestate">
+  <option value="">Select Value</option>
+ {state_Options}
+</select>
+
+ 						  <label for="RPreventivesite" style="display: none;">Site</label> 
+                          <select id="RPreventivesite" name="{site_Name}">
+                            <option selected value="">Select Value</option>
+                            {site_Options}
+                          </select>
+ </td> 
+                        <td class="th"><label for="RPreventiveprvt_eta">ETA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                        <td width="40%"><input id="RPreventiveprvt_eta" value="{prvt_eta}" maxlength="30" name="{prvt_eta_Name}">&nbsp;(Format: dd/mm/yy hh:mm:ss)</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="smart_resolutionrslt_status">ToppanID <font color="#ff0000">*</font>&nbsp;/ Counter</label></td> 
+                        <td><input id="RPreventiveprvt_equipment" value="{prvt_equipment}" type="hidden" name="{prvt_equipment_Name}">
+                          <!-- BEGIN ListBox prvt_toppanid -->
+                          <select id="RPreventiveprvt_toppanid" name="{prvt_toppanid_Name}">
+                            <option selected value="">Select Value</option>
+                            {prvt_toppanid_Options}
+                          </select>
+ <!-- END ListBox prvt_toppanid -->&nbsp; /&nbsp; <label for="RPreventiveprvt_counter" style="display: none;">TextBox1</label><input id="RPreventiveprvt_counter" value="{prvt_counter}" name="{prvt_counter_Name}"></td> 
+                        <td class="th">ETD</td> 
+                        <td><input id="RPreventiveprvt_etd" value="{prvt_etd}" maxlength="30" name="{prvt_etd_Name}">&nbsp;(Format: dd/mm/yy hh:mm:ss)</td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RPreventiveprvt_servicedate">Service Date <font color="#ff0000">*</font></label></td> 
+                        <td><input id="RPreventiveprvt_servicedate" value="{prvt_servicedate}" maxlength="100" size="12" name="{prvt_servicedate_Name}">
+                          <!-- BEGIN DatePicker DatePicker_prvt_servicedate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RPreventiveDatePicker_prvt_servicedate"><img id="RPreventiveDatePicker_prvt_servicedate_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_prvt_servicedate --></td> 
+                        <td>Customer</td> 
+                        <td><input id="RPreventivecustomer" value="{customer}" name="{customer_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RPreventiveprvt_servicennumber">Service No. <font color="#ff0000">*</font></label></td> 
+                        <td><input id="RPreventiveprvt_servicennumber" value="{prvt_servicennumber}" maxlength="100" size="50" name="{prvt_servicennumber_Name}"></td> 
+                        <td>Customer Contact</td> 
+                        <td><label for="RPreventivecustomercontact" style="display: none;">&nbsp;</label><input id="RPreventivecustomercontact" value="{customercontact}" maxlength="12" name="{customercontact_Name}">&nbsp;/ <input id="RPreventivecustomercontact1" value="{customercontact1}" maxlength="12" name="{customercontact1_Name}"></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td class="th"><label for="RPreventiveprvt_byuser">Engineer <font color="#ff0000">*</font></label></td> 
+                        <td>
+                          <select id="RPreventiveprvt_byuser" name="{prvt_byuser_Name}">
+                            <option selected value="">Select Value</option>
+                            {prvt_byuser_Options}
+                          </select>
+ /&nbsp; 
+                          <select id="RPreventiveprvt_byuser2" name="{prvt_byuser2_Name}">
+                            <option selected value="">Select Value</option>
+                            {prvt_byuser2_Options}
+                          </select>
+ </td> 
+                        <td>&nbsp;<label for="RPreventivedatemodified" style="display: none;">Datemodified</label><input id="RPreventivedatemodified" value="{datemodified}" type="hidden" name="{datemodified_Name}"></td> 
+                        <td></td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td colspan="4">&nbsp; 
+                          <table border="0" cellpadding="1" width="100%">
+                            <tr>
+                              <td width="50%">Inspection <font color="#ff0000">*</font></td> 
+                              <td width="50%">Action Taken <font color="#ff0000">*</font></td>
+                            </tr>
+ 
+                            <tr>
+                              <td><textarea id="RPreventiveprvt_inspection" rows="3" cols="50" name="{prvt_inspection_Name}">{prvt_inspection}</textarea></td> 
+                              <td><textarea id="RPreventiveprvt_actiontaken" rows="3" cols="50" name="{prvt_actiontaken_Name}">{prvt_actiontaken}</textarea><br>
+                                <input id="RPreventiveprvt_actionmethod" value="{prvt_actionmethod}" type="hidden" name="{prvt_actionmethod_Name}"></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+ 
+                      <tr class="Controls">
+                        <td colspan="4">
+                          <table border="0" cellpadding="1" width="100%">
+                            <tr>
+                              <td width="50%">Next Action Plan</td> 
+                              <td width="50%">Results/Remark</td>
+                            </tr>
+ 
+                            <tr>
+                              <td><textarea id="RPreventiveprvt_planning" rows="3" cols="50" name="{prvt_planning_Name}">{prvt_planning}</textarea></td> 
+                              <td><textarea id="RPreventiveprvt_remark" rows="3" cols="50" name="{prvt_remark_Name}">{prvt_remark}</textarea></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+ 
+                      <tr class="Bottom">
+                        <td colspan="4" align="right">
+                          <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreventiveButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                          <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreventiveButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                          <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RPreventiveButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <!-- END Record RPreventive --></td>
+        </tr>
+ 
+        <tr>
+          <td><font color="#ff0000" size="2"><em>* Please make sure you have completed details of PM Activity above before proceeded fill up the additional information below:</em></font></td>
+        </tr>
+ 
+        <tr>
+          <td>
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td><span id="bobcontent{id1}-title" class="handcursor">EQUIPMENT(S) DETAILS</span> 
+                  <div id="bobcontent{id2}" class="switchgroup1">
+                    <!-- BEGIN Panel Panel1 -->
+                    <table border="0" cellspacing="2" cellpadding="0" width="100%">
+                      <tr>
+                        <td valign="top">
+                          <!-- BEGIN EditableGrid GEquipment -->
+                          <form id="Panel1GEquipment" method="post" name="{HTMLFormName}" action="{Action}">
+                            <input value="{FormState}" type="hidden" name="FormState">{FormScript} 
+                            <table border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td valign="top">
+                                  <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                                      <td class="th"><strong>Details</strong></td> 
+                                      <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                                    </tr>
+                                  </table>
+ 
+                                  <table class="Grid" cellspacing="0" cellpadding="0">
+                                    <!-- BEGIN Error -->
+                                    <tr class="Error">
+                                      <td colspan="3">{Error}</td>
+                                    </tr>
+                                    <!-- END Error -->
+                                    <tr class="Caption">
+                                      <th scope="col">No.</th>
+ 
+                                      <th scope="col">Equipment <font color="#ff0000">*</font></th>
+ 
+                                      <th scope="col">Serial Number <font color="#ff0000">*</font></th>
+                                    </tr>
+ 
+                                    <!-- BEGIN Row -->
+                                    <!-- BEGIN RowError -->
+                                    <tr class="Error">
+                                      <td colspan="3">{Error}</td>
+                                    </tr>
+                                    <!-- END RowError -->
+                                    <tr class="Row">
+                                      <td><label for="Panel1GEquipmentdatemodified_{GEquipment:rowNumber}" style="display: none;">&nbsp;</label>{lblNumber}</td> 
+                                      <td><label for="Panel1GEquipmentequipment_id_{GEquipment:rowNumber}" style="display: none;">Equipment Id</label> 
+                                        <select id="Panel1GEquipmentequipment_id_{GEquipment:rowNumber}" name="{equipment_id_Name}">
+                                          <option selected value="">Select Value</option>
+                                          {equipment_id_Options}
+                                        </select>
+ <input style="WIDTH: 43px; HEIGHT: 22px" id="Panel1GEquipmentresolution_id_{GEquipment:rowNumber}" value="{resolution_id}" size="5" type="hidden" name="{resolution_id_Name}"><input style="WIDTH: 21px; HEIGHT: 22px" id="Panel1GEquipmentid_{GEquipment:rowNumber}" value="{id}" size="2" type="hidden" name="{id_Name}"></td> 
+                                      <td><label for="Panel1GEquipmentflty_serialnumber_{GEquipment:rowNumber}" style="display: none;">Flty Serialnumber</label><input id="Panel1GEquipmentflty_serialnumber_{GEquipment:rowNumber}" value="{flty_serialnumber}" maxlength="200" size="50" name="{flty_serialnumber_Name}"><input id="Panel1GEquipmentdatemodified_{GEquipment:rowNumber}" value="{datemodified}" type="hidden" name="{datemodified_Name}"></td>
+                                    </tr>
+ <!-- END Row -->
+                                    <!-- BEGIN NoRecords -->
+                                    <tr class="NoRecords">
+                                      <td colspan="3">No records</td>
+                                    </tr>
+                                    <!-- END NoRecords -->
+                                    <tr class="Footer">
+                                      <td style="TEXT-ALIGN: right" colspan="3">
+                                        <!-- BEGIN Button Button_Submit --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel1GEquipmentButton_Submit" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Submit -->
+                                        <!-- BEGIN Button Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel1GEquipmentCancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Cancel --></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </form>
+                          <!-- END EditableGrid GEquipment --><br>
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- END Panel Panel1 -->
+                  </div>
+                </td>
+              </tr>
+            </table>
+ 
+            <script type="text/javascript">
+        // MAIN FUNCTION: new switchcontent("class name", "[optional_element_type_to_scan_for]") REQUIRED
+        // Call Instance.init() at the very end. REQUIRED
+
+        var bobexample = new switchcontent("switchgroup1", "div") //Limit scanning of switch contents to just "div" elements
+        bobexample.setStatus('<img src="Styles/{CCS_Style}/Images/open.png" align="absmiddle" /> ', '<img src="Styles/{CCS_Style}/Images/close.png" align="absmiddle" /> ')
+        bobexample.setColor('darkred', 'black')
+        bobexample.setPersist(true)
+        bobexample.collapsePrevious(true) //Only one content open at any given time
+        bobexample.init()
+        </script>
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td><span id="bobcontent2-title" class="handcursor">MEASUREMENT</span> 
+                  <!-- BEGIN Panel Panel2 -->
+                  <div id="bobcontent2" class="switchgroup2">
+                    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                      <tr>
+                        <td valign="top">
+                          <!-- BEGIN EditableGrid GMeasurement -->
+                          <form id="Panel2GMeasurement" method="post" name="{HTMLFormName}" action="{Action}">
+                            <input value="{FormState}" type="hidden" name="FormState">{FormScript} 
+                            <table border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td valign="top">
+                                  <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                                      <td class="th"><strong>List of Smart Measurement </strong></td> 
+                                      <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                                    </tr>
+                                  </table>
+ 
+                                  <table class="Grid" cellspacing="0" cellpadding="0">
+                                    <!-- BEGIN Error -->
+                                    <tr class="Error">
+                                      <td colspan="5">{Error}</td>
+                                    </tr>
+                                    <!-- END Error -->
+                                    <tr class="Caption">
+                                      <th scope="col">No.</th>
+ 
+                                      <th scope="col">Item <font color="#ff0000">*</font></th>
+ 
+                                      <th scope="col">Msre Before <font color="#ff0000">*</font></th>
+ 
+                                      <th scope="col">Msre After <font color="#ff0000">*</font></th>
+ 
+                                      <th scope="col">Remark <font color="#ff0000">*</font></th>
+                                    </tr>
+ 
+                                    <!-- BEGIN Row -->
+                                    <!-- BEGIN RowError -->
+                                    <tr class="Error">
+                                      <td colspan="5">{Error}</td>
+                                    </tr>
+                                    <!-- END RowError -->
+                                    <tr class="Row">
+                                      <td><input style="WIDTH: 17px; HEIGHT: 22px" id="Panel2GMeasurementid_{GMeasurement:rowNumber}" value="{id}" size="2" type="hidden" name="{id_Name}">&nbsp;{lblNumber}</td> 
+                                      <td><label for="Panel2GMeasurementmsre_item_{GMeasurement:rowNumber}" style="display: none;">Msre Item</label> 
+                                        <select id="Panel2GMeasurementmsre_item_{GMeasurement:rowNumber}" name="{msre_item_Name}">
+                                          <option selected value="">Select Value</option>
+                                          {msre_item_Options}
+                                        </select>
+ <input style="WIDTH: 30px; HEIGHT: 22px" id="Panel2GMeasurementresolution_id_{GMeasurement:rowNumber}" value="{resolution_id}" size="4" type="hidden" name="{resolution_id_Name}"></td> 
+                                      <td><label for="Panel2GMeasurementmsre_before_{GMeasurement:rowNumber}" style="display: none;">Msre Before</label><input id="Panel2GMeasurementmsre_before_{GMeasurement:rowNumber}" value="{msre_before}" maxlength="12" size="12" name="{msre_before_Name}"></td> 
+                                      <td><label for="Panel2GMeasurementmsre_after_{GMeasurement:rowNumber}" style="display: none;">Msre After</label><input id="Panel2GMeasurementmsre_after_{GMeasurement:rowNumber}" value="{msre_after}" maxlength="12" size="12" name="{msre_after_Name}"></td> 
+                                      <td><label for="Panel2GMeasurementmsre_remark_{GMeasurement:rowNumber}" style="display: none;">Msre Remark</label><input id="Panel2GMeasurementmsre_remark_{GMeasurement:rowNumber}" value="{msre_remark}" maxlength="250" size="50" name="{msre_remark_Name}"><input id="Panel2GMeasurementdatemodified_{GMeasurement:rowNumber}" value="{datemodified}" type="hidden" name="{datemodified_Name}"></td>
+                                    </tr>
+ <!-- END Row -->
+                                    <!-- BEGIN NoRecords -->
+                                    <tr class="NoRecords">
+                                      <td colspan="5">No records</td>
+                                    </tr>
+                                    <!-- END NoRecords -->
+                                    <tr class="Footer">
+                                      <td style="TEXT-ALIGN: right" colspan="5">
+                                        <!-- BEGIN Button Button_Submit --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel2GMeasurementButton_Submit" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Submit -->
+                                        <!-- BEGIN Button Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel2GMeasurementCancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Cancel --></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </form>
+                          <!-- END EditableGrid GMeasurement --><br>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!-- END Panel Panel2 --></td>
+              </tr>
+            </table>
+ 
+            <script type="text/javascript">
+                        // MAIN FUNCTION: new switchcontent("class name", "[optional_element_type_to_scan_for]") REQUIRED
+                        // Call Instance.init() at the very end. REQUIRED
+
+                        var bobexample = new switchcontent("switchgroup2", "div") //Limit scanning of switch contents to just "div" elements
+                        bobexample.setStatus('<img src="Styles/{CCS_Style}/Images/open.png" align="absmiddle" /> ', '<img src="Styles/{CCS_Style}/Images/close.png" align="absmiddle" /> ')
+                        bobexample.setColor('darkred', 'black')
+                        bobexample.setPersist(true)
+                        bobexample.collapsePrevious(true) //Only one content open at any given time
+                        bobexample.init()
+                        </script>
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td valign="top"><span id="bobcontent3-title" class="handcursor">PART/EQUIPMENT REPLACEMENT</span> 
+                  <!-- BEGIN Panel Panel3 -->
+                  <div id="bobcontent3" class="switchgroup3">
+                    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                      <tr>
+                        <td valign="top">
+                          <!-- BEGIN Grid GSmartReplacement -->
+                          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tr>
+                              <td valign="top">
+                                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                                    <td class="th"><strong>Part(s) / Equipment Replacement (if applicable)</strong></td> 
+                                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                                  </tr>
+                                </table>
+ 
+                                <table class="Grid" cellspacing="0" cellpadding="0">
+                                  <tr class="Caption">
+                                    <th width="5%" scope="col">No.</th>
+ 
+                                    <th width="20%" scope="col">Part/Equipment</th>
+ 
+                                    <th scope="col">Original S/N</th>
+ 
+                                    <th scope="col">Replacement S/N</th>
+ 
+                                    <th scope="col">&nbsp;Remark</th>
+                                  </tr>
+ 
+                                  <!-- BEGIN Row -->
+                                  <tr class="Row">
+                                    <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;</td> 
+                                    <td><a href="{equipment_id_Src}" id="Panel3GSmartReplacementequipment_id_{GSmartReplacement:rowNumber}">{equipment_id}</a>&nbsp;<input style="WIDTH: 29px; HEIGHT: 22px" id="Panel3GSmartReplacementrplc_type" value="{rplc_type}" size="3" type="hidden" name="{rplc_type_Name}"></td> 
+                                    <td style="TEXT-ALIGN: center">{equipment_serialno}&nbsp;</td> 
+                                    <td style="TEXT-ALIGN: center">{rplc_serialnumber}&nbsp;</td> 
+                                    <td style="TEXT-ALIGN: center">&nbsp;{rplc_remark}</td>
+                                  </tr>
+ <!-- END Row -->
+                                  <!-- BEGIN Separator -->
+                                  <tr class="Separator">
+                                    <td colspan="5"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                                  </tr>
+                                  <!-- END Separator -->
+                                  <!-- BEGIN NoRecords -->
+                                  <tr class="NoRecords">
+                                    <td colspan="5">No records</td>
+                                  </tr>
+                                  <!-- END NoRecords -->
+                                  <tr class="Footer">
+                                    <td colspan="5">
+                                      <!-- BEGIN Navigator Navigator -->
+                                      <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                                      <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                                      <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                                      <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                                      <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                                      <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                                      <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                                      <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp; 
+                                      <!-- BEGIN ImageLink btnNewRec --><a onClick="Panel3RSmartReplacementitemtype_OnClick()" href="{btnNewRec}" id="Panel3GSmartReplacementbtnNewRec_{smart_equipment:rowNumber}"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{btnNewRec}" src="Styles/smartStyleTurqoise/Images/en/ButtonNewRecord.gif"></a><!-- END ImageLink btnNewRec --></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- END Grid GSmartReplacement --></td> 
+                        <td valign="top" width="40%">
+                          <!-- BEGIN Record RSmartReplacement -->
+                          <form id="Panel3RSmartReplacement" method="post" name="{HTMLFormName}" action="{Action}">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td valign="top">
+                                  <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                                      <td class="th"><strong>Details</strong></td> 
+                                      <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                                    </tr>
+                                  </table>
+ 
+                                  <table class="Record" cellspacing="0" cellpadding="0">
+                                    <!-- BEGIN Error -->
+                                    <tr class="Error">
+                                      <td colspan="2">{Error}</td>
+                                    </tr>
+                                    <!-- END Error -->
+                                    <tr class="Controls">
+                                      <td class="th"><label for="Panel3RSmartReplacementitemtype">Faulty Eequipment <font color="#ff0000">*</font></label></td> 
+                                      <td>
+                                        <!-- BEGIN RadioButton itemtype --><input id="Panel3RSmartReplacementitemtype_{itemtype:optionNumber}" value="{Value}" type="radio" name="{itemtype_Name}" {Check}><label for="Panel3RSmartReplacementitemtype_{itemtype:optionNumber}">{Description}</label><!-- END RadioButton itemtype --></td>
+                                    </tr>
+ 
+                                    <tr id="trEquipment" class="Controls">
+                                      <td class="th"></td> 
+                                      <td>
+                                        <!-- BEGIN ListBox rplc_equipment -->
+                                        <select id="Panel3RSmartReplacementrplc_equipment" name="{rplc_equipment_Name}">
+                                          <option selected value="">Select Value</option>
+                                          {rplc_equipment_Options}
+                                        </select>
+ <!-- END ListBox rplc_equipment --></td>
+                                    </tr>
+ 
+                                    <tr id="trSparePart" class="Controls">
+                                      <td class="th"></td> 
+                                      <td>
+                                        <!-- BEGIN ListBox rplc_sparepart -->
+                                        <select id="Panel3RSmartReplacementrplc_sparepart" name="{rplc_sparepart_Name}">
+                                          <option selected value="">Select Value</option>
+                                          {rplc_sparepart_Options}
+                                        </select>
+ <!-- END ListBox rplc_sparepart --></td>
+                                    </tr>
+ 
+                                    <tr class="Controls">
+                                      <td class="th"><label for="Panel3RSmartReplacementrplc_serialnumber">Serial No</label> <font color="#ff0000">*</font></td> 
+                                      <td><input id="Panel3RSmartReplacementrplc_serialnumber" value="{rplc_serialnumber}" maxlength="100" size="40" name="{rplc_serialnumber_Name}"><input style="WIDTH: 37px; HEIGHT: 22px" id="Panel3RSmartReplacementdatemodified" value="{datemodified}" size="5" type="hidden" name="{datemodified_Name}"></td>
+                                    </tr>
+ 
+                                    <tr class="Controls">
+                                      <td class="th">Replacement Serial No. <font color="#ff0000">*</font></td> 
+                                      <td><input id="Panel3RSmartReplacementrplc_rplcserial" value="{rplc_rplcserial}" maxlength="100" size="40" name="{rplc_rplcserial_Name}"><input style="WIDTH: 50px; HEIGHT: 22px" id="Panel3RSmartReplacementresolution_id" value="{resolution_id}" size="6" type="hidden" name="{resolution_id_Name}"></td>
+                                    </tr>
+ 
+                                    <tr class="Controls">
+                                      <td class="th"><label for="Panel3RSmartReplacementrplc_remark">Remark <font color="#ff0000">*</font></label></td> 
+                                      <td><textarea id="Panel3RSmartReplacementrplc_remark" rows="3" cols="35" name="{rplc_remark_Name}">{rplc_remark}</textarea></td>
+                                    </tr>
+ 
+                                    <tr class="Bottom">
+                                      <td colspan="2" align="right">
+                                        <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel3RSmartReplacementButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                                        <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel3RSmartReplacementButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                                        <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Panel3RSmartReplacementButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </form>
+                          <!-- END Record RSmartReplacement --><br>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!-- END Panel Panel3 --></td>
+              </tr>
+            </table>
+ 
+            <script type="text/javascript">
+                        // MAIN FUNCTION: new switchcontent("class name", "[optional_element_type_to_scan_for]") REQUIRED
+                        // Call Instance.init() at the very end. REQUIRED
+
+                        var bobexample = new switchcontent("switchgroup3", "div") //Limit scanning of switch contents to just "div" elements
+                        bobexample.setStatus('<img src="Styles/{CCS_Style}/Images/open.png" align="absmiddle" /> ', '<img src="Styles/{CCS_Style}/Images/close.png" align="absmiddle" /> ')
+                        bobexample.setColor('darkred', 'black')
+                        bobexample.setPersist(true)
+                        bobexample.collapsePrevious(true) //Only one content open at any given time
+                        bobexample.init()
+                        </script>
+          </td>
+        </tr>
+ 
+        <tr>
+          <td>
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td><span id="bobcontent4-title" class="handcursor">ATTACHEMENT(S)</span> 
+                  <div id="bobcontent4" class="switchgroup4">
+                    <em>Please upload files in format *.pdf / *.jpg / *.png / *.gif with size less than 2MB</em><br>
+                    <br>
+                    <!-- BEGIN EditableGrid smart_attachment -->
+                    <form id="smart_attachment" enctype="{HTMLFormEnctype}" method="post" name="{HTMLFormName}" action="{Action}">
+                      <input value="{FormState}" type="hidden" name="FormState">{FormScript} 
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td valign="top">
+                            <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                                <td class="th"><strong>List of Smart Attachment </strong></td> 
+                                <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                              </tr>
+                            </table>
+ 
+                            <table class="Grid" cellspacing="0" cellpadding="0">
+                              <!-- BEGIN Error -->
+                              <tr class="Error">
+                                <td colspan="7">{Error}</td>
+                              </tr>
+                              <!-- END Error -->
+                              <tr class="Caption">
+                                <th scope="col">No.</th>
+ 
+                                <th scope="col">Byuser</th>
+ 
+                                <th scope="col">Title <font color="#ff0000">*</font></th>
+ 
+                                <th scope="col">Source File <font color="#ff0000">*</font></th>
+ 
+                                <th scope="col">Date </th>
+ 
+                                <th colspan="2" scope="col">Delete</th>
+                              </tr>
+ 
+                              <!-- BEGIN Row -->
+                              <!-- BEGIN RowError -->
+                              <tr class="Error">
+                                <td colspan="7">{Error}</td>
+                              </tr>
+                              <!-- END RowError -->
+                              <tr class="Row">
+                                <td><input style="WIDTH: 8px; HEIGHT: 22px" id="smart_attachmentid_{smart_attachment:rowNumber}" value="{id}" size="1" type="hidden" name="{id_Name}"><input style="WIDTH: 9px; HEIGHT: 22px" id="smart_attachmentresolution_id_{smart_attachment:rowNumber}" value="{resolution_id}" size="1" type="hidden" name="{resolution_id_Name}">{lblNumber}</td> 
+                                <td><label for="smart_attachmentattch_byuser_{smart_attachment:rowNumber}" style="display: none;">&nbsp;</label><input id="smart_attachmentattch_byuser_{smart_attachment:rowNumber}" disabled value="{attch_byuser}" maxlength="10" size="10" name="{attch_byuser_Name}"><input style="WIDTH: 17px; HEIGHT: 22px" id="smart_attachmentstoreuser" value="{storeuser}" size="2" type="hidden" name="{storeuser_Name}"></td> 
+                                <td><label for="smart_attachmentattch_name_{smart_attachment:rowNumber}" style="display: none;">&nbsp;</label><input id="smart_attachmentattch_name_{smart_attachment:rowNumber}" value="{attch_name}" maxlength="200" size="40" name="{attch_name_Name}"></td> 
+                                <td><a href="{att_link_Src}" id="smart_attachmentatt_link_{smart_attachment:rowNumber}" target="_blank">{att_link}</a> 
+                                  <!-- BEGIN FileUpload FileUpload --><input id="smart_attachmentFileUploadControlName_{smart_attachment:rowNumber}" value="{State}" type="hidden" name="{ControlName}">
+                                  <!-- BEGIN Info -->&nbsp;({FileSize}&nbsp;bytes)<!-- END Info --><br>
+                                  <!-- BEGIN Upload --><label for="smart_attachmentFileUploadFileControl_{smart_attachment:rowNumber}" style="display: none;">File upload</label><input id="smart_attachmentFileUploadFileControl_{smart_attachment:rowNumber}" type="file" name="{FileControl}"><!-- END Upload -->
+                                  <!-- BEGIN DeleteControl --><label for="smart_attachmentFileUploadDeleteControl_{smart_attachment:rowNumber}">Delete</label><input id="smart_attachmentFileUploadDeleteControl_{smart_attachment:rowNumber}" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload --></td> 
+                                <td><label for="smart_attachmentattch_date_{smart_attachment:rowNumber}" style="display: none;">&nbsp;</label><input id="smart_attachmentattch_date_{smart_attachment:rowNumber}" value="{attch_date}" maxlength="100" size="18" name="{attch_date_Name}">&nbsp;<input id="smart_attachmentdatemodified" value="{datemodified}" type="hidden" name="{datemodified_Name}"></td> 
+                                <td colspan="2">
+                                  <!-- BEGIN Panel CheckBox_Delete_Panel --><label for="smart_attachmentCheckBox_Delete_PanelCheckBox_Delete_{smart_attachment:rowNumber}" style="display: none;">Delete</label> 
+                                  <!-- BEGIN CheckBox CheckBox_Delete --><input id="smart_attachmentCheckBox_Delete_PanelCheckBox_Delete_{smart_attachment:rowNumber}" value="1" type="checkbox" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete --><!-- END Panel CheckBox_Delete_Panel -->&nbsp;</td>
+                              </tr>
+ <!-- END Row -->
+                              <!-- BEGIN NoRecords -->
+                              <tr class="NoRecords">
+                                <td colspan="7">No records</td>
+                              </tr>
+                              <!-- END NoRecords -->
+                              <tr class="Footer">
+                                <td style="TEXT-ALIGN: right" colspan="7">
+                                  <!-- BEGIN Navigator Navigator -->
+                                  <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                                  <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                                  <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                                  <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                                  <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                                  <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                                  <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                                  <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->
+                                  <!-- BEGIN Button Button_Submit --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="smart_attachmentButton_Submit" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Submit -->
+                                  <!-- BEGIN Button Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="smart_attachmentCancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Cancel --></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </form>
+                    <!-- END EditableGrid smart_attachment --><br>
+                  </div>
+                </td>
+              </tr>
+            </table>
+ 
+            <script type="text/javascript">
+            // MAIN FUNCTION: new switchcontent("class name", "[optional_element_type_to_scan_for]") REQUIRED
+            // Call Instance.init() at the very end. REQUIRED
+
+            var bobexample = new switchcontent("switchgroup4", "div") //Limit scanning of switch contents to just "div" elements
+            bobexample.setStatus('<img src="Styles/{CCS_Style}/Images/open.png" align="absmiddle" /> ', '<img src="Styles/{CCS_Style}/Images/close.png" align="absmiddle" /> ')
+            bobexample.setColor('darkred', 'black')
+            bobexample.setPersist(true)
+            bobexample.collapsePrevious(true) //Only one content open at any given time
+            bobexample.init()
+            </script>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

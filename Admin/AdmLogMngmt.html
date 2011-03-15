@@ -1,0 +1,290 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-86BEACD2
+</script>
+<script language="JavaScript" src="../ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="../ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-47865B4B
+
+var RLog_DatePicker_log_date = new Object(); 
+RLog_DatePicker_log_date.format           = "GeneralDate";
+RLog_DatePicker_log_date.style            = "Admin/../Styles/{CCS_Style}/Style.css";
+RLog_DatePicker_log_date.relativePathPart = "../";
+RLog_DatePicker_log_date.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//RLogButton_Delete_OnClick @59-73642600
+function RLogButton_Delete_OnClick()
+{
+    var result = true;
+//End RLogButton_Delete_OnClick
+
+//Confirmation Message @60-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close RLogButton_Delete_OnClick @59-BC33A33A
+    return result;
+}
+//End Close RLogButton_Delete_OnClick
+
+//RLogButton_Cancel_OnClick @38-354EC107
+function RLogButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RLogButton_Cancel_OnClick
+
+//bind_events @1-F2FB65A6
+function bind_events() {
+    if (functionExists("adminheader_bind_events")) adminheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("RLogButton_Delete", "click", RLogButton_Delete_OnClick);
+    addEventHandler("RLogButton_Cancel", "click", RLogButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="../Styles/{CCS_Style}/Style_doctype.css" />
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <p></p>
+ 
+      <div class="H1">
+        LOG ACTIVITIES MANAGEMENT 
+      </div>
+ 
+      <p></p>
+ 
+      <div class="default">
+        <!-- BEGIN Record SLog -->
+        <form id="SLog" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Search Smart Logactivity </strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  </tr>
+ 
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td> 
+                  </tr>
+ <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="SLogs_log_userid">Log Userid</label></td> 
+                    <td>
+                      <select id="SLogs_log_userid" name="{s_log_userid_Name}">
+                        <option selected value="">Select Value</option>
+ {s_log_userid_Options} 
+                      </select>
+ &nbsp;&nbsp;&nbsp; Ticker :&nbsp; <input id="SLogs_log_ticket" value="{s_log_ticket}" maxlength="30" size="30" name="{s_log_ticket_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="SLogs_log_action">Log Action</label></td> 
+                    <td>
+                      <!-- BEGIN CheckBoxList s_log_action --><input id="SLogs_log_action_{s_log_action:optionNumber}" value="{Value}" type="checkbox" name="{s_log_action_Name}" {Check}><label for="SLogs_log_action_{s_log_action:optionNumber}">{Description}</label><!-- END CheckBoxList s_log_action --></td> 
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="SLogButton_DoSearch" value="Search" alt="Search" src="../Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+                  </tr>
+ 
+                </table>
+ </td> 
+            </tr>
+ 
+          </table>
+ 
+        </form>
+ <!-- END Record SLog --><br>
+        <!-- BEGIN Grid GLog -->
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>List of Smart Log Activity</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                  <th width="3%" scope="col">No.</th>
+ 
+                  <th width="10%" scope="col">
+                  <!-- BEGIN Sorter Sorter_log_userid -->User 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GLogSorter_log_userid"><img border="0" alt="{Asc_URL}" src="../Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GLogSorter_log_userid"><img border="0" alt="{Desc_URL}" src="../Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_log_userid --></th>
+ 
+                  <th scope="col">
+                  <!-- BEGIN Sorter Sorter_log_action -->Log Action 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GLogSorter_log_action"><img border="0" alt="{Asc_URL}" src="../Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GLogSorter_log_action"><img border="0" alt="{Desc_URL}" src="../Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_log_action --></th>
+ 
+                  <th scope="col">
+                  <!-- BEGIN Sorter Sorter_log_ticket -->Log Ticket 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GLogSorter_log_ticket"><img border="0" alt="{Asc_URL}" src="../Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GLogSorter_log_ticket"><img border="0" alt="{Desc_URL}" src="../Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_log_ticket --></th>
+ 
+                  <th width="30%" scope="col">Log Description</th>
+ 
+                  <th scope="col">
+                  <!-- BEGIN Sorter Sorter_log_date -->Log Date 
+                  <!-- BEGIN Asc_On --><img border="0" alt="Ascending" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="GLogSorter_log_date"><img border="0" alt="{Asc_URL}" src="../Styles/{CCS_Style}/Images/AscOff.gif"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img border="0" alt="Descending" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="GLogSorter_log_date"><img border="0" alt="{Desc_URL}" src="../Styles/{CCS_Style}/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_log_date --></th>
+ 
+                  <th width="10%" scope="col">&nbsp;Action</th>
+ 
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {GLog:rowStyle}>
+                  <td style="TEXT-ALIGN: center"><input style="WIDTH: 13px; HEIGHT: 22px" id="GLogid_{GLog:rowNumber}" value="{id}" size="1" type="hidden" name="{id_Name}">&nbsp;{lblNumber}</td> 
+                  <td>{log_userid}&nbsp;</td> 
+                  <td>{log_action}&nbsp;</td> 
+                  <td>{log_ticket}&nbsp;</td> 
+                  <td>{log_description}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{log_date}</td> 
+                  <td style="TEXT-ALIGN: center"><a href="{ImageLink1}" id="GLogImageLink1_{GLog:rowNumber}"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{ImageLink1}" align="absMiddle" src="../images/icon-details.jpg"></a>&nbsp; <a href="{ImageLink2}" id="GLogImageLink2_{GLog:rowNumber}"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{ImageLink2}" align="absMiddle" src="../images/icon-delete.jpg"></a></td> 
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="7">No records</td> 
+                </tr>
+ <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td colspan="7"><a href="{smart_logactivity_Insert_Src}" id="GLogsmart_logactivity_Insert">Add New</a>&nbsp; 
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="../Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="../Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="../Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="../Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="../Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="../Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="../Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="../Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ <!-- END Grid GLog --><br>
+        <!-- BEGIN Record RLog -->
+        <form id="RLog" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Log Details&nbsp;</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  </tr>
+ 
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td> 
+                  </tr>
+ <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="RLoglog_userid">Log Userid</label></td> 
+                    <td>
+                      <select id="RLoglog_userid" name="{log_userid_Name}">
+                        <option selected value="">Select Value</option>
+ {log_userid_Options} 
+                      </select>
+ </td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RLoglog_action">Log Action</label></td> 
+                    <td>
+                      <select id="RLoglog_action" name="{log_action_Name}">
+                        <option selected value="">Select Value</option>
+ {log_action_Options} 
+                      </select>
+ </td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RLoglog_ticket">Log Ticket</label></td> 
+                    <td><input id="RLoglog_ticket" value="{log_ticket}" maxlength="30" size="30" name="{log_ticket_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RLoglog_description">Log Description</label></td> 
+                    <td><textarea id="RLoglog_description" rows="5" cols="50" name="{log_description_Name}">{log_description}</textarea></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RLoglog_date">Log Date</label></td> 
+                    <td><input id="RLoglog_date" value="{log_date}" maxlength="100" size="29" name="{log_date_Name}">
+                      <!-- BEGIN DatePicker DatePicker_log_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="RLogDatePicker_log_date"><img id="RLogDatePicker_log_date_Image" border="0" alt="Show Date Picker" src="../Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_log_date --></td> 
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RLogButton_Insert" value="Add" alt="Add" src="../Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RLogButton_Update" value="Submit" alt="Submit" src="../Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                      <!-- BEGIN Button Button_Delete --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RLogButton_Delete" value="Delete" alt="Delete" src="../Styles/{CCS_Style}/Images/en/ButtonDelete.gif" type="image" name="{Button_Name}"><!-- END Button Button_Delete -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RLogButton_Cancel" value="Cancel" alt="Cancel" src="../Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td> 
+                  </tr>
+ 
+                </table>
+ </td> 
+            </tr>
+ 
+          </table>
+ 
+        </form>
+ <!-- END Record RLog --><br>
+      </div>
+ </td> 
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

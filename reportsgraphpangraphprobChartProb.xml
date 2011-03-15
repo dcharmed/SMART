@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?> <!--FlashChart Header @41-EFBEC7D5-->
+
+<!--FlashChart Template @41-DFFF7345-->
+<root>
+	<schema name="Metall">
+		<mask name="4"/>
+		<colors><color value="A6651D"/><color value="88524E"/><color value="7E4860"/><color value="543D63"/><color value="3E3C6A"/><color value="365263"/><color value="496857"/><color value="71724E"/><color value="8E743A"/><color value="6F5D45"/><color value="735245"/><color value="525344"/><color value="516268"/><color value="6B7A66"/><color value="586177"/><color value="817E84"/><color value="976263"/><color value="8B876F"/><color value="888F5B"/><color value="7A8D66"/><color value="6F8A74"/><color value="748988"/><color value="5A7A95"/><color value="596A8E"/><color value="585386"/><color value="7D5D84"/><color value="8C6358"/><color value="7F6E59"/><color value="8E9194"/><color value="7C6A43"/><color value="B07D19"/><color value="A34B2A"/><color value="A15342"/><color value="8F4854"/><color value="7F3553"/><color value="564164"/><color value="345E66"/><color value="496857"/><color value="5F733E"/><color value="A68927"/></colors>
+	</schema>
+	<separator decimal="," group=""/>
+	<background border="yes" beginColor="FFFFFF" endColor="FFFFFF" color="FFFFFF" gradient="no"/>
+	<chartarea border="yes" alpha="100" beginColor="f6f6f4" endColor="C6D5E3" bgcolor="f6f6f4" gradient="yes">
+		<grid line_style="medium" alpha="100" color="c1bcb2" visible="yes"/>
+		<vertical_axis visible="yes"><font face="Verdana" size="10" color="73706a" bold="no" italic="no" uline="no"/></vertical_axis>
+		<horizontal_axis visible="yes" rotation="degrees" autoRotate="yes"><font face="Verdana" size="9" bold="yes" color="73706a" italic="no" uline="no"/></horizontal_axis>
+		<chart line_thick="2" enabled="yes" border="yes" alpha="100" isBorderBright="no" type="3d_columns" series="columns">
+			<inscriptions color="000000" visible="yes"><font face="ArialNarrow" size="9" bold="yes" italic="no" uline="no"/></inscriptions>
+			<animation type="conc_resize" time="3000"/>
+			<markers size="8" type="0"/>
+			<hints border="yes" enabled="yes" color="FFFF99"><font face="Verdana" size="9" italic="yes" color="FF0000" bold="no" uline="no"/></hints>
+		</chart>
+		<legend sqr_size="12" sqr_borders="yes" border_thick="0" alpha="100" position="bottom-left" layout="horizontal" visible="yes"><font face="Verdana" size="10" bold="yes" color="73706a" italic="no" uline="no"/></legend>
+		<title position="top" align="center" border="no" alpha="100" visible="yes" text="Graph of Tickets According To Problem Categories By Year"><font face="Verdana" size="12" bold="yes" color="808080" italic="no" uline="no"/></title>
+	</chartarea>
+	<objects>
+	</objects>
+	<data>
+		<columns>
+			<column field="ticketnum" name="ticketnum"/></columns>
+		<rows>
+			<!-- BEGIN Row --><row col1="{ticketnum}" name="{probcat}"/><!-- END Row --></rows>
+	</data>
+</root>
+
+<!--End FlashChart Template-->
+

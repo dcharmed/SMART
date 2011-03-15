@@ -1,0 +1,346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//DEL  function GSiteContactCheckFB_OnClick(ValChecked)
+//DEL  {
+//DEL      var result = true;
+
+
+//DEL      // -------------------------
+//DEL      alert(document.getElementById("GSiteContactCheckFB")+"||"+ValChecked);
+//DEL          //GSiteContactsc_facebook_
+//DEL      // -------------------------
+
+//RSiteButton_Cancel_OnClick @37-684011B9
+function RSiteButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End RSiteButton_Cancel_OnClick
+
+//bind_events @1-15D3D13B
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("RSiteButton_Cancel", "click", RSiteButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <div class="H1">
+        SITE INFO 
+      </div>
+ 
+      <div class="default">
+        <!-- BEGIN Record SSite -->Below is the list of sites. You can search a specific sites using the search form below and simply click the <b>SITE NAME</b> column to view the details. Please click button&nbsp;<a href="{ImageLink1}" id="SSiteImageLink1_{GSite:rowNumber}"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{ImageLink1}" align="absMiddle" src="Styles/smartStyleTurqoise/Images/en/ButtonNewRecord.gif"></a>&nbsp; to add new record.<br>
+        <br>
+        <form id="SSite" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Search Site</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="SSites_state">Site State</label></td> 
+                    <td>
+                      <select id="SSites_state" name="{s_state_Name}">
+                        <option selected value="">Select Value</option>
+                        {s_state_Options}
+                      </select>
+ </td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="SSites_name">Site Name</label></td> 
+                    <td><input id="SSites_name" value="{s_name}" maxlength="100" size="50" name="{s_name_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="SSites_code">Site Code</label></td> 
+                    <td><input id="SSites_code" value="{s_code}" maxlength="20" name="{s_code_Name}" size="20"></td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="SSiteButton_DoSearch" value="Search" alt="Search" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record SSite --><br>
+        <!-- BEGIN Grid GSite -->
+        <table border="0" cellspacing="0" cellpadding="0" width="90%">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>List of Sites</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                  <th style="TEXT-ALIGN: center" width="3%" scope="col">No.</th>
+ 
+                  <th scope="col">Site Name</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">Site Code</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Site State</th>
+ 
+                  <th style="TEXT-ALIGN: center" scope="col">Site Region</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">Site Offnumber</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">Site Faxnumber</th>
+ 
+                  <th scope="col">Site Offhours</th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {GSite:rowStyle}>
+                  <td style="TEXT-ALIGN: center">{lblNumber}&nbsp;</td> 
+                  <td><a href="{site_name_Src}" id="GSitesite_name_{GSite:rowNumber}">{site_name}</a>&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{site_code}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{site_state}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{site_region}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{site_offnumber}&nbsp;</td> 
+                  <td style="TEXT-ALIGN: center">{site_faxnumber}&nbsp;</td> 
+                  <td>{site_offhours}&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="8">No records</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td colspan="8"><a href="{smart_site_Insert_Src}" id="GSitesmart_site_Insert">Add New</a>&nbsp; 
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp; </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!-- END Grid GSite --><br>
+        <!-- BEGIN Record RSite -->Please complete the form below in order to add / update the site info. Please be informed, you can add details of staff according to the site once the site details has succesfully recorded.<br>
+        <br>
+        <em>{lblNotes}</em> 
+        <form id="RSite" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Details of Site Info</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="4">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="RSitesite_name">Site Name<font color="#ff0000">*</font></label></td> 
+                    <td><input style="TEXT-TRANSFORM: uppercase" id="RSitesite_name" value="{site_name}" maxlength="150" size="80" name="{site_name_Name}"></td> 
+                    <td>Site SLA</td> 
+                    <td><input id="RSitesite_sla" value="{site_sla}" maxlength="20" name="{site_sla_Name}" size="20"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RSitesite_code">Site Code<font color="#ff0000">*</font></label></td> 
+                    <td><input style="TEXT-TRANSFORM: uppercase" id="RSitesite_code" value="{site_code}" maxlength="20" name="{site_code_Name}" size="20"></td> 
+                    <td>&nbsp;<label for="RSitesite_address">Site Address<font color="#ff0000">*</font></label></td> 
+                    <td rowspan="2"><textarea id="RSitesite_address" rows="4" cols="50" name="{site_address_Name}">{site_address}</textarea></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RSitesite_state">Site State<font color="#ff0000">*</font></label></td> 
+                    <td>
+                      <select id="RSitesite_state" name="{site_state_Name}">
+                        <option selected value="">Select Value</option>
+                        {site_state_Options}
+                      </select>
+ &nbsp; Site Region<font color="#ff0000">*</font> : 
+                      <select id="RSitesite_region" name="{site_region_Name}">
+                        <option selected value="">Select Value</option>
+                        {site_region_Options}
+                      </select>
+ </td> 
+                    <td>&nbsp;</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RSitesite_lat">Site Latitude</label></td> 
+                    <td><input id="RSitesite_lat" value="{site_lat}" maxlength="20" name="{site_lat_Name}" size="20">&nbsp;&nbsp; <label for="RSitesite_long">Site Longtitude : </label><input id="RSitesite_long" value="{site_long}" maxlength="20" name="{site_long_Name}" size="20"></td> 
+                    <td>Office-Hours</td> 
+                    <td><input id="RSitesite_offhours" value="{site_offhours}" maxlength="20" name="{site_offhours_Name}" size="20"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="RSitesite_offnumber">Contact Number</label></td> 
+                    <td><input id="RSitesite_offnumber" value="{site_offnumber}" maxlength="12" size="12" name="{site_offnumber_Name}">&nbsp;(Office)&nbsp;&nbsp; <input id="RSitesite_faxnumber" value="{site_faxnumber}" maxlength="12" size="12" name="{site_faxnumber_Name}">&nbsp; (Fax)</td> 
+                    <td>&nbsp;</td> 
+                    <td>&nbsp;</td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="4" align="right">
+                      <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RSiteButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RSiteButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="RSiteButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END Record RSite -->
+        <!-- BEGIN EditableGrid GSiteContact --><br>
+        <form id="GSiteContact" method="post" name="{HTMLFormName}" action="{Action}">
+          <input value="{FormState}" type="hidden" name="FormState">{FormScript} 
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>List of Officers</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="8">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Caption">
+                    <th scope="col">No.</th>
+ 
+                    <th scope="col">Name<font color="#ff0000">*</font></th>
+ 
+                    <th scope="col">Position</th>
+ 
+                    <th scope="col">Department<font color="#ff0000">*</font></th>
+ 
+                    <th scope="col">Mobile</th>
+ 
+                    <th scope="col">Email</th>
+ 
+                    <th scope="col">Facebook Account</th>
+ 
+                    <th scope="col">Delete</th>
+                  </tr>
+ 
+                  <!-- BEGIN Row -->
+                  <!-- BEGIN RowError -->
+                  <tr class="Error">
+                    <td colspan="8">{Error}</td>
+                  </tr>
+                  <!-- END RowError -->
+                  <tr class="Row">
+                    <td>{lblNumber}&nbsp;<input style="WIDTH: 16px; HEIGHT: 22px" id="GSiteContactsc_sitecode_{GSiteContact:rowNumber}" value="{sc_sitecode}" size="2" type="hidden" name="{sc_sitecode_Name}"></td> 
+                    <td><label for="GSiteContactsc_name_{GSiteContact:rowNumber}" style="display: none;">&nbsp;</label><input id="GSiteContactsc_name_{GSiteContact:rowNumber}" value="{sc_name}" maxlength="250" size="40" name="{sc_name_Name}"></td> 
+                    <td><label for="GSiteContactsc_position_{GSiteContact:rowNumber}" style="display: none;">&nbsp;</label> 
+                      <select id="GSiteContactsc_position_{GSiteContact:rowNumber}" name="{sc_position_Name}">
+                        <option selected value="">Select Value</option>
+                        {sc_position_Options}
+                      </select>
+ </td> 
+                    <td><label for="GSiteContactsc_department_{GSiteContact:rowNumber}" style="display: none;">&nbsp;</label> 
+                      <select id="GSiteContactsc_department_{GSiteContact:rowNumber}" name="{sc_department_Name}">
+                        <option selected value="">Select Value</option>
+                        {sc_department_Options}
+                      </select>
+ </td> 
+                    <td><label for="GSiteContactsc_mobile_{GSiteContact:rowNumber}" style="display: none;">&nbsp;</label><input id="GSiteContactsc_mobile_{GSiteContact:rowNumber}" value="{sc_mobile}" maxlength="12" size="12" name="{sc_mobile_Name}"></td> 
+                    <td><label for="GSiteContactsc_email_{GSiteContact:rowNumber}" style="display: none;">&nbsp;</label><input id="GSiteContactsc_email_{GSiteContact:rowNumber}" value="{sc_email}" maxlength="100" size="40" name="{sc_email_Name}"></td> 
+                    <td><label for="GSiteContactsc_facebook_{GSiteContact:rowNumber}" style="display: none;">&nbsp;</label><input id="GSiteContactsc_facebook_{GSiteContact:rowNumber}" value="{sc_facebook}" maxlength="100" size="30" name="{sc_facebook_Name}"></td> 
+                    <td>
+                      <!-- BEGIN Panel CheckBox_Delete_Panel --><label for="GSiteContactCheckBox_Delete_PanelCheckBox_Delete_{GSiteContact:rowNumber}" style="display: none;">Delete</label> 
+                      <!-- BEGIN CheckBox CheckBox_Delete --><input id="GSiteContactCheckBox_Delete_PanelCheckBox_Delete_{GSiteContact:rowNumber}" value="1" type="checkbox" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete --><!-- END Panel CheckBox_Delete_Panel -->&nbsp;</td>
+                  </tr>
+ <!-- END Row -->
+                  <!-- BEGIN NoRecords -->
+                  <tr class="NoRecords">
+                    <td colspan="8">No records</td>
+                  </tr>
+                  <!-- END NoRecords -->
+                  <tr class="Footer">
+                    <td style="TEXT-ALIGN: right" colspan="8">
+                      <!-- BEGIN Navigator Navigator -->
+                      <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                      <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                      <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                      <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                      <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                      <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                      <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                      <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->
+                      <!-- BEGIN Button Button_Submit --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="GSiteContactButton_Submit" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <!-- END EditableGrid GSiteContact --><br>
+        <br>
+      </div>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

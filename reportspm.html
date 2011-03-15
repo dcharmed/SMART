@@ -1,0 +1,70 @@
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+<br>
+&nbsp;
+<!-- BEGIN Report smart_eqtoppan_smart_prev1 -->
+<table border="0" cellspacing="0" cellpadding="0" width="60%">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+          <td class="th"><strong>Statistic of PM According to Branch By Month of And Year</strong></td> 
+          <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header -->
+        <tr class="Caption">
+          <th scope="col">#</th>
+ 
+          <th scope="col">SITE</th>
+ 
+          <th scope="col">SITE CODE</th>
+ 
+          <th scope="col">TID</th>
+ 
+          <th width="20%" scope="col">ENG ID #1</th>
+ 
+          <th width="20%" scope="col">ENG ID #2</th>
+ 
+          <th scope="col" widht="15%">DATE</th>
+ 
+          <th scope="col">REPORT?</th>
+ 
+        </tr>
+ <!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tr class="Footer">
+          <td colspan="8">{Report_CurrentDateTime}</td> 
+        </tr>
+ <!-- END Section Page_Footer -->
+        <!-- BEGIN Section state_Header --><!-- END Section state_Header -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right">{Report_Row_Number} </td> 
+          <td>&nbsp;{state}&nbsp;<input id="reportspmsmart_eqtoppan_smart_prev1Detailbranchcode_{smart_eqtoppan_smart_prev1:rowNumber}" value="{branchcode}" type="hidden" name="{branchcode_Name}"></td> 
+          <td>&nbsp;{branch}</td> 
+          <td>{eqtop_toppan} </td> 
+          <td style="TEXT-ALIGN: center">{prvt_byuser} </td> 
+          <td style="TEXT-ALIGN: center">{prvt_byuser2} </td> 
+          <td>{prvt_date} </td> 
+          <td>{prvt_report} </td> 
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section state_Footer --><!-- END Section state_Footer -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="8">No records</td> 
+        </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Report smart_eqtoppan_smart_prev1 --><a href="{ImageLink1}" id="reportspmImageLink1"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{ImageLink1}" src="Styles/smartStyleTurqoise/Images/en/ButtonPrint.gif"></a><br>
+<br>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">

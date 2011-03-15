@@ -1,0 +1,112 @@
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-A2F3288E
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//smartmap_OnLoad @1-B89DEEEF
+function smartmap_OnLoad()
+{
+    var result = true;
+//End smartmap_OnLoad
+
+//Custom Code @2-2A29BDB7
+    // -------------------------
+    load();
+    // -------------------------
+//End Custom Code
+
+//Close smartmap_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close smartmap_OnLoad
+
+//smartmap_OnUnload @1-7AAAD6B5
+function smartmap_OnUnload()
+{
+    var result = true;
+//End smartmap_OnUnload
+
+//Custom Code @3-2A29BDB7
+    // -------------------------
+    GUnload();
+    // -------------------------
+//End Custom Code
+
+//Close smartmap_OnUnload @1-BC33A33A
+    return result;
+}
+//End Close smartmap_OnUnload
+
+//bind_events @1-EFA80323
+function smartmap_bind_events() {
+    window.onunload = smartmap_OnUnload;
+    addEventHandler("smartmap", "load", smartmap_OnLoad);
+    addEventHandler("smartmap", "unload", smartmap_OnUnload);
+}
+//End bind_events
+
+//End CCS script
+</script>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAICV8GpN2sDEzR-QfZuS8UhSPxKbvFXYzFXXboF_g6oEHYfSHDRRbMEIXjy-r8hEHX1cU_SsRaaCM8Q" type="text/javascript"></script>
+
+    <script type="text/javascript">
+    var iconBlue = new GIcon(); 
+    iconBlue.image = 'images/mm_20_blue.png';
+    iconBlue.shadow = 'images/mm_20_shadow.png';
+    iconBlue.iconSize = new GSize(12, 20);
+    iconBlue.shadowSize = new GSize(22, 20);
+    iconBlue.iconAnchor = new GPoint(6, 20);
+    iconBlue.infoWindowAnchor = new GPoint(5, 1);
+
+    var iconRed = new GIcon(); 
+    iconRed.image = 'images/mm_20_red.png';
+    iconRed.shadow = 'images/mm_20_shadow.png';
+    iconRed.iconSize = new GSize(12, 20);
+    iconRed.shadowSize = new GSize(22, 20);
+    iconRed.iconAnchor = new GPoint(6, 20);
+    iconRed.infoWindowAnchor = new GPoint(5, 1);
+
+    var customIcons = [];
+    customIcons["restaurant"] = iconBlue;
+    customIcons["office"] = iconRed;
+
+    function load() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map"));
+        map.addControl(new GSmallMapControl());
+        map.addControl(new GMapTypeControl());
+        map.setCenter(new GLatLng(4.210484,101.975766), 5);
+
+        GDownloadUrl("smartmapgenxml.php", function(data) {
+          var xml = GXml.parse(data);
+          var markers = xml.documentElement.getElementsByTagName("marker");
+          for (var i = 0; i < markers.length; i++) {
+            var name = markers[i].getAttribute("name");
+            var address = markers[i].getAttribute("address");
+            var type = markers[i].getAttribute("type");
+			var ticket = markers[i].getAttribute("ticket");
+			var scode = markers[i].getAttribute("scode");
+            var point = new GLatLng(parseFloat(markers[i].getAttribute("lat")),
+                                    parseFloat(markers[i].getAttribute("lng")));
+            var marker = createMarker(point, name, address, type,ticket,scode);
+            map.addOverlay(marker);
+          }
+        });
+      }
+    }
+
+    function createMarker(point, name, address, type,ticket,scode) {
+      var marker = new GMarker(point, customIcons[type]);
+      var html = "<b>" + name + " ( "+scode+" )</b> <br/>" + address +"<br><a href='ticketlist.php?s_state=&s_branch="+scode+"&mode=7'>Number of Ticket: "+ticket+" (NOT CLOSED)</a>";
+      GEvent.addListener(marker, 'mouseover', function() {
+        marker.openInfoWindowHtml(html);
+      });
+      return marker;
+    }
+    
+  </script>
+    <div id="map" style="width: 100%; height: 500px"></div>

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//_OnLoad @1-9C4F01C0
+function _OnLoad()
+{
+    var result = true;
+//End _OnLoad
+
+//Set Focus @44-D20FE9BF
+    if (document.forms["Login"] && document.forms["Login"].login) document.forms["Login"].login.focus();
+//End Set Focus
+
+//Set Focus @51-44F43B12
+    if (document.forms["Login1"] && document.forms["Login1"].login) document.forms["Login1"].login.focus();
+//End Set Focus
+
+//Close _OnLoad @1-BC33A33A
+    return result;
+}
+//End Close _OnLoad
+
+//bind_events @1-DC2B5776
+function bind_events() {
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("", "load", _OnLoad);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css">
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<table class="t1" cellspacing="0" cellpadding="5" width="100%">
+  <tr>
+    <td valign="bottom" align="left">
+      <p><span class="logo1"><img style="WIDTH: 50px; HEIGHT: 50px" id="Image1" border="1" name="Image1" alt="" src="images/TARGET_logo.jpg" width="50" height="50">&nbsp;<font color="#000000">TAR-GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span> &nbsp;&nbsp;&nbsp; <br>
+      <span class="logo3"><strong>Technology Asian Resources - GET Sdn. Bhd. (606636-D)</strong></span></p>
+    </td> 
+    <td style="TEXT-ALIGN: right; valign: bottom" width="30%">&nbsp;</td>
+  </tr>
+ 
+  <tr>
+    <td style="LINE-HEIGHT: 20px" class="navmenu" colspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="80%" align="center">
+      <p><span class="H1">
+      <p>Sistem Maklumat &amp; Rekod TAR-GET<br>(SMART)</p>
+      </span>
+      <!-- BEGIN Record loginForm -->
+      <form id="loginForm" method="post" name="{HTMLFormName}" action="{Action}">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>Login Form</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="loginFormlogin">Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                  <td><input id="loginFormlogin" value="{login}" maxlength="100" name="{login_Name}" size="20"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="loginFormpassword">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td> 
+                  <td><input id="loginFormpassword" value="{password}" maxlength="100" type="password" name="{password_Name}" size="20"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th" colspan="2" align="center">&nbsp;<input id="loginFormautoLogin" value="1" type="checkbox" name="{autoLogin_Name}" {autoLogin}><label for="loginFormautoLogin">Remember me&nbsp;</label></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td colspan="2" align="right">
+                    <!-- BEGIN Button Button_DoLogin --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="loginFormButton_DoLogin" value="Login" alt="Login" src="Styles/{CCS_Style}/Images/en/ButtonLogin.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoLogin --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record loginForm --></p>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

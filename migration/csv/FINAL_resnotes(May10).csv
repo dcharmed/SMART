@@ -1,0 +1,813 @@
+1005-38(L),CM,,2010-05-27 17:05:54,NIK,,,2010-05-14 09:15:00,2010-05-15 12:30:00,,"""Received CM reprot from Din.
+Action taken:
+'1. Make shim adjustment.
+2. Test print
+3. Reinstall RTE software.
+4. Scan for virus.
+5. Production monitored.
+Printing success. production continue as usual.""",,Next Action Plan :,
+1005-50(O),CM,,2010-05-27 17:03:26,NIK,,,2010-05-17 12:15:00,2010-05-18 17:30:00,,"""Received CM report from Din.
+Action taken:
+1. Open RTE hardware and reattach cable connection.
+2. Did RFIS troubleshooting problem.
+3. Production monitored.
+QA procedured success. Production continue as usual.""",,Next Action Plan :,
+1005-85(L),CM,,2010-05-27 17:01:00,NIK,,,2010-04-19 11:40:00,,,"""Received CM report from Din. On site on 19/04/2010. around 11:40am. 
+He did change with loan unit S/N: 413 0186
+
+Log close since problem resolved on site by engineer.""",,Next Action Plan :,
+1005-79(L),SN,,2010-05-27 15:48:43,NIK,,,,,,"""Call user. Spoke with Pn Fatimah. They still cannot use this printer because facing problem with Server. They already report to ADUKOM but no other action yet. So log unable to close since they not test yet.""",,Next Action Plan :,
+1005-81(L),SN,,2010-05-27 16:54:03,SUZIE,,,,,,"""Azzeri confirm status with BTMR Ridzuan - status allow to be close.""",,Next Action Plan :,
+1005-81(L),SN,,2010-05-27 16:50:05,SUZIE,,,,,,"""Received call from Azzeri update status - loan unit replaced at this PC, serial L3ANR0B.""",,Next Action Plan :,
+1005-80(L),SN,,2010-05-27 15:46:53,NIK,,,,,,"""Call user spoke with Mdm Kim. Confirm no problem occur anymore. Log allow to close.""",,Next Action Plan :,
+1005-84(L),SN,,2010-05-27 15:34:37,NIK,,,,,,"""call En Dzulkarnain 0145559008. Informed engineer will be on site. He will standby IO to standby on that day.""",,Next Action Plan :,
+1005-84(L),SN,,2010-05-27 10:38:09,NIK,,,,,,"""Arrange flight for Anuar assignment to Labuan on tuesday (01/06/2010) 07:50am.""",,Next Action Plan :,
+1005-67(L),SN,,2010-05-27 10:29:53,NIK,,,,,,"""Received call from En Dzulkarnain. Informed that will sent engineer. He ask to sent engineer on tuesday (1/06/10) because wed they just in after holiday. They suspect many production. So need engineer do that work on tuesday on holiday and they ready to standby.""",,Next Action Plan :,
+1005-84(L),SN,,2010-05-27 10:22:28,NIK,,,,,,"""Call user. Spoke with En jasrun. As per informed by him found that RTE8000 cannot function as usual. At first error reading from file. After user restart and check cable, RTE8000 cannot function where at first Red LED blinking and disappear. After restart no LED at all. Need to check with engineer first but cannot sent engineer today because today already thu and tomorrow holiday. En Jasrun pass phone to KI Dzulkarnain and he will call back later since line not really good.""",,Next Action Plan :,
+1005-83(L),SN,,2010-05-27 10:19:52,NIK,,,,,,"""Call ADUKOM. Spoke with Efa. Esc the problem to HTP back.""",,Next Action Plan :,
+1005-83(L),SN,,2010-05-27 10:15:29,NIK,,,,,,"""Call Faizal. Informed the problem. Faizal said if the host already update the status, so we cannot do anything. He ask to pass back the log to HTP.""",,Next Action Plan :,
+1005-83(L),SN,,2010-05-27 10:12:50,NIK,,,,,,"""Call HTP. Spoke with Rahman. Ask him to pass phone to En Kamarudin. He in training now.""",,Next Action Plan :,
+1005-83(L),SN,,2010-05-27 10:12:29,NIK,,,,,,"""Call En Kamarudin HTP but failed to reach.""",,Next Action Plan :,
+1005-83(L),SN,,2010-05-27 10:06:06,NIK,,,,,,"""Call user spoke with fariz. when doing QA, all passport selesai QA but in kemaskini only MRZ berjaya. other3 gagal. and error Imbasan Imej belum dilalukan. Take passport no and from No : K22391151, 5072495. Fariz also informed that in cawangan, status at imbasan but at host, process already QA.""",,Next Action Plan :,
+1005-83(L),SN,,2010-05-27 09:59:12,NIK,,,,,,"""Received call from ADUKOM. Report that error Imbasan Imej gagal dilakukan. They already refer to HTP but HTP ask us to update step. HTP personnel: IA kamarudin.""",,Next Action Plan :,
+1005-82(L),SN,,2010-05-27 13:56:26,NIK,,,,,,"""Call kak mashitah. Informed that engineer will bring nextweek. She agree.""",,Next Action Plan :,
+1005-82(L),SN,,2010-05-27 13:54:54,NIK,,,,,,"""Check PM schedule. Nextweek engineer will be on site doing PM. Will pass to PM team.""",,Next Action Plan :,
+1005-82(L),SN,,2010-05-27 08:08:22,NIK,,,,,,"""Received call from Pn Mashitah. Informed that cleaning kits just left 1 packet. I informed her that will sent to site today.""",,Next Action Plan :,
+1005-81(L),SN,,2010-05-27 09:54:27,NIK,,,,,,"""Azzeri informed that problem at PC QA already resolved. He check no  mapping. Create mapping, no problem occur anymore.""",,Next Action Plan :,
+1005-81(L),SN,,2010-05-27 09:27:51,NIK,,,,,,"""Yusuf informed that Azzeri on the way to site.""",,Next Action Plan :,
+1005-81(L),SN,,2010-05-27 08:48:20,NIK,,,,,,"""Call Yusuf. Not Pickup.""",,Next Action Plan :,
+1005-81(L),SN,,2010-05-27 08:43:43,NIK,,,,,,"""Call user. Spoke with En Ridzuan. He said that problem still occur. They facing the bleu screen but when they use the correct way to ON PC and RTE8000, QA display only one process lulus. Another 3 not lulus.""",,Next Action Plan :,
+1005-81(L),SN,,2010-05-27 08:41:38,NIK,,,,,,"""Received call from ADUKOM informed that user ask to call back since problem repeated.""",,Next Action Plan :,
+1005-80(L),SN,,2010-05-27 09:29:37,NIK,,,,,,"""Received call from Zul. Problem resolved. But found not problem CCD but hopper. Also permenant line occur. Need to replace thermal head. Zul ask to sent thermal head. Ima prepare used thermal head to be sent to site by Hafiz.""",,Next Action Plan :,
+1005-80(L),SN,,2010-05-27 08:29:34,NIK,,,,,,"""Call Zul. Informed him the problem. Assign him to be on site today.""",,Next Action Plan :,
+1005-80(L),SN,,2010-05-27 08:28:21,NIK,,,,,,"""Call user. Spoke with Mdm Kim. He informed that same problem occur again.""",,Next Action Plan :,
+1005-80(L),SN,,2010-05-27 08:28:54,NIK,,,,,,"""Received call from ADUKOM. Informed that user report back the problem.""",,Next Action Plan :,
+1005-79(L),SN,,2010-05-27 09:42:55,NIK,,,,,,"""Call user. Spoke with Pn Fatimah., Today no production test yet because they unable to enter ID pengguna in system JIM. User already log problem to ADUKOM. Log unable to close yet. """,,Next Action Plan :,
+1005-79(L),SN,,2010-05-26 17:14:38,NIK,,,,,,"""Call user but nobody pickup. Will update statsu tomorrow morning.""",,Next Action Plan :,
+1005-79(L),SN,,2010-05-26 17:13:12,NIK,,,,,,"""Call ardina. In meeting She ask to call process room.""",,Next Action Plan :,
+1005-81(L),SN,,2010-05-26 17:25:47,NIK,,,,,,"""Call Yusuf. Explained the problem. He will be on site tomorrow. """,,Next Action Plan :,
+1005-81(L),SN,,2010-05-26 17:16:51,NIK,,,,,,"""Call user. Spoke with PN Sharifah. Already do that but when do as i guide, RTE8000 hang. Cannot be use at all. They repeated as they do before, blue screen occur. Use said that they already sms Yusuf. She ask to informed Yusuf the detail of problem.""",,Next Action Plan :,
+1005-81(L),SN,,2010-05-26 16:53:36,NIK,,,,,,"""Call user. Rino pass phone pn sharifah. She informed that problem since morning until now. Ask user to ON PC and log in system first than ON plu RTE. User will try first. Will call back after 15 min.""",,Next Action Plan :,
+1005-80(L),SN,,2010-05-26 17:15:29,NIK,,,,,,"""Call user. Spoke with Ramesh. He informed that error occur when they want to test. After restart they stop using printer. I ask them to try but they said, no production to produce anymore. He will try tomorrow. I will double check with user again tomorrow.""",,Next Action Plan :,
+1005-80(L),SN,,2010-05-26 16:35:07,NIK,,,,,,"""Call user. Spoke with Mdm Kim. IO still testing. Ask to call back after 15 min.""",,Next Action Plan :,
+1005-68(L),SN,,2010-05-26 16:39:29,NIK,,,,,,"""Call user spoke with Lili. She said that jarfalla ok since yesterday after they stop using it for a day. Now it can work without problem. Log can be close.""",,Next Action Plan :,
+1005-68(L),SN,,2010-05-26 16:37:47,NIK,,,,,,"""Call Ashok on site. Jarfalla ok after remove cable and plug it back.""",,Next Action Plan :,
+1005-80(L),SN,,2010-05-26 15:54:17,NIK,,,,,,"""Call user. Spoke with Mdm Kim. She informed that at first line small but now become bigger. Problem start this morning and already clean but not ok. Ask user to clean at thermal head once again. Will call back to confirm status after 30 minutes.""",,Next Action Plan :,
+1005-79(L),SN,,2010-05-26 15:13:17,NIK,,,,,,"""Problem resolved. Test ok. """,,Next Action Plan :,
+1005-79(L),SN,,2010-05-26 14:36:42,NIK,,,,,,"""Azhar arrived at site.""",,Next Action Plan :,
+1005-78(L),SN,,2010-05-26 10:40:59,NIK,,,,,,"""Sufian call. He talked with user already. User want to print using mode latihan. Thats why they found this problem today.""",,Next Action Plan :,
+1005-78(L),SN,,2010-05-26 09:30:33,NIK,,,,,,"""Informed problem to Maria. She will talk with Sufian.""",,Next Action Plan :,
+1005-78(L),SN,,2010-05-26 09:09:16,NIK,,,,,,"""Nazri call. After swap also not ok. Means not Monitor problem. Maybe problem with CPU.""",,Next Action Plan :,
+1005-78(L),SN,,2010-05-26 08:55:40,NIK,,,,,,"""Call Nazri's mobile. He informed that problem star this morning. No display at monitor. All LED at monitor and CPU ON. Ask user to swap monitor with other monitor. Will call back later.
+
+*user informed mesiniaga come to install antivirus. Also do at our PC spooler.""",,Next Action Plan :,
+1005-78(L),SN,,2010-05-26 08:54:01,NIK,,,,,,"""Call general line not pickup.""",,Next Action Plan :,
+1005-79(L),SN,,2010-05-26 10:51:08,NIK,,,,,,"""Received log from irwan ADUKOM. User report problem peel off.""",,Next Action Plan :,
+1005-79(L),SN,,2010-05-26 10:53:02,NIK,,,,,,"""Call arnida's mobile since call direct line no body pickup. As check no peel off. Just a line occur. 2 line at the same place. Already clean but still not ok.""",,Next Action Plan :,
+1005-79(L),SN,,2010-05-26 11:02:54,NIK,,,,,,"""Call Anuar. He at BSUB monitor for Aircond service at site by our new contractor. Assign him to be on site if finish early.""",,Next Action Plan :,
+1005-79(L),SN,,2010-05-26 11:35:28,NIK,,,,,,"""Anuar call. He informed that cleaning aircond at subang will take time cause facing problem. Maybe cannot go to BPIN. Ask to sent other engineer.""",,Next Action Plan :,
+1005-79(L),SN,,2010-05-26 13:50:04,NIK,,,,,,"""Assign Azhar to be on site.""",,Next Action Plan :,
+1005-78(L),SN,,2010-05-26 12:22:43,NIK,,,,,,"""Call En Nazri. Informed him thata engineer will be on site nextweek to check the problem. Since production not star yet, log allow to close.""",,Next Action Plan :,
+1005-26(L),CM,,2010-05-25 15:13:28,NIK,,,2010-05-09 09:00:00,,,"""Received CM report from Fakhrul.
+Did change voltage. Rescrew platen roller. Production continue as usual""",,Found ribbon and film tube spidal faulty.,
+1005-25(L),CM,,2010-05-25 15:11:57,NIK,,,2010-05-09 09:00:00,,,"""Received CM report from Fakhrul. 
+He did change RTE8000 with loan unit S/N: 5RL13937. Faulty S/N: 5RL13952.""",,Next Action Plan :,
+1005-77(L),SN,,2010-05-25 15:34:19,NIK,,,,,,"""Log close with Rosmaizah ADUKOM.""",,Next Action Plan :,
+1005-76(L),SN,,2010-05-25 15:34:04,NIK,,,,,,"""Log close with Rosmaizah ADUKOM.""",,Next Action Plan :,
+1005-75(L),SN,,2010-05-25 15:34:18,NIK,,,,,,"""Log close with Rosmaizah ADUKOM.""",,Next Action Plan :,
+1005-76(L),SN,,2010-05-25 11:50:43,NIK,,,,,,"""Call irwan's mobile. No problem occur anymore. Allow to close log.""",,Next Action Plan :,
+1005-77(L),SN,,2010-05-25 11:50:08,NIK,,,,,,"""Call irwan's mobile. No problem occur anymore. Allow to close log.""",,Next Action Plan :,
+1005-76(L),SN,,2010-05-25 08:39:22,NIK,,,,,,"""Call Faizal. Informed this problem. Since Naufal will be on site for problem in log 1005-75(L), Faizal ask Naufal copy spoolingcaller.exe from T3 and paste at T1 and T2. Also ask naufal to copy file PLMSlog with today's date in folder c:jimplmslogpc at T1 into r:	arget. Ask user to take passport number that facing problem.""",,Next Action Plan :,
+1005-76(L),SN,,2010-05-25 10:37:20,NIK,,,,,,"""Received call from Naufal. Already do as Faizal ask. No problem happned for this moment.""",,Next Action Plan :,
+1005-77(L),SN,,2010-05-25 10:37:39,NIK,,,,,,"""Received call from Naufal. Already do as Faizal ask. No problem happned for this moment.""",,Next Action Plan :,
+1005-77(L),SN,,2010-05-25 08:39:19,NIK,,,,,,"""Call Faizal. Informed this problem. Since Naufal will be on site for problem in log 1005-75(L), Faizal ask Naufal copy spoolingcaller.exe from T3 and paste at T1 and T2. Also ask naufal to copy file PLMSlog with today's date in folder c:jimplmslogpc at T1 into r:	arget. Ask user to take passport number that facing problem.""",,Next Action Plan :,
+1005-77(L),SN,,2010-05-25 08:36:02,NIK,,,,,,"""Call user. He informed that yesterday Faizal upgrade spooler version. And Faizal already informed him that if this problem happened need to report immediately.""",,Next Action Plan :,
+1005-76(L),SN,,2010-05-25 08:36:59,NIK,,,,,,"""Call user. He informed that yesterday Faizal upgrade spooler version. And Faizal already informed him that if this problem happened need to report immediately.""",,Next Action Plan :,
+1005-75(L),SN,,2010-05-25 11:50:56,NIK,,,,,,"""Call irwan's mobile. No problem occur anymore. Allow to close log.""",,Next Action Plan :,
+1005-75(L),SN,,2010-05-25 10:37:27,NIK,,,,,,"""Received call from Naufal. Problem settle at site.""",,Next Action Plan :,
+1005-75(L),SN,,2010-05-25 08:38:38,NIK,,,,,,"""Call Naufal. Informed the problem. Ask him to b eon site today to check the problem.""",,Next Action Plan :,
+1005-75(L),SN,,2010-05-25 08:36:46,NIK,,,,,,"""Call Irwan's mobile. He informed that error occur and after restart still not ok. Ask user to enter into maintenance mode while waiting for an engineer.""",,Next Action Plan :,
+1005-74(L),SN,,2010-05-25 11:32:09,NIK,,,,,,"""Call user spoke with Pn Raja. She confirmed problem already settle. She pass phone to Faizal since Faizal still on site. faizal confirm log allow to close by user.""",,Next Action Plan :,
+1005-74(L),SN,,2010-05-25 10:36:24,NIK,,,,,,"""Received email from Faizal:
+
+ip conflict di wangsa maju hanya jadi pada pc spooler. smlm pun pc spooler sahaja . pc jafarla mmg xjd.
+
+so solution i did change the ip address and pcid.
+172.24.220.159 change to  172.24.220.162
+pcid059 chanhe to pcid062
+""",,Next Action Plan :,
+1005-74(L),SN,,2010-05-24 15:48:05,NIK,,,,,,"""Faizal will be on site tomorrow.""",,Next Action Plan :,
+1005-74(L),SN,,2010-05-24 14:47:11,NIK,,,,,,"""Saufi call En Fauzi informed this problem since after he refer to BTMR Pn MAzlin ask us to settle this problem.""",,Next Action Plan :,
+1005-74(L),SN,,2010-05-24 11:51:24,NIK,,,,,,"""Call ADUKOM. Ask to refer to BTMR.""",,Next Action Plan :,
+1005-74(L),SN,,2010-05-24 11:40:45,NIK,,,,,,"""Call Faizal. He informed that have to refer to BTMR since we cannot configure IP address by ourself.""",,Next Action Plan :,
+1005-74(L),SN,,2010-05-24 11:39:09,NIK,,,,,,"""Call user. Spoke with hafiz. As today faizal on site but no problem anymore. But now problem repeated. Seem like someone using our IP address for PC Spooler again. """,,Next Action Plan :,
+1005-74(L),SN,,2010-05-24 11:31:28,NIK,,,,,,"""Received call frm ADUKOM informed that probelm repeated. Please refer log 1005-64(L). Will check with user.""",,Next Action Plan :,
+1005-73(L),SN,,2010-05-25 11:06:02,NIK,,,,,,"""As per agree with user, log close.""",,Next Action Plan :,
+1005-73(L),SN,,2010-05-24 10:58:30,NIK,,,,,,"""Call Yusuf. Ask regarding this problem. He already know about this.""",,Next Action Plan :,
+1005-73(L),SN,,2010-05-24 11:03:56,NIK,,,,,,"""Call user. User informed that they understand the problem is because of the passport physical itself. But she refuse to do that because they claim, in cetakan passport procedure not stated that need to smooth the passport using sand paper. I explain to her that we cannot do anything since pour engineer already adjust the printer for the best. User agree and understand this problem.""",,Next Action Plan :,
+1005-20(L),CM,,2010-05-24 17:41:21,NIK,,,2010-05-10 15:00:00,2010-05-11 17:00:00,,"""Received CM report from Maria.
+Action taken:
+1. Ghost spooler PC.
+2. Clone image from spooler PC02 into spooler PC 01.
+3. But send loan unit as temporary (8188-QAQ, KHBT9L1)
+Loan unit can procees the production as usual.""",,Next Action Plan :,
+1005-28(L),CM,,2010-05-24 17:39:13,NIK,,,2010-05-11 09:00:00,2010-05-11 16:15:00,,"""Received Cm report from Arham.
+Action taken:
+1. check all sensors reading.
+2. Remove cover S14.""",,Next Action Plan :,
+1005-37(L),CM,,2010-05-24 17:37:13,NIK,,,2010-05-13 08:30:00,2010-05-13 14:30:00,,"""Received CM report from Zul.
+Action taken:
+
+1. Perform crystagram adjustment.
+2. Monitor production.
+3. Change tube spindal.
+Printing success. Printer in good condition.""",,Next Action Plan :,
+1005-47(L),CM,,2010-05-24 17:35:14,NIK,,,2010-05-15 11:30:00,2010-05-15 12:30:00,,"""Received Cm report from Faizal.
+Action taken:
+1. Open RTE8000 usb RFID. Change position cable.
+Successfully done QA MRZ.""",,Next Action Plan :,
+1005-39(L),CM,,2010-05-24 17:33:37,NIK,,,2010-05-13 12:30:00,2010-05-13 14:30:00,,"""Received Cm report from Faizal.
+Action taken:
+1. Change PC.
+2. Taken back PC to office. S/N: L3R2588.
+""",,Next Action Plan :,
+1005-72(L),CM,,2010-05-24 17:29:50,NIK,,,2010-05-13 09:00:00,2010-05-13 12:30:00,,"""Received CM report from Yusuf. On site on 13/05/2010 around 09:00am.
+Action taken:
+1. Replaced S7 sensor.
+2. Voltage measured.
+3. Production monitor.
+Printing operation success.
+Log close since problem already resolved by Yusuf on site.""",,Next Action Plan :,
+1005-71(L),CM,,2010-05-24 17:23:41,NIK,,,2010-05-09 09:30:00,2010-05-09 12:15:00,,"""Received Cm report from Yusuf. On site on 09/05/2010 around 09:30am.
+Action taken:
+1. S12 sensor measured.
+2. S12 voltage out of working range - cleaned and reposition.
+3. Test print continue with the actial production.
+Printing success.
+Log close since problem already resolved on site by Yusuf.""",,Next Action Plan :,
+1005-05(L),CM,,2010-05-24 17:18:10,NIK,,,2010-05-05 10:45:00,2010-05-07 14:00:00,,"""Received CM report from Anuar. 
+Problem no display on LCD printer. Ribbon continuous spin.
+Action taken:
+1. Troubleshooting process performed.
+2. Check PI and PO unit.
+3. Found that electrical board failure.
+4. Change new electrical board.
+5. Did test print.
+6. Production monitored.
+CM success. Printer in good condition. Production run as usual.""",,Next Action Plan :,
+1005-70(L),CM,,2010-05-24 16:57:16,NIK,,,2010-05-14 11:35:00,2010-05-14 12:30:00,,"""Received CM report from Isyraf. On site on 14/05/2010 around 11:35. Actually this problem alreday reported by user on 14/05/2010 around 10:00am but im forgot to opened log but on the day problem happened all target staff on the way to Afamosa melaka for ICAO meeting. Only Isyraf and Ashok available at office. So i ask Isyraf to be on site.
+Action atken:
+1. Check film condition.
+2. Need to change S3 for precaution action.
+3. Set the printer in maintenance mode.
+4. Check the voltage condition. All in range.
+Log close since problem already reoslved on site by Isyraf.""",,Next Action Plan :,
+1005-49(L),CM,,2010-05-24 16:51:56,NIK,,,2010-05-18 09:10:00,2010-05-18 17:00:00,,"""Received Cm report from Ashok. 
+Action taken:
+1. Cleaned pass sensor.
+2. Cleaned PF1 all unit.
+3. Test print.
+4. Monitor production.
+There is no problem on PF1. Production continie as usual.""",,Next Action Plan :,
+1005-60(L),CM,,2010-05-24 16:49:03,NIK,,,2010-05-20 12:15:00,2010-05-20 13:30:00,,"""Received CM report from faizal.
+Problem jarfalla cannot retrieve book. Sometime words not printed well.
+Action taken:
+1. Change jarfalla loan unit. 
+Loan : 457 9995. Faulty : 413 0307.
+successfully testing.""",,Next Action Plan :,
+1005-57(L),CM,,2010-05-24 16:43:58,NIK,,,2010-05-19 12:05:00,2010-05-20 13:00:00,,"""Received CM report from Amuar.
+Black line after printed M/S pemerhatian.
+Action taken:
+1. Clean all roller inside jarfalla.
+2. Did general cleaning.
+3. Problem still happened so change to a new jarfalla (loan unit).
+4. Test print using notepad.
+Loan: 413 0135. Faulty: 442 8067.
+Jarfalla in good condition. Production run as usual.""",,Next Action Plan :,
+1005-64(L),CM,,2010-05-24 16:26:45,NIK,,,2010-05-24 09:00:00,2010-05-24 10:00:00,,"""Received CM report from faizal.
+he did check IP is correct. Suspect somebaody has change other PC's IP address. 
+Problem solved and no more IP conflict.""",,Next Action Plan :,
+1005-69(L),SN,,2010-05-24 15:29:34,NIK,,,,,,"""Call ADUKOM. Log close with Efa.""",,Next Action Plan :,
+1005-69(L),SN,,2010-05-24 15:28:55,NIK,,,,,,"""Call user. Spoke with Dian. Problem already resolved after check SCSI cable. Log allow to close.""",,Next Action Plan :,
+1005-69(L),SN,,2010-05-24 15:23:29,NIK,,,,,,"""Received log from ADUKOM.""",,Next Action Plan :,
+1005-69(L),SN,,2010-05-24 14:40:48,NIK,,,,,,"""Suzie call Dian's mobile after received her miscal. Dian report that printer OFFLINE. Suzie guide Dian to remove and plug back the SCSI cable behind the printer. Will call back later.""",,Next Action Plan :,
+1005-61(L),SN,,2010-05-24 12:57:50,NIK,,,,,,"""Call user. Spoke with En Arifin. Jarfalla alreday install and production run smoothly. Log allow to close.""",,Next Action Plan :,
+1005-67(L),SN,,2010-05-24 11:57:42,NIK,,,,,,"""Call user spoke with Pn Salina. She informed that no probelm anymore. Log allow to close.""",,Next Action Plan :,
+1005-66(L),SN,,2010-05-24 11:57:19,NIK,,,,,,"""Call user spoke with Pn Salina. She informed that no probelm anymore. Log allow to close.""",,Next Action Plan :,
+1005-68(L),SN,,2010-05-24 11:50:53,NIK,,,,,,"""Ashok will be on site this week. Informed him the problem. He said that he can settle the problem on site. No need to bring standby unit. Just bring jarfalla cable. He will come ofice to take cable. his flight this evening.""",,Next Action Plan :,
+1005-68(L),SN,,2010-05-24 11:47:22,NIK,,,,,,"""Call lili's mobile. She informed that problem still happened. test print not help.""",,Next Action Plan :,
+1005-68(L),SN,,2010-05-24 11:25:35,NIK,,,,,,"""Call Lili's mobile. Guide her to do test print. Will call back after 15 minutes.""",,Next Action Plan :,
+1005-68(L),SN,,2010-05-24 11:17:44,NIK,,,,,,"""Call general line. Spoke with lili. Want to guide user to do test print. Lili ask to call her mobile because this phone line far from jarfalla.""",,Next Action Plan :,
+1005-68(L),SN,,2010-05-24 11:08:06,NIK,,,,,,"""Call Rosdi after received his SMS ask to call him back. He informed that user call him report the problem. Its happened many times. Rosdi ask to follow up with user.""",,Next Action Plan :,
+1005-64(L),SN,,2010-05-24 10:52:40,NIK,,,,,,"""Call user spoke with Hafiz. He informed that today no problem at all. Log allow to close for this moment.""",,Next Action Plan :,
+1005-63(L),SN,,2010-05-21 10:57:02,NIK,,,,,,"""Call ADUKOM. Log esc to HTP.""",,Next Action Plan :,
+1005-63(L),SN,,2010-05-21 10:55:08,NIK,,,,,,"""Refer to Faizal. He ask to esc to HTP since this system problem.""",,Next Action Plan :,
+1005-63(L),SN,,2010-05-21 10:50:18,NIK,,,,,,"""Call user. User explain that 6 to 9 passport happened the problem. So they stop printing.""",,Next Action Plan :,
+1005-62(O),SN,,2010-05-21 00:39:02,NIK,,,,,,"""Call ADUKOM. Spoke with Saufi. Explain to him that BTMR handle System JIM at Oversea. He noted and log close at our site and will be esc to BTMR.""",,Next Action Plan :,
+1005-62(O),SN,,2010-05-21 00:30:00,NIK,,,,,,"""As refer to Faizal, he said that system JIM handle by BTMR. I will informed ADUKOM about this.""",,Next Action Plan :,
+1005-62(O),SN,,2010-05-21 00:28:31,NIK,,,,,,"""Call user again but also not pickup.""",,Next Action Plan :,
+1005-62(O),SN,,2010-05-21 00:06:48,NIK,,,,,,"""Call user, not pickup.""",,Next Action Plan :,
+1005-62(O),SN,,2010-05-20 20:31:56,NIK,,,,,,"""Call ADUKOM back after realize miscall.Spoke with Saufi. Saufi informed that user report to him that PC in process room failed to enter System JIM and do process. Informed to him that if relate to JIM system, its not our log. But Saufi refuse. He siad that PC at process room so all log target. I will check with Faizal.""",,Next Action Plan :,
+1005-61(L),SN,,2010-05-24 11:07:25,NIK,,,,,,"""Call user spoke with dayang. She pass phone to PN Heneritha. Pn Heneritha informed that they alreday received a box but still not open yet. Ask user to open it and try to install. If facing any problem, ask user to informed us.""",,Next Action Plan :,
+1005-64(L),SN,,2010-05-24 09:11:16,NIK,,,,,,"""Received SMS from Faizal. Problem resolved.
+
+Also received Email from faizal:
+sallam nicky,
+kes ip conflict dah settle. i already in wangsa maju but the problem seem to be solved already. somebody already change the other side pc ip address.
+""",,Next Action Plan :,
+1005-64(L),SN,,2010-05-21 17:09:28,NIK,,,,,,"""Call ADUKOM. Spoke with Saufi. Informed him to informed this to BTMR and Faizal will be on site to help settle this problem.""",,Next Action Plan :,
+1005-64(L),SN,,2010-05-21 17:03:18,NIK,,,,,,"""Call Faizal. Explained the situation. He said that if they want us to settle this problem, he can do but need a permission from BTMR since BTMR control the IP address. Will informed to ADUKOM.""",,Next Action Plan :,
+1005-64(L),SN,,2010-05-21 16:08:33,NIK,,,,,,"""Call ADUKOM. Spoke with Saufi. Saufi said that mesiNiaga on site to check this problem but this problem relate to PC spooler in process room so as refer to the previous meeting before, MesiNiaga cannot disturb PC in bilik process. But i explain to him that this problem relate to IP address problem. As check with user, Hafiz, he informed that IP address at spooler PC T3 still same as in our record. Thats mean other PC use our PC Spooler IP address. But dont know which printer. user also informed that no other vendor come to do maintenace. But Saufi ADUKOM refuse and still want us to settle this problem. Will refer this problem to Faizal.""",,Next Action Plan :,
+1005-64(L),SN,,2010-05-21 15:55:13,NIK,,,,,,"""Received call from ADUKOM Irwan. """,,Next Action Plan :,
+1005-64(L),SN,,2010-05-21 10:56:02,NIK,,,,,,"""Received call from user Hafiz. He informed that error occur. I ask him to log ADUKOM since this problem related to the IP address.""",,Next Action Plan :,
+1005-65(L),SN,,2010-05-22 12:06:28,NIK,,,,,,"""Call EN Asli. He informed that after check cable and restart once again, problem resolved. Log allow to close.""",,Next Action Plan :,
+1005-65(L),SN,,2010-05-22 11:03:54,NIK,,,,,,"""Call Pn Marsilla after realize that have miscall from her around 10:52am. She informed that error appear. She pass phone to BTMR Asli. En Asli said that they already restart all and check camera cable. But still not ok. I ask him to restart and check cable one more time. He ask to call his mobile no. BTMR Asli : 0128577528.""",,Next Action Plan :,
+1005-66(L),SN,,2010-05-24 09:12:26,NIK,,,,,,"""Received sms from Zul. Arrived at site 8:15am. Printer operate as usual after user restart again.""",,Next Action Plan :,
+1005-66(L),SN,,2010-05-24 07:55:03,NIK,,,,,,"""Call Zul. Explain the problem. He will go on site today to check the problem.""",,Next Action Plan :,
+1005-66(L),SN,,2010-05-24 07:51:31,NIK,,,,,,"""Received call from Pn Kumari. She explain that error occur. They already restart but after restart, film cut two.""",,Next Action Plan :,
+1005-67(L),SN,,2010-05-24 09:12:36,NIK,,,,,,"""Received sms from Zul. Arrived at site 8:15am. Printer operate as usual after user restart again.""",,Next Action Plan :,
+1005-67(L),SN,,2010-05-24 07:55:57,NIK,,,,,,"""Call Zul. Explain the problem. He will go on site today to check the problem.""",,Next Action Plan :,
+1005-67(L),SN,,2010-05-24 07:51:09,NIK,,,,,,"""Received call from Pn Kumari. She informed that both printer not run as usual. She pas to IO and she explain that book always stuck inside CCD.""",,Next Action Plan :,
+1005-60(L),SN,,2010-05-20 16:23:41,NIK,,,,,,"""Call Pn Salina's mobile. She confirmed status of printer ok after chnage jarfalla. Log close.""",,Next Action Plan :,
+1005-57(L),SN,,2010-05-20 16:11:28,NIK,,,,,,"""Call user. Spoke with Irwan. Confirm status of jarfalla ok. Log allow to close.""",,Next Action Plan :,
+1005-61(L),SN,,2010-05-20 11:21:28,NIK,,,,,,"""Packing jarfalla loan unit S/N: 442 8060 to be sent at site via nationwide.""",,Next Action Plan :,
+1005-61(L),SN,,2010-05-20 11:14:21,NIK,,,,,,"""Call user. Spoke with Pn Heneritha. Informed her that situation. User agree. Can accept.""",,Next Action Plan :,
+1005-61(L),SN,,2010-05-20 11:02:59,NIK,,,,,,"""Have one loan unit at office. Test ok. Check with Nationwide. If sent today, unit will take 2 working days to arrived at site. Will ask user first.""",,Next Action Plan :,
+1005-61(L),SN,,2010-05-20 10:51:03,NIK,,,,,,"""Call user. Try to guide BTMR Nizam to do test print but same happened. Book will be ejected and not print data. Need to replace new jarfalla. Will check the availability of jarfalla at office first to be courier to site today.""",,Next Action Plan :,
+1005-60(L),SN,,2010-05-20 15:33:53,NIK,,,,,,"""Received email from Faizal informed that problem settle. Already replace jarfalla. Status resolved.""",,Next Action Plan :,
+1005-60(L),SN,,2010-05-20 10:16:41,NIK,,,,,,"""Arrived at office. Prepare Jarfalla since user informed jarfalla still not ok. Assign Faizal to send loan unit at site since no available engineer today. S/N : 457 9995""",,Next Action Plan :,
+1005-60(L),SN,,2010-05-20 09:12:19,NIK,,,,,,"""Refer tu Zul. Ask to check Ribbon. If still not ok, suggest to send loan unit to see either system problem o not coz problem happened intermittent.""",,Next Action Plan :,
+1005-60(L),SN,,2010-05-20 08:34:07,NIK,,,,,,"""Received call from Pn Salina. She informed that problem repeated. Refer log 1005-58(L). """,,Next Action Plan :,
+1005-57(L),SN,,2010-05-20 11:52:05,NIK,,,,,,"""Received call from Anura. Already change power port. For now ok. Problem resolved.""",,Next Action Plan :,
+1005-57(L),SN,,2010-05-20 11:00:37,NIK,,,,,,"""Received call from Anuar informed that when ariived on site, the loan unit that he bring cannot ON. He will try take power port from faulty jarfalla and put at loan unit.""",,Next Action Plan :,
+1005-57(L),SN,,2010-05-19 17:44:06,NIK,,,,,,"""Anuar take jarfalla to bring to site tomorrow. S/N: 413 0135 - loan unit.""",,Next Action Plan :,
+1005-58(L),SN,,2010-05-19 16:53:06,NIK,,,,,,"""Call user confirmed status jarfalla. No problem occur. Just one passport occur that problem but still can be use. maybe system intermittent. Log allow to close.""",,Next Action Plan :,
+1005-57(L),SN,,2010-05-19 12:32:31,NIK,,,,,,"""Received call from Anuar informed that jarfalla need to replace because cause dirty printing.""",,Next Action Plan :,
+1005-55(L),SN,,2010-05-19 16:36:17,NIK,,,,,,"""Call user. Spoke with PI Arnida. Confirmed status ok after change thermal head. Log allow to close.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-19 16:30:29,NIK,,,,,,"""Call Arham. Problem resolved at site. With permission from En Arifin, log allow to close.""",,Next Action Plan :,
+1005-59(L),SN,,2010-05-19 16:30:29,NIK,,,,,,"""Call Arham. Problem resolved at site. With permission from En Arifin, log allow to close.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-19 11:51:38,NIK,,,,,,"""Received call from Arham. Problem resolved.""",,Next Action Plan :,
+1005-59(L),SN,,2010-05-19 11:51:59,NIK,,,,,,"""Arham call back to confirm the status of thermla head. I ask him to call dina because dina not confirm the status with me yet.""",,Next Action Plan :,
+1005-59(L),SN,,2010-05-19 11:33:35,NIK,,,,,,"""Informed Dina. She will decide later.""",,Next Action Plan :,
+1005-59(L),SN,,2010-05-19 11:31:29,NIK,,,,,,"""Received call from Arham. He informed that he try to clean. If not ok, he will take thermal head from Lawas printer at site now. I Will ask dina regarding that problem and will informed him back later.""",,Next Action Plan :,
+1005-58(L),SN,,2010-05-19 11:13:47,NIK,,,,,,"""Call user. Spoke with sanusi. Confirmed status of him for now no problem occur anymore. But will monitro production until evening before log can be close.""",,Next Action Plan :,
+1005-55(L),SN,,2010-05-19 11:06:38,NIK,,,,,,"""Received SMS from Hafiz:
+Barang dah di pickup di stesen bas.""",,Next Action Plan :,
+1005-58(L),SN,,2010-05-19 10:46:53,NIK,,,,,,"""Call Pn Salina's mobile. She said that everytime need to print, they have to restart the jarfalla. She pass phone to Sanusi and i guide Sanusi to do test print. Will call back after 15 minutes to confirm the status.""",,Next Action Plan :,
+1005-58(L),SN,,2010-05-19 10:44:59,NIK,,,,,,"""call direct line provided by ADUKOM but not pickup.""",,Next Action Plan :,
+1005-58(L),SN,,2010-05-19 10:44:24,NIK,,,,,,"""Call direct line in helpdesk phone, line auto cut off. """,,Next Action Plan :,
+1005-58(L),SN,,2010-05-19 10:42:40,NIK,,,,,,"""Received call from Zana. Actually Zana already refer this problem to HTP since its involve the setting but after HTP check with user, user said that after do many time the same passport, ok.""",,Next Action Plan :,
+1005-57(L),SN,,2010-05-19 09:32:59,NIK,,,,,,"""Call general line but nobody pickup.""",,Next Action Plan :,
+1005-57(L),SN,,2010-05-19 09:18:37,NIK,,,,,,"""Call Anuar. He replace Naufal this week for standby at WP14, BKAJ and WPUT. Ask him to go check on site. But he informed that he on the way to stor Putrajaya as request by En Razi. Ask him to drop by at site after settle down at stor.""",,Next Action Plan :,
+1005-57(L),SN,,2010-05-19 09:13:51,NIK,,,,,,"""Call user Irwan for confirmation. But not pickup.""",,Next Action Plan :,
+1005-57(L),SN,,2010-05-19 09:10:50,NIK,,,,,,"""Received sms from user Irwan :
+Salam. Nk bgtau jarfalla topan 2 tu ctkn dier menyebbkn bhg lain kotor mcm b'garis. Naufal tau psl ni. Nak buat mcm mane ek sbb bos en wahid t'perasan la plak smlm. Huhu.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-18 17:32:33,NIK,,,,,,"""Call Arham. Just arrived at LImbang. Already deal with user to be on site tomorrow morning since printer still can run production in maintenace mode.""",,Next Action Plan :,
+1005-54(L),SN,,2010-05-18 17:00:35,NIK,,,,,,"""Received call from Rosdi. Log allow to close by Zaki.""",,Next Action Plan :,
+1005-56(L),SN,,2010-05-18 17:00:02,NIK,,,,,,"""Received call from Rosdi. Log allow to close by Zaki.""",,Next Action Plan :,
+1005-56(L),SN,,2010-05-18 15:59:22,NIK,,,,,,"""Received call from rosdi. Update status for log 1005-54(L). Found this problem too. He did change S7. Problem resolved. Now monitoring.""",,Next Action Plan :,
+1005-49(L),SN,,2010-05-18 16:39:10,NIK,,,,,,"""Log close with ADUKOM Hayati.""",,Next Action Plan :,
+1005-49(L),SN,,2010-05-18 16:32:51,NIK,,,,,,"""Call user. Spoke with PIT Hang Tuah. He confirmed that no problem occur anymore. Log allow to close.""",,Next Action Plan :,
+1005-54(L),SN,,2010-05-18 15:59:27,NIK,,,,,,"""Received call from Rosdi, confirmed the status of printed ok after change S14. Problem resolved.""",,Next Action Plan :,
+1005-44(L),CM,,2010-05-18 15:31:38,NIK,,,2010-04-17 09:30:00,2010-04-17 13:00:00,,"""Received CM report from Azzeri. PF1 passport jammed inside the feeder. PF2 setting book gate to 64 pages passport.
+Action taken:
+1. Check sendor S1 on PF1.
+2. Set Book gate for PF2 for 48 pages.
+3. Done cleaning - monitored production.
+Production continue as usual. No more problem on feeder anymore.""",,Need to replace S1 ,
+1005-41(L),SN,,2010-05-18 14:56:33,SUZIE,,,,,,"""Received call from TPPI Herinta - informed her Arham flight was arranged at 10:15hrs today, but the flight was delay to 14:00hrs and we just heard new status - flight delay again to 15:40hrs. OK, she understood on our situation.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-18 14:35:25,NIK,,,,,,"""Call user. Spoke with Dayang. Informed the problem. Dayang will informed this to her bos.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-18 14:11:20,NIK,,,,,,"""Received call from Arham informed that flight delay again to 3:40pm today. Ok will informed user.""",,Next Action Plan :,
+1005-55(L),SN,,2010-05-18 14:08:38,NIK,,,,,,"""Assign Azhar to test thermal head to be sent to Naufal. S/N: 94-035-01.""",,Next Action Plan :,
+1005-55(L),SN,,2010-05-18 14:10:29,NIK,,,,,,"""Informed naufal to take the unit at terminal bus kota bharu tomorrow morning around 9 / 10 am. He agree. He ask to prepare thermal head with R = 3737.""",,Next Action Plan :,
+1005-55(L),SN,,2010-05-18 13:25:52,NIK,,,,,,"""Call transnational. Need to sent to Bengkel transnational at jeramat before 7 pm to make sure thermal head will arrived at kota bharu terminal and to be pickup around 9 / 10 am tomorrow morning. Zul will sent the unit to transnational keramat.""",,Next Action Plan :,
+1005-55(L),SN,,2010-05-18 13:04:31,NIK,,,,,,"""As perdiscuss with suzie and others will send thermal head to the site via bus (Transnational). """,,Next Action Plan :,
+1005-55(L),SN,,2010-05-18 13:00:51,NIK,,,,,,"""Received call from Naufal. On site doing PM. Found this problem. Ask whether we can sent a thermal head to the site.""",,Next Action Plan :,
+1005-53(L),SN,,2010-05-18 09:50:19,NIK,,,,,,"""Call EN Ridzuan mobile. He informed that the problem already settle. This problem always blue screen every morning. He report becaus ehe afraid that this pronlem will become more worst. But since no problem occur anymore, log will be close.""",,Ask Azzeri to be on site early in the morning tomorrow to check the problem.,
+1005-53(L),SN,,2010-05-18 09:48:30,NIK,,,,,,"""Received call from yusuf. he already call user and they informed that no problem occur. He ask me to reconfirmed the problem with En Ridzuan.""",,Next Action Plan :,
+1005-53(L),SN,,2010-05-18 09:44:18,NIK,,,,,,"""Call Azzeri. On the way to the office to sent back faulty PC taken from ATLK and PPIN. Will informed him the problem when he arrived at office.""",,Next Action Plan :,
+1005-53(L),SN,,2010-05-18 09:39:46,NIK,,,,,,"""Call Yusuf. On the way to Alor setar because Siva Lorry will sent E2000 original unit to site today. He did not get any report from user regarding this problem. Yusuf ask to ask azzeri to see the problem.""",,Next Action Plan :,
+1005-53(L),SN,,2010-05-18 09:36:27,NIK,,,,,,"""Call En Ridzuan mobile since call general line keep busy. He inform that problem happened every morning.""",,Next Action Plan :,
+1005-52(O),SN,,2010-05-17 14:44:40,NIK,,,,,,"""Call En Ramli. Informed him like wat faizal said. He provide pasport no:
+64 pages that out empty : 20499121
+32 pages that printed 64 pages application : 20900504
+64 pages cetak semula : 20499122
+
+*Since this log is juat a guidance, log close.""",,Next Action Plan :,
+1005-52(O),SN,,2010-05-17 14:35:41,NIK,,,,,,"""Informed the problem to faizal. He said that this is the system problem. He will check but need the passport number. """,,Next Action Plan :,
+1005-49(L),SN,,2010-05-18 12:09:23,NIK,,,,,,"""Received SMS from Ashok. Problem already settle.""",,Next Action Plan :,
+1005-54(L),SN,,2010-05-18 12:03:47,SUZIE,,,,,,"""Call general line and status inform to Pn Zubaidah - noted engineer on site.""",,Next Action Plan :,
+1005-54(L),SN,,2010-05-18 11:47:05,SUZIE,,,,,,"""As this site fall under Rosdi maintenance, Nik call Rosdi and inform the status. Rosdi will on site from Subang to Port Klang.""",,Next Action Plan :,
+1005-54(L),SN,,2010-05-18 11:45:33,SUZIE,,,,,,"""Received call from Zaki - symptom cause book printed in order but fail to move out normally from PO unit. If he try to restart E2000, error REMOVE THE SHEET IN THE PRINTER. The cause of error already known, its due to S14 sensor. But did advice Zaki to running E2000 in maintenance mode first. Will call back.""",,Next Action Plan :,
+1005-50(O),SN,,2010-05-17 10:13:10,SUZIE,,,,,,"""Call Din TARGET - assign on the task and explain on status that Yusuf found out. Noted.""",,Next Action Plan :,
+1005-50(O),SN,,2010-05-17 10:10:28,SUZIE,,,,,,"""Status informed by Yusuf verbally. He suggest to replace RTE as RFID not found, but if Din can make it to look on site - maybe Din can try to replace unprotected file first.""",,Next Action Plan :,
+1005-52(O),SN,,2010-05-17 14:26:25,NIK,,,,,,"""Received call from en ramli informed that one application for 64 pages print out empty but after that the data printed out in 32 pages passport with the passport number print out same with the 64 pages passport that out empty. They already cetak semula. He just call to make sure that for 32 pages passport need to daftar rosak as wat cause. I will check with faizal first and will call back user later.""",,Next Action Plan :,
+1005-48(L),SN,,2010-05-18 11:00:18,NIK,,,,,,"""Zul back to office. He informed that problem already reoslved since yesterday. Today he just monitoring. Log can be close.""",,Next Action Plan :,
+1005-50(O),SN,,2010-05-18 11:09:50,NIK,,,,,,"""Call user confirm status ok. Log allow to close.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-18 09:58:45,NIK,,,,,,"""Call user spoke with En Arifin. Informed that flight delay. user ok.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-18 09:57:43,NIK,,,,,,"""Received call from Arham. Informed that now he at airport but flight delay. Change time to 2pm.""",,Next Action Plan :,
+1005-43(L),SN,,2010-05-17 10:51:54,NIK,,,,,,"""Call user spoke with En Aziz. She informed that problem not happened anymore. Log close for this problem. He just ask to sent engineer to check the skew problem. But still accepted.""",,Next Action Plan :,
+1005-48(L),SN,,2010-05-17 16:24:30,NIK,,,,,,"""Received call from Zul. On site informed that passport peel off. User stop using sand paper for about 2 weeks. But now for the new batch, need to use sand paper but user refuse to use. Between new PIT and dont know about using the sand paper. Now Zul cannot do any adjustment because blackout. He will continue tomorrow.""",,Next Action Plan :,
+1005-48(L),SN,,2010-05-17 15:30:28,NIK,,,,,,"""Zul received call from user again report that problem reported.""",,Next Action Plan :,
+1005-48(L),SN,,2010-05-17 15:15:04,NIK,,,,,,"""Ashok back from site problem resolved.""",,Next Action Plan :,
+1005-48(L),SN,,2010-05-17 10:39:39,NIK,,,,,,"""Assign Ashok to be on site today.""",,Next Action Plan :,
+1005-48(L),SN,,2010-05-17 10:26:13,NIK,,,,,,"""Call user. Spoke with PIT Salina. She informed that peel off happened.  She ask to send engineer to check the problem since many passport damage today.""",,Next Action Plan :,
+1005-48(L),SN,,2010-05-17 10:13:06,NIK,,,,,,"""Zul call. He ask to pass phone to Anuar.User report the problem to him but he at putrajaya now have ICAO meeting with DOI. He ask to send engineer to check on site.""",,Next Action Plan :,
+1005-49(L),SN,,2010-05-17 16:15:19,NIK,,,,,,"""Assign Ashok to the site. Kak mira MC today so Ima incharge for flight arrangement. KL-KCHG 7:10am tomorrow. Will arrived aroung 8:55am. Bring pass sensor for standby.""",,Next Action Plan :,
+1005-49(L),SN,,2010-05-17 15:40:27,NIK,,,,,,"""Azhar guide user, but still not ok. He think problem with Pass sensor. Need to assign engineer to the site tomorrow.""",,Next Action Plan :,
+1005-49(L),SN,,2010-05-17 15:30:06,NIK,,,,,,"""Assign Azhar to guide user.""",,Next Action Plan :,
+1005-49(L),SN,,2010-05-17 14:37:57,NIK,,,,,,"""Call user again. Spoke with PI Anita. She informed that white roller inside feeder not function. Ask user to check cable behind the feeder.""",,Next Action Plan :,
+1005-49(L),SN,,2010-05-17 14:11:15,NIK,,,,,,"""Call user. Spoke with PI Suriati. Ask him to clean conveyor belt inside Feeder again.""",,Next Action Plan :,
+1005-49(L),SN,,2010-05-17 13:10:35,NIK,,,,,,"""Call user but not pickup.""",,Next Action Plan :,
+1005-49(L),SN,,2010-05-17 12:23:32,NIK,,,,,,"""As per informed by Yusuf feeder 2 at this site adjust to 64 pages for PTB. So user just have one feeder for 48 pages.""",,Next Action Plan :,
+1005-49(L),SN,,2010-05-17 12:17:48,NIK,,,,,,"""Call user. Spoke with PI suriati. She informed that error PF1 SP JAM occur. Book not insert into CCD. PI Anita that incharge for this printer is out for lunch.""",,Next Action Plan :,
+1005-49(L),SN,,2010-05-17 11:45:25,NIK,,,,,,"""Received log from ADUKOM reported that roller CCD not function.""",,Next Action Plan :,
+1005-43(L),SN,,2010-05-14 12:06:14,SUZIE,,,,,,"""Call Din TARGET - assign on the assignment. OK""",,Next Action Plan :,
+1005-43(L),SN,,2010-05-14 12:05:29,SUZIE,,,,,,"""Referring to En Radzi - Din need to back to JPIN as JPIN open on saturday and sunday.""",,Next Action Plan :,
+1005-43(L),SN,,2010-05-14 11:54:27,SUZIE,,,,,,"""Call Ashok as he not joint us at A'Famosa if he can make it to look on site - prayer. OK, understood.""",,Next Action Plan :,
+1005-43(L),SN,,2010-05-14 11:49:24,SUZIE,,,,,,"""Call PIT Manisa mobile and she passed to Aziz - according to Aziz, Din has guided him to run under maintenance mode, but printer fail to be READY and error appear.""",,Next Action Plan :,
+1005-50(O),SN,,2010-05-17 16:05:33,NIK,,,,,,"""Call Din. He informed that he try to troubleshoot RFID and adjust the cable inside RTE8000. For now, no problem anymore. But he afriad problem will repeated. He ask for loan unit to be sent to site. But for now problem resolved.""",,Next Action Plan :,
+1005-43(L),SN,,2010-05-14 11:43:53,SUZIE,,,,,,"""Received call from Din TARGET informed the error. As he at MPIN and all staff at A'Famosa, Melacca for ICAO brainstorming. He ask any idea, if he need to back to JPIN.""",,Next Action Plan :,
+1005-51(L),SN,,2010-05-17 15:38:08,NIK,,,,,,"""Call Idham. Confirmed status ok now. Log able to close.""",,Next Action Plan :,
+1005-51(L),SN,,2010-05-17 14:57:52,NIK,,,,,,,,Next Action Plan :,
+1005-51(L),SN,,2010-05-17 14:25:07,NIK,,,,,,"""Informed to Faizal. He ask to guide user to copy JIM folder from other PC jarfalla.""",,Next Action Plan :,
+1005-51(L),SN,,2010-05-17 11:23:20,NIK,,,,,,"""Received call from Zana ADUKOM. Hitech request to install SNA client.""",,Next Action Plan :,
+1005-42(L),SN,,2010-05-14 10:38:05,NIK,,,,,,"""Call user again. Confirmed everything ok. Log allow to close.""",,Next Action Plan :,
+1005-42(L),SN,,2010-05-14 10:32:43,NIK,,,,,,"""Call user. Spoke with BTMR Liswati. Now ok already. But keyboard and barcode scanner not detected. Ask user to restart again.""",,Next Action Plan :,
+1005-42(L),SN,,2010-05-14 09:31:21,NIK,,,,,,"""Problem happened where PC keep auto restart and blue screen. Ask user to OFF PLug at RTE8000 and restart PC QA. After PC ready and enter Jim, ask user to ON RTE8000. Will call back later.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-14 11:03:28,NIK,,,,,,"""Received call from Dayang. She informed that now printer run ok in maintenace mode. So they will use it.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-14 10:18:48,NIK,,,,,,"""Call user. spoke with Pn rozaimah. He agree the dealing.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-14 10:16:17,NIK,,,,,,"""Call Kak mira. Ask her to change flight ticket for Arham. Change to 10:15am from Miri and will arrived at Limbang around 10:45am.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-14 09:55:12,NIK,,,,,,"""Call Arham. He said that his flight to QLIM for PM will be on tuesday evening. Ask to assign him alone to be on site morning. Nizam will standby at QMIR. Arham ok.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-14 08:51:59,NIK,,,,,,"""Received call from en Ariffin. He informed that today problem continue. So need further action. En Arifin pas phone to dayang. Dayang try to enter maintenance mode but failed to ready. Error keep repeating. Since we have meeting at a Famosa for this weekend, ask that if we can go on site nextweek on tuesday since PM team will do PM at that site nextweek. They pas to PIT Rozaimah and she agree.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-13 16:23:42,NIK,,,,,,"""Call user. Spoke with en Arifin. He ask to call tomorrow since they already OFF everything. They facing electricity problem.""",,Next Action Plan :,
+1005-41(L),SN,,2010-05-13 16:20:30,NIK,,,,,,"""Call user. Spoke with dayang. Check supporting tube spindal still ok.""",,Next Action Plan :,
+1005-40(L),SN,,2010-05-17 09:56:56,NIK,,,,,,"""Call user. Spoke with Dian. Log allow to close since no rpoblem occur anymore.""",,Next Action Plan :,
+1005-40(L),SN,,2010-05-14 09:31:38,NIK,,,,,,"""Call user spoke with Sulastri. She informed that before this she use jarfalla at PC QA together with RTE8000. But now PC Jarfalla repaired by IRIS becuase during ICAO installation, engineer swap the PC for jarfalla with PC QA. And PC IRIS that install jarfalla faulty. Just finish repair by IRIS. So user ask how to install back the jarfalla. guide user and now problem resolved. Jarfalla can be use as usual. But user facing another problem. Please refer to log 1005-42(L).""",,Next Action Plan :,
+1005-40(L),SN,,2010-05-14 09:24:35,NIK,,,,,,"""Received call from ADUKOM. Informed that user report the same problem.""",,Next Action Plan :,
+1005-40(L),SN,,2010-05-13 16:17:49,NIK,,,,,,,,Next Action Plan :,
+1005-44(L),SN,,2010-05-17 11:50:27,NIK,,,,,,"""Azzeri informed that log allow to close as permission from PIT Said.""",,Next Action Plan :,
+1005-44(L),SN,,2010-05-17 11:43:14,NIK,,,,,,"""Received SMS from Azzeri. He adjust the book gate at feeder 2 and use as a feeder. For feeder1 that faulty, he put back the faulty book sensor.""",,Next Action Plan :,
+1005-44(L),SN,,2010-05-17 10:14:28,NIK,,,,,,"""Azzeri call. Suzie pickup. Informed that problem resolved.""",,Next Action Plan :,
+1005-44(L),SN,,2010-05-17 09:50:47,NIK,,,,,,"""Azzeri SMS : Just arrived on site.""",,Next Action Plan :,
+1005-44(L),SN,,2010-05-15 11:25:23,NIK,,,,,,"""Informed the problem to Azzeri. He will be back to northern region on monday morning. So assign him to drop by at site to resolve dthe problem. He discuss with Yusuf because they are both northern region engineers. As per agree Azzeri will be on site on monday morning.""",,Next Action Plan :,
+1005-44(L),SN,,2010-05-14 13:24:00,NIK,,,,,,"""Received call from PI Azlin. After change Feeder, book insert 2 in CCD. Maybe the adjustment of book gate at feeder 2 is not ok. Ask to sned engineer on monday since now we at melaka for ICAO meeting. User agree.""",,Next Action Plan :,
+1005-44(L),SN,,2010-05-14 14:50:41,NIK,,,,,,"""Received call from PI Azlin. She informed that she found that book sensor fall down from it position. She try to put it back but he dont know how. As per informed by Azhar and Zul, they already adjust feeder 2 for 48pages. Ask user to swap feeder. Will call back later.""",,Next Action Plan :,
+1005-45(L),SN,,2010-05-17 11:24:46,NIK,,,,,,"""Call user. Spoke with En Khalifah. He informed that today he try to clean all unit again, and until now, no problem anymore. But he still ask engineer to come for service. But not today. Will informed regional engineer to be on site when free. For now, en khalifah allow to close log.""",,Next Action Plan :,
+1005-45(L),SN,,2010-05-17 11:14:18,NIK,,,,,,"""Since Din will be going to singapore for another problem, and Isyraf on leave today, no engineer that evailable to be on site today. Will update status with user.""",,Next Action Plan :,
+1005-45(L),SN,,2010-05-14 11:11:48,NIK,,,,,,"""Call user. Spoke with En Khalifah. He informed that book always stuck today. Ask user to do allignment and cleaning. But suer said that since sometime another printer too slow, so he need engineer to be on site. But i informed to him that all engineer now Have meeting at melaka. Will assign engineer to be on site on monday. Usr agree.""",,Next Action Plan :,
+1005-46(L),SN,,2010-05-15 11:15:51,NIK,,,,,,"""Received call from Baizura. She informed that after swap the spindal, problem resolved. She allow to close log.""",,"As per discuss with Zul, still need to replace the spindal during next PM.",
+1005-46(L),SN,,2010-05-15 11:00:13,NIK,,,,,,"""Zul call user. Ask user to swap the spindal from Film cassette to ribbon cassette. User will try first. """,,Next Action Plan :,
+1005-46(L),SN,,2010-05-15 10:54:46,NIK,,,,,,"""Call user. Spoke with Baizura. She said that error appear and film not stop rolling when they insert the film cassette into the printer. She found that supporting tube spindal at the film cassette broken. I will check with engineer first regarding this problwm.""",,Next Action Plan :,
+1005-46(L),SN,,2010-05-15 10:06:18,NIK,,,,,,"""Azhar received report from user informed the problem.""",,Next Action Plan :,
+1005-47(L),SN,,2010-05-17 10:03:02,NIK,,,,,,"""Call user. Spoke with PI Roziah. Today no problem occur anymore. Log allow to close.""",,Next Action Plan :,
+1005-47(L),SN,,2010-05-15 11:59:04,NIK,,,,,,,,Next Action Plan :,
+1005-47(L),SN,,2010-05-15 10:50:03,NIK,,,,,,"""Still not ok although scan the virus. Since now we at A Famosa Melaka, discuss with En Razi, Will assign Faizal to on site today.""",,Next Action Plan :,
+1005-47(L),SN,,2010-05-15 10:48:34,NIK,,,,,,"""Refer problem to Faizal/ Suspect virus. Yesterday Din on site and Din alreday scan the virus and problem resolved. But today problem oocur again. Ask BTMR Imran to scan virus again.""",,Next Action Plan :,
+1005-47(L),SN,,2010-05-15 10:48:05,NIK,,,,,,"""Azhar Informed that user report the problem to him. He try to troubleshoot but still not ok. """,,Next Action Plan :,
+1005-40(L),SN,,2010-05-13 15:42:00,NIK,,,,,,"""Call user. Spoke with Syarifah. Guide her to do test print. Will call back later to update status.""",,Next Action Plan :,
+1005-40(L),SN,,2010-05-13 15:35:25,NIK,,,,,,"""Call user. Not Pickup.""",,Next Action Plan :,
+1005-38(L),SN,,2010-05-17 10:03:06,NIK,,,,,,"""Call user. Spoke with Pn Roziah. She informed that today no problem occur anymore. Log allow to close.""",,Next Action Plan :,
+1005-39(L),SN,,2010-05-17 10:49:23,NIK,,,,,,"""Call user. Spoke with fariz. He confirmed that bo problem occur to the PC already. Log allow to close.""",,Next Action Plan :,
+1005-39(L),SN,,2010-05-14 14:55:38,NIK,,,,,,"""Email from Faizal:
+taken back imbasan workstation to office. please have a look because the pc always hang. i think might caused by RAM or motherboard.
+
+below is the workstation details:
+
+PC ID= 092
+IP :  10.23.131.166
+gateway: 10.23.131.254
+
+DNS: 10.23.132.3
+
+currently at wput i'm replacing the temporary workstation from the process room itself. this workstation is free from any use at the moment and have different ip address from. taken from the left imbasan workstation.
+""",,Next Action Plan :,
+1005-39(L),SN,,2010-05-13 11:44:05,NIK,,,,,,"""Call user. Informed that engineer will be on site.""",,Next Action Plan :,
+1005-39(L),SN,,2010-05-13 11:42:12,NIK,,,,,,"""Call Faizal. Still at putrajaya. Having lunch. He will go check on site. But take about 30 minutes.""",,Next Action Plan :,
+1005-39(L),SN,,2010-05-13 11:40:05,NIK,,,,,,"""Imform problem to Maria. Maria inform that faizal at putrajaya now do testing. Will call Faizal if he can go on site to look at this problem.""",,Next Action Plan :,
+1005-39(L),SN,,2010-05-13 11:38:13,NIK,,,,,,"""call user again. Spoke with Fariz. He said that PC imbasan will hang when thay want to imbas the photo. It will auto restart every time they want to do imbasan.""",,Next Action Plan :,
+1005-39(L),SN,,2010-05-13 11:38:44,NIK,,,,,,"""Call fariz mobile - unreachable.""",,Next Action Plan :,
+1005-39(L),SN,,2010-05-13 11:35:13,NIK,,,,,,"""Call user direct line - not pickup.""",,Next Action Plan :,
+1005-38(L),SN,,2010-05-14 22:11:37,NIK,,,,,,"""Din arrived at A Famosa for ICAO meeting. Informed that problem resolved.""",,Next Action Plan :,
+1005-38(L),SN,,2010-05-13 13:06:14,NIK,,,,,,,,Next Action Plan :,
+1005-38(L),SN,,2010-05-13 12:55:30,NIK,,,,,,"""As per discuss with user agree to send engineer tomorrow.""",,Next Action Plan :,
+1005-38(L),SN,,2010-05-13 12:47:37,NIK,,,,,,"""Call Din. He not back to KL. He will go to melaka for ICAO meeting from Johor.""",,Next Action Plan :,
+1005-38(L),SN,,2010-05-13 12:46:16,NIK,,,,,,"""Call Ashok. Ashok said din will back today. Will check with Din.""",,Next Action Plan :,
+1005-38(L),SN,,2010-05-13 12:45:37,NIK,,,,,,"""Received call from BTMR nizam. He informed that still not ok.""",,Next Action Plan :,
+1005-38(L),SN,,2010-05-13 12:14:12,NIK,,,,,,"""Call user. Spoke with Shila. She try to clean and now do test print. She ask to call back later.""",,Next Action Plan :,
+1005-38(L),SN,,2010-05-13 11:23:24,NIK,,,,,,"""Received call from user, Dira. She inform that today printing blur at above site of data page. Yesterday PM team do PM at site. After PM still ok. Problem start today. Ask user to clean at thermal head and platen roller. Will call back user around 11:45am.""",,Next Action Plan :,
+1005-37(L),SN,,2010-05-13 15:51:28,NIK,,,,,,"""Problem resolved and able to close.""",,Next Action Plan :,
+1005-37(L),SN,,2010-05-13 11:49:32,NIK,,,,,,"""Zul back to the office. He take one tube spindal but on site problem already resolved after user take tube spindal from ribbon cassette swap with film cassette.""",,Next Action Plan :,
+1005-37(L),SN,,2010-05-13 08:47:03,NIK,,,,,,"""Zul sms. Arrived on site.""",,Next Action Plan :,
+1005-37(L),SN,,2010-05-13 09:05:09,NIK,,,,,,"""Zul call. He found that tube spindle damaged cause the problem. Need to replace new one. I will check with dina and zul will back to office to take it. """,,Next Action Plan :,
+1005-37(L),SN,,2010-05-12 18:16:39,NIK,,,,,,"""Call Zul. Assign him to check on site tomorrow.""",,Next Action Plan :,
+1005-37(L),SN,,2010-05-12 18:12:33,NIK,,,,,,"""Call user. Spoke with asma again. Problem still not ok. This problem always happened after user change new film. But today still not ok after they do transfer mark not as before. She already OFF printer. She ask to call back tomorrow or sent engineer since T3 also occur same error.""",,Next Action Plan :,
+1005-37(L),SN,,2010-05-12 17:52:23,NIK,,,,,,"""Call user. Spoke with asma. She explained that the problem happened after she changed new film. Error occur. When she change at T3, same problem happened. Ask user to do transfer mark using permenant marker pen. She will do first. Promise to call back after 15 minutes.""",,Next Action Plan :,
+1005-35(O),SN,,2010-05-12 16:25:38,NIK,,,,,,"""Call user. Spoke with Yazid. Confirmed RTE8000 can be use without problem anymore. Log allow to close.""",,Next Action Plan :,
+1005-36(L),SN,,2010-05-12 14:59:32,NIK,,,,,,"""Call user spoke with Dian. Confirmed status pC ok. No problem occur anymore. Log allow to close.""",,Next Action Plan :,
+1005-35(O),SN,,2010-05-12 14:42:07,NIK,,,,,,,,Next Action Plan :,
+1005-34(L),SN,,2010-05-12 14:33:39,NIK,,,,,,"""Confirmed status with user, Lina. No problem occur anymore. Log able to close.""",,Next Action Plan :,
+1005-36(L),SN,,2010-05-12 11:42:15,NIK,,,,,,"""Call user spoke with Dian. After restart ok. Will update status back this afternoon. If problem occur again user will report back. For now, problem resolved.""",,Next Action Plan :,
+1005-36(L),SN,,2010-05-12 11:39:47,NIK,,,,,,"""Received report from Shima ADUKOM.""",,Next Action Plan :,
+1005-35(O),SN,,2010-05-12 10:48:08,NIK,,,,,,"""Call user spoke with Yazid. Ask for IP address : 172.24.131.241.""",,Next Action Plan :,
+1005-35(O),SN,,2010-05-12 10:34:06,NIK,,,,,,"""faizal call. He suspect problem happened becaus eof the PC effected by virus. Same problem with MPIN. He ask to ask maria to remote and scan the virus.""",,Next Action Plan :,
+1005-35(O),SN,,2010-05-12 10:28:29,NIK,,,,,,"""Call Faizal. At Uni Malaya register subject. After that he will off yo MPIN to sent back RTE8000 original unit. He ask to call user and ask for PC QA IP address and ask to sent Maria to remote site at putrajaya.""",,Next Action Plan :,
+1005-35(O),SN,,2010-05-12 10:26:57,NIK,,,,,,"""Call Din. At MPIN doing PM with Ashok.""",,Next Action Plan :,
+1005-35(O),SN,,2010-05-12 10:18:28,NIK,,,,,,"""Call user. Spoke with Yazid. Check cable . Test with standalone. When open eMRTD_QA_Reader, error ""Camera Driver Return An Error Code"".""",,Next Action Plan :,
+1005-35(O),SN,,2010-05-12 10:12:00,NIK,,,,,,"""Received report from Zana ADUKOM.""",,Next Action Plan :,
+1005-34(L),SN,,2010-05-12 10:50:38,NIK,,,,,,"""Call user. Spoke with Fariz. Check the model : 9637-C99. S/N: L3R2588. fariz informed that when he ON PC, enter the safe mode. He press R=repair, after that PC ok. No auto shutdown anymore. Will reconfirmed the status in the afternoon. Problem resolved for now.""",,Next Action Plan :,
+1005-34(L),SN,,2010-05-12 10:32:08,NIK,,,,,,"""Inform the situation to Maria. Maria ask to ask the model number. Nizam suggest to check, if they didn't scan photo and left PC idle after on, it will shutdown or not.""",,Next Action Plan :,
+1005-34(L),SN,,2010-05-12 10:31:42,NIK,,,,,,"""Call user. Spoke with Lina. She informed that when she try to scan photo, PC will aoto shutdown. They need to ON it back and same thing happened when they want to scan photo.""",,Next Action Plan :,
+1005-20(L),SN,,2010-05-12 09:22:51,NIK,,,,,,"""Call user. SPoke with sofi. No problem occur anymore today. Log allow to close.""",,Next Action Plan :,
+1005-32(L),SN,,2010-05-11 16:24:27,NIK,,,,,,"""Call user spoke with pn maziah. Confirmed after adjust ID 155 to 25 yesterday, no print wrong. For now log will be close. If problem occur again, user will call back.""",,Next Action Plan :,
+1005-28(L),SN,,2010-05-11 16:18:12,NIK,,,,,,"""Call user. Spoke with kak ita. She confirmed printer ok now. Log allow to clsoe.""",,Next Action Plan :,
+1005-20(L),SN,,2010-05-11 16:14:26,NIK,,,,,,,,Next Action Plan :,
+1005-30(L),SN,,2010-05-11 14:03:22,NIK,,,,,,"""Received call from Hafiz. He pass phone to Dian. Dian confirmed status of PC ok now. Log allow to close.""",,Next Action Plan :,
+1005-28(L),SN,,2010-05-11 10:05:25,NIK,,,,,,"""Received sms from Arham. he arrived on site at 9:00am. Error appear. Check S7 = 2.21V. S12 = 1.52V. Reposition change to 1.22V. S13 = 1.23V. S14 = 2.16V. Remove cover 1.29V. problem resolved.""",,Next Action Plan :,
+1004-115(L),SN,,2010-05-03 09:41:34,NIK,,,,,,"""Received CM report from Sufian. On site from 6/04/10 - 10/04/10. Problem: Film empty, FILM ENC ERROR, Film stuck between platen roller and cleaning platen roller and white line.
+Action taken:
+1. check crystagram, timing belt for platen roller and sensor S7. All in good condition.
+2. Check DC1 gear. Found broken.
+3. Change gear for DC1.
+4. Test print and monitor production.
+Printer can work as usual.""",,Next Action Plan :,
+1004-114(L),CM,,2010-05-03 09:38:36,NIK,,,2010-04-19 16:00:00,2010-04-19 19:00:00,,"""Received CM report from Azzeri On site on 19/04/2010 around 16:00hrs. Error occur and passport can't print after finish encode in CCD.
+Action taken:
+1. Change new sensor S12.
+2. Note all sensor voltage reading S7, S12, S13, S14.
+3. Done cleaning procedure.
+4. Test print.
+5. Monitored production.
+S12 : Before = 1.78V. After = 0.13V.
+Production continue as usual. No more turn error exist again. Since problem alreday resolved by Azzeri onsite, log able to close.""",,Next Action Plan :,
+1005-34(L),SN,,2010-05-12 10:17:07,NIK,,,,,,"""Inform the problem informally to Maria.""",,Next Action Plan :,
+1005-34(L),CM,,2010-05-12 10:12:25,NIK,,,2010-05-12 10:12:00,2010-05-12 10:12:00,,"""Received report from Zana ADUKOM.""",,Next Action Plan :,
+1005-33(L),SN,,2010-05-11 16:18:47,NIK,,,,,,"""Call user. Spoke with kak ita. Confirmed with her that no problem occur anymore. Log allow to close.""",,Next Action Plan :,
+1005-33(L),CM,,2010-05-11 11:45:57,NIK,,,2010-05-11 11:00:00,2010-05-11 16:00:00,,"""Received sms from Arham. Around 11am, user report dislocation always happened. He did open PI, clean all parts. S7 still high. Change S7 emmitter with recycle sensor. 2.21V drop to 0.16V. Done transfer mark adjustment. S12 : 1.22V -> 1.07V. S13 : 1.23V -> 1.00V. Production continue as usual.""",,Next Action Plan :,
+1005-02(L),CM,,2010-05-10 09:04:49,NIK,,,2010-05-03 10:00:00,2010-05-04 12:00:00,,"""Received CM report from Yusuf.
+Action taken:
+1. Try to troubleshoot using 3M software.
+2. MSD and check camera work fine except for RFID (not consistent).
+3. Replaced the RTE with the loan unit.
+Faulty S/N: 5RL13947. New S/N: 5RL17138.
+Production run as expected.""",,faulty unit will be taken back to workshop for repair.,
+1005-20(L),SN,,2010-05-10 22:32:57,NIK,,,,,,"""Received SMS from Maria informed that problem PC not settle yet. She will be on site again tomorrow morning.""",,Next Action Plan :,
+1005-32(L),SN,,2010-05-10 10:49:18,NIK,,,,,,"""Faizal call. Informed him that Arham already guide user to change ID. Faizal ask to monitor fisrt, If problem happened again he will check again. Will update status until tomorrow.""",,Next Action Plan :,
+1005-32(L),SN,,2010-05-10 10:39:28,NIK,,,,,,"""Call user spoke with Zimin. Argam guide him to change ID155 from 15 to 25.""",,Next Action Plan :,
+1005-32(L),SN,,2010-05-10 10:34:25,NIK,,,,,,"""Received email from Faizal. Ask to ask engineer to guide user to check ID155 = 25.""",,Next Action Plan :,
+1005-32(L),SN,,2010-05-10 10:30:30,NIK,,,,,,"""Sent email to faizal informed this problem. """,,Next Action Plan :,
+1005-32(L),SN,,2010-05-10 10:20:47,NIK,,,,,,"""Received call from Kak Maziah. She informed that problem happened on saturday 0 printed as 6.""",,Next Action Plan :,
+1005-31(L),SN,,2010-05-10 16:23:44,NIK,,,,,,,,Next Action Plan :,
+1005-31(L),SN,,2010-05-10 16:21:15,NIK,,,,,,"""Call user spoke with kak yani. She informed when they want to print DPT. Informed to user that if DPT need to refer to HTP.""",,Next Action Plan :,
+1005-30(L),SN,,2010-05-10 17:21:59,NIK,,,,,,"""Hafiz call. He informed that problem resolved. Tomorrow will update status with user. But Hafiz informed that tomorrow all IO will have exam in the morning. So need to call in afternoon.""",,Next Action Plan :,
+1005-30(L),SN,,2010-05-10 14:44:33,NIK,,,,,,"""Call Anuar. He already do as what Faizal told me. Now no problem occur anymore. He will monitor production and will confirm back status later.""",,Next Action Plan :,
+1005-30(L),SN,,2010-05-10 14:29:08,NIK,,,,,,"""informed the problem to Faizal. H eask to guide Anuar to remove the floppy disk, CD Rom and battery at motherboard.""",,Next Action Plan :,
+1005-30(L),SN,,2010-05-10 14:26:36,NIK,,,,,,"""Received call from Anuar at site doing PM34. Problem happened and he already try to troubleshoot but still cannot. He ask to refer to Faizal or maria regarding this problem.""",,Next Action Plan :,
+1005-29(L),SN,,2010-05-10 16:24:12,NIK,,,,,,"""Call user spoke with Hafiz. No problem happened anymore. Log close.""",,Next Action Plan :,
+1005-29(L),SN,,2010-05-10 15:01:45,NIK,,,,,,"""Arham call user. Now they already can print one passport. Will monitoring first and will call back user to update status around 16:00hrs.""",,Next Action Plan :,
+1005-29(L),SN,,2010-05-10 14:36:39,NIK,,,,,,"""Received call from Hafiz again. He said that he already do clenaing platen roller and orange roller many times. Also clean platen cleaning roller too. And he found there is some crack at platen cleaning roller. Ask Arham to guide user to do SP1 platen. Pas phone to Arham. Arham guide user but still not ok. Try to do TRS and CRS adjustment but failed. For now, Arham guide user to clean platen roller once again and enter in maintennace mode. Will call back later.""",,Next Action Plan :,
+1005-29(L),SN,,2010-05-10 14:20:36,NIK,,,,,,"""Received call from user hafiz. He informed that dislocation happened. Ask him to clean platen roller first. Suddenly line disconnected.""",,Next Action Plan :,
+1005-28(L),SN,,2010-05-10 13:22:30,NIK,,,,,,"""Assign Arham to be on site tomorrow. Arrange flight ticket to Arham. Firefly tomorrow at 7am. Will arrive at Kota bharu around 8:05am.""",,Next Action Plan :,
+1005-28(L),SN,,2010-05-10 12:11:42,NIK,,,,,,"""Suzie received call from user. User as to snet engineer this week because they already stop using this printer.""",,Next Action Plan :,
+1005-28(L),SN,,2010-05-10 11:50:40,NIK,,,,,,"""Refer to Arham. Maybe problem happened because of the S14.""",,Next Action Plan :,
+1005-28(L),SN,,2010-05-10 11:45:28,NIK,,,,,,"""Received call from kak ita. She informed that before this problem happened but only for 1 or 2 passport. But for today, this problem happened many tomes. I will check with engineer first regarding this problem.""",,Next Action Plan :,
+1005-26(L),SN,,2010-05-10 10:45:18,NIK,,,,,,"""Call kak yati to update status. No problem occur anymore today. Log allow to close.""",,Next Action Plan :,
+1005-26(L),SN,,2010-05-08 12:45:04,NIK,,,,,,"""Call Fakhrul.Assign him to be on site tomorrow morning. He agree.""",,Next Action Plan :,
+1005-26(L),SN,,2010-05-08 12:42:30,NIK,,,,,,,,Next Action Plan :,
+1005-26(L),SN,,2010-05-08 12:16:56,NIK,,,,,,"""Call kak yati for log reported by Azhar 1005-25(L). Kak Yati ask to sent engineer tomorrow because sunway always many application and  have other problem with RTE8000 too. """,,Next Action Plan :,
+1005-20(L),SN,,2010-05-10 13:49:03,NIK,,,,,,"""Maria on the way to the site.""",,Next Action Plan :,
+1005-18(L),SN,,2010-05-10 13:15:04,NIK,,,,,,"""The time Rosdi arrived on site problem already resolved. User allow to close log.""",,Next Action Plan :,
+1005-16(L),SN,,2010-05-10 13:15:47,NIK,,,,,,"""The time Rosdi arrived on site problem already resolved. User allow to close log.""",,Next Action Plan :,
+1005-16(L),SN,,2010-05-10 09:43:22,NIK,,,,,,"""Call Rosdi. Informed the problem. He will go on site today.""",,Next Action Plan :,
+1005-18(L),SN,,2010-05-10 09:43:43,NIK,,,,,,"""Call Rosdi. Informed the problem. He will go on site today.""",,Next Action Plan :,
+1005-18(L),SN,,2010-05-10 09:35:30,NIK,,,,,,"""Call Pn Anis. She informed that today problem still happened. She ask to check it again.""",,Next Action Plan :,
+1005-16(L),SN,,2010-05-10 09:35:27,NIK,,,,,,"""Call Pn Anis. She informed that today problem still happened. She ask to check it again.""",,Next Action Plan :,
+1005-25(L),SN,,2010-05-10 10:45:09,NIK,,,,,,"""Call kak yati to update status. No problem occur anymore today. Log allow to close.""",,Next Action Plan :,
+1005-25(L),SN,,2010-05-08 12:47:37,NIK,,,,,,"""Call faizal. Ask him to prepair RTE8000 and pass it to Fakhrul to bring to site tomorrow.""",,Next Action Plan :,
+1005-25(L),SN,,2010-05-08 12:16:05,NIK,,,,,,"""Call user. Spoke with kak yati. She ask to sent engineer tomorrow morning because usualy many application on sunday. Cant wait until monday.""",,Next Action Plan :,
+1005-25(L),SN,,2010-05-08 12:45:24,NIK,,,,,,"""Call Fakhrul.Assign him to be on site tomorrow morning. He agree.""",,Next Action Plan :,
+1005-25(L),SN,,2010-05-08 12:42:36,NIK,,,,,,"""Call Naufal since he standby this weekend but he informed that he have thing to do. Ashok at his hometown because his grandfather just pass away. """,,Next Action Plan :,
+1005-25(L),SN,,2010-05-08 12:10:22,NIK,,,,,,"""Received call from Azhar. He informed that user report the problem to him. He try to guide user but still failed to resolved. Maybe problem with RFID.""",,Next Action Plan :,
+1005-27(L),SN,,2010-05-10 10:09:11,NIK,,,,,,"""Call user. Spoke with Pn Zaiton. Confirmed today no problem occur anymore. Log allow to close.""",,Next Action Plan :,
+1005-27(L),SN,,2010-05-09 11:30:18,NIK,,,,,,"""Sent Sesnor to Rosdi. But the time i arrive on site, problem already resolved. Sensor is just for standby.""",,Next Action Plan :,
+1005-27(L),SN,,2010-05-09 10:29:20,NIK,,,,,,"""Received call from Rosdi. Need sensor S14 but he dont have sensor with him now. Ask me to sent sensor to him at site.""",,Next Action Plan :,
+1005-27(L),SN,,2010-05-08 21:45:03,NIK,,,,,,"""Received call from Rosdi. Informed problem to him. He will go on site tomorrow morning.""",,Next Action Plan :,
+1005-27(L),SN,,2010-05-08 17:12:24,NIK,,,,,,"""Call Rosdi many time but not pickup.""",,Next Action Plan :,
+1005-27(L),SN,,2010-05-08 16:43:50,NIK,,,,,,"""Received call from Din. User report the problem to him. User ask to sent engineer tomorrow morning because toady they need to stay until 4 pm because only one printer can be use.""",,Next Action Plan :,
+1004-73(L),CM,,2010-04-30 17:39:31,NIK,,,2010-04-22 09:30:00,2010-04-22 17:00:00,,"""Received CM report from Rosdi.
+Action taken:
+1. Swapped RTE8000.
+2. Loan unit S/N:5RL13942.
+3. Original unit S/N: 5RL13937.
+4. Test QA success.
+5. Monitor production.""",,Next Action Plan :,
+1004-76(L),SN,,2010-04-30 17:36:52,NIK,,,,,,"""Received CM report from Azlan.
+Action taken:
+1. Adjust CCD leg only 2 screw not 3 screw.
+2. Place piece of passport paper at top pf PI unit.
+3. Run test. Feed test, production.
+Book manage to print success.""",,Next Action Plan :,
+1004-62(L),CM,,2010-04-30 17:34:38,NIK,,,2010-04-17 10:00:00,2010-04-17 14:00:00,,"""Received CM report from Arham.
+Action taken:
+1. Clean thermal head, platen roller, all rollers (cleaning) and fans.
+2. Change film with new.
+3. Test print.
+4. Monitor productions.
+Problem resolved. Production continue as usual.""",,Next Action Plan :,
+1004-82(L),CM,,2010-04-30 17:32:14,NIK,,,2010-04-22 14:30:00,2010-04-23 11:00:00,,"""Received CM report from Zul. Dislcation and skew.
+Action taken:
+1. Clean at platen roller area.
+2. take out SP1 and clean the area.
+3. Adjust timing belt from 595 Hz to 480 Hz.
+4. Monitor production.
+5. Adjust slide bar.
+Printing success. Production continue.""",,Next Action Plan :,
+1004-63(L),CM,,2010-04-30 17:26:41,NIK,,,2010-04-18 10:00:00,2010-04-18 12:45:00,,"""Received CM report from Arham
+Action taken:
+1. Try to ghost original HDD but fail due to blue screen.
+2. Change old HDD with new.
+3. Ghost - success.
+4. Set all settings.
+5. Cannot do production (offline).
+Imbasan PC runs normally as before. Problem solved.""",,Continue monitor on 19/04/10.,
+1004-105(L),CM,,2010-04-30 17:21:23,NIK,,,2010-04-29 08:45:00,2010-04-29 12:30:00,,"""Received CM report from Arham.
+Action taken:
+1. Cannot repair the PC because it was under other vendor responsible. 
+2. Temporary solutaion:
+ - Attach jarfalla at PC QA.
+ - PC QA will b used for QA process and Cetakan Muka surat pemerhatian.
+ - Ser settings in txdvr22.tmt.
+ - Keyboard and barcode scanner was replaced with PC QA keyboard.
+Jarfalla process can be done. Problem solved temporarily.""",,Already inform BTMR about the problem and told them to escalate it to responsible vendor.,
+1004-94(L),CM,,2010-04-30 17:15:05,NIK,,,2010-04-28 08:20:00,2010-04-28 15:50:00,,"""Received CM report from isyraf.
+Action taken:
+1. Check the timing belt 2 and 3 at film unit.
+2. Change new platen roller. 08GA45.
+3. Configure back the timing belt tension from 560 to 410 Hz for both belt 2 and 3.
+Printer in good condition. No more dislocation problem happen.""",,Next Action Plan :,
+1004-69(L),CM,,2010-04-30 17:10:32,NIK,,,2010-04-19 16:30:00,2010-04-19 17:30:00,,,,Next Action Plan :,
+1004-101(L),CM,,2010-04-30 17:06:24,NIK,,,2010-04-28 08:00:00,2010-04-28 09:15:00,,"""Received CM report from Hafiz. Continue CM for yesterday 27/04/10.
+Action taken:
+1. Change parameter settings since new thermal head replaced. (ID100, 101, 102.106).
+Test print done. Production continue as usual, even better than yesterday.""",,Next Action Plan :,
+1004-101(L),CM,,2010-04-30 17:01:38,NIK,,,2010-04-27 16:00:00,2010-04-27 17:30:00,,"""Received CM report from Hafiz.
+Action taken:
+1. General cleaning (All Rollers).
+2. Thermal head cleaning.
+3. Line still exists. 
+Thermal head. Old S/N: 7x-057-01. New: 95-005-01.
+Printing quality restored to normal. Printing continues as usual.""",,Next Action Plan :,
+1004-99(L),CM,,2010-04-30 16:56:36,NIK,,,2010-04-28 09:00:00,2010-04-28 12:45:00,,"""Received CM report from Maria.
+Action taken:
+1. Replace a new hard disk (western digital, 80 GB. S/N : WMAM9ZF82791) that had been cloned with PC imbasab 03 WPIN.
+Old HDD (Western digital, 80GB S/N: WMAJ96305758).
+Imbasan process can be proceed as usual.""",,Next Action Plan :,
+1004-104(L),CM,,2010-04-30 16:53:27,NIK,,,2010-04-28 12:00:00,2010-04-28 13:30:00,,"""Received CM report from Nizam. 
+Action taken:
+1. Check all connection.
+2. Bypass HDD unable to loab BIOS.
+3. Call IBM to confirm the issue.
+4. Take back the unit.""",,Will sent loan unit.,
+1004-109(L),CM,,2010-04-30 16:48:01,NIK,,,2010-04-29 12:00:00,2010-04-29 13:00:00,,"""Received CM report from Nizam. 
+Action taken:
+1. Swap with spare monitor.
+2. Take back faulty monitor.
+PC running as usual.""",,Next Action Plan :,
+1004-100(L),CM,,2010-04-30 16:43:40,NIK,,,2010-04-28 11:00:00,2010-04-28 16:30:00,,"""Received CM report from Faizal. Spooler got problem with network and closed while printing.
+Action taken:
+1. Change workstation loan unit.
+2. Change network cable.
+3. Swap network port.
+taken back : Lenovo thinkcentre L3A8736.
+Loan Unit : Lenovo Thinkcentre L3A8813.
+Printing success without network problem. """,,Will repair and sent during next PM,
+1004-98(L),CM,,2010-04-30 16:38:26,NIK,,,2010-04-28 11:00:00,2010-04-28 16:30:00,,"""Received CM report from Faizal. Spooler T1 got double printing and PC got OS problem.
+Action taken:
+1. Hardisk image ghost.
+2. Setup back ICAO settings.
+Monitoring production No double printing occur anymore.""",,Will follow up with GET Egypt,
+1004-102(L),CM,,2010-04-30 16:35:10,NIK,,,2010-04-27 15:30:00,2010-04-27 18:00:00,,"""Received CM report from Ashok. 
+Action taken:
+1. Change heater lmap.
+2. Test print.
+3. Monitor production.
+Also change platen roller and heater cleaning roller since last PM engineer not change it.
+There is no error on printer after change parts. Production continue as usual""",,Next Action Plan :,
+1004-97(L),CM,,2010-04-30 16:32:24,NIK,,,2010-04-27 11:30:00,2010-04-27 16:30:00,,"""Received CM report from Rosdi.
+Action taken:
+1. Changed SCSI card slot.
+2. Restarted PC, ok.""",,Software engineer will come back to check the PC and troubleshoot the problem,
+1003-107(L),CM,,2010-04-30 16:28:59,NIK,,,2010-04-29 09:30:00,2010-04-29 12:00:00,,"""Received CM report Faizal. 
+Action taken:
+1. Repair windows.
+2. Ghost with backup image.
+Success QA""",,Will replace back the iriginal RTE8000.,
+1004-85(L),CM,,2010-04-30 16:24:13,NIK,,,2010-04-24 09:00:00,2010-04-24 14:00:00,,"""Received CM report from Azhar.
+Action taken:
+1. PI unit inspected.
+2. Replaced S12 sensor. Before : 1.75V. After : 0.13V.
+3. Added grease at DC5, DC6 and DC7.
+4. Readjusted belt 2 (650 -> 460)
+5. Clean all dusty part in PI unit.
+6. Test feed using feed test.
+7. Monitor production.
+Production as usual.""",,Next Action Plan :,
+1004-40(L),CM,,2010-04-30 16:21:03,NIK,,,2010-04-12 14:45:00,2010-04-12 17:00:00,,"""Received CM report from Azhar. Sensor for book detector found broken.
+Action taken:
+1. The broken sensor cannot be installed again after PF opened.
+2. Readjust other feeder (S/N: 04030083) to 48 pages.
+3. Feed test.
+4. Monitor production.
+Feed test success. Production continue as usual.""",,Next Action Plan :,
+1005-01(L),CM,,2010-05-04 16:16:48,NIK,,,2010-05-03 14:30:00,2010-05-03 16:45:00,,"""Received CM report from naufal.
+Action taken:
+1. Cover lock assembly tighten.
+2. Test print performed.
+3. Production monitored.
+Printer in good condition.""",,Next Action Plan :,
+1004-83(L),CM,,2010-05-04 16:12:54,NIK,,,2010-04-23 15:40:00,2010-04-26 12:30:00,,"""Received CM report from Anuar. Problem encoding failed and SCSI error.
+Action taken:
+1. Change new SCSI card.
+2. Connect IRIS dongle and signer card on different USB port.
+3. Testing using original passport.
+CM success. Printer in good condition. Production run as usual.""",,Next Action Plan :,
+1004-75(L),CM,,2010-05-04 16:10:57,NIK,,,2010-04-21 11:50:00,2010-04-21 16:30:00,,"""Received CM report frm Anuar.
+Action taken:
+1. Did cleaning for platen roller and book out roller.
+2. Did test print using test card.
+3. Production monitored.
+Printer in good condition.""",,Next Action Plan :,
+1004-74(L),CM,,2010-05-04 16:07:35,NIK,,,2010-04-21 11:50:00,2010-04-21 16:30:00,,,,Next Action Plan :,
+1004-110(L),CM,,2010-05-04 16:02:59,NIK,,,2010-05-03 11:45:00,2010-05-03 16:00:00,,"""Received CM report from Anuar.
+Action taken:
+1. Sensor S12 readjust.
+2. Tension for belt 1, 2 and 3 readjust (PI unit).
+3. Did general cleaning.
+4. Production monitored.
+Printer in good condition. Production run as usual.""",,Next Action Plan :,
+1004-111(L),CM,,2010-05-04 16:00:23,NIK,,,2010-05-03 11:45:00,2010-05-03 16:00:00,,"""Received CM report from Anuar.
+Action taken:
+1. Swap PF1 to PF2.
+2. Book sensor readjust (PF1).
+3. Did general cleaning.
+4. Production monitored.
+Both feeder in good condition. Production run as usual.""",,Next Action Plan :,
+1005-10(L),CM,,2010-05-07 10:56:52,NIK,,,2010-05-04 10:00:00,2010-05-04 17:00:00,,"""Received CM report frm Rosdi.
+Action taken:
+1. Open feeder.
+2. Clean feeder.
+3. Put the grease to the gear.
+4. Test ok.
+5. Production ok.""",,Next Action Plan :,
+1005-24(L),SN,,2010-05-07 15:52:01,NIK,,,,,,"""Since this problem already resolved by Isyraf on site the same day problem reported, log close.""",,Next Action Plan :,
+1005-24(L),CM,,2010-05-07 15:48:36,NIK,,,2010-05-06 13:00:00,2010-05-06 17:30:00,,"""Received CM report from Isyraf. On site on 06/05/2010 around 13:00hrs.
+Action taken:
+1. Open PO unit and check the timing belt range.
+2. Recponfigure the tension belt 1 and 2.
+3. Done test print and its success without error. 
+Printer in good condition. Production continue as well.""",,Next Action Plan :,
+1005-15(L),CM,,2010-05-07 15:39:36,NIK,,,2010-05-05 15:00:00,2010-05-05 16:45:00,,"""Received CM report from Naufal. 
+Action taken:
+1. CCD chnaged from Toppan 01 to Toppan 03 to confirm symptom.
+2. ID 155 changed from 30 to 5.
+Frequency of pop up reduced.""",,Next Action Plan :,
+1005-09(L),CM,,2010-05-07 15:36:08,NIK,,,2010-05-05 10:30:00,2010-05-05 14:30:00,,"""Received CM report from Faizal. Problem : Server date problem and jura key expired.
+Action taken:
+1. Change Jura key.
+New : Jura dongle 1970 -> 01/01/1012 
+Old : Jura dongle 1832 -> Expired and taken back.
+Pasport printing as usual.""",,Next Action Plan :,
+1005-23(L),SN,,2010-05-07 15:34:59,NIK,,,,,,"""Since this problem already resolved by Yusuf on the same day CM done, log close.""",,Next Action Plan :,
+1005-23(L),CM,,2010-05-07 15:32:52,NIK,,,2010-04-26 10:15:00,2010-04-26 13:30:00,,"""Received CM report from Yusuf pass to Azhar. Yusuf on site on 26/04/2010 around 10:15am same time with log 1005-22(L). Found the problem.
+Action taken:
+1. Reconfigure port (sysbranchcfg.exe).
+Problem resolved. Production monitored.""",,Next Action Plan :,
+1005-22(L),SN,,2010-05-07 15:30:13,NIK,,,,,,"""Since this problem already resolved by Yusuf on the same day CM done, log close.""",,Next Action Plan :,
+1005-22(L),CM,,2010-05-07 15:26:57,NIK,,,2010-04-26 10:15:00,2010-04-26 13:30:00,,"""Received CM report from Yusuf. He pass via Azhar. Yusuf on site on 26/04/2010 around 10:15am. 
+Action taken:
+1. Swap film cassette between those two printer. Problem resolved.
+2. Replaced film roll - test print. No more white dots appear.
+*Film is replaced because 1) White dots on passport printed. 2) Vertical line on crystagram (MLP P006-5d).
+Production monitored.""",,Next Action Plan :,
+1005-21(L),SN,,2010-05-08 16:19:41,NIK,,,,,,"""Call user. Spoke with kak mariati. No problem occur anymore. Log allow to close.""",,Next Action Plan :,
+1005-21(L),SN,,2010-05-07 15:11:02,NIK,,,,,,"""Received sms from Yusuf. He on site for CM log no 1005-19(L). Found this problem. 
+Action taken:
+1. Delete image inside jim/work folder. Reconfigure sysbranch.cfg. problem resolved.""",,Next Action Plan :,
+1005-16(L),SN,,2010-05-07 17:18:32,NIK,,,,,,"""Received call from Rosdi. Problem resolved. Will update status with user nextweek.""",,Next Action Plan :,
+1005-16(L),SN,,2010-05-07 09:53:43,NIK,,,,,,"""Call Pn anis. She informed that problem happened again this morning. Informed to him that engineer will be on site today.""",,Next Action Plan :,
+1005-18(L),SN,,2010-05-07 17:18:41,NIK,,,,,,,,Next Action Plan :,
+1005-19(L),SN,,2010-05-07 16:19:39,NIK,,,,,,"""Call user. Spoke with kak mariati. No problem occur anymore. Log allow to close.""",,Next Action Plan :,
+1005-19(L),SN,,2010-05-07 15:11:55,NIK,,,,,,"""Received SMS from Yusuf. Found that PC no bootdrive. He did rearrange boot sequence. Resolved.""",,Next Action Plan :,
+1005-20(L),SN,,2010-05-07 17:45:33,NIK,,,,,,"""Maria already check with Helmi IRIS. Decide to sent loan unit on Monday evening because need to deal with IRIS also because they need to install their device to that PC too.""",,Next Action Plan :,
+1005-20(L),SN,,2010-05-07 16:02:30,NIK,,,,,,"""Helmi IRIS informed that he found that both PC also facing the same problem althought they already change their device about 3 times.""",,Next Action Plan :,
+1005-20(L),SN,,2010-05-07 15:00:17,NIK,,,,,,"""Recieved call from Helmi IRIS informed the problem. Will clarify with Maria.""",,Next Action Plan :,
+1005-19(L),SN,,2010-05-07 10:37:29,NIK,,,,,,"""Call Kak Mariati. Informed her that engineer on the way to the site.""",,Next Action Plan :,
+1005-19(L),SN,,2010-05-07 10:33:53,NIK,,,,,,"""Received call from Yusuf. he on the way to site.""",,Next Action Plan :,
+1005-19(L),SN,,2010-05-07 10:32:36,NIK,,,,,,"""Call Yusuf not pickup.""",,Next Action Plan :,
+1005-19(L),SN,,2010-05-07 10:29:23,NIK,,,,,,"""Call user spoke with kak mariati. She alraedy refer this problem to Yusuf. After trouble by Yusuf via phone call, Yusuf found that maybe windows corrupt. Yusuf ask user to log this problem to ADUKOM.""",,Next Action Plan :,
+1005-05(L),SN,,2010-05-07 09:28:33,NIK,,,,,,"""Call user. Spoke with Pn Marsilla. Confirmed problem resolved. Log allow to close.""",,Next Action Plan :,
+1005-05(L),SN,,2010-05-06 15:07:02,NIK,,,,,,"""Received SMS from Anuar. Printer already up. Already test 5 passport ok. No problem anymore.""",,Next Action Plan :,
+1005-05(L),SN,,2010-05-06 12:56:14,NIK,,,,,,"""Received SMS from Anuar. Unit already arrived.""",,Next Action Plan :,
+1005-15(L),SN,,2010-05-07 09:35:06,NIK,,,,,,"""Call user spoke with Irwan. For today just a few passport popup. maybe because they already change new bundle of passport. User agree problem because of the passport physical. He allow to clsoe log.""",,Next Action Plan :,
+1005-15(L),SN,,2010-05-06 09:19:40,NIK,,,,,,"""Naufal informed that yesterday he promise with user to be on site again today. But need to cancle because En Razi ask him to standby at Damansara because KSU will visit Damansara site toay.""",,Next Action Plan :,
+1005-18(L),SN,,2010-05-07 09:42:28,NIK,,,,,,"""Rosdi informed that problem not settle yet. He will be on site again today.""",,Next Action Plan :,
+1005-18(L),SN,,2010-05-06 11:04:56,NIK,,,,,,,,Next Action Plan :,
+1005-18(L),SN,,2010-05-06 11:00:48,NIK,,,,,,"""Received call from Rosdi. He informed problem occur and he try tpo clean many time but still not ok. He dont have thermal head. Ask to sent someone to send thermal head to him at site. """,,Next Action Plan :,
+1005-16(L),SN,,2010-05-06 14:06:07,NIK,,,,,,"""Received call from Rosdi. Problem already resolved. """,,Next Action Plan :,
+1005-16(L),SN,,2010-05-06 09:17:44,NIK,,,,,,"""Call Pn Anis mobile. She informed that problem occur again where book stuck at feeder. I informed to her that Rosdi will be on site today to standby. She noted.""",,Next Action Plan :,
+1005-17(L),SN,,2010-05-06 15:00:14,NIK,,,,,,"""Zul back from site. He informed that no problem at site open his arrival. He monitor production since morning and no problem occur.""",,Next Action Plan :,
+1005-17(L),SN,,2010-05-06 09:20:08,NIK,,,,,,"""Call kak haili's mobile. She informed that error appear at spooler. They did restart printer but still not ok. I informed to her that Zul will be on site today. She noted.""",,Next Action Plan :,
+1005-13(L),SN,,2010-05-05 16:11:56,NIK,,,,,,"""Call Zul on site. He already check. The problem happned because of the barcode printed at the passport itself. Since not all passport popup, he explain to user. User accept and can key in the passport number. Log allow to close.""",,Next Action Plan :,
+1005-14(L),SN,,2010-05-05 16:11:32,NIK,,,,,,"""Call Zul on site. He already check. The problem happned because of the barcode printed at the passport itself. Since not all passport popup, he explain to user. User accept and can key in the passport number. Log allow to close.""",,Next Action Plan :,
+1005-15(L),SN,,2010-05-05 16:12:45,NIK,,,,,,"""Naufal SMS: Problem happened at T3 after swap CCD. He try adjust ID155 at T3. Have some improvement. He will try adjust a little bit.""",,Next Action Plan :,
+1005-09(L),SN,,2010-05-05 16:07:12,NIK,,,,,,"""Call user spoke with Pn Zubaidah. Confirmed status ok after change Jura dongle by faizal. Log allow to close.""",,Next Action Plan :,
+1005-11(L),SN,,2010-05-05 16:01:35,NIK,,,,,,"""Call user. Spoke with Sorap. He pas phoen to Sufian since sufian still on site. Confirm staus of printer ok. Log allow to close by Sorap.""",,Next Action Plan :,
+1005-15(L),SN,,2010-05-05 15:55:40,NIK,,,,,,"""Received SMS from Naufal.He found that CCD at T1 captured image of barcode to bright.  He swapped CCD T1 with T3. So far T1 ok. Now he monitoring T3. """,,Next Action Plan :,
+1005-09(L),SN,,2010-05-05 14:26:00,NIK,,,,,,"""Received SMS from Faizal. Problem already resolved around 10:30am his morning.""",,Next Action Plan :,
+1005-15(L),SN,,2010-05-05 12:56:53,NIK,,,,,,"""naufal just come to office. Off half day today. Assign him to check the problem at site today.""",,Next Action Plan :,
+1005-15(L),SN,,2010-05-05 10:31:39,NIK,,,,,,"""Call user Irwan. He informed that when he check img.bmp, he found that image for T1 different. They using same bundle with T2 and T3. But problem only occur at this printer. He ask to check.""",,Next Action Plan :,
+1005-15(L),SN,,2010-05-05 10:32:27,NIK,,,,,,"""Received sms from user Irwan. She informed that this printer always appear popup ask to enter passport no. This problem just happened this few days. """,,Next Action Plan :,
+1005-10(L),SN,,2010-05-05 13:23:12,NIK,,,,,,,,Next Action Plan :,
+1005-14(L),SN,,2010-05-05 12:04:35,NIK,,,,,,"""Call user. Spoke with Asma. Pass phone to Zul. Zul spoke with user. He will on site today and will check problem.""",,Next Action Plan :,
+1005-13(L),SN,,2010-05-05 12:04:58,NIK,,,,,,"""Call user. Spoke with Asma. Pass phone to Zul. Zul spoke with user. He will on site today and will check problem.""",,Next Action Plan :,
+1005-12(L),SN,,2010-05-05 10:08:17,NIK,,,,,,"""Call user spoke with En Azlan. He informed that problem already resolved after restart. Maybe network problem since job not listed in spooler list. Log close since problem already resolved.""",,Next Action Plan :,
+1005-11(L),SN,,2010-05-05 12:36:53,NIK,,,,,,"""Received SMS from Sufain. printer ok after change thermal head. S/N old: 94-012-01. S/N new : 94-111-01.""",,Next Action Plan :,
+1005-05(L),SN,,2010-05-05 11:00:34,NIK,,,,,,"""Refer to En Razi. He call Anuar and decide Anuar will standby. We will courier the part to him via nationwide.""",,Next Action Plan :,
+1005-05(L),SN,,2010-05-05 10:58:20,NIK,,,,,,"""Received call from Anuar. He said that after change new display board, still not ok. From his inspection and refer to zul, maybe problem with electrical or mechanical board.""",,Next Action Plan :,
+1005-11(L),SN,,2010-05-04 18:20:08,NIK,,,,,,"""Call Sufian. He informed that today he do site visit at SPIN office. But user report there is a white line. He did clean but line still appear at the same place and very thin. He will try to clean again tomorrow since today already late. If tomorrow clean not ok, he will change the new thermal head.""",,Next Action Plan :,
+1005-07(L),SN,,2010-05-05 09:22:10,NIK,,,,,,"""Call user. Spoke with En Khalifah. This morning, no problem occur to both printer. Log allow to close.""",,Next Action Plan :,
+1005-10(L),SN,,2010-05-05 09:08:22,NIK,,,,,,"""Call user spoke with Idham. User not use T2 yet. They usually start use T2 in afternoon. So i will confirmed the status of T2 in the afternoon.""",,Next Action Plan :,
+1005-10(L),SN,,2010-05-04 16:07:44,NIK,,,,,,"""Call Rosdi to update log 1005-03(L). He found this problem on site where when passport from feeder to CCD, it will stuck in between and cover page will pass but data page stuck at roller. Rosdi inspect the feeder too dirty. He clean the feeder and put some grease at roller. For now problem resolved. Will update status with user tomorrow morning since Rosdi still on site now monitoring production.""",,Next Action Plan :,
+1005-09(L),SN,,2010-05-04 16:50:11,NIK,,,,,,"""Assign Faizal on site tomorrow. Arrange flight ticket with kak mira. Flight to labuan at 0750hrs. Will arrive labuan at 1015hrs.""",,Next Action Plan :,
+1005-09(L),SN,,2010-05-04 16:47:00,NIK,,,,,,"""Rosdi informed that KI labuan already call him and as to snet engineer since yesterday's 4 passport and all passport for today sre pending.""",,Next Action Plan :,
+1005-09(L),SN,,2010-05-04 16:27:04,NIK,,,,,,"""Rosdi call. Already guide user but not help. Check JSPdongledriver already expired with error ""JURA 1832 EXPIRED"". Need to sent engineer replacing the Jura since the problem affect the Jura to expired. faizal informed that vmaybe this problem happened because server down yesterday.""",,Next Action Plan :,
+1005-09(L),SN,,2010-05-04 16:16:44,NIK,,,,,,"""Guide rosdi as advise by Faizal.""",,Next Action Plan :,
+1005-09(L),SN,,2010-05-04 16:15:56,NIK,,,,,,"""Faizal ask me to guide rosdi to change the time at PC. And check the jura in JSPdongledriver.""",,Next Action Plan :,
+1005-09(L),SN,,2010-05-04 16:00:36,NIK,,,,,,,,Next Action Plan :,
+1004-90(L),SN,,2010-05-04 16:15:37,NIK,,,,,,"""Call user spoke with pn maziah. Today no problem at all. She allow to close log first. Will report back if problem occur again.""",,Next Action Plan :,
+1004-90(L),SN,,2010-05-03 16:21:59,NIK,,,,,,"""Received call from Faizal. ALready remote site. Will check with user tomorrow.""",,Next Action Plan :,
+1005-02(L),SN,,2010-05-04 16:14:11,NIK,,,,,,"""Call user spoke with kak As. Confirmed after Yusuf sent loan unit, it performed well. Log allow to close.""",,Next Action Plan :,
+1005-03(L),SN,,2010-05-04 16:12:20,NIK,,,,,,"""Call user spoke with Pn Rosnah. Confirmed PC ok now. Jarfalla can work normally. Log allow to close.""",,Next Action Plan :,
+1005-03(L),SN,,2010-05-04 13:11:32,NIK,,,,,,"""Received call from Rosdi. After replace with loan PC, jarfalla can print well but have some different in system JIM appearance. Rosdi already ask user to log this problem to ADUKOM if they do not like this difference. So now log resolved.""",,Next Action Plan :,
+1005-07(L),SN,,2010-05-04 16:17:49,NIK,,,,,,"""Call Din on site. Doing PM to this printer today. Still have problem book jammed. Now testing. Will update status later.""",,Next Action Plan :,
+1005-08(L),SN,,2010-05-04 16:17:42,NIK,,,,,,"""Call Din. On site doing PM. Today they do PM at T1 so user use this printer. While on site, no problem occur to thsi printer at all. So this log will be close for this moment since user use this printer the whole day without any problem.""",,Next Action Plan :,
+1005-07(L),SN,,2010-05-04 10:54:01,NIK,,,,,,"""Received call from Din. Today user informed both printer facing problem. But now ok but user afraid problem will repeat. Din and Arham will do PM at site today. So they will check the problem.""",,Next Action Plan :,
+1005-08(L),SN,,2010-05-04 10:59:45,NIK,,,,,,"""Received call from Din. Today user informed both printer facing problem. But now ok but user afraid problem will repeat. Din and Azhar will do PM at site today. So they will check the problem.""",,Next Action Plan :,
+1005-08(L),SN,,2010-05-04 10:29:32,NIK,,,,,,"""Call Din. Ask him to follow up with user and update status to helpdesk later.""",,Next Action Plan :,
+1005-07(L),SN,,2010-05-04 10:29:13,NIK,,,,,,"""Call Din. Ask him to follow up with user and update status to helpdesk later.""",,Next Action Plan :,
+1005-02(L),SN,,2010-05-04 11:52:29,NIK,,,,,,"""SMS from Yusuf : problem resolved. Replace with loan unit.""",,Next Action Plan :,
+1005-06(L),SN,,2010-05-04 09:45:16,NIK,,,,,,"""Call user spoke with Pn Zanariah. Ask her to change plug since no lamp at CPU. She ask her IO to do that, pronlem resolved. Plug faulty. Log close.""",,Next Action Plan :,
+1005-06(L),SN,,2010-05-04 09:42:31,NIK,,,,,,"""Received call from Irwan ADUKOM. He informed that PC jarfalla failed to boot windows.""",,Next Action Plan :,
+1005-05(L),SN,,2010-05-04 10:45:22,NIK,,,,,,"""Arrange flight ticket with Kak Mira. Flight to Kuching around 7:10am tomorrow.""",,Next Action Plan :,
+1005-05(L),SN,,2010-05-04 10:38:39,NIK,,,,,,,,Next Action Plan :,
+1005-05(L),SN,,2010-05-04 10:36:10,NIK,,,,,,"""Assign Anuar to be on site tomorrow.""",,Next Action Plan :,
+1005-05(L),SN,,2010-05-04 10:31:08,NIK,,,,,,"""Call Sufian many time but cannot reach. Line keep busy.""",,Next Action Plan :,
+1005-05(L),SN,,2010-05-04 09:14:24,NIK,,,,,,"""Ask naufal. He said the problem maybe because of user install ribbon wrongly or no grease at thermal head cause the sensor not detect ribbon.""",,Next Action Plan :,
+1005-05(L),SN,,2010-05-04 09:11:47,NIK,,,,,,"""Call user spoke with PIT Hang Tuah. He informed that after change new film, ribbon roll non stop until finish. Ask user ot try another new film. Will call back after 15 minutes.""",,Next Action Plan :,
+1005-04(L),SN,,2010-05-04 10:11:49,NIK,,,,,,"""Call user. Spoke with user (Nasrina). She confirmed today no rpoblem occur anymore. Log able to close.""",,Next Action Plan :,
+1005-04(L),CM,,2010-05-03 22:36:04,NIK,,,2010-05-03 09:00:00,2010-05-03 11:45:00,,"""Received CM report from yusuf via email. On site on 03/05/10 around 9:00am. Problem at PC imbasan : self Reboot.
+Action taken:
+1. Confirmed with user  about the   problem reported.
+2. Cleared CMOS and minimize the power usage by disable all device except for hard drive, the problem persist,   .
+3. No standby pc available at that time and was suggested by  Mr. Izhar(BTMR) to used the KPIN extra PC as  temporary replacement. 
+4. Configured the PC for  ‘Image capture’(imbasan), testing and then  continue with the actual production, problem solved.  
+5. Production monitored, and leave KPIN at 1145 for RPIN CM
+""",,The broken PC will later be repaired after the parts arrive.,
+1005-01(L),SN,,2010-05-04 09:19:50,NIK,,,,,,"""Call user. Spoke with kak Zuhariah. No problem occur anymore. Log allow to close.""",,Next Action Plan :,
+1005-03(L),SN,,2010-05-03 17:13:57,NIK,,,,,,"""Call user. Informed that engineer will be on site tomorrow. User agree.""",,Next Action Plan :,
+1004-111(L),SN,,2010-05-03 16:51:58,NIK,,,,,,"""Call user. No problem occur anymore. Log allow to close.""",,Next Action Plan :,
+1004-110(L),SN,,2010-05-03 16:51:51,NIK,,,,,,"""Call user. No problem occur anymore. Log allow to close.""",,Next Action Plan :,
+1005-03(L),SN,,2010-05-03 14:30:47,NIK,,,,,,"""Informed to Maria. Will assign Rosdi to replace CPU with loan unit prepare by maria.PC Lenovo 9265-A18. S/N: L3A7202""",,Next Action Plan :,
+1005-03(L),SN,,2010-05-03 14:23:09,NIK,,,,,,"""Call user. Problem still not resolved. Will informed this problem to Maria.""",,Next Action Plan :,
+1005-03(L),SN,,2010-05-03 14:09:27,NIK,,,,,,"""Received call frm Zaki. He informed that PC failed to load windows. Error appear OS not found. Ask user to check cable and change the position of CPU. user will gtry first and will call back user to update status after 10 minutes. """,,Next Action Plan :,
+1005-01(L),SN,,2010-05-03 17:20:32,NIK,,,,,,"""Call Naufal. He already on the way back. He arrived at site around14:30hrs. Problem already resolved.""",,Next Action Plan :,
+1005-02(L),SN,,2010-05-03 15:33:55,NIK,,,,,,"""Received sms from Yusuf. He try to troubleshoot the problem to avoid any problem repeated in future. But will continue tomorrow.""",,Next Action Plan :,
+1005-02(L),SN,,2010-05-03 12:00:53,NIK,,,,,,"""Azhar received call from user, problem already resolved. But he will bring RTE8000 to give to Yusuf to replace at site since the problem is intermittent.""",,Next Action Plan :,
+1005-02(L),SN,,2010-05-03 11:44:54,NIK,,,,,,"""Call Yusuf. He already on the way to site. User already informed the problem to him and problem happened intermittent.""",,Next Action Plan :,
+1005-02(L),SN,,2010-05-03 11:17:08,NIK,,,,,,"""Ask Azhar to guide user. Azhar guide user to check using standalone. But if just stand alone, ok. But if using JIM system, failed. But user said RTE8000 already ready. Azhar ask user to restart again.""",,Next Action Plan :,
+1005-02(L),SN,,2010-05-03 11:15:51,NIK,,,,,,"""Call user. Ask user to check cable.  But still not ok.""",,Next Action Plan :,
+1005-01(L),SN,,2010-05-03 10:45:14,NIK,,,,,,"""Assign Naufal to be on site today. He suppose to standby at WP14/BKAJ/WPUT and ashok standby at office but Ashok have think to do today so Naufal will be on site. Bring together CCD for problem Popup.""",,Next Action Plan :,
+1005-01(L),SN,,2010-05-03 10:32:12,NIK,,,,,,"""Assign Rosdi to guide user but found that the key holder loose. need to send engineer to tighten the holder.""",,Next Action Plan :,
+1005-01(L),SN,,2010-05-03 10:00:29,NIK,,,,,,"""Call user to ask about the statistic damage book for feb and mac and user wan hafiz informed that printer facing probelm where error appear when passport inside toppan and cause the passport stuck at PO unit. Will check with engineer to guide user to put passport at cover sensor.""",,Next Action Plan :,
+1004-111(L),SN,,2010-05-03 12:05:19,NIK,,,,,,"""Received sms from Anuar. Arrived on site around 11:45am. Problem already resolved.""",,Next Action Plan :,
+1004-111(L),SN,,2010-05-03 08:14:58,NIK,,,,,,"""Sms Anuar since he standby this week. Informed the problem. He will be on site today. Anuar ask to prepare screw and put it on his table.""",,Next Action Plan :,
+1004-111(L),SN,,2010-04-30 16:32:38,NIK,,,,,,"""Received call from Kak yati. She informed that book sensor fall and they try to put it back but failed. She ask to snet engineer on site on monday since another printer also facing problem. Refer to log 1004-110(L). Ask to guide user to swap feeder but user refuse because they afraid to do that.""",,Next Action Plan :,
+1004-110(L),SN,,2010-05-03 12:09:45,NIK,,,,,,"""Received SMS from Anuar. Arrived on site around 11:45am.""",,Next Action Plan :,
+1004-110(L),SN,,2010-05-03 14:50:54,NIK,,,,,,"""Received call frm Anuar. He said that he not replace the screw but he did adjust the timing belt. Now no error occur. He said that difficult to change the screw. It will take time to remove the broken screw. But for now, no error, so problem resolved.""",,Next Action Plan :,
+1004-110(L),SN,,2010-05-03 08:14:10,NIK,,,,,,"""Sms Anuar since he standby this week. Informed the problem. He will be on site today. Anuar ask to prepare screw and put it on his table.""",,Next Action Plan :,
+1004-110(L),SN,,2010-04-30 16:32:11,NIK,,,,,,,,Next Action Plan :,
+1004-113(L),CM,,2010-05-03 10:00:01,NIK,,,2010-04-23 10:30:00,2010-04-26 11:30:00,,"""Received CM report from Rosdi. On site on 23/04/2010 around 10:30am. 
+Action taken:
+1. Checked platen roller.
+2. Measured platen timing belt (tension).
+3. Adjust platen timing belt (tension).
+4. Test print and monitor production.
+Since this problem alreday resolved by engineer on site, log close.""",,Next Action Plan :,
+1004-112(L),SN,,2010-05-03 10:05:49,NIK,,,,,,"""Log close since this problem already resolved by engineer at site and no reported problem regarding this problem.""",,Next Action Plan :,
+1004-112(L),CM,,2010-05-03 10:00:26,NIK,,,2010-04-09 14:30:00,2010-04-09 17:00:00,,"""Received CM report from Rosdi. On site on 09/04/2010 around 14:30hrs.
+Action taken:
+1. Changed RTE8000 USB port.
+2. Installed driver.
+3. Stand alone test success.
+4. Monitor QA process.
+QA reader working fine.""",,Next Action Plan :,

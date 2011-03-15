@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<style type="text/css">
+    /* CSS for printing */
+#logoHeader {
+        font-family: "Arial";
+        font-size: 100%;
+        line-height: 130%;
+        font-weight: bold;
+        color: #000000;
+}
+#logoHeaderSmall {
+        font-family: "Arial";
+        font-size: 70%;
+        line-height: 130%;
+        font-weight: bold;
+        color: #000000;
+}
+#HeadTitle {
+        font-family: "Arial";
+        font-size: 130%;
+        line-height: 130%;
+        font-weight: bold;
+        color: #000000;
+    text-align:center;
+}
+#HeadTitleTdColored {
+        font-family: "Arial";
+        font-size: 110%;
+        line-height: 100%;
+        font-weight: bold;
+        color: #000000;
+    background-color: #CDCDCD;
+        padding: 4px;
+    text-align:center;
+}
+.t1 {
+        font-family: "Trebuchet MS";
+        font-size: 100%;
+        line-height: 100%;
+        font-weight: normal;
+        padding: 0px;
+    background-color: #2c7d98;
+}
+.tdBordered{
+    border-top: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+    font-weight:normal;
+    font-size:95%;
+}
+.tdHeader{
+    border-top: 1px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+    font-weight:bold;
+    font-size:90%;
+    text-align:center;
+}
+.tdContent {
+    padding-top:2px;
+    font-size:80%;
+    font-weight:normal;
+    border-bottom: 1px solid #CCCCCC;
+}
+.tdBold {
+        line-height: 90%;
+        font-weight: bold;
+    text-align:center;
+}
+
+</style>
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- BEGIN Panel PanHeadPage -->
+<div id="HeadTitleTdColored">
+  Statistic of PM According to Site By Month of {lblMonth} And Year of {lblYear} 
+</div>
+<!-- END Panel PanHeadPage -->
+<!-- BEGIN Report smart_eqtoppan_smart_prev1 -->
+<table border="0" cellspacing="0" cellpadding="0" width="80%">
+  <tr>
+    <td valign="top"><br>
+      <br>
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header -->
+        <tr class="Caption">
+          <th scope="col" style="TEXT-ALIGN: center" class="tdHeader" >#</th>
+ 
+          <th scope="col" style="TEXT-ALIGN: center" class="tdHeader" >SITE</th>
+ 
+          <th scope="col" style="TEXT-ALIGN: center" class="tdHeader" >SITE CODE</th>
+ 
+          <th scope="col" style="TEXT-ALIGN: center" class="tdHeader" >TID</th>
+ 
+          <th width="20%" scope="col" style="TEXT-ALIGN: center" class="tdHeader" >ENG ID #1</th>
+ 
+          <th width="20%" scope="col" style="TEXT-ALIGN: center" class="tdHeader" >ENG ID #2</th>
+ 
+          <th scope="col" widht="15%" style="TEXT-ALIGN: center" class="tdHeader" >DATE</th>
+ 
+          <th scope="col">REPORT?</th>
+        </tr>
+ <!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tr class="Footer">
+          <td colspan="8">{Report_CurrentDateTime}</td>
+        </tr>
+ <!-- END Section Page_Footer -->
+        <!-- BEGIN Section state_Header --><!-- END Section state_Header -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: center" class="tdContent">{Report_Row_Number} </td> 
+          <td style="TEXT-ALIGN: center" class="tdContent">&nbsp;{state}&nbsp;<input id="smart_eqtoppan_smart_prev1Detailbranchcode_{smart_eqtoppan_smart_prev1:rowNumber}" value="{branchcode}" type="hidden" name="{branchcode_Name}"></td> 
+          <td style="TEXT-ALIGN: center" class="tdContent">&nbsp;{branch}</td> 
+          <td style="TEXT-ALIGN: center" class="tdContent">{eqtop_toppan} </td> 
+          <td style="TEXT-ALIGN: center" class="tdContent">{prvt_byuser} </td> 
+          <td style="TEXT-ALIGN: center" class="tdContent">{prvt_byuser2} </td> 
+          <td style="TEXT-ALIGN: center" class="tdContent">{prvt_date} </td> 
+          <td style="TEXT-ALIGN: center" class="tdContent">{prvt_report} </td>
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section state_Footer --><!-- END Section state_Footer -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="8">No records</td>
+        </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Report smart_eqtoppan_smart_prev1 -->
+</body>
+</html>
