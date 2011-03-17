@@ -76,7 +76,7 @@ class clsRecordsmartheadersmart_user { //smart_user Class @12-803DE2F1
     }
 //End Class_Initialize Event
 
-//Initialize Method @12-D3026D7D
+//Initialize Method @12-F708D448
     function Initialize()
     {
 
@@ -84,6 +84,7 @@ class clsRecordsmartheadersmart_user { //smart_user Class @12-803DE2F1
             return;
 
         $this->DataSource->Parameters["sesUserID"] = CCGetSession("UserID", NULL);
+        $this->DataSource->Parameters["expr57"] = usrgroup;
     }
 //End Initialize Method
 
@@ -265,17 +266,21 @@ class clssmartheadersmart_userDataSource extends clsDBSMART {  //smart_userDataS
     }
 //End DataSourceClass_Initialize Event
 
-//Prepare Method @12-094CA36F
+//Prepare Method @12-FDFC7335
     function Prepare()
     {
         global $CCSLocales;
         global $DefaultDateFormat;
         $this->wp = new clsSQLParameters($this->ErrorBlock);
         $this->wp->AddParameter("1", "sesUserID", ccsInteger, "", "", $this->Parameters["sesUserID"], "", false);
+        $this->wp->AddParameter("2", "expr57", ccsText, "", "", $this->Parameters["expr57"], "", false);
         $this->AllParametersSet = $this->wp->AllParamsSet();
         $this->wp->Criterion[1] = $this->wp->Operation(opEqual, "smart_user.id", $this->wp->GetDBValue("1"), $this->ToSQL($this->wp->GetDBValue("1"), ccsInteger),false);
-        $this->Where = 
-             $this->wp->Criterion[1];
+        $this->wp->Criterion[2] = $this->wp->Operation(opEqual, "smart_referencecode.ref_type", $this->wp->GetDBValue("2"), $this->ToSQL($this->wp->GetDBValue("2"), ccsText),false);
+        $this->Where = $this->wp->opAND(
+             false, 
+             $this->wp->Criterion[1], 
+             $this->wp->Criterion[2]);
     }
 //End Prepare Method
 

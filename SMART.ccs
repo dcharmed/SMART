@@ -57,14 +57,14 @@
 	</CodeFiles>
 	<Groups>
 		<Group id="443" name="Administrator" value="1"/>
-<Group id="444" name="Manager" value="2"/>
-<Group id="445" name="Engineer" value="3"/>
-<Group id="446" name="Helpdesk" value="5"/>
-<Group id="447" name="Adukom" value="6"/>
-<Group id="448" name="Senior" value="4"/>
-<Group id="449" name="User/Client" value="10"/>
-<Group id="450" name="In-House Engineer" value="7"/>
-</Groups>
+		<Group id="444" name="Manager" value="2"/>
+		<Group id="445" name="Engineer" value="3"/>
+		<Group id="446" name="Helpdesk" value="5"/>
+		<Group id="447" name="Adukom" value="6"/>
+		<Group id="448" name="Senior" value="4"/>
+		<Group id="449" name="User/Client" value="10"/>
+		<Group id="450" name="In-House Engineer" value="7"/>
+	</Groups>
 	<Styles>
 		<Style id="3" name="smartStyle" caption="smartStyle"/>
 		<Style id="4" name="smartStyleTurqoise" caption="smartStyleTurqoise"/>
@@ -74,42 +74,42 @@
 	</Styles>
 	<CustomButtons>
 		<CustomButton id="407" name="ButtonCancel" value="Cancel"/>
-<CustomButton id="408" name="ButtonDelete" value="Delete"/>
-<CustomButton id="409" name="ButtonInsert" value="Add"/>
-<CustomButton id="410" name="ButtonLogin" value="Login"/>
-<CustomButton id="411" name="ButtonLogout" value="Logout"/>
-<CustomButton id="412" name="ButtonSearch" value="Search"/>
-<CustomButton id="413" name="ButtonToday" value="Today"/>
-<CustomButton id="414" name="ButtonUpdate" value="Update"/>
-<CustomButton id="415" name="ButtonLast" value="Last"/>
-<CustomButton id="416" name="ButtonLastOff" value="Last"/>
-<CustomButton id="417" name="ButtonFirst" value="First"/>
-<CustomButton id="418" name="ButtonFirstOff" value="First"/>
-<CustomButton id="419" name="ButtonNext" value="Next"/>
-<CustomButton id="420" name="ButtonNextOff" value="Next"/>
-<CustomButton id="421" name="ButtonPrev" value="Prev"/>
-<CustomButton id="422" name="ButtonPrevOff" value="Prev"/>
-<CustomButton id="423" name="ButtonReturned" value="Return"/>
-<CustomButton id="424" name="ButtonProcess" value="Process"/>
-<CustomButton id="425" name="ButtonApproval" value="Submit For Approval"/>
-<CustomButton id="426" name="ButtonBackToList" value="Back To Ticket List"/>
-<CustomButton id="427" name="ButtonCM" value="Corrective Maintenance"/>
-<CustomButton id="428" name="ButtonSN" value="Support Notes"/>
-<CustomButton id="429" name="ButtonNewCM" value="New CM"/>
-<CustomButton id="430" name="ButtonNewSN" value="New SN"/>
-<CustomButton id="431" name="ButtonClose" value="Close"/>
-<CustomButton id="432" name="ButtonFind" value="Find"/>
-<CustomButton id="433" name="ButtonNewRow" value="Add New Row"/>
-<CustomButton id="434" name="ButtonPrint" value="Print"/>
-<CustomButton id="435" name="ButtonReport" value="Generate Report"/>
-<CustomButton id="436" name="ButtonFilter" value="Filter"/>
-<CustomButton id="437" name="ButtonNo" value="No"/>
-<CustomButton id="438" name="ButtonYes" value="Yes"/>
-<CustomButton id="439" name="ButtonSubmit" value="Submit"/>
-<CustomButton id="440" name="ButtonNewRecord" value="Add New Record"/>
-<CustomButton id="441" name="ButtonUpdStock" value="Update Stocks"/>
-<CustomButton id="442" name="ButtonGenerate" value="Generate"/>
-</CustomButtons>
+		<CustomButton id="408" name="ButtonDelete" value="Delete"/>
+		<CustomButton id="409" name="ButtonInsert" value="Add"/>
+		<CustomButton id="410" name="ButtonLogin" value="Login"/>
+		<CustomButton id="411" name="ButtonLogout" value="Logout"/>
+		<CustomButton id="412" name="ButtonSearch" value="Search"/>
+		<CustomButton id="413" name="ButtonToday" value="Today"/>
+		<CustomButton id="414" name="ButtonUpdate" value="Update"/>
+		<CustomButton id="415" name="ButtonLast" value="Last"/>
+		<CustomButton id="416" name="ButtonLastOff" value="Last"/>
+		<CustomButton id="417" name="ButtonFirst" value="First"/>
+		<CustomButton id="418" name="ButtonFirstOff" value="First"/>
+		<CustomButton id="419" name="ButtonNext" value="Next"/>
+		<CustomButton id="420" name="ButtonNextOff" value="Next"/>
+		<CustomButton id="421" name="ButtonPrev" value="Prev"/>
+		<CustomButton id="422" name="ButtonPrevOff" value="Prev"/>
+		<CustomButton id="423" name="ButtonReturned" value="Return"/>
+		<CustomButton id="424" name="ButtonProcess" value="Process"/>
+		<CustomButton id="425" name="ButtonApproval" value="Submit For Approval"/>
+		<CustomButton id="426" name="ButtonBackToList" value="Back To Ticket List"/>
+		<CustomButton id="427" name="ButtonCM" value="Corrective Maintenance"/>
+		<CustomButton id="428" name="ButtonSN" value="Support Notes"/>
+		<CustomButton id="429" name="ButtonNewCM" value="New CM"/>
+		<CustomButton id="430" name="ButtonNewSN" value="New SN"/>
+		<CustomButton id="431" name="ButtonClose" value="Close"/>
+		<CustomButton id="432" name="ButtonFind" value="Find"/>
+		<CustomButton id="433" name="ButtonNewRow" value="Add New Row"/>
+		<CustomButton id="434" name="ButtonPrint" value="Print"/>
+		<CustomButton id="435" name="ButtonReport" value="Generate Report"/>
+		<CustomButton id="436" name="ButtonFilter" value="Filter"/>
+		<CustomButton id="437" name="ButtonNo" value="No"/>
+		<CustomButton id="438" name="ButtonYes" value="Yes"/>
+		<CustomButton id="439" name="ButtonSubmit" value="Submit"/>
+		<CustomButton id="440" name="ButtonNewRecord" value="Add New Record"/>
+		<CustomButton id="441" name="ButtonUpdStock" value="Update Stocks"/>
+		<CustomButton id="442" name="ButtonGenerate" value="Generate"/>
+	</CustomButtons>
 	<Profiles>
 		<Profile name="Server1" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;pl;pm;cgi;mdb;gif;jpg;css;xml;java;ascx;aspx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;swf" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" fileExtension=".php" location="Local" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;swf" publishingExceptMask="ccs;ccp" publishingType="Project" FTPFolder="" FTPLogin="" FTPPassword="" FTPServer="" FTPServerURL="" __specValue="" localServerPath="C:\wamp\www\SMART" localServerURL="http://localhost/SMART">
 			<Connections connection="SMART">

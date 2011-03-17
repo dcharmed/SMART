@@ -31,7 +31,7 @@ class clsMenusmartnavmenuMenuListHelpdesk extends clsMenu { //MenuListHelpdesk c
 		$this->StaticItems[] = array("item_id" => "MenuItem3Item1", "item_id_parent" => "MenuItem3", "item_caption" => "Requisition List", "item_url" => array("Page" => $this->RelativePath . "smartpreq.php", "Parameters" => null), "item_target" => "_self", "item_title" => "Requisition List");
 		$this->StaticItems[] = array("item_id" => "MenuItem3Item3", "item_id_parent" => "MenuItem3", "item_caption" => "Returned List", "item_url" => array("Page" => $this->RelativePath . "smartprtn.php", "Parameters" => null), "item_target" => "_self", "item_title" => "Returned List");
 		$this->StaticItems[] = array("item_id" => "MenuItem3Item2", "item_id_parent" => "MenuItem3", "item_caption" => "Stocks", "item_url" => array("Page" => $this->RelativePath . "smartpstock.php", "Parameters" => null), "item_target" => "_self", "item_title" => "Stocks");
-        $this->StaticItems[] = array("item_id" => "MenuItem4", "item_id_parent" => null, "item_caption" => "Workshop & Repair", "item_url" => array("Page" => $this->RelativePath . "#", "Parameters" => null), "item_target" => "", "item_title" => "Workshop");
+        $this->StaticItems[] = array("item_id" => "MenuItem4", "item_id_parent" => null, "item_caption" => "Workshop & Equipment", "item_url" => array("Page" => $this->RelativePath . "#", "Parameters" => null), "item_target" => "", "item_title" => "Workshop");
 		$this->StaticItems[] = array("item_id" => "MenuItem11", "item_id_parent" => null, "item_caption" => "Maintenance & Loans", "item_url" => array("Page" => $this->RelativePath . "smartloan.php", "Parameters" => null), "item_target" => "", "item_title" => "Maintenance & Loans");
 		$this->StaticItems[] = array("item_id" => "MenuItem6", "item_id_parent" => null, "item_caption" => "Damaged Passport", "item_url" => array("Page" => $this->RelativePath . "smartdp.php", "Parameters" => null), "item_target" => "", "item_title" => "Damaged Passport");
 		$this->StaticItems[] = array("item_id" => "MenuItem9", "item_id_parent" => null, "item_caption" => "Site Info", "item_url" => array("Page" => $this->RelativePath . "smartsite.php", "Parameters" => null), "item_target" => "", "item_title" => "Site Info");
@@ -131,7 +131,7 @@ class clsMenusmartnavmenuMenuListEngineer extends clsMenu { //MenuListEngineer c
         $this->StaticItems[] = array("item_id" => "MenuItem3Item2", "item_id_parent" => "MenuItem3", "item_caption" => "Task Assignments", "item_url" => array("Page" => $this->RelativePath . "taskactivity.php", "Parameters" => null), "item_target" => "", "item_title" => "");
         $this->StaticItems[] = array("item_id" => "MenuItem6", "item_id_parent" => null, "item_caption" => "Reports", "item_url" => array("Page" => $this->RelativePath . "reports.php", "Parameters" => null), "item_target" => "", "item_title" => "");
         $this->StaticItems[] = array("item_id" => "MenuItem4", "item_id_parent" => null, "item_caption" => "Spare Part", "item_url" => array("Page" => $this->RelativePath . "#", "Parameters" => null), "item_target" => "", "item_title" => "");
-        $this->StaticItems[] = array("item_id" => "MenuItem5", "item_id_parent" => null, "item_caption" => "Workshop", "item_url" => array("Page" => $this->RelativePath . "#", "Parameters" => null), "item_target" => "", "item_title" => "");
+        $this->StaticItems[] = array("item_id" => "MenuItem5", "item_id_parent" => null, "item_caption" => "Workshop & Equipment", "item_url" => array("Page" => $this->RelativePath . "#", "Parameters" => null), "item_target" => "", "item_title" => "");
 
         $this->DataSource = new clssmartnavmenuMenuListEngineerDataSource($this);
         $this->ds = & $this->DataSource;
@@ -224,7 +224,7 @@ class clsMenusmartnavmenuMenuListAdmin extends clsMenu { //MenuListAdmin class @
 		$this->StaticItems[] = array("item_id" => "MenuItem3Item1", "item_id_parent" => "MenuItem3", "item_caption" => "Requisition List", "item_url" => array("Page" => $this->RelativePath . "smartpreq.php", "Parameters" => null), "item_target" => "_self", "item_title" => "Requisition List");
 		$this->StaticItems[] = array("item_id" => "MenuItem3Item3", "item_id_parent" => "MenuItem3", "item_caption" => "Returned List", "item_url" => array("Page" => $this->RelativePath . "smartprtn.php", "Parameters" => null), "item_target" => "_self", "item_title" => "Returned List");
 		$this->StaticItems[] = array("item_id" => "MenuItem3Item2", "item_id_parent" => "MenuItem3", "item_caption" => "Stocks", "item_url" => array("Page" => $this->RelativePath . "smartpstock.php", "Parameters" => null), "item_target" => "_self", "item_title" => "Stocks");
-        $this->StaticItems[] = array("item_id" => "MenuItem4", "item_id_parent" => null, "item_caption" => "Workshop", "item_url" => array("Page" => $this->RelativePath . "#", "Parameters" => null), "item_target" => "", "item_title" => "Workshop");
+        $this->StaticItems[] = array("item_id" => "MenuItem4", "item_id_parent" => null, "item_caption" => "Workshop & Equipment", "item_url" => array("Page" => $this->RelativePath . "#", "Parameters" => null), "item_target" => "", "item_title" => "Workshop & Equipment");
 
         $this->DataSource = new clssmartnavmenuMenuListAdminDataSource($this);
         $this->ds = & $this->DataSource;
@@ -414,6 +414,7 @@ class clsMenusmartnavmenuMenuListInHouseEng extends clsMenu { //MenuListInHouseE
 		$this->StaticItems[] = array("item_id" => "MenuItem3Item3", "item_id_parent" => "MenuItem3", "item_caption" => "Returned List", "item_url" => array("Page" => $this->RelativePath . "smartprtn.php", "Parameters" => null), "item_target" => "_self", "item_title" => "Returned List");
 		$this->StaticItems[] = array("item_id" => "MenuItem3Item2", "item_id_parent" => "MenuItem3", "item_caption" => "Stocks", "item_url" => array("Page" => $this->RelativePath . "smartpstock.php", "Parameters" => null), "item_target" => "_self", "item_title" => "Stocks");
         $this->StaticItems[] = array("item_id" => "MenuItem9", "item_id_parent" => null, "item_caption" => "Maintenance & Loans", "item_url" => array("Page" => $this->RelativePath . "#", "Parameters" => null), "item_target" => "", "item_title" => "Maintenance & Loans");
+		$this->StaticItems[] = array("item_id" => "MenuItem10", "item_id_parent" => null, "item_caption" => "Workshop & Equipment", "item_url" => array("Page" => $this->RelativePath . "smartworkshop.php", "Parameters" => null), "item_target" => "", "item_title" => "Workshop & Equipment");
 
         $this->DataSource = new clssmartnavmenuMenuListInHouseEngDataSource($this);
         $this->ds = & $this->DataSource;
@@ -509,7 +510,7 @@ class clsMenusmartnavmenuMenuListSenior extends clsMenu { //MenuListSenior class
         $this->StaticItems[] = array("item_id" => "MenuItem3Item1", "item_id_parent" => "MenuItem3", "item_caption" => "Calendar", "item_url" => array("Page" => $this->RelativePath . "calactivity.php", "Parameters" => null), "item_target" => "", "item_title" => "");
         $this->StaticItems[] = array("item_id" => "MenuItem3Item2", "item_id_parent" => "MenuItem3", "item_caption" => "Task Assignments", "item_url" => array("Page" => $this->RelativePath . "taskactivity.php", "Parameters" => null), "item_target" => "", "item_title" => "");
         $this->StaticItems[] = array("item_id" => "MenuItem4", "item_id_parent" => null, "item_caption" => "Spare Part", "item_url" => array("Page" => $this->RelativePath . "#", "Parameters" => null), "item_target" => "", "item_title" => "");
-        $this->StaticItems[] = array("item_id" => "MenuItem5", "item_id_parent" => null, "item_caption" => "Workshop", "item_url" => array("Page" => $this->RelativePath . "#", "Parameters" => null), "item_target" => "", "item_title" => "");
+        $this->StaticItems[] = array("item_id" => "MenuItem5", "item_id_parent" => null, "item_caption" => "Workshop & Equipment", "item_url" => array("Page" => $this->RelativePath . "#", "Parameters" => null), "item_target" => "", "item_title" => "");
 
         $this->DataSource = new clssmartnavmenuMenuListSeniorDataSource($this);
         $this->ds = & $this->DataSource;

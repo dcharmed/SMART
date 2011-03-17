@@ -1,0 +1,517 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SMART: Sistem Maklumat Rekod-TARGET</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.54">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-EDECDED7
+
+var SEquipment_DatePicker_s_wkshp_date = new Object(); 
+SEquipment_DatePicker_s_wkshp_date.format           = "LongDate";
+SEquipment_DatePicker_s_wkshp_date.style            = "Styles/{CCS_Style}/Style.css";
+SEquipment_DatePicker_s_wkshp_date.relativePathPart = "";
+SEquipment_DatePicker_s_wkshp_date.themeVersion = "3.0";
+
+var SEquipment_DatePicker_s_wkshp_benchmarkdate = new Object(); 
+SEquipment_DatePicker_s_wkshp_benchmarkdate.format           = "LongDate";
+SEquipment_DatePicker_s_wkshp_benchmarkdate.style            = "Styles/{CCS_Style}/Style.css";
+SEquipment_DatePicker_s_wkshp_benchmarkdate.relativePathPart = "";
+SEquipment_DatePicker_s_wkshp_benchmarkdate.themeVersion = "3.0";
+
+var REquipmentForm_DatePicker_wkshp_date = new Object(); 
+REquipmentForm_DatePicker_wkshp_date.format           = "GeneralDate";
+REquipmentForm_DatePicker_wkshp_date.style            = "Styles/{CCS_Style}/Style.css";
+REquipmentForm_DatePicker_wkshp_date.relativePathPart = "";
+REquipmentForm_DatePicker_wkshp_date.themeVersion = "3.0";
+
+var REquipmentForm_DatePicker_wkshp_benchmarkdate = new Object(); 
+REquipmentForm_DatePicker_wkshp_benchmarkdate.format           = "GeneralDate";
+REquipmentForm_DatePicker_wkshp_benchmarkdate.style            = "Styles/{CCS_Style}/Style.css";
+REquipmentForm_DatePicker_wkshp_benchmarkdate.relativePathPart = "";
+REquipmentForm_DatePicker_wkshp_benchmarkdate.themeVersion = "3.0";
+
+var REquipmentForm_DatePicker_wkshp_requesteddate = new Object(); 
+REquipmentForm_DatePicker_wkshp_requesteddate.format           = "LongDate";
+REquipmentForm_DatePicker_wkshp_requesteddate.style            = "Styles/{CCS_Style}/Style.css";
+REquipmentForm_DatePicker_wkshp_requesteddate.relativePathPart = "";
+REquipmentForm_DatePicker_wkshp_requesteddate.themeVersion = "3.0";
+
+var REquipmentForm_DatePicker_wkshp_receiveddate = new Object(); 
+REquipmentForm_DatePicker_wkshp_receiveddate.format           = "LongDate";
+REquipmentForm_DatePicker_wkshp_receiveddate.style            = "Styles/{CCS_Style}/Style.css";
+REquipmentForm_DatePicker_wkshp_receiveddate.relativePathPart = "";
+REquipmentForm_DatePicker_wkshp_receiveddate.themeVersion = "3.0";
+
+var REquipmentForm_DatePicker_wkshp_authorizeddate = new Object(); 
+REquipmentForm_DatePicker_wkshp_authorizeddate.format           = "LongDate";
+REquipmentForm_DatePicker_wkshp_authorizeddate.style            = "Styles/{CCS_Style}/Style.css";
+REquipmentForm_DatePicker_wkshp_authorizeddate.relativePathPart = "";
+REquipmentForm_DatePicker_wkshp_authorizeddate.themeVersion = "3.0";
+
+var REquipmentForm_DatePicker_wkshp_delivereddate = new Object(); 
+REquipmentForm_DatePicker_wkshp_delivereddate.format           = "LongDate";
+REquipmentForm_DatePicker_wkshp_delivereddate.style            = "Styles/{CCS_Style}/Style.css";
+REquipmentForm_DatePicker_wkshp_delivereddate.relativePathPart = "";
+REquipmentForm_DatePicker_wkshp_delivereddate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//REquipmentFormButton_Delete_OnClick @33-F72FFBCA
+function REquipmentFormButton_Delete_OnClick()
+{
+    var result = true;
+//End REquipmentFormButton_Delete_OnClick
+
+//Confirmation Message @34-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close REquipmentFormButton_Delete_OnClick @33-BC33A33A
+    return result;
+}
+//End Close REquipmentFormButton_Delete_OnClick
+
+//REquipmentFormButton_Cancel_OnClick @35-46925C51
+function REquipmentFormButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End REquipmentFormButton_Cancel_OnClick
+
+//bind_events @1-94F38513
+function bind_events() {
+    if (functionExists("smartheader_bind_events")) smartheader_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+    addEventHandler("REquipmentFormButton_Delete", "click", REquipmentFormButton_Delete_OnClick);
+    addEventHandler("REquipmentFormButton_Cancel", "click", REquipmentFormButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style_doctype.css" />
+</head>
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+{header} 
+<table class="t2" cellpadding="10" width="100%">
+  <tr>
+    <td valign="top" rowspan="2" width="100%">
+      <p></p>
+ 
+      <div class="H1">
+        WORKSHOP &amp; EQUIPMENT 
+      </div>
+ 
+      <div class="default">
+        <br>
+        <!-- BEGIN Record SEquipment -->
+        <form id="SEquipment" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>Search</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  </tr>
+ 
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="4">{Error}</td> 
+                  </tr>
+ <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="SEquipments_wkshp_serial">FORm Serial #</label></td> 
+                    <td><input id="SEquipments_wkshp_serial" value="{s_wkshp_serial}" maxlength="10" size="10" name="{s_wkshp_serial_Name}"></td> 
+                    <td class="th">Equipment : </td> 
+                    <td>
+                      <select id="SEquipments_wkshp_equipment" name="{s_wkshp_equipment_Name}">
+                        <option selected value="">Select Value</option>
+ {s_wkshp_equipment_Options} 
+                      </select>
+ &nbsp;</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="SEquipments_wkshp_date">Date</label></td> 
+                    <td colspan="3"><input id="SEquipments_wkshp_date" value="{s_wkshp_date}" maxlength="20" size="15" name="{s_wkshp_date_Name}">
+                      <!-- BEGIN DatePicker DatePicker_s_wkshp_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="SEquipmentDatePicker_s_wkshp_date"><img id="SEquipmentDatePicker_s_wkshp_date_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_s_wkshp_date -->&nbsp;&nbsp;to &nbsp;<input id="SEquipments_wkshp_benchmarkdate" value="{s_wkshp_benchmarkdate}" maxlength="20" size="15" name="{s_wkshp_benchmarkdate_Name}">&nbsp; 
+                      <!-- BEGIN DatePicker DatePicker_s_wkshp_benchmarkdate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="SEquipmentDatePicker_s_wkshp_benchmarkdate"><img id="SEquipmentDatePicker_s_wkshp_benchmarkdate_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_s_wkshp_benchmarkdate --></td> 
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="4" align="right">
+                      <!-- BEGIN Button Button_DoSearch --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="SEquipmentButton_DoSearch" value="Search" alt="Search" src="Styles/{CCS_Style}/Images/en/ButtonSearch.gif" type="image" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+                  </tr>
+ 
+                </table>
+ </td> 
+            </tr>
+ 
+          </table>
+ 
+        </form>
+ <!-- END Record SEquipment --><br>
+        <!-- BEGIN Grid GEquipmentList -->
+        <div>
+          This is the equipment tracking list. Click on the equipment name for details. Click on <a href="{ImageLink1}" id="GEquipmentListImageLink1_{GEquipmentList:rowNumber}"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" alt="{ImageLink1}" src="Styles/smartStyleTurqoise/Images/en/ButtonNewRecord.gif"></a> for new Equipment Tracking Form. 
+        </div>
+ <br>
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  <td class="th"><strong>equipment tracking list</strong></td> 
+                  <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                  <th style="TEXT-ALIGN: center" width="3%" scope="col">No.</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="5%" scope="col">Serial Form#</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="10%" scope="col">Date</th>
+ 
+                  <th style="TEXT-ALIGN: center" width="5%" scope="col">D.O. Number</th>
+ 
+                  <th scope="col">Equipment</th>
+ 
+                  <th scope="col">Maintenance Serial Number</th>
+ 
+                  <th scope="col">Loan Serial Number</th>
+ 
+                  <th scope="col">Engineer</th>
+ 
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {GEquipmentList:rowStyle}>
+                  <td style="TEXT-ALIGN: right">{lblNumber}&nbsp;</td> 
+                  <td>{wkshp_serial}&nbsp;</td> 
+                  <td>{wkshp_date}&nbsp;</td> 
+                  <td>{wkshp_donumber}&nbsp;</td> 
+                  <td>{wkshp_equipment}&nbsp;</td> 
+                  <td>{wkshp_mtn_serialnumber}&nbsp;</td> 
+                  <td>{wkshp_loan_serialnumber}&nbsp;</td> 
+                  <td>{wkshp_requestedby}&nbsp;</td> 
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="8">No records</td> 
+                </tr>
+ <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td colspan="8">
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 	<!-- END Grid GEquipmentList --><br>
+	<!-- BEGIN Grid GEquipmentRelated -->
+	<table border="0" cellspacing="0" cellpadding="0" width="100%">
+	  <tr>
+	    <td valign="top">
+	      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+	        <tr>
+	          <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+	          <td class="th"><strong>equipment related</strong></td> 
+	          <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+	        </tr>
+ 
+	      </table>
+ 
+	      <table class="Grid" cellspacing="0" cellpadding="0">
+	        <tr class="Caption">
+	          <th scope="col">Request</th>
+ 
+	          <th scope="col">Date</th>
+ 
+	          <th scope="col">Benchmark Date</th>
+ 
+	          <th scope="col">D.O Number</th>
+ 
+	          <th scope="col">Maintenance Serial Number</th>
+ 
+	          <th scope="col">Loan Serial Number</th>
+ 
+	          <th scope="col">Origin Location</th>
+ 
+	          <th scope="col">Lcation Belongs To</th>
+ 
+	          <th scope="col">Remark</th>
+ 
+	        </tr>
+ 
+	        <!-- BEGIN Row -->
+	        <tr class="Row">
+	          <td>{wkshp_request}&nbsp;</td> 
+	          <td>{wkshp_date}&nbsp;</td> 
+	          <td>{wkshp_benchmarkdate}&nbsp;</td> 
+	          <td>{wkshp_donumber}&nbsp;</td> 
+	          <td>{wkshp_mtn_serialnumber}&nbsp;</td> 
+	          <td>{wkshp_loan_serialnumber}&nbsp;</td> 
+	          <td>{wkshp_eq_origin}&nbsp;</td> 
+	          <td>{wkshp_eq_location}&nbsp;</td> 
+	          <td>{wkshp_remark}&nbsp;</td> 
+	        </tr>
+	 <!-- END Row -->
+	        <!-- BEGIN NoRecords -->
+	        <tr class="NoRecords">
+	          <td colspan="9">No records</td> 
+	        </tr>
+	 <!-- END NoRecords -->
+	        <tr class="Footer">
+	          <td colspan="9">
+	            <!-- BEGIN Navigator Navigator -->
+	            <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/First.gif"></a> <!-- END First_On -->
+	            <!-- BEGIN First_Off --><img border="0" alt="{First_URL}" src="Styles/{CCS_Style}/Images/FirstOff.gif"><!-- END First_Off -->
+	            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/Prev.gif"></a> <!-- END Prev_On -->
+	            <!-- BEGIN Prev_Off --><img border="0" alt="{Prev_URL}" src="Styles/{CCS_Style}/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+	            <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/Next.gif"></a> <!-- END Next_On -->
+	            <!-- BEGIN Next_Off --><img border="0" alt="{Next_URL}" src="Styles/{CCS_Style}/Images/NextOff.gif"><!-- END Next_Off -->
+	            <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/Last.gif"></a> <!-- END Last_On -->
+	            <!-- BEGIN Last_Off --><img border="0" alt="{Last_URL}" src="Styles/{CCS_Style}/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td> 
+	        </tr>
+ 
+	      </table>
+	 </td> 
+	  </tr>
+ 
+	</table>
+	 <!-- END Grid GEquipmentRelated -->
+        <!-- BEGIN Record REquipmentForm -->
+        <form id="REquipmentForm" method="post" name="{HTMLFormName}" action="{Action}">
+          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                    <td class="th"><strong>equipment tracking form</strong></td> 
+                    <td class="HeaderRight"><img border="0" alt="" src="Styles/{CCS_Style}/Images/Spacer.gif"></td> 
+                  </tr>
+ 
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="4">{Error}</td> 
+                  </tr>
+ <!-- END Error -->
+                  <tr class="Controls">
+                    <td class="th"><label for="REquipmentFormwkshp_serial">FORM Serial #</label></td> 
+                    <td><input id="REquipmentFormwkshp_serial" value="{wkshp_serial}" maxlength="15" size="15" name="{wkshp_serial_Name}"></td> 
+                    <td class="th">&nbsp;REQuest :</td> 
+                    <td>&nbsp; 
+                      <!-- BEGIN RadioButton wkshp_request --><input id="REquipmentFormwkshp_request_{wkshp_request:optionNumber}" value="{Value}" type="radio" name="{wkshp_request_Name}" {Check}><label for="REquipmentFormwkshp_request_{wkshp_request:optionNumber}">{Description}</label><!-- END RadioButton wkshp_request --></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="REquipmentFormwkshp_date">Date</label></td> 
+                    <td><input id="REquipmentFormwkshp_date" value="{wkshp_date}" maxlength="15" size="15" name="{wkshp_date_Name}">
+                      <!-- BEGIN DatePicker DatePicker_wkshp_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="REquipmentFormDatePicker_wkshp_date"><img id="REquipmentFormDatePicker_wkshp_date_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_wkshp_date --></td> 
+                    <td class="th">&nbsp;d.O. no :</td> 
+                    <td>&nbsp;<input id="REquipmentFormwkshp_donumber" value="{wkshp_donumber}" maxlength="30" size="30" name="{wkshp_donumber_Name}"></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="REquipmentFormwkshp_benchmarkdate">Benchmark date</label></td> 
+                    <td><input id="REquipmentFormwkshp_benchmarkdate" value="{wkshp_benchmarkdate}" maxlength="15" size="15" name="{wkshp_benchmarkdate_Name}">
+                      <!-- BEGIN DatePicker DatePicker_wkshp_benchmarkdate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="REquipmentFormDatePicker_wkshp_benchmarkdate"><img id="REquipmentFormDatePicker_wkshp_benchmarkdate_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_wkshp_benchmarkdate --></td> 
+                    <td class="th">&nbsp;</td> 
+                    <td>&nbsp;</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th" colspan="4"><strong><u>details of equipment</u></strong></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="REquipmentFormwkshp_equipment">Equipment</label></td> 
+                    <td>
+                      <select id="REquipmentFormwkshp_equipment" name="{wkshp_equipment_Name}">
+                        <option selected value="">Select Value</option>
+ {wkshp_equipment_Options} 
+                      </select>
+ </td> 
+                    <td class="th">&nbsp;</td> 
+                    <td>&nbsp;</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="REquipmentFormwkshp_eq_origin">SITE CODE / origin location</label></td> 
+                    <td>
+                      <select id="REquipmentFormwkshp_eq_origin" name="{wkshp_eq_origin_Name}">
+                        <option selected value="">Select Value</option>
+ {wkshp_eq_origin_Options} 
+                      </select>
+ </td> 
+                    <td class="th">&nbsp;</td> 
+                    <td>&nbsp;</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="REquipmentFormwkshp_mtn_serialnumber">Serial number (maintenance unit)</label></td> 
+                    <td><input id="REquipmentFormwkshp_mtn_serialnumber" value="{wkshp_mtn_serialnumber}" maxlength="30" size="30" name="{wkshp_mtn_serialnumber_Name}"></td> 
+                    <td class="th">&nbsp;</td> 
+                    <td>&nbsp;</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="REquipmentFormwkshp_loan_serialnumber">Serial number (loan unit)</label></td> 
+                    <td><input id="REquipmentFormwkshp_loan_serialnumber" value="{wkshp_loan_serialnumber}" maxlength="30" size="30" name="{wkshp_loan_serialnumber_Name}"></td> 
+                    <td class="th">&nbsp;</td> 
+                    <td>&nbsp;</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="REquipmentFormwkshp_eq_location">equipment belongs to</label></td> 
+                    <td>
+                      <select id="REquipmentFormwkshp_eq_location" name="{wkshp_eq_location_Name}">
+                        <option selected value="">Select Value</option>
+ {wkshp_eq_location_Options} 
+                      </select>
+ <label for="REquipmentFormTextBox1" style="display: none;">TextBox1</label><input id="REquipmentFormTextBox1" value="{TextBox1}" name="{TextBox1_Name}"></td> 
+                    <td class="th">&nbsp;</td> 
+                    <td>&nbsp;</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th">Delivery method</td> 
+                    <td>
+                      <!-- BEGIN RadioButton wkshp_eq_deliverymethod --><input id="REquipmentFormwkshp_eq_deliverymethod_{wkshp_eq_deliverymethod:optionNumber}" value="{Value}" type="radio" name="{wkshp_eq_deliverymethod_Name}" {Check}><label for="REquipmentFormwkshp_eq_deliverymethod_{wkshp_eq_deliverymethod:optionNumber}">{Description}</label><!-- END RadioButton wkshp_eq_deliverymethod --></td> 
+                    <td class="th">&nbsp;</td> 
+                    <td>&nbsp;</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th">&nbsp;</td> 
+                    <td>
+                      <select id="REquipmentFormwkshp_deliveredcourier" name="{wkshp_deliveredcourier_Name}">
+                        <option selected value="">Select Value</option>
+ {wkshp_deliveredcourier_Options} 
+                      </select>
+ &nbsp; 
+                      <select id="REquipmentFormwkshp_deliveredby" name="{wkshp_deliveredby_Name}">
+                        <option selected value="">Select Value</option>
+ {wkshp_deliveredby_Options} 
+                      </select>
+ </td> 
+                    <td class="th">&nbsp;</td> 
+                    <td>&nbsp;</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th">&nbsp;</td> 
+                    <td>&nbsp;<input id="REquipmentFormwkshp_delivereddate" value="{wkshp_delivereddate}" maxlength="15" size="15" name="{wkshp_delivereddate_Name}">&nbsp; 
+                      <!-- BEGIN DatePicker DatePicker_wkshp_delivereddate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="REquipmentFormDatePicker_wkshp_delivereddate"><img id="REquipmentFormDatePicker_wkshp_delivereddate_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_wkshp_delivereddate --></td> 
+                    <td class="th">&nbsp;</td> 
+                    <td>&nbsp;</td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th"><label for="REquipmentFormwkshp_remark">Wkshp Remark</label></td> 
+                    <td colspan="3"><textarea id="REquipmentFormwkshp_remark" rows="5" cols="80" name="{wkshp_remark_Name}">{wkshp_remark}</textarea></td> 
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <td class="th" colspan="4">
+                      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                        <tr>
+                          <td>REQUESTED / RETURNED BY</td> 
+                          <td>&nbsp;AUTHORIZED BY</td> 
+                          <td>&nbsp;RECEIVED BY</td> 
+                        </tr>
+ 
+                        <tr>
+                          <td>
+                            <select id="REquipmentFormwkshp_requestedby" name="{wkshp_requestedby_Name}">
+                              <option selected value="">Select Value</option>
+ {wkshp_requestedby_Options} 
+                            </select>
+ </td> 
+                          <td>
+                            <select id="REquipmentFormwkshp_authorizedby" name="{wkshp_authorizedby_Name}">
+                              <option selected value="">Select Value</option>
+ {wkshp_authorizedby_Options} 
+                            </select>
+ </td> 
+                          <td>
+                            <select id="REquipmentFormwkshp_receivedby" name="{wkshp_receivedby_Name}">
+                              <option selected value="">Select Value</option>
+ {wkshp_receivedby_Options} 
+                            </select>
+ </td> 
+                        </tr>
+ 
+                        <tr>
+                          <td><input id="REquipmentFormwkshp_requesteddate" value="{wkshp_requesteddate}" maxlength="15" size="15" name="{wkshp_requesteddate_Name}">&nbsp; 
+                            <!-- BEGIN DatePicker DatePicker_wkshp_requesteddate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="REquipmentFormDatePicker_wkshp_requesteddate"><img id="REquipmentFormDatePicker_wkshp_requesteddate_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_wkshp_requesteddate --></td> 
+                          <td><input id="REquipmentFormwkshp_authorizeddate" value="{wkshp_authorizeddate}" maxlength="15" size="15" name="{wkshp_authorizeddate_Name}">&nbsp; 
+                            <!-- BEGIN DatePicker DatePicker_wkshp_authorizeddate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="REquipmentFormDatePicker_wkshp_authorizeddate"><img id="REquipmentFormDatePicker_wkshp_authorizeddate_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_wkshp_authorizeddate --></td> 
+                          <td><input id="REquipmentFormwkshp_receiveddate" value="{wkshp_receiveddate}" maxlength="15" size="15" name="{wkshp_receiveddate_Name}">&nbsp; 
+                            <!-- BEGIN DatePicker DatePicker_wkshp_receiveddate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="REquipmentFormDatePicker_wkshp_receiveddate"><img id="REquipmentFormDatePicker_wkshp_receiveddate_Image" border="0" alt="Show Date Picker" src="Styles/{CCS_Style}/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_wkshp_receiveddate --></td> 
+                        </tr>
+ 
+                      </table>
+ </td> 
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="4" align="right">
+                      <!-- BEGIN Button Button_Insert --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="REquipmentFormButton_Insert" value="Add" alt="Add" src="Styles/{CCS_Style}/Images/en/ButtonSubmit.gif" type="image" name="{Button_Name}"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Update --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="REquipmentFormButton_Update" value="Submit" alt="Submit" src="Styles/{CCS_Style}/Images/en/ButtonUpdate.gif" type="image" name="{Button_Name}"><!-- END Button Button_Update -->
+                      <!-- BEGIN Button Button_Delete --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="REquipmentFormButton_Delete" value="Delete" alt="Delete" src="Styles/{CCS_Style}/Images/en/ButtonDelete.gif" type="image" name="{Button_Name}"><!-- END Button Button_Delete -->
+                      <!-- BEGIN Button Button_Cancel --><input style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="REquipmentFormButton_Cancel" value="Cancel" alt="Cancel" src="Styles/{CCS_Style}/Images/en/ButtonCancel.gif" type="image" name="{Button_Name}"><!-- END Button Button_Cancel --></td> 
+                  </tr>
+ 
+                </table>
+ </td> 
+            </tr>
+ 
+          </table>
+ 
+        </form>
+ 		<!-- END Record REquipmentForm --><br>
+        <br>
+      </div>
+ </td> 
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

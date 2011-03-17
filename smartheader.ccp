@@ -43,7 +43,8 @@
 			</Events>
 			<TableParameters>
 				<TableParameter id="13" conditionType="Parameter" useIsNull="False" field="smart_user.id" dataType="Integer" logicOperator="And" searchConditionType="Equal" parameterType="Session" orderNumber="1" parameterSource="UserID"/>
-			</TableParameters>
+				<TableParameter id="57" conditionType="Parameter" useIsNull="False" field="smart_referencecode.ref_type" dataType="Text" searchConditionType="Equal" parameterType="Expression" logicOperator="And" parameterSource="usrgroup"/>
+</TableParameters>
 			<SPParameters/>
 			<SQLParameters/>
 			<JoinTables>
@@ -51,8 +52,8 @@
 				<JoinTable id="43" tableName="smart_referencecode" posLeft="149" posTop="10" posWidth="117" posHeight="152"/>
 			</JoinTables>
 			<JoinLinks>
-				<JoinTable2 id="44" tableLeft="smart_user" tableRight="smart_referencecode" fieldLeft="smart_user.usr_group" fieldRight="smart_referencecode.ref_value" joinType="left" conditionType="Equal"/>
-			</JoinLinks>
+				<JoinTable2 id="56" tableLeft="smart_user" tableRight="smart_referencecode" fieldLeft="smart_user.usr_group" fieldRight="smart_referencecode.ref_value" joinType="left" conditionType="Equal"/>
+</JoinLinks>
 			<Fields>
 				<Field id="45" tableName="smart_user" fieldName="smart_user.*"/>
 				<Field id="46" tableName="smart_referencecode" fieldName="ref_description"/>
